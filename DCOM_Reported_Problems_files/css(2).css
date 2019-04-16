@@ -1,0 +1,861 @@
+* {
+	-moz-box-shadow: none; -webkit-box-shadow: none;
+}
+#forums * {
+	-moz-border-radius: 0; -webkit-border-radius: 0;
+}
+#wgo * {
+	-moz-border-radius: 0; -webkit-border-radius: 0;
+}
+#forumbits * {
+	-moz-border-radius: 0; -webkit-border-radius: 0;
+}
+.wgo_block {
+	margin: 0px;
+}
+#fb_headerbox {
+	padding-right: 5px;
+}
+.facebook_cvb {
+	top: 15px; right: 15px; position: absolute; z-index: 3000;
+}
+#userleft {
+	float: left;
+}
+.navbar {
+	-moz-border-radius-bottomleft: 0; -moz-border-radius-bottomright: 0; -webkit-border-bottom-left-radius: 0; -webkit-border-bottom-right-radius: 0;
+}
+.announcements {
+	margin-top: 10px;
+}
+.highlight {
+	background-image: none;
+}
+.navlinksBox {
+	width: 100%; text-align: center; color: rgb(93, 93, 93); clear: both; font-size: 11px; font-weight: 700; margin-top: 8px; margin-bottom: 0px;
+}
+.navlinksBoxWrap {
+	padding: 10px 0px;
+}
+.bodyWrap {
+	background: rgb(255, 255, 255); margin: 0px 2px;
+}
+.body_wrapper {
+	margin: 0px; padding: 0px;
+}
+.above_body {
+	margin: 0px; padding: 0px;
+}
+.threadbit .sticky {
+	border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.threadbit .nonthread {
+	border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.threadbit .nonsticky {
+	border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.threadbit .deleted {
+	border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.threadbit .discussionrow {
+	border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.threadbit .ignored {
+	border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.popupbody li > a {
+	padding: 8px 10px;
+}
+.popupbody li > label {
+	padding: 8px 10px;
+}
+.formsubmit label {
+	color: rgb(62, 62, 62);
+}
+.memberBox .toplinks ul.isuser .popupbody li {
+	color: rgb(62, 62, 62);
+}
+.loginLeft #fb_loginbtn {
+	top: 4px; position: relative;
+}
+.toplinks #fb_loginbtn {
+	top: 2px; position: relative;
+}
+.popupbody li > a {
+	padding: 8px 10px;
+}
+.popupbody li > label {
+	padding: 8px 10px;
+}
+#memberlist #searchstats {
+	color: rgb(255, 255, 255);
+}
+.popupbody li > a {
+	background: rgb(255, 255, 255);
+}
+.popupbody li > label {
+	background: rgb(255, 255, 255);
+}
+.block .searchlisthead {
+	color: rgb(255, 255, 255);
+}
+.block .searchlisthead a {
+	color: rgb(255, 255, 255);
+}
+.forumdescription {
+	padding-top: 3px;
+}
+img {
+	border: 0px currentColor; border-image: none;
+}
+.verticalAlign {
+	vertical-align: middle;
+}
+.clearfix::after {
+	height: 0px; line-height: 0; clear: both; display: block; visibility: hidden; content: ".";
+}
+.clearfix {
+	display: inline-block;
+}
+html[xmlns] .clearfix {
+	display: block;
+}
+* html .clearfix {
+	height: 1%;
+}
+.lastPostIMG {
+	top: 2px; position: relative;
+}
+body {
+	margin: 0px; width: auto; min-width: 990px;
+}
+#pageWrapper {
+	background: url("images/styles/RoyalFlush/style/pageBG.html") repeat-x left top rgb(246, 250, 252);
+}
+.pageBottom {
+	background: url("images/styles/RoyalFlush/style/pageBottomBG.html") repeat-x left bottom; padding: 0px 25px;
+}
+.pageWrap {
+	margin: 0px; width: auto;
+}
+.doc_header {
+	height: 168px;
+}
+#headerMain {
+	height: 168px; position: relative;
+}
+.headerWrap {
+	background: url("images/styles/RoyalFlush/style/logoBox_left.html") no-repeat left top; padding: 7px 0px 0px 263px; height: 161px; position: relative;
+}
+#logo {
+	left: 7px; top: 42px; position: absolute;
+}
+.searchBox {
+	background: url("images/styles/RoyalFlush/style/searchBox.html") no-repeat left top; padding: 9px 0px 0px 11px; left: 280px; top: 84px; width: 280px; height: 58px; position: absolute;
+}
+.searchInputBox {
+	background: url("images/styles/RoyalFlush/style/searchInput_left.html") no-repeat left top; width: 236px; height: 23px; float: left;
+}
+.searchInput {
+	background: none; padding: 0px 5px; border: 0px currentColor; border-image: none; width: 226px; height: 23px; color: rgb(102, 102, 102); line-height: 23px; font-size: 12px;
+}
+.loginBox {
+	height: 66px; padding-top: 1px; padding-left: 315px; float: left;
+}
+.memberLogin {
+	background: url("images/styles/RoyalFlush/style/loginBoxBG.html") repeat-x left top; height: 67px;
+}
+.memberLoginLeft {
+	background: url("images/styles/RoyalFlush/style/loginBoxLeft.html") no-repeat left top; height: 67px;
+}
+.memberLoginRight {
+	background: url("images/styles/RoyalFlush/style/loginBoxRight.html") no-repeat right top; height: 58px; padding-top: 9px; padding-left: 14px; position: relative;
+}
+.loginBox form {
+	margin: 0px; padding: 0px;
+}
+.searchBox form {
+	margin: 0px; padding: 0px;
+}
+.loginBox ul {
+	list-style: none; margin: 0px; padding: 0px;
+}
+.loginBox li {
+	margin: 0px; padding-right: 5px; float: left;
+}
+.loginBoxInput {
+	background: url("images/styles/RoyalFlush/style/loginBoxInput.html") no-repeat left top; width: 116px; height: 23px;
+}
+.loginInput {
+	background: none; padding: 0px 5px; border: 0px currentColor; border-image: none; width: 106px; height: 23px; color: rgb(102, 102, 102); line-height: 23px; font-size: 12px;
+}
+.boxHeading {
+	padding: 0px 0px 8px;
+}
+.boxHeading a:link {
+	color: rgb(222, 236, 242);
+}
+.boxHeading a:visited {
+	color: rgb(222, 236, 242);
+}
+.boxHeading a:hover {
+	color: rgb(255, 255, 255);
+}
+.boxHeading strong {
+	margin: 0px; padding: 0px; text-align: left; color: rgb(255, 255, 255); font-size: 12px; font-weight: 700;
+}
+.searchBox h4 {
+	margin: 0px; padding: 0px; text-align: left; color: rgb(255, 255, 255); font-size: 12px; font-weight: 700;
+}
+.boxHeading .notReg {
+	margin-right: 13px; float: right;
+}
+a.notReg {
+	color: rgb(202, 226, 255);
+}
+a.link.notReg {
+	color: rgb(202, 226, 255);
+}
+a.notReg:visited {
+	color: rgb(202, 226, 255);
+}
+a.notReg:hover {
+	color: rgb(255, 255, 255);
+}
+#contentMain {
+	background: rgb(255, 255, 255);
+}
+#contentBox {
+	background: url("images/styles/RoyalFlush/style/contentBoxBG.html") repeat-x left top;
+}
+.contentBoxLeft {
+	background: url("images/styles/RoyalFlush/style/contentBoxLeftBG.html") repeat-y left top;
+}
+.contentBoxRight {
+	background: url("images/styles/RoyalFlush/style/contentBoxRightBG.html") repeat-y right top;
+}
+.contentBoxTopLeft {
+	background: url("images/styles/RoyalFlush/style/contentBoxLeft.html") no-repeat left top;
+}
+.contentBoxTopRight {
+	background: url("images/styles/RoyalFlush/style/contentBoxRight.html") no-repeat right top; padding: 25px 15px 15px;
+}
+.footerNav {
+	background: url("images/styles/RoyalFlush/style/footerNav.html") repeat-x left top; height: 37px; line-height: 37px; font-size: 14px;
+}
+.footerNavLeft {
+	background: url("images/styles/RoyalFlush/style/footerNavLeft.html") no-repeat left top; height: 37px;
+}
+.footerNavRight {
+	background: url("images/styles/RoyalFlush/style/footerNavRight.html") no-repeat right top; padding: 0px 9px; height: 37px;
+}
+.footerNav ul {
+	list-style: none; margin: 0px; padding: 0px;
+}
+.footerNav li {
+	background: url("images/styles/RoyalFlush/style/footerNavSplit.html") no-repeat right top; padding-right: 2px; float: left;
+}
+.footerNav a:link {
+	padding: 0px 22px; color: rgb(0, 68, 153); font-weight: 700; display: block;
+}
+.footerNav a:visited {
+	padding: 0px 22px; color: rgb(0, 68, 153); font-weight: 700; display: block;
+}
+.footerNav a:hover {
+	background: url("images/styles/RoyalFlush/style/footerNav_Hover.html") repeat-x left top; color: rgb(255, 146, 0);
+}
+#footerBar {
+	background: url("images/styles/RoyalFlush/style/footerBarBG.html") repeat-x left top; height: 54px; line-height: 50px;
+}
+.footerBarLeft {
+	background: url("images/styles/RoyalFlush/style/footerBarLeft.html") no-repeat left top; height: 54px;
+}
+.footerBarRight {
+	background: url("images/styles/RoyalFlush/style/footerBarRight.html") no-repeat right top; padding: 0px 26px; height: 54px;
+}
+.backTop {
+	background: url("images/styles/RoyalFlush/style/topArrow.html") no-repeat left; padding-left: 28px; font-weight: 700; float: left;
+}
+a.link.backTop {
+	color: rgb(0, 68, 153);
+}
+a.backTop:visited {
+	color: rgb(0, 68, 153);
+}
+#footerBar a:link {
+	color: rgb(0, 68, 153);
+}
+#footerBar a:visited {
+	color: rgb(0, 68, 153);
+}
+a.backTop:hover {
+	color: rgb(255, 146, 0);
+}
+#footerBar a:hover {
+	color: rgb(255, 146, 0);
+}
+.skinSelect {
+	padding: 7px 20px; float: right;
+}
+#footerMain {
+	background: url("images/styles/RoyalFlush/style/footerBG.html") repeat-x left top; height: 79px; color: rgb(35, 67, 106); line-height: 16px; clear: both; font-size: 11px;
+}
+.copyright {
+	padding-top: 3px; padding-left: 26px; float: left;
+}
+.footerLogo {
+	float: right;
+}
+#footerMain a:link {
+	color: rgb(0, 68, 153);
+}
+#footerMain a:visited {
+	color: rgb(0, 68, 153);
+}
+#footerMain a:hover {
+	color: rgb(255, 146, 0);
+}
+#searchBox {
+	top: 7px; right: 25px; position: absolute;
+}
+#searchBox .textbox {
+	border: 1px solid rgb(168, 195, 211); border-image: none;
+}
+#searchBox .searchBox_container {
+	padding-top: 1px; padding-right: 8px; float: left; display: block;
+}
+#searchBox .searchBox_button {
+	float: left; display: block;
+}
+#searchBox .searchBox_advanced_search {
+	top: 40px; right: 0px; position: absolute;
+}
+.navbar {
+	background: url("images/styles/RoyalFlush/style/navBG.html") repeat-x left top; font: 11px/normal tahoma, verdana, geneva, lucida, "lucida grande", arial, helvetica, sans-serif; margin: 0px; padding: 0px; width: 100%; height: 75px; color: rgb(0, 68, 153); position: relative; font-size-adjust: none; font-stretch: normal;
+}
+.navLeft {
+	background: url("images/styles/RoyalFlush/style/navLeft_left.html") no-repeat left top; height: 75px;
+}
+.navRight {
+	background: url("images/styles/RoyalFlush/style/navRight_left.html") no-repeat right top; padding: 0px 9px; height: 75px;
+}
+#navtabs li.selected ul.floatcontainer {
+	margin-top: 4px;
+}
+#navtabs li.selected ul.floatcontainer a:link {
+	height: 27px; line-height: 27px;
+}
+#navtabs li.selected ul.floatcontainer a:visited {
+	height: 27px; line-height: 27px;
+}
+.navbar a {
+	color: rgb(0, 68, 153);
+}
+.navbar a:hover {
+	color: rgb(0, 68, 153);
+}
+.navtabs ul li:first-child {
+	text-indent: 0px; margin-left: 15px;
+}
+.navtabs {
+	padding-left: 0px;
+}
+.navtabs ul {
+	left: 0px; top: 36px; width: 100%; position: absolute; direction: ltr;
+}
+.navtabs li {
+	background: url("images/styles/RoyalFlush/style/navSplit.html") no-repeat right top; padding-right: 2px; float: left;
+}
+.navtabs li li {
+	background: none;
+}
+.navtabs ul li {
+	border-right-color: currentColor; border-right-width: 0px; border-right-style: none; position: relative;
+}
+.navtabs li a {
+	height: 36px; line-height: 36px;
+}
+.navtabs li a.navtab {
+	font: bold 14px/36px arial, helvetica, sans-serif; padding: 0px 10px; width: auto !important; height: 36px; text-align: center; color: rgb(0, 68, 153); text-decoration: none; display: block; min-width: 60px; font-size-adjust: none; font-stretch: normal; _width: 75px; _min-width: 75px;
+}
+.navtabs li a.navtab:hover {
+	background: url("images/styles/RoyalFlush/style/navBG_hover.html") repeat-x rgb(54, 101, 159); color: rgb(0, 68, 153);
+}
+.navtabs li.selected {
+	height: 36px; color: rgb(0, 68, 153);
+}
+.navtabs li.selected a.navtab {
+	color: rgb(0, 68, 153); position: relative; z-index: 10;
+}
+.navtabs li.selected li a {
+	font: 11px/27px tahoma, verdana, geneva, lucida, "lucida grande", arial, helvetica, sans-serif; text-decoration: none; font-size-adjust: none; font-stretch: normal;
+}
+.navbar_advanced_search li a {
+	font: 11px/27px tahoma, verdana, geneva, lucida, "lucida grande", arial, helvetica, sans-serif; text-decoration: none; font-size-adjust: none; font-stretch: normal;
+}
+.navtabs li.selected li {
+	padding: 0px 5px;
+}
+.navtabs li.selected li li {
+	padding: 0px 2px;
+}
+.navtabs li.selected li a {
+	padding: 2px 5px; color: rgb(202, 226, 255); font-weight: 400;
+}
+.navbar_advanced_search li {
+	height: 27px; clear: both; display: block;
+}
+.navbar_advanced_search li a {
+	color: rgb(0, 68, 153);
+}
+.navbar_advanced_search li a:hover {
+	color: rgb(0, 68, 153); text-decoration: none;
+}
+.navtabs li.selected li a:hover {
+	color: rgb(255, 255, 255); text-decoration: none;
+}
+.navtabs li.selected .popupbody li > a {
+	text-indent: 0px;
+}
+.navtabs li.selected li a.popupctrl {
+	background: url("images/styles/RoyalFlush/misc/arrow.html") no-repeat right; color: rgb(202, 226, 255); padding-right: 15px; -moz-border-radius: 3px; -webkit-border-radius: 3px; _border: none; _background-image: url(images/styles/RoyalFlush/misc/arrow-2.html);
+}
+.navtabs li.selected li:hover a.popupctrl.active {
+	color: rgb(255, 255, 255);
+}
+.navtabs li.selected li a.popupctrl.active {
+	color: rgb(255, 255, 255);
+}
+.navtabs li.selected li a.popupctrl:hover {
+	color: rgb(255, 255, 255);
+}
+.breadcrumb {
+	background: url("images/styles/RoyalFlush/style/bcBG.html") repeat-x left top; padding: 0px; color: rgb(90, 133, 155); font-size: 12px; font-weight: 700; margin-bottom: 8px;
+}
+.bcLeft {
+	background: url("images/styles/RoyalFlush/style/bcLeft.html") no-repeat left top;
+}
+.bcRight {
+	background: url("images/styles/RoyalFlush/style/bcRight.html") no-repeat right top; padding: 8px 10px 0px; height: 28px;
+}
+.breadcrumb .navbit > a {
+	border: 1px solid transparent; border-image: none;
+}
+.breadcrumb .lastnavbit span {
+	border: 1px solid transparent; border-image: none;
+}
+.breadcrumb .navbit a:link {
+	color: rgb(90, 133, 155); font-weight: 700;
+}
+.breadcrumb .navbit a:visited {
+	color: rgb(90, 133, 155); font-weight: 700;
+}
+.breadcrumb .navbit a:hover {
+	background: rgb(29, 75, 132); border: 1px solid transparent; border-image: none; color: rgb(255, 255, 255);
+}
+.tcatBar {
+	background: url("images/styles/RoyalFlush/style/tcatBG.html") repeat-x left top; border: 0px currentColor; border-image: none; width: 100%; height: 43px; color: rgb(202, 226, 255); clear: both; margin-top: 8px; float: left; position: relative;
+}
+.tcatLeft {
+	background: url("images/styles/RoyalFlush/style/tcatLeft.html") no-repeat left top; height: 43px;
+}
+.tcatRight {
+	background: url("images/styles/RoyalFlush/style/tcatRight.html") no-repeat right top; height: 43px;
+}
+.tcatBar .forumtitle {
+	font-weight: 700;
+}
+.tcatBar .tcatDesc {
+	font-size: 11px; font-weight: 400;
+}
+.tcatBar h2 {
+	font: bold 12px/43px arial, helvetica, sans-serif; padding-left: 16px; float: left; font-size-adjust: none; font-stretch: normal;
+}
+.tcatBar a:link {
+	color: rgb(202, 226, 255);
+}
+.tcatBar a:visited {
+	color: rgb(202, 226, 255);
+}
+.tcatBar a:hover {
+	
+}
+.tcatBar .tcatCollapse {
+	top: 13px; right: 11px; position: absolute;
+}
+.tcat_threadlist_controls {
+	padding-right: 8px; float: right;
+}
+.forumdisplaypopups {
+	clear: both;
+}
+#forumdisplaypopups {
+	clear: both;
+}
+.tcat_threadlist_controls h6 {
+	padding: 0px; height: 43px; line-height: 43px; font-size: 11px; display: block;
+}
+.forumdisplaypopups a.popupctrl {
+	background: none; padding: 0px 10px; border: 0px currentColor; border-image: none; height: 43px; color: rgb(202, 226, 255); line-height: 43px; clear: right; font-family: arial, helvetica, sans-serif; font-size: 11px; font-weight: 700; float: left; display: block; _display: 43px;
+}
+.forumdisplaypopups.popupgroup .popupmenu a.popupctrl {
+	background: none; padding: 0px 10px; border: 0px currentColor; border-image: none; height: 43px; color: rgb(202, 226, 255); line-height: 43px; clear: right; font-family: arial, helvetica, sans-serif; font-size: 11px; font-weight: 700; float: left; display: block; _display: 43px;
+}
+.postlist_popups h6 a.popupctrl {
+	background: none; padding: 0px 10px; border: 0px currentColor; border-image: none; height: 43px; color: rgb(202, 226, 255); line-height: 43px; clear: right; font-family: arial, helvetica, sans-serif; font-size: 11px; font-weight: 700; float: left; display: block; _display: 43px;
+}
+.postlist_popups.popupgroup .popupmenu h6 a.popupctrl {
+	background: none; padding: 0px 10px; border: 0px currentColor; border-image: none; height: 43px; color: rgb(202, 226, 255); line-height: 43px; clear: right; font-family: arial, helvetica, sans-serif; font-size: 11px; font-weight: 700; float: left; display: block; _display: 43px;
+}
+.forumdisplaypopups a.popupctrl:hover {
+	border: 0px currentColor; border-image: none; color: rgb(202, 226, 255); text-decoration: underline;
+}
+.forumdisplaypopups.popupgroup .popupmenu a.popupctrl:hover {
+	border: 0px currentColor; border-image: none; color: rgb(202, 226, 255); text-decoration: underline;
+}
+.postlist_popups h6 a.popupctrl:hover {
+	border: 0px currentColor; border-image: none; color: rgb(202, 226, 255); text-decoration: underline;
+}
+.postlist_popups.popupgroup .popupmenu h6 a.popupctrl:hover {
+	border: 0px currentColor; border-image: none; color: rgb(202, 226, 255); text-decoration: underline;
+}
+#postlist_popups a {
+	color: rgb(202, 226, 255); _border: none;
+}
+.postlist_popups a {
+	color: rgb(202, 226, 255); _border: none;
+}
+#postlist_popups a:hover {
+	color: rgb(202, 226, 255); text-decoration: underline;
+}
+.postlist_popups a:hover {
+	color: rgb(202, 226, 255); text-decoration: underline;
+}
+#postlist_popups .popupmenu:hover a.popupctrl {
+	border: 0px currentColor; border-image: none;
+}
+#postlist_popups .popupmenu:hover .popupctrl a.popupctrl.active {
+	border: 0px currentColor; border-image: none;
+}
+.postlist_popups .popupmenu:hover a.popupctrl {
+	border: 0px currentColor; border-image: none;
+}
+.postlist_popups .popupmenu:hover .popupctrl a.popupctrl.active {
+	border: 0px currentColor; border-image: none;
+}
+#postlist_popups ul li {
+	color: rgb(62, 62, 62);
+}
+#postlist_popups ul li a {
+	color: rgb(62, 62, 62); _border: none;
+}
+.postlist_popups ul li a {
+	color: rgb(62, 62, 62); _border: none;
+}
+#postlist_popups ul li a:hover {
+	color: rgb(62, 62, 62); text-decoration: underline;
+}
+.postlist_popups ul li a:hover {
+	color: rgb(62, 62, 62); text-decoration: underline;
+}
+#forumdisplaypopups ul a {
+	color: rgb(62, 62, 62);
+}
+.forumdisplaypopups ul a {
+	color: rgb(62, 62, 62);
+}
+.thead_bar .theadrow {
+	background: url("images/styles/RoyalFlush/style/theadBG.html") repeat-x left top rgb(230, 235, 245); font: 11px/20px arial, helvetica, sans-serif; border: 1px solid rgb(206, 221, 235); border-image: none; width: 100%; color: rgb(25, 49, 79); float: left; display: block; position: relative; font-size-adjust: none; font-stretch: normal;
+}
+.thead_bar .padding {
+	padding-left: 12px;
+}
+.thead_bar .forumhead span.forumlastpost {
+	width: 23%;
+}
+.thead_bar .theadrow .forumdata {
+	float: left;
+}
+.thead_bar {
+	width: 100%; float: left; display: block; position: relative;
+}
+.thead_bar .forumhead .forumtitle {
+	width: 76%;
+}
+.thead_bar .foruminfo {
+	width: 53%; clear: right; float: left; min-width: 30%;
+}
+.thead_bar .foruminfo .forumdata {
+	padding: 0px; width: 100%; _width: 99%;
+}
+.thead_bar .forumstats {
+	width: 16%; clear: right; margin-right: 2%; float: left; display: block;
+}
+.thead_bar .forumstats_2 {
+	width: 16%; clear: right; margin-right: 2%; float: left; display: block;
+}
+.thead_bar .foruminfo .forumdata .datacontainer {
+	padding: 0px 0px 0px 68px; width: 86%; float: left;
+}
+.thead_bar .forumactionlinks {
+	width: 5%; clear: right; float: left; display: block;
+}
+.thead_bar .forumactionlink {
+	background: no-repeat; width: 18px; overflow: hidden; clear: left; float: right; display: block; position: relative;
+}
+.thead_bar .forumstats li {
+	text-align: right; padding-right: 20px; display: block;
+}
+.thead_bar .forumstats_2 li {
+	text-align: right; padding-right: 20px; display: block;
+}
+.thead_bar .forumlastpost {
+	clear: right; float: left; display: block;
+}
+.thead_bar .theadrow .forumlastpost {
+	width: 22%;
+}
+.forumbitBody {
+	padding-right: 2px; clear: both; z-index: 1;
+}
+#post {
+	z-index: 1;
+}
+.threadlist {
+	margin-top: 0px;
+}
+#threadlist .threadlisthead {
+	background: url("images/styles/RoyalFlush/style/theadBG.html") repeat-x left top rgb(230, 235, 245); font: 11px/normal arial, helvetica, sans-serif; margin: 0px; padding: 4px 0px; border: 1px solid rgb(206, 221, 235); border-image: none; width: 100%; color: rgb(25, 49, 79); float: left; display: block; position: relative; font-size-adjust: none; font-stretch: normal;
+}
+#threadlist .threadlisthead a {
+	color: rgb(25, 49, 79);
+}
+#threadlist .threadlisthead a:hover {
+	color: rgb(25, 49, 79);
+}
+.postbit .posthead {
+	background: url("images/styles/RoyalFlush/style/theadBG.html") repeat-x left top rgb(230, 235, 245); font: 11px/normal arial, helvetica, sans-serif; margin: -1px -1px 0px; padding: 4px 0px; border: 1px solid rgb(206, 221, 235); border-image: none; width: 100%; color: rgb(25, 49, 79); clear: both; float: left; display: block; font-size-adjust: none; font-stretch: normal;
+}
+.postbitlegacy .posthead {
+	background: url("images/styles/RoyalFlush/style/theadBG.html") repeat-x left top rgb(230, 235, 245); font: 11px/normal arial, helvetica, sans-serif; margin: -1px -1px 0px; padding: 4px 0px; border: 1px solid rgb(206, 221, 235); border-image: none; width: 100%; color: rgb(25, 49, 79); clear: both; float: left; display: block; font-size-adjust: none; font-stretch: normal;
+}
+.eventbit .eventhead {
+	background: url("images/styles/RoyalFlush/style/theadBG.html") repeat-x left top rgb(230, 235, 245); font: 11px/normal arial, helvetica, sans-serif; margin: -1px -1px 0px; padding: 4px 0px; border: 1px solid rgb(206, 221, 235); border-image: none; width: 100%; color: rgb(25, 49, 79); clear: both; float: left; display: block; font-size-adjust: none; font-stretch: normal;
+}
+#posts .posthead a:link {
+	color: rgb(25, 49, 79);
+}
+#posts .posthead a:visited {
+	color: rgb(25, 49, 79);
+}
+#posts .posthead a:hover {
+	color: rgb(25, 49, 79);
+}
+#posts .posthead .time {
+	color: rgb(25, 49, 79);
+}
+#posts .nodecontrols {
+	color: rgb(25, 49, 79);
+}
+#postlist .userinfo {
+	padding-top: 10px;
+}
+.username_container {
+	padding: 2px 0px; text-align: center;
+}
+.username_container .username strong {
+	font: 16pt/normal arial, helvetica, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+.usertitle {
+	text-align: center;
+}
+.rank {
+	text-align: center;
+}
+.usercenter {
+	text-align: center; padding-top: 5px;
+}
+.post_field {
+	background: url("images/styles/RoyalFlush/style/postfieldBG.html") repeat-x left bottom rgb(255, 255, 255); padding: 3px 3px 3px 10px; border: 1px solid rgb(223, 223, 223); border-image: none; text-align: left; color: rgb(42, 42, 42); margin-top: 2px;
+}
+.post_field strong {
+	color: rgb(255, 138, 0);
+}
+.post_field dt {
+	color: rgb(255, 138, 0); font-weight: 700;
+}
+.postbit {
+	margin-bottom: 0px;
+}
+.postbitlegacy {
+	margin-bottom: 0px;
+}
+.eventbit {
+	margin-bottom: 0px;
+}
+.bbcode_container .bbcode_quote_container {
+	background: none;
+}
+.forum_info_block {
+	background: none;
+}
+.forum_info_form {
+	background: none;
+}
+.postfoot {
+	border-top-color: rgb(194, 210, 223); border-top-width: 1px; border-top-style: solid;
+}
+.postfootWrap {
+	border-right-color: rgb(194, 210, 223); border-right-width: 1px; border-right-style: solid;
+}
+#thread_info a.collapse {
+	top: 9px; position: absolute;
+}
+.toplinks .notifications a.popupctrl {
+	border-radius: 5px; color: rgb(255, 255, 255); -moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+.toplinks .notifications a.popupctrl:hover {
+	-moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+.toplinks .nonotifications a.popupctrl:hover {
+	-moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+.toplinks .nonotifications a.popupctrl.active {
+	-moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+.toplinks ul.isuser li a:hover {
+	-moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+#toplinks {
+	left: 14px; text-align: left; line-height: 20px;
+}
+.toplinks {
+	left: 14px; text-align: left; line-height: 20px;
+}
+.bottomBar {
+	background: url("images/styles/RoyalFlush/style/bottomBarBG.html") repeat-x left top; height: 3px; clear: both; font-size: 0px;
+}
+.bottomBarLeft {
+	background: url("images/styles/RoyalFlush/style/bottomBarBG.html") no-repeat left top; height: 3px; font-size: 0px;
+}
+.bottomBarRight {
+	background: url("images/styles/RoyalFlush/style/bottomBarBG.html") no-repeat right top; height: 3px; font-size: 0px;
+}
+h1.header {
+	text-transform: capitalize;
+}
+h2.header {
+	text-transform: capitalize;
+}
+.forumrow .forumtitle a:link {
+	font: 14px/normal arial, helvetica, sans-serif; color: rgb(0, 68, 153); font-size-adjust: none; font-stretch: normal;
+}
+.forumrow .forumtitle a:visited {
+	font: 14px/normal arial, helvetica, sans-serif; color: rgb(0, 68, 153); font-size-adjust: none; font-stretch: normal;
+}
+.forumrow .forumtitle a:hover {
+	color: rgb(255, 126, 0);
+}
+.forumrow .lastposttitle a:link {
+	color: rgb(80, 128, 192); font-weight: 700;
+}
+.forumrow .lastposttitle a:visited {
+	color: rgb(80, 128, 192); font-weight: 700;
+}
+.forumrow .lastposttitle a:hover {
+	color: rgb(255, 126, 0);
+}
+#forums .lastpostby a.username {
+	
+}
+#forums .lastpostby a.username:hover {
+	
+}
+.forumdescription {
+	
+}
+#notices .restore {
+	background: rgb(255, 239, 182); padding: 8px 10px; border-radius: 5px; border: 1px solid rgb(235, 210, 123); border-image: none; color: rgb(60, 58, 34); line-height: 16px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+#searchtypeswitcher {
+	border-bottom-color: rgb(29, 75, 132); border-bottom-width: 4px; border-bottom-style: solid;
+}
+#searchtypeswitcher li a {
+	color: rgb(255, 255, 255); background-color: rgb(17, 46, 81);
+}
+#searchtypeswitcher li.selected a {
+	background-color: rgb(29, 75, 132);
+}
+#searchtypeswitcher li a:hover {
+	background-color: rgb(29, 75, 132);
+}
+li.sgicon .maincol {
+	background: rgb(255, 255, 255);
+}
+#sidebar li.sgicon .maincol {
+	background: rgb(255, 255, 255);
+}
+#thumbnails li {
+	background: rgb(255, 255, 255);
+}
+#sidebar li.sgicon .maincol .textcontrol {
+	color: rgb(66, 66, 66);
+}
+#content .grouplist .blockrow > li {
+	background: rgb(244, 245, 245); border: 1px solid rgb(194, 210, 223); border-image: none;
+}
+#content .grouplist .blockrow > ol {
+	background: rgb(244, 245, 245); border: 1px solid rgb(194, 210, 223); border-image: none;
+}
+#content .grouplist .blockrow > div {
+	background: rgb(244, 245, 245); border: 1px solid rgb(194, 210, 223); border-image: none;
+}
+#pictures .blockbody .blockrow {
+	border: 1px solid rgb(194, 210, 223); border-image: none;
+}
+#group_discussion_inlinemod_form .blockbody .blockrow {
+	border: 1px solid rgb(194, 210, 223); border-image: none;
+}
+.toolsmenu {
+	background: url("images/misc/blog/top-highlight.html") repeat-x left top rgb(217, 225, 236); border: 1px solid rgb(177, 196, 213); border-image: none; _background-image: none;
+}
+.toolsmenu div {
+	color: rgb(66, 66, 66); border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+.toolsmenu h1 a {
+	color: rgb(66, 66, 66);
+}
+.toolsmenu .popupgroup a.popupctrl {
+	color: rgb(66, 66, 66);
+}
+.toolsmenu .popupgroup .popupmenu a.popupctrl {
+	color: rgb(66, 66, 66);
+}
+.toolsmenu .nopopupgroup li a {
+	color: rgb(66, 66, 66);
+}
+.toolsmenu .popupgroup a.popupctrl {
+	color: rgb(66, 66, 66);
+}
+.toolsmenu .popupgroup .popupmenu a.popupctrl {
+	color: rgb(66, 66, 66);
+}
+.toolsmenu .popupgroup .popupmenu:hover a.popupctrl {
+	color: rgb(66, 66, 66);
+}
+.toolsmenu .popupgroup .popupmenu:hover .popupctrl a.popupctrl.active {
+	color: rgb(66, 66, 66);
+}
+dl.blogbit {
+	background: rgb(255, 255, 255);
+}
+tr.blogbit {
+	background: rgb(255, 255, 255);
+}
+dl.blogcatbit {
+	background: rgb(255, 255, 255);
+}
+tr.blogcatbit {
+	background: rgb(255, 255, 255);
+}

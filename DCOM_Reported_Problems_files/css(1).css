@@ -1,0 +1,1548 @@
+.toolsmenu {
+	background: url("images/buttons/newbtn_middle.html") repeat-x rgb(233, 233, 233); margin: 0.5em 0px; border: 1px solid rgb(206, 206, 206); border-image: none; width: 100%; clear: both; float: left; display: block;
+}
+.toolsmenu div {
+	width: 100%; text-align: right; color: rgb(78, 78, 78); clear: both; float: left;
+}
+.toolsmenu h1 {
+	text-align: left; font-size: 14px; font-weight: bold; margin-top: 0.25em; margin-left: 10px; float: left; display: inline;
+}
+.toolsmenu h1 a {
+	color: rgb(78, 78, 78);
+}
+.toolsmenu ul {
+	padding: 5px 0px; margin-right: 10px; float: right;
+}
+.toolsmenu .nopopupgroup li {
+	margin-left: 10px; float: left;
+}
+.toolsmenu .popupgroup a.popupctrl {
+	padding: 0.2em 0.4em; color: rgb(78, 78, 78); clear: right; font-size: 11px; float: left; display: block; _display: inline;
+}
+.toolsmenu .popupgroup .popupmenu a.popupctrl {
+	padding: 0.2em 0.4em; color: rgb(78, 78, 78); clear: right; font-size: 11px; float: left; display: block; _display: inline;
+}
+.toolsmenu .nopopupgroup li a {
+	padding: 0.2em 0.4em; color: rgb(78, 78, 78); clear: right; font-size: 11px; float: left; display: block; _display: inline;
+}
+.toolsmenu .popupgroup a.popupctrl {
+	border: 0px currentColor; border-image: none; color: rgb(78, 78, 78); padding-right: 15px;
+}
+.toolsmenu .popupgroup .popupmenu a.popupctrl {
+	border: 0px currentColor; border-image: none; color: rgb(78, 78, 78); padding-right: 15px;
+}
+.toolsmenu .popupgroup .popupmenu:hover a.popupctrl {
+	border: 0px currentColor; border-image: none; color: rgb(78, 78, 78); padding-right: 15px;
+}
+.toolsmenu .popupgroup .popupmenu:hover .popupctrl a.popupctrl.active {
+	border: 0px currentColor; border-image: none; color: rgb(78, 78, 78); padding-right: 15px;
+}
+.toolsmenu li {
+	clear: right; display: block; position: relative;
+}
+.toolsmenu .popupgroup ul {
+	text-align: left; float: left;
+}
+.toolsmenu .popupgroup .popupbody {
+	padding: 2px;
+}
+.toolsmenu .menuimage {
+	color: rgb(78, 78, 78); padding-left: 20px;
+}
+.toolsmenu li a.menuimage {
+	color: rgb(78, 78, 78); padding-left: 20px;
+}
+.toolsmenu .nopopupgroup li a {
+	color: rgb(78, 78, 78); font-weight: bold;
+}
+.toolsmenu .menuimage a.popupctrl {
+	color: rgb(78, 78, 78); font-weight: bold;
+}
+.toolsmenu .nopopupgroup li a:hover {
+	color: rgb(75, 104, 149);
+}
+.toolsmenu .menuimage a.popupctrl:hover {
+	color: rgb(75, 104, 149);
+}
+.menusearch.popupmenu .popupbody {
+	left: -100px; font-size: 11px; min-width: 240px; max-width: 240px;
+}
+.menusearch input.button {
+	top: 0px; float: right;
+}
+.menusearch .submitoptions {
+	width: 50%; text-align: left; clear: right; float: left;
+}
+.menusearch .formsubmit .advancedsearchlink {
+	width: 50%; clear: right; float: left;
+}
+.toolsmenu .popupgroup .popupbody a {
+	font-size: 11px;
+}
+.toolsmenu .popupgroup .popupbody li label {
+	font-size: 11px;
+}
+.toolsmenu .popupgroup .popupbody li {
+	width: 100%;
+}
+.toolsmenu .popupgroup .popupbody form ul {
+	width: 100%;
+}
+.postlist {
+	clear: both; margin-top: 5px; margin-bottom: 10px; position: relative; _height: 1%; _zoom: 1;
+}
+#postlist {
+	clear: both; margin-top: 5px; margin-bottom: 10px; position: relative; _height: 1%; _zoom: 1;
+}
+.above_postlist {
+	left: 0px; width: 100%; height: 32px; margin-top: 5px; float: left; position: relative; _height: 1%; _zoom: 1;
+}
+#above_postlist {
+	left: 0px; width: 100%; height: 32px; margin-top: 5px; float: left; position: relative; _height: 1%; _zoom: 1;
+}
+.posts {
+	margin: 10px 0px;
+}
+#message_list {
+	margin: 10px 0px;
+}
+#inlinemod_formctrls ul {
+	left: auto; right: 0px;
+}
+.postlist_navpopup {
+	clear: both; margin-top: 2em;
+}
+.qr_require_click {
+	display: none;
+}
+form#quick_reply {
+	max-width: 100%;
+}
+form#quick_reply .actionbuttons .group {
+	max-width: 100%;
+}
+form#quick_reply textarea {
+	height: 100px;
+}
+.above_postlist .newcontent_textcontrol {
+	margin-top: 5px; position: relative; _display: inline;
+}
+#pagination_postlist_bottom {
+	float: left;
+}
+.pagination_top {
+	width: 60%; right: 0px; margin-top: 5px; float: right; position: relative;
+}
+.above_postlist .pagination_top .pagination {
+	color: rgb(62, 62, 62); clear: left; font-size: 12px; vertical-align: middle; float: right; _display: inline;
+}
+.above_postlist .pagination_top .postpagestats {
+	color: rgb(62, 62, 62); clear: left; font-size: 12px; vertical-align: middle; float: right; _display: inline;
+}
+.postpagestats {
+	margin-top: -1px; vertical-align: inherit;
+}
+.pagination_top .pagination {
+	top: -3px; margin-left: 10px; position: relative;
+}
+.postlistfoot {
+	width: 100%; height: 2em; clear: both; display: block; position: relative;
+}
+.below_postlist {
+	width: 100%; clear: both; margin-top: 45px; margin-bottom: 1em; float: right; display: block; position: relative;
+}
+.noinlinemod.below_postlist {
+	margin-top: -2.5em;
+}
+.discussionlist + .below_postlist {
+	margin-bottom: 20px;
+}
+.below_postlist .pagination_bottom {
+	width: 100%; margin-top: 5px; float: right;
+}
+.below_postlist .pagination_bottom .pagination {
+	clear: left; margin-bottom: 1em; margin-left: 5px; float: right; position: relative;
+}
+.below_postlist .newcontent_textcontrol {
+	top: -2.5em; position: absolute;
+}
+.noinlinemod.below_postlist .newcontent_textcontrol {
+	top: 0em;
+}
+.pagetitle {
+	width: 100%;
+}
+.postlist {
+	_border: 1px solid rgb(255, 255, 255);
+}
+.popupbody .rating {
+	background: url("images/styles/RoyalFlush/rating/rating-15_0.html") no-repeat left; padding: 0px 0px 0px 75px; display: block;
+}
+.popupbody .r5 {
+	background-image: url("images/styles/RoyalFlush/rating/rating-15_5.html");
+}
+.popupbody .r4_right {
+	background-image: url("images/styles/RoyalFlush/rating/rating-15_4.html");
+}
+.popupbody .r3_right {
+	background-image: url("images/styles/RoyalFlush/rating/rating-15_3.html");
+}
+.popupbody .r2_right {
+	background-image: url("images/styles/RoyalFlush/rating/rating-15_2.html");
+}
+.popupbody .r1_right {
+	background-image: url("images/styles/RoyalFlush/rating/rating-15_1.html");
+}
+.popupbody .r4_left {
+	background-image: url("images/styles/RoyalFlush/rating/rating-15_4_left.html");
+}
+.popupbody .r3_left {
+	background-image: url("images/styles/RoyalFlush/rating/rating-15_3_left.html");
+}
+.popupbody .r2_left {
+	background-image: url("images/styles/RoyalFlush/rating/rating-15_2_left.html");
+}
+.popupbody .r1_left {
+	background-image: url("images/styles/RoyalFlush/rating/rating-15_1_left.html");
+}
+.searchthread.popupmenu .popupbody {
+	width: 236px;
+}
+.searchthread.popupmenu .popupbody input.searchbox {
+	margin-top: 1px; margin-bottom: 3px;
+}
+.searchthread.popupmenu .popupbody input.button {
+	top: 0px; float: right;
+}
+.qrcontainer.blockfoot {
+	padding-top: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; -moz-border-radius-topright: 5px; -moz-border-radius-topleft: 5px; -webkit-border-top-right-radius: 5px; -webkit-border-top-left-radius: 5px;
+}
+.formcontrols .openclose {
+	padding: 5px;
+}
+.formcontrols .stickunstick {
+	padding: 5px;
+}
+.formcontrols .showsignature {
+	padding: 5px;
+}
+#ad_thread_first_post_content {
+	float: right;
+}
+#ad_thread_last_post_content {
+	float: right;
+}
+#posttree {
+	border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentColor rgb(107, 145, 171) rgb(107, 145, 171); padding: 2px; border-image: none; height: 150px; text-align: left; overflow: auto; white-space: nowrap;
+}
+#posttree .poston {
+	background: rgb(255, 255, 255);
+}
+#posttreee .postoff {
+	
+}
+#threaded_view h4 {
+	background: url("images/buttons/newbtn_middle.html") repeat-x rgb(37, 73, 127); font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 4px; border: 1px solid rgb(0, 60, 109); border-image: none; color: rgb(255, 255, 255); font-size-adjust: none; font-stretch: normal;
+}
+a.firstunread {
+	background: url("images/styles/RoyalFlush/buttons/firstnew.html") no-repeat right; padding: 0px 15px 0px 4px; border: 1px solid transparent; border-image: none; font-size: 11px; text-decoration: none; margin-left: 5px; display: inline-block;
+}
+#tag_edit_form .formcontrols {
+	border-top-color: rgb(107, 145, 171); border-top-width: 1px; border-top-style: solid;
+}
+#collapse_wrt_list {
+	position: inherit;
+}
+.lastedited {
+	color: rgb(62, 62, 62); padding-top: 1em; font-size: 11px; font-style: italic;
+}
+.lastedited a {
+	color: rgb(62, 62, 62);
+}
+.postbit_reputation {
+	padding-left: 2px; clear: both; font-size: 0px; display: block;
+}
+img.repimg {
+	margin-left: -2px; display: inline;
+}
+.quickedit {
+	border-top-color: rgb(107, 145, 171); border-top-width: 1px; border-top-style: solid;
+}
+.signature {
+	padding-top: 1em; margin-top: 2em; border-top-color: rgb(221, 221, 221); border-top-width: 1px; border-top-style: solid;
+}
+.postbit {
+	border: 1px solid rgb(194, 210, 223); border-image: none; width: 100%; color: rgb(62, 62, 62); clear: both; margin-bottom: 10px; float: left; display: block; position: relative;
+}
+.postbitlegacy {
+	border: 1px solid rgb(194, 210, 223); border-image: none; width: 100%; color: rgb(62, 62, 62); clear: both; margin-bottom: 10px; float: left; display: block; position: relative;
+}
+.eventbit {
+	border: 1px solid rgb(194, 210, 223); border-image: none; width: 100%; color: rgb(62, 62, 62); clear: both; margin-bottom: 10px; float: left; display: block; position: relative;
+}
+.postbit object {
+	clear: both;
+}
+.postbit .postdetails {
+	width: 100%; float: left; display: block;
+}
+.postrow {
+	overflow: auto;
+}
+.postbit .posthead {
+	background: url("images/buttons/newbtn_middle.html") repeat-x rgb(37, 73, 127); font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; margin: -1px -1px 0px; padding: 4px 0px; border: 1px solid rgb(0, 60, 109); border-image: none; width: 100%; color: rgb(255, 255, 255); clear: both; float: left; display: block; font-size-adjust: none; font-stretch: normal; _background-image: none;
+}
+.postbitlegacy .posthead {
+	background: url("images/buttons/newbtn_middle.html") repeat-x rgb(37, 73, 127); font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; margin: -1px -1px 0px; padding: 4px 0px; border: 1px solid rgb(0, 60, 109); border-image: none; width: 100%; color: rgb(255, 255, 255); clear: both; float: left; display: block; font-size-adjust: none; font-stretch: normal; _background-image: none;
+}
+.eventbit .eventhead {
+	background: url("images/buttons/newbtn_middle.html") repeat-x rgb(37, 73, 127); font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; margin: -1px -1px 0px; padding: 4px 0px; border: 1px solid rgb(0, 60, 109); border-image: none; width: 100%; color: rgb(255, 255, 255); clear: both; float: left; display: block; font-size-adjust: none; font-stretch: normal; _background-image: none;
+}
+.postbit .posthead .postdate {
+	font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; width: 49%; padding-left: 15px; clear: right; margin-left: 10px; float: left; display: block; font-size-adjust: none; font-stretch: normal;
+}
+.postbitlegacy .posthead .postdate {
+	font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; width: 49%; padding-left: 15px; clear: right; margin-left: 10px; float: left; display: block; font-size-adjust: none; font-stretch: normal;
+}
+.postbit .posthead .postdate.old {
+	background: url("images/styles/RoyalFlush/statusicon/post_old.html") no-repeat left;
+}
+.postbitlegacy .posthead .postdate.old {
+	background: url("images/styles/RoyalFlush/statusicon/post_old.html") no-repeat left;
+}
+.postbit .posthead .postdate.new {
+	background: url("images/styles/RoyalFlush/statusicon/post_new.html") no-repeat left;
+}
+.postbitlegacy .posthead .postdate.new {
+	background: url("images/styles/RoyalFlush/statusicon/post_new.html") no-repeat left;
+}
+.postbit .postdate .time {
+	color: rgb(255, 255, 255); margin-left: 10px;
+}
+.postbithead .postdate .time {
+	color: rgb(62, 62, 62);
+}
+.postbit .userinfo .contact {
+	width: 50%; clear: right; float: left; display: block; position: relative;
+}
+.postbit .userinfo_noavatar .contact {
+	width: 50%; clear: right; float: left; display: block; position: relative;
+}
+.postbit .postuseravatarlink {
+	top: 0px; text-align: center; clear: right; margin-left: 15px; float: left; display: block; position: relative;
+}
+.postbit .postuseravatarlink img {
+	
+}
+.postbit .nodecontrols .postimod {
+	top: 0px; margin-left: 10px; position: relative;
+}
+.postbit .userinfo {
+	background: rgb(244, 245, 245); padding: 0.5em 0px; width: 100%; height: auto !important; clear: both; border-bottom-color: rgb(194, 210, 223); border-bottom-width: 1px; border-bottom-style: solid; float: left; _background-image: none;
+}
+.postbit .userinfo_noavatar {
+	background: rgb(244, 245, 245); padding: 0.5em 0px; width: 100%; height: auto !important; clear: both; border-bottom-color: rgb(194, 210, 223); border-bottom-width: 1px; border-bottom-style: solid; float: left; _background-image: none;
+}
+.postbit .userinfo .contact {
+	height: auto !important; display: inline-block;
+}
+.userinfo .userinfo_extra {
+	height: auto !important; display: inline-block;
+}
+.postbit .userinfo_noavatar .contact {
+	height: auto !important; display: inline-block;
+}
+.postbit .username_container {
+	clear: right; margin-left: 10px; float: left; display: block;
+}
+.postbit .userinfo .username_container .memberaction {
+	display: inline;
+}
+.postbit .userinfo_noavatar .username_container .memberaction {
+	display: inline;
+}
+.postbit .postdetails_noavatar .posthead {
+	margin-left: 0px;
+}
+.postbit .postdetails_noavatar .userinfo .contact {
+	margin-left: 0px;
+}
+.postbit .userinfo .username {
+	font-size: 13px; font-weight: bold;
+}
+.postbit .userinfo_noavatar .username {
+	font-size: 13px; font-weight: bold;
+}
+.postbit .userinfo_noavatar .imlinks img {
+	display: inline;
+}
+.postbit .userinfo .username.guest {
+	font-weight: normal;
+}
+.postbit .userinfo_noavatar .username.guest {
+	font-weight: normal;
+}
+.postbit .userinfo_noavatar .usertitle {
+	clear: both; font-size: 11px; font-weight: bold; display: block;
+}
+.postbit .userinfo .usertitle {
+	clear: both; font-size: 11px; font-weight: bold; display: block;
+}
+.postbit .userinfo_noavatar .rank {
+	clear: both; font-size: 11px; font-weight: bold; display: block;
+}
+.postbit .userinfo .rank {
+	clear: both; font-size: 11px; font-weight: bold; display: block;
+}
+.postbit .userinfo .userinfo_extra {
+	width: 300px; text-align: right; font-size: 11px; float: right;
+}
+.postbit .userinfo_noavatar .userinfo_extra {
+	width: 300px; text-align: right; font-size: 11px; float: right;
+}
+.postbit .userinfo .userinfo_extra dl {
+	width: 150px; margin-right: 10px; float: right;
+}
+.postbit .userinfo_noavatar .userinfo_extra dl {
+	width: 150px; margin-right: 10px; float: right;
+}
+.postbit .userinfo_extra dl dt {
+	margin-right: 5px; float: left; display: block;
+}
+.postbit .userinfo_extra dl dt::after {
+	content: ":";
+}
+.postbit .userinfo_extra dl dt.blank::after {
+	content: none;
+}
+.postbit .userinfo_extra dl dd {
+	display: block;
+}
+.postbit .userinfo .moreinfo {
+	float: left; display: inline;
+}
+.postbit .userinfo_noavatar .moreinfo {
+	float: left; display: inline;
+}
+.postbit .userinfo .popupmenu a.popupctrl {
+	background: none; padding: 0px; font-size: 12px; display: inline-block;
+}
+.postbit .userinfo_noavatar .popupmenu a.popupctrl {
+	background: none; padding: 0px; font-size: 12px; display: inline-block;
+}
+.postbit .userinfo .popupmenu a.popupctrl:hover {
+	color: rgb(0, 68, 153);
+}
+.postbit .userinfo_noavatar .popupmenu a.popupctrl:hover {
+	color: rgb(0, 68, 153);
+}
+.postbit .postbody {
+	background: rgb(255, 255, 255); color: rgb(51, 51, 51); clear: both;
+}
+.postrow blockquote ul {
+	margin: 0px 40px;
+}
+.postrow blockquote ol {
+	margin: 0px 40px;
+}
+.postrow blockquote dl {
+	margin: 0px 40px;
+}
+.postbit .postrow {
+	font-family: Verdana,Arial,Tahoma,Calibri,Geneva,sans-serif;
+}
+.postbit .postrow {
+	font: 13px/normal Verdana, Arial, Tahoma, Calibri, Geneva, sans-serif; padding: 5px 10px 3em; font-size-adjust: none; font-stretch: normal;
+}
+.postbit hr {
+	display: none;
+}
+.postcontent {
+	-ms-word-wrap: break-word;
+}
+.postbit .posttitle {
+	font: bold 14px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; margin: 0px; padding: 10px; display: block; font-size-adjust: none; font-stretch: normal;
+}
+.postbitlegacy hr {
+	display: none;
+}
+.eventbit hr {
+	display: none;
+}
+blockquote.restore hr {
+	display: block;
+}
+.postbitlegacy .postdetails {
+	background: rgb(244, 245, 245); width: 100%; float: left; _background-image: none;
+}
+.eventbit .eventdetails {
+	background: rgb(244, 245, 245); width: 100%; float: left; _background-image: none;
+}
+.postbitlegacy .posthead .time {
+	font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; color: rgb(255, 255, 255); font-size-adjust: none; font-stretch: normal;
+}
+.postbit .posthead .nodecontrols {
+	font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 4px 10px 0px; top: 0px; width: 50%; text-align: right; right: 0px; color: rgb(255, 255, 255); vertical-align: middle; position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.postbitlegacy .posthead .nodecontrols {
+	font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 4px 10px 0px; top: 0px; width: 50%; text-align: right; right: 0px; color: rgb(255, 255, 255); vertical-align: middle; position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.eventbit .eventhead .nodecontrols {
+	font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 4px 10px 0px; top: 0px; width: 50%; text-align: right; right: 0px; color: rgb(255, 255, 255); vertical-align: middle; position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.postbit .posthead .nodecontrols a {
+	top: -2px; color: rgb(255, 255, 255); position: relative;
+}
+.postbitlegacy .posthead .nodecontrols a {
+	top: -2px; color: rgb(255, 255, 255); position: relative;
+}
+.eventbit .eventhead .nodecontrols a {
+	top: -2px; color: rgb(255, 255, 255); position: relative;
+}
+.postbitlegacy .posthead .nodecontrols img {
+	padding: 0px; top: 2px; position: relative;
+}
+.eventbit .eventhead .nodecontrols img {
+	padding: 0px; top: 2px; position: relative;
+}
+.postbitlegacy .posthead .nodecontrols .postimod {
+	top: 0px; margin-left: 5px; position: relative;
+}
+.eventbit .eventhead .nodecontrols .postimod {
+	top: 0px; margin-left: 5px; position: relative;
+}
+.postbitlegacy .postbody {
+	background: rgb(255, 255, 255); padding-bottom: 1em; margin-left: 200px; border-left-color: rgb(194, 210, 223); border-left-width: 1px; border-left-style: solid; _background-image: none;
+}
+.eventbit .eventdetails .eventbody {
+	background: rgb(255, 255, 255); padding-bottom: 1em; margin-left: 200px; border-left-color: rgb(194, 210, 223); border-left-width: 1px; border-left-style: solid; _background-image: none;
+}
+.postbitlegacy .postrow {
+	font: 13px/normal Verdana, Arial, Tahoma, Calibri, Geneva, sans-serif; padding: 5px 10px 10px; color: rgb(51, 51, 51); font-size-adjust: none; font-stretch: normal;
+}
+.eventbit .eventrow {
+	font: 13px/normal Verdana, Arial, Tahoma, Calibri, Geneva, sans-serif; padding: 5px 10px 10px; color: rgb(51, 51, 51); font-size-adjust: none; font-stretch: normal;
+}
+.postbitdeleted .postrow {
+	font: 13px/normal Verdana, Arial, Tahoma, Calibri, Geneva, sans-serif; padding: 5px 10px 10px; color: rgb(51, 51, 51); font-size-adjust: none; font-stretch: normal;
+}
+.postbitignored .postrow {
+	font: 13px/normal Verdana, Arial, Tahoma, Calibri, Geneva, sans-serif; padding: 5px 10px 10px; color: rgb(51, 51, 51); font-size-adjust: none; font-stretch: normal;
+}
+.postbitlegacy .userinfo {
+	background: rgb(244, 245, 245); padding: 2px 10px 5px; width: 180px; clear: both; font-size: 11px; float: left; display: block; position: relative;
+}
+.postbitlegacy .userinfo .rank {
+	clear: both; font-size: 11px; display: block;
+}
+.postbitlegacy .userinfo .usertitle {
+	clear: both; font-size: 11px; display: block;
+}
+.postbitlegacy .userinfo .username_container {
+	margin-bottom: 8px;
+}
+.postbitlegacy .userinfo .username_container .memberaction {
+	display: inline;
+}
+.postbitlegacy .userinfo .postuseravatar {
+	margin: 3.33px auto 0px; width: auto; text-align: left; clear: both; float: left; display: block;
+}
+.eventbit .userinfo .eventuseravatar {
+	margin: 3.33px auto 0px; width: auto; text-align: left; clear: both; float: left; display: block;
+}
+.postbitlegacy .userinfo .postuseravatar img {
+	max-width: 180px;
+}
+.eventbit .userinfo .eventuseravatar img {
+	max-width: 180px;
+}
+.postbitlegacy .userinfo a.username {
+	width: auto; clear: right; font-size: 13px; font-weight: bold; -ms-word-wrap: break-word; max-width: 160px;
+}
+.eventbit .userinfo a.username {
+	width: auto; clear: right; font-size: 13px; font-weight: bold; -ms-word-wrap: break-word; max-width: 160px;
+}
+.postbitlegacy .userinfo .guest.username {
+	padding-top: 5px; font-size: 13px; display: block;
+}
+.eventbit .userinfo .guest.username {
+	padding-top: 5px; font-size: 13px; display: block;
+}
+.postbitlegacy dl.userinfo_extra {
+	margin: 5px 0px; width: 180px; float: left; display: block;
+}
+.postbitlegacy dl.user_rep {
+	margin: 5px 0px; width: 180px; float: left; display: block;
+}
+.postbitlegacy dl.userinfo_extra dt {
+	width: auto !important; text-align: left; margin-right: 10px; margin-left: 0px; float: left; min-width: 60px;
+}
+.postbitlegacy dl.user_rep dt {
+	width: auto !important; text-align: left; margin-right: 10px; margin-left: 0px; float: left; min-width: 60px;
+}
+.postbitlegacy dl.userinfo_extra dt::after {
+	content: ":";
+}
+.postbitlegacy dl.user_rep dt::after {
+	content: ":";
+}
+.postbitlegacy dl.user_rep dt.blank::after {
+	content: none;
+}
+.postbitlegacy dl.userinfo_extra dd {
+	padding-bottom: 3px;
+}
+.postbitlegacy dl.userinfo_extra dd a {
+	padding-bottom: 3px;
+}
+.postbitlegacy dl.user_rep dd {
+	padding-bottom: 3px;
+}
+.postbitlegacy dl.user_rep img {
+	margin-top: 10px;
+}
+.postbitlegacy .imlinks {
+	width: 100%; float: left;
+}
+.postbitlegacy .imlinks img {
+	display: inline;
+}
+.postbitlegacy .title {
+	font: bold 14px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 10px 10px 10px 0px; display: block; font-size-adjust: none; font-stretch: normal;
+}
+.eventbit .title {
+	font: bold 14px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 10px 10px 10px 0px; display: block; font-size-adjust: none; font-stretch: normal;
+}
+.postbit .postfoot {
+	background: none; font: bold 11px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; width: 100%; right: 0px; clear: both; float: left; display: block; position: relative; font-size-adjust: none; font-stretch: normal;
+}
+.postbitlegacy .postfoot {
+	background: none; font: bold 11px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; width: 100%; right: 0px; clear: both; float: left; display: block; position: relative; font-size-adjust: none; font-stretch: normal;
+}
+.eventbit .eventfoot {
+	background: none; font: bold 11px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; width: 100%; right: 0px; clear: both; float: left; display: block; position: relative; font-size-adjust: none; font-stretch: normal;
+}
+.postbitlegacy .postrow.has_after_content {
+	padding-bottom: 4em;
+}
+.postbitlegacy .after_content {
+	width: 100%; clear: both; position: relative;
+}
+.postbitlegacy .signature {
+	padding: 1em 10px 0px; margin-top: 1em;
+}
+.postbitlegacy .lastedited {
+	padding: 1em 10px 0px; margin-top: 1em;
+}
+.postbit .postfoot .textcontrols {
+	background: rgb(220, 224, 227); font: bold 11px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 6px 0px 4px; width: 100%; margin-right: 10px; display: block; font-size-adjust: none; font-stretch: normal; _background-image: none;
+}
+.postbitlegacy .postfoot .textcontrols {
+	background: rgb(220, 224, 227); font: bold 11px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 6px 0px 4px; width: 100%; margin-right: 10px; display: block; font-size-adjust: none; font-stretch: normal; _background-image: none;
+}
+.eventbit .eventfoot .eventcontrols {
+	background: rgb(220, 224, 227); font: bold 11px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 6px 0px 4px; width: 100%; margin-right: 10px; display: block; font-size-adjust: none; font-stretch: normal; _background-image: none;
+}
+.postbitlegacy .postfoot .postcontrols {
+	width: 50%; text-align: right; padding-right: 10px; float: right;
+}
+.postbit .postfoot .postcontrols {
+	width: 50%; text-align: right; padding-right: 10px; float: right;
+}
+.postbitlegacy .postfoot .postlinking {
+	padding-left: 10px;
+}
+.postbit .postfoot .postlinking {
+	padding-left: 10px;
+}
+.postbitlegacy .postfoot .textcontrols img.inline {
+	left: -1px; top: 2px; margin-right: 1px; position: absolute;
+}
+.postbit .postfoot .textcontrols img.inline {
+	left: -1px; top: 2px; margin-right: 1px; position: absolute;
+}
+.postbitlegacy .postfoot .textcontrols span.seperator {
+	margin: 0px 5px; border-right-color: rgb(187, 194, 199); border-right-width: medium; border-right-style: solid; display: inline;
+}
+.postbit .postfoot .textcontrols span.seperator {
+	margin: 0px 5px; border-right-color: rgb(187, 194, 199); border-right-width: medium; border-right-style: solid; display: inline;
+}
+.postbitlegacy .postfoot .textcontrols a {
+	background: rgb(220, 224, 227); font: bold 11px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 0px 0px 0px 23px; border-radius: 0px; border: 0px solid rgb(168, 168, 168); border-image: none; color: rgb(78, 78, 78); margin-left: 5px; display: inline-block; font-size-adjust: none; font-stretch: normal; -moz-border-radius: 0px; -webkit-border-radius: 0px; _background-image: none;
+}
+.postbit .postfoot .textcontrols a {
+	background: rgb(220, 224, 227); font: bold 11px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 0px 0px 0px 23px; border-radius: 0px; border: 0px solid rgb(168, 168, 168); border-image: none; color: rgb(78, 78, 78); margin-left: 5px; display: inline-block; font-size-adjust: none; font-stretch: normal; -moz-border-radius: 0px; -webkit-border-radius: 0px; _background-image: none;
+}
+.eventbit .eventfoot .eventcontrols a {
+	background: rgb(220, 224, 227); font: bold 11px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 0px 0px 0px 23px; border-radius: 0px; border: 0px solid rgb(168, 168, 168); border-image: none; color: rgb(78, 78, 78); margin-left: 5px; display: inline-block; font-size-adjust: none; font-stretch: normal; -moz-border-radius: 0px; -webkit-border-radius: 0px; _background-image: none;
+}
+.postbitlegacy .postfoot .textcontrols span.mobile {
+	background: rgb(220, 224, 227); font: bold 11px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 0px 0px 0px 23px; border-radius: 0px; border: 0px solid rgb(168, 168, 168); border-image: none; color: rgb(78, 78, 78); margin-left: 5px; display: inline-block; font-size-adjust: none; font-stretch: normal; -moz-border-radius: 0px; -webkit-border-radius: 0px; _background-image: none;
+}
+.postbit .postfoot .textcontrols span.mobile {
+	background: rgb(220, 224, 227); font: bold 11px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 0px 0px 0px 23px; border-radius: 0px; border: 0px solid rgb(168, 168, 168); border-image: none; color: rgb(78, 78, 78); margin-left: 5px; display: inline-block; font-size-adjust: none; font-stretch: normal; -moz-border-radius: 0px; -webkit-border-radius: 0px; _background-image: none;
+}
+.postbitlegacy .postfoot .textcontrols img.spam {
+	padding-top: 2px;
+}
+.postbit .postfoot .textcontrols img.spam {
+	padding-top: 2px;
+}
+.postbitlegacy .postfoot .textcontrols img.moderated {
+	padding-top: 2px;
+}
+.postbit .postfoot .textcontrols img.moderated {
+	padding-top: 2px;
+}
+.postbitlegacy .postfoot .textcontrols img.spam {
+	padding-top: 2px;
+}
+.postbit .postfoot .textcontrols img.spam {
+	padding-top: 2px;
+}
+.postbitlegacy .postfoot .textcontrols img.deleted_nolink {
+	padding-top: 2px;
+}
+.postbit .postfoot .textcontrols img.deleted_nolink {
+	padding-top: 2px;
+}
+.postbitlegacy .postfoot .textcontrols a.editpost {
+	background: url("images/styles/RoyalFlush/buttons/edit_40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols a.editpost {
+	background: url("images/styles/RoyalFlush/buttons/edit_40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.eventbit .eventfoot .textcontrols a.editevent {
+	background: url("images/styles/RoyalFlush/buttons/edit_40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.editpost:hover {
+	background: url("images/styles/RoyalFlush/buttons/edit_40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbit .postfoot .textcontrols a.editpost:hover {
+	background: url("images/styles/RoyalFlush/buttons/edit_40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.eventbit .eventfoot .textcontrols a.editevent:hover {
+	background: url("images/styles/RoyalFlush/buttons/edit_40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.quickreply {
+	background: url("images/styles/RoyalFlush/buttons/reply_40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols a.quickreply {
+	background: url("images/styles/RoyalFlush/buttons/reply_40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.forwardpost {
+	background: url("images/styles/RoyalFlush/buttons/reply_40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols a.forwardpost {
+	background: url("images/styles/RoyalFlush/buttons/reply_40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.quickreply:hover {
+	background: url("images/styles/RoyalFlush/buttons/reply_40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbit .postfoot .textcontrols a.quickreply:hover {
+	background: url("images/styles/RoyalFlush/buttons/reply_40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.forwardpost:hover {
+	background: url("images/styles/RoyalFlush/buttons/reply_40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbit .postfoot .textcontrols a.forwardpost:hover {
+	background: url("images/styles/RoyalFlush/buttons/reply_40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.newreply {
+	background: url("images/styles/RoyalFlush/buttons/quote_40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols a.newreply {
+	background: url("images/styles/RoyalFlush/buttons/quote_40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.newreply:hover {
+	background: url("images/styles/RoyalFlush/buttons/quote_40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbit .postfoot .textcontrols a.newreply:hover {
+	background: url("images/styles/RoyalFlush/buttons/quote_40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.multiquote {
+	background: url("images/styles/RoyalFlush/buttons/multiquote-back_40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 1px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols a.multiquote {
+	background: url("images/styles/RoyalFlush/buttons/multiquote-back_40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 1px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.multiquote:hover {
+	background: url("images/styles/RoyalFlush/buttons/multiquote_40b-hover.html") no-repeat left;
+}
+.postbit .postfoot .textcontrols a.multiquote:hover {
+	background: url("images/styles/RoyalFlush/buttons/multiquote_40b-hover.html") no-repeat left;
+}
+.postbitlegacy .postfoot .textcontrols a.promotecms {
+	background: url("images/styles/RoyalFlush/cms/promote_small.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols a.promotecms {
+	background: url("images/styles/RoyalFlush/cms/promote_small.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.promotecms:hover {
+	background: url("images/styles/RoyalFlush/cms/promote_small-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbit .postfoot .textcontrols a.promotecms:hover {
+	background: url("images/styles/RoyalFlush/cms/promote_small-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.infraction {
+	background: url("images/styles/RoyalFlush/buttons/add-infraction_sm.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols a.infraction {
+	background: url("images/styles/RoyalFlush/buttons/add-infraction_sm.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.infraction:hover {
+	background: url("images/styles/RoyalFlush/buttons/add-infraction_sm-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbit .postfoot .textcontrols a.infraction:hover {
+	background: url("images/styles/RoyalFlush/buttons/add-infraction_sm-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.report {
+	background: url("images/styles/RoyalFlush/buttons/report-40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols a.report {
+	background: url("images/styles/RoyalFlush/buttons/report-40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.report:hover {
+	background: url("images/styles/RoyalFlush/buttons/report-40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbit .postfoot .textcontrols a.report:hover {
+	background: url("images/styles/RoyalFlush/buttons/report-40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.blog {
+	background: url("images/styles/RoyalFlush/misc/blog/blogpost_40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols a.blog {
+	background: url("images/styles/RoyalFlush/misc/blog/blogpost_40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.blog:hover {
+	background: url("images/styles/RoyalFlush/misc/blog/blogpost_40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbit .postfoot .textcontrols a.blog:hover {
+	background: url("images/styles/RoyalFlush/misc/blog/blogpost_40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.reputation {
+	background: url("images/styles/RoyalFlush/buttons/reputation-40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols a.reputation {
+	background: url("images/styles/RoyalFlush/buttons/reputation-40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.reputation:hover {
+	background: url("images/styles/RoyalFlush/buttons/reputation-40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbit .postfoot .textcontrols a.reputation:hover {
+	background: url("images/styles/RoyalFlush/buttons/reputation-40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.ip {
+	background: url("images/styles/RoyalFlush/buttons/ip-40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols a.ip {
+	background: url("images/styles/RoyalFlush/buttons/ip-40b.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.ip:hover {
+	background: url("images/styles/RoyalFlush/buttons/ip-40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbit .postfoot .textcontrols a.ip:hover {
+	background: url("images/styles/RoyalFlush/buttons/ip-40b-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.redcard {
+	background: url("images/styles/RoyalFlush/buttons/red-card_sm.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols a.redcard {
+	background: url("images/styles/RoyalFlush/buttons/red-card_sm.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.redcard:hover {
+	background: url("images/styles/RoyalFlush/buttons/red-card_sm-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbit .postfoot .textcontrols a.redcard:hover {
+	background: url("images/styles/RoyalFlush/buttons/red-card_sm-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.yellowcard {
+	background: url("images/styles/RoyalFlush/buttons/yellow-card_sm.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols a.yellowcard {
+	background: url("images/styles/RoyalFlush/buttons/yellow-card_sm.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.yellowcard:hover {
+	background: url("images/styles/RoyalFlush/buttons/yellow-card_sm-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbit .postfoot .textcontrols a.yellowcard:hover {
+	background: url("images/styles/RoyalFlush/buttons/yellow-card_sm-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.deleted {
+	background: url("images/styles/RoyalFlush/buttons/deleted_sm.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols a.deleted {
+	background: url("images/styles/RoyalFlush/buttons/deleted_sm.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.deleted:hover {
+	background: url("images/styles/RoyalFlush/buttons/deleted_sm-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbit .postfoot .textcontrols a.deleted:hover {
+	background: url("images/styles/RoyalFlush/buttons/deleted_sm-hover.html") no-repeat left; padding: 0px 0px 0px 20px; border: 0px currentColor; border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a:hover {
+	color: rgb(75, 104, 149); _background-image: none;
+}
+.postbit .postfoot .textcontrols a:hover {
+	color: rgb(75, 104, 149); _background-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.highlight {
+	
+}
+.postbit .postfoot .textcontrols a.highlight {
+	
+}
+.postbitlegacy .postfoot .textcontrols a img {
+	left: 3px; top: 2px; position: absolute;
+}
+.postbit .postfoot .textcontrols a img {
+	left: 3px; top: 2px; position: absolute;
+}
+.postbitlegacy .postfoot .textcontrols a:hover img {
+	top: 2px;
+}
+.postbit .postfoot .textcontrols a:hover img {
+	top: 2px;
+}
+.postbitlegacy .postfoot .textcontrols .mobile.mobile_android {
+	background: url("images/styles/RoyalFlush/buttons/android_icon.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols .mobile.mobile_android {
+	background: url("images/styles/RoyalFlush/buttons/android_icon.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols .mobile.mobile_iphone {
+	background: url("images/styles/RoyalFlush/buttons/android_icon.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols .mobile.mobile_iphone {
+	background: url("images/styles/RoyalFlush/buttons/android_icon.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols .mobile.mobile_facebook {
+	background: url("images/styles/RoyalFlush/buttons/android_icon.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbit .postfoot .textcontrols .mobile.mobile_facebook {
+	background: url("images/styles/RoyalFlush/buttons/android_icon.html") no-repeat left rgb(220, 224, 227); padding: 0px 0px 0px 20px; border: 0px solid rgb(168, 168, 168); border-image: none;
+}
+.postbitlegacy .postfoot .textcontrols a.mobile_android:hover {
+	background: url("images/styles/RoyalFlush/buttons/android_icon-hover.html") no-repeat left;
+}
+.postbit .postfoot .textcontrols a.mobile_android:hover {
+	background: url("images/styles/RoyalFlush/buttons/android_icon-hover.html") no-repeat left;
+}
+.postbitlegacy .postfoot .textcontrols .mobile.mobile_iphone {
+	background: url("images/styles/RoyalFlush/buttons/iphone_icon.html") no-repeat left rgb(220, 224, 227);
+}
+.postbit .postfoot .textcontrols .mobile.mobile_iphone {
+	background: url("images/styles/RoyalFlush/buttons/iphone_icon.html") no-repeat left rgb(220, 224, 227);
+}
+.postbitlegacy .postfoot .textcontrols a.mobile_iphone:hover {
+	background: url("images/styles/RoyalFlush/buttons/iphone_icon-hover.html") no-repeat left;
+}
+.postbit .postfoot .textcontrols a.mobile_iphone:hover {
+	background: url("images/styles/RoyalFlush/buttons/iphone_icon-hover.html") no-repeat left;
+}
+.postbitlegacy .postfoot .textcontrols .mobile.mobile_facebook {
+	background: url("images/styles/RoyalFlush/buttons/facebook_icon.html") no-repeat left rgb(220, 224, 227);
+}
+.postbit .postfoot .textcontrols .mobile.mobile_facebook {
+	background: url("images/styles/RoyalFlush/buttons/facebook_icon.html") no-repeat left rgb(220, 224, 227);
+}
+.postbitlegacy .postfoot .textcontrols a.mobile_facebook:hover {
+	background: url("images/styles/RoyalFlush/buttons/facebook_icon-hover.html") no-repeat left;
+}
+.postbit .postfoot .textcontrols a.mobile_facebook:hover {
+	background: url("images/styles/RoyalFlush/buttons/facebook_icon-hover.html") no-repeat left;
+}
+.postbitdeleted {
+	background: rgb(228, 234, 242); border: 1px solid rgb(194, 210, 223); border-image: none; width: 100%; color: rgb(62, 62, 62); clear: both; margin-bottom: 10px; float: left; display: block; position: relative; _background-image: none;
+}
+.postbitignored {
+	background: rgb(228, 234, 242); border: 1px solid rgb(194, 210, 223); border-image: none; width: 100%; color: rgb(62, 62, 62); clear: both; margin-bottom: 10px; float: left; display: block; position: relative; _background-image: none;
+}
+.postbitdeleted hr {
+	display: none;
+}
+.postbitignored hr {
+	display: none;
+}
+.postbitdeleted .posthead {
+	background: url("images/buttons/newbtn_middle.html") repeat-x rgb(37, 73, 127); font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; margin: -1px -1px 0px; padding: 4px 0px; border: 1px solid rgb(0, 60, 109); border-image: none; width: 100%; height: 16px; color: rgb(255, 255, 255); display: table; font-size-adjust: none; font-stretch: normal; _background-image: none;
+}
+.postbitignored .posthead {
+	background: url("images/buttons/newbtn_middle.html") repeat-x rgb(37, 73, 127); font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; margin: -1px -1px 0px; padding: 4px 0px; border: 1px solid rgb(0, 60, 109); border-image: none; width: 100%; height: 16px; color: rgb(255, 255, 255); display: table; font-size-adjust: none; font-stretch: normal; _background-image: none;
+}
+.postbitdeleted .posthead .date {
+	background: url("images/styles/RoyalFlush/statusicon/post_old.html") no-repeat left; font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; color: rgb(255, 255, 255); padding-left: 14px; margin-left: 10px; display: inline-block; font-size-adjust: none; font-stretch: normal;
+}
+.postbitignored .posthead .date {
+	background: url("images/styles/RoyalFlush/statusicon/post_old.html") no-repeat left; font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; color: rgb(255, 255, 255); padding-left: 14px; margin-left: 10px; display: inline-block; font-size-adjust: none; font-stretch: normal;
+}
+.postbitdeleted .posthead .date .time {
+	font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; color: rgb(255, 255, 255); font-size-adjust: none; font-stretch: normal;
+}
+.postbitignored .date .time {
+	font: 12px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; color: rgb(255, 255, 255); font-size-adjust: none; font-stretch: normal;
+}
+.postbitdeleted .posthead .postimod {
+	top: 5px; right: 10px; position: absolute;
+}
+.postbitignored .posthead .postimod {
+	top: 5px; right: 10px; position: absolute;
+}
+.postbitdeleted .postbody {
+	padding: 0px;
+}
+.postbitignored .postbody {
+	padding: 0px;
+}
+.postbitdeleted .postrow {
+	padding: 10px;
+}
+.postbitignored .postrow {
+	padding: 10px;
+}
+.postbitdeleted .userinfo .memberaction {
+	display: block;
+}
+.postbitignored .userinfo .memberaction {
+	display: block;
+}
+.postbitdeleted .userinfo {
+	background: none; padding: 5px 10px; clear: both; border-bottom-color: rgb(194, 210, 223); border-bottom-width: 1px; border-bottom-style: solid; display: block; position: relative; -ms-word-wrap: break-word;
+}
+.postbitignored .userinfo {
+	background: none; padding: 5px 10px; clear: both; border-bottom-color: rgb(194, 210, 223); border-bottom-width: 1px; border-bottom-style: solid; display: block; position: relative; -ms-word-wrap: break-word;
+}
+.postbitdeleted .userinfo .username {
+	clear: right; font-size: 13px; float: left; display: block;
+}
+.postbitignored .userinfo .username {
+	clear: right; font-size: 13px; float: left; display: block;
+}
+.postbitdeleted .userinfo .moreinfo {
+	top: -5px; float: left; display: block; position: relative;
+}
+.postbitignored .userinfo .moreinfo {
+	top: -5px; float: left; display: block; position: relative;
+}
+.postbitdeleted .userinfo .usertitle {
+	clear: both;
+}
+.postbitignored .userinfo .usertitle {
+	clear: both;
+}
+.postbitdeleted .userinfo .popupmenu a.popupctrl:hover {
+	color: rgb(0, 68, 153); text-decoration: none;
+}
+.postbitignored .userinfo .popupmenu a.popupctrl:hover {
+	color: rgb(0, 68, 153); text-decoration: none;
+}
+.postbitdeleted .title {
+	font: bold 14px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+.postbitignored .title {
+	font: bold 14px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+.postbitdeleted .nodecontrols {
+	background: rgb(220, 224, 227); font: bold 11px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 4px 10px 4px 0px; height: 16px; text-align: right; font-size-adjust: none; font-stretch: normal; _background-image: none;
+}
+.postbitignored .nodecontrols {
+	background: rgb(220, 224, 227); font: bold 11px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; padding: 4px 10px 4px 0px; height: 16px; text-align: right; font-size-adjust: none; font-stretch: normal; _background-image: none;
+}
+.postbitdeleted .nodecontrols .textcontrol {
+	background: rgb(220, 224, 227); font: bold 11px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; border: 0px solid rgb(168, 168, 168); border-image: none; font-size-adjust: none; font-stretch: normal; _background-image: none;
+}
+.postbitignored .nodecontrols .textcontrol {
+	background: rgb(220, 224, 227); font: bold 11px/normal Tahoma, Calibri, Verdana, Geneva, sans-serif; border: 0px solid rgb(168, 168, 168); border-image: none; font-size-adjust: none; font-stretch: normal; _background-image: none;
+}
+.postbitdeleted .nodecontrols a.textcontrol:hover {
+	border: 0px solid rgb(168, 168, 168); border-image: none; _background-image: none;
+}
+.postbitignored .nodecontrols a.textcontrol:hover {
+	border: 0px solid rgb(168, 168, 168); border-image: none; _background-image: none;
+}
+.userinfo .popupmenu:hover a.popupctrl {
+	background-color: transparent;
+}
+.userinfo .popupgroup .popupmenu:hover a.popupctrl.active {
+	color: inherit; background-color: transparent;
+}
+.userinfo .popupmenu a.popupctrl.active {
+	color: inherit; background-color: transparent;
+}
+.postbit .userinfo .popupmenu .popupctrl {
+	
+}
+.postbit.imod_highlight .userinfo_noavatar {
+	background: rgb(255, 235, 144); color: rgb(62, 62, 62);
+}
+.postbit.imod_highlight .userinfo {
+	background: rgb(255, 235, 144); color: rgb(62, 62, 62);
+}
+.postbit.imod_highlight .postbody {
+	background: rgb(255, 235, 144); color: rgb(62, 62, 62);
+}
+.postbitlegacy.imod_highlight .postdetails {
+	background: rgb(255, 235, 144); color: rgb(62, 62, 62);
+}
+.postbitlegacy.imod_highlight .userinfo {
+	background: rgb(255, 235, 144); color: rgb(62, 62, 62);
+}
+.postbitlegacy.imod_highlight .postbody {
+	background: rgb(255, 235, 144); color: rgb(62, 62, 62);
+}
+.postbitdeleted.imod_highlight {
+	background: rgb(255, 235, 144); color: rgb(62, 62, 62);
+}
+.postbitignored.imod_highlight {
+	background: rgb(255, 235, 144); color: rgb(62, 62, 62);
+}
+.userinfo .popupmenu:hover a.popupctrl {
+	background-color: transparent;
+}
+.userinfo .popupgroup .popupmenu:hover a.popupctrl.active {
+	color: inherit; background-color: transparent;
+}
+.userinfo .popupmenu a.popupctrl.active {
+	color: inherit; background-color: transparent;
+}
+.postbitlegacy .userinfo .popupmenu .popupctrl {
+	
+}
+img.onlinestatus_noavatar {
+	left: -56px; top: 5px; position: relative;
+}
+img.onlinestatus {
+	left: -4px; top: 5px; position: relative;
+}
+.postbody img.inlineimg {
+	vertical-align: bottom;
+}
+.postbody .lastedited .reason {
+	font-weight: bold;
+}
+.postbitlegacy .userinfo .userinfo_extra {
+	width: 180px; font-size: 11px; float: left;
+}
+.hasad {
+	margin-right: 300px; display: block;
+}
+.postbit .posttitle {
+	padding-bottom: 5px; margin-bottom: 5px; border-bottom-color: rgb(200, 200, 200); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.postbitlegacy .title {
+	padding-bottom: 5px; margin-bottom: 5px; border-bottom-color: rgb(200, 200, 200); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.wgo_block {
+	margin-top: 15px; margin-bottom: 10px; display: block; border-top-left-radius: 5px; border-top-right-radius: 5px; box-shadow: -2px 2px 2px #c8c8c8; -moz-box-shadow: -2px 2px 2px #c8c8c8; -webkit-box-shadow: -2px 2px 2px #c8c8c8; -moz-border-radius-topright: 5px; -moz-border-radius-topleft: 5px; -webkit-border-top-right-radius: 5px; -webkit-border-top-left-radius: 5px;
+}
+.wgo_block .blockbody {
+	background: url("images/gradients/gradient-greytowhite.html") repeat-x rgb(255, 255, 255); border: 1px solid rgb(196, 196, 196); border-image: none; _background-image: none;
+}
+.wgo_block .blockhead {
+	background: url("images/buttons/newbtn_middle.html") repeat-x rgb(37, 73, 127); border: 1px solid rgb(0, 60, 109); border-image: none; color: rgb(255, 255, 255); font-size: 12px; font-weight: bold; _background-image: none;
+}
+.wgo_block .time {
+	color: rgb(62, 62, 62);
+}
+.wgo_block .section {
+	padding: 0px 0px 0.5em; width: 100%; color: rgb(62, 62, 62); clear: both; display: block;
+}
+.wgo_block .blocksubhead {
+	background: none; color: rgb(62, 62, 62); padding-bottom: 5px; padding-left: 10px;
+}
+.wgo_block :first-child.section .blocksubhead {
+	border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.wgo_block .section .blocksubhead img {
+	padding-right: 5px;
+}
+.wgo_block .section div {
+	padding-left: 20px;
+}
+.wgo_block .section ol {
+	padding-left: 20px;
+}
+.wgo_block .section div p {
+	padding-bottom: 5px;
+}
+.wgo_block .section div ol {
+	padding-left: 0px;
+}
+.wgo_block .section dl dt {
+	display: inline;
+}
+.wgo_block .section dl dt::after {
+	content: ":";
+}
+.wgo_block .section dl dd {
+	margin-right: 5px; display: inline;
+}
+.wgo_block .section dl.icon_legends dt {
+	clear: right; margin-right: 5px; float: left;
+}
+.wgo_block .section dl.icon_legends dt::after {
+	content: "";
+}
+.wgo_block .section dl.icon_legends dd {
+	margin-bottom: 5px; display: block;
+}
+#wgo_onlineusers .commalist li {
+	margin-left: 1px;
+}
+#wgo_birthdays .commalist li {
+	margin-left: 1px;
+}
+.forum_info {
+	top: -10px; width: 100%; color: rgb(62, 62, 62); clear: both; margin-bottom: 5px; float: left; position: relative;
+}
+.forum_info .blockhead {
+	background: url("images/buttons/newbtn_middle.html") repeat-x rgb(37, 73, 127); border: 1px solid rgb(0, 60, 109); border-image: none; color: rgb(255, 255, 255); font-size: 12px; font-weight: bold; margin-top: 5px; box-shadow: -2px 0px 2px #c8c8c8; -moz-box-shadow: -2px 0 2px #c8c8c8; -webkit-box-shadow: -2px 0 2px #c8c8c8; _background-image: none;
+}
+.forum_info a.collapse {
+	top: 6.88px; position: absolute;
+}
+.forum_info .blockbody {
+	background: url("images/gradients/gradient-greytowhite.html") repeat-x rgb(255, 255, 255); border-right-color: rgb(196, 196, 196); border-bottom-color: rgb(196, 196, 196); border-left-color: rgb(196, 196, 196); border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; box-shadow: -2px 2px 2px #c8c8c8; -moz-box-shadow: -2px 2px 2px #c8c8c8; -webkit-box-shadow: -2px 2px 2px #c8c8c8; _background-image: none;
+}
+.forum_info_subblock {
+	padding: 5px 10px;
+}
+.info_subblock {
+	padding: 5px 10px;
+}
+.forum_info_form .options_input_wrapper {
+	float: right; display: inline-block;
+}
+.forum_info_form .options_input_block {
+	padding: 10px; float: left; display: inline-block;
+}
+.forum_info_form .options_input_block .description {
+	display: none;
+}
+.forum_info_form .options_input_block label {
+	display: block;
+}
+.forum_info_form .options_input_block .checkradio li {
+	margin-right: 10px; display: inline-block;
+}
+.forum_info_form .options_input_block .button {
+	margin-top: 15.99px; position: relative;
+}
+.forum_info .options_block_container {
+	top: 0px; width: 100%; padding-top: 0px; margin-top: 0px; float: left; display: block; position: relative;
+}
+.thread_info .options_block_container {
+	top: 0px; width: 100%; padding-top: 0px; margin-top: 0px; float: left; display: block; position: relative;
+}
+.forum_info .options_block {
+	width: 49%; padding-right: 0.5%; clear: right; float: left; position: relative;
+}
+.thread_info .options_block {
+	width: 49%; padding-right: 0.5%; clear: right; float: left; position: relative;
+}
+.forum_info .options_block2 {
+	width: 49%; padding-right: 0.5%; clear: right; float: left; position: relative;
+}
+.thread_info .options_block2 {
+	width: 49%; padding-right: 0.5%; clear: right; float: left; position: relative;
+}
+.forum_info .options_block .options_correct {
+	margin-right: -1.1%;
+}
+.thread_info .options_block .options_correct {
+	margin-right: -1.1%;
+}
+.forum_info .options_block2 .options_correct {
+	margin-right: -1.1%;
+}
+.thread_info .options_block2 .options_correct {
+	margin-right: -1.1%;
+}
+.forum_info .options_block2 {
+	margin-left: 1%;
+}
+.thread_info .options_block2 {
+	margin-right: 1%;
+}
+dl.icon_legends dt {
+	clear: right; margin-right: 5px; float: left;
+}
+dl.icon_legends dt::after {
+	content: "";
+}
+dl.icon_legends dd {
+	margin-bottom: 5px; display: block;
+}
+.info_subblock ul li {
+	margin-bottom: 2px;
+}
+.bbcodeblock ul li a {
+	font-weight: bold;
+}
+.rules_link a {
+	font-weight: bold;
+}
+.thread_info {
+	top: -10px; width: 100%; color: rgb(62, 62, 62); clear: both; margin-bottom: 0px; float: left; position: relative;
+}
+.thread_info a {
+	
+}
+.thread_info h4 {
+	background: url("images/buttons/newbtn_middle.html") repeat-x rgb(37, 73, 127); border: 1px solid rgb(0, 60, 109); border-image: none; color: rgb(255, 255, 255); font-size: 12px; font-weight: bold; margin-top: 5px; box-shadow: -2px 2px 2px #c8c8c8; -moz-box-shadow: -2px 2px 2px #c8c8c8; -webkit-box-shadow: -2px 2px 2px #c8c8c8; _background-image: none;
+}
+.thread_info h5 {
+	display: none;
+}
+.thread_info .blockbody {
+	background: url("images/gradients/gradient-greytowhite.html") repeat-x rgb(255, 255, 255); border-right-color: rgb(196, 196, 196); border-bottom-color: rgb(196, 196, 196); border-left-color: rgb(196, 196, 196); border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; box-shadow: -2px 2px 2px #c8c8c8; -moz-box-shadow: -2px 2px 2px #c8c8c8; -webkit-box-shadow: -2px 2px 2px #c8c8c8; _background-image: none;
+}
+.thread_info .inner_block {
+	padding: 4px 10px;
+}
+.info_subblock {
+	padding: 4px 10px;
+}
+ul.icon_list li {
+	width: 100%; margin-bottom: 5px; display: block;
+}
+.inner_block .commalist {
+	margin-top: 5px;
+}
+#thread_info_block_1 {
+	width: 34.9%; float: left;
+}
+#thread_info_block_1 > * {
+	margin-right: 2px;
+}
+#thread_info_block_2 {
+	width: 65%; float: right;
+}
+#forumrules {
+	background: none; border: 0px currentColor; border-image: none;
+}
+.similar_threads {
+	clear: both;
+}
+.similar_threads li {
+	padding: 5px 10px;
+}
+ol.similar_threads li h6 a {
+	
+}
+.similar_threads .starter_forum {
+	font-size: 11px;
+}
+.similar_threads .titleblock {
+	float: left;
+}
+.similar_threads .dateblock {
+	text-align: right; float: right;
+}
+blockquote .align_left {
+	float: left;
+}
+blockquote .align_center {
+	margin: 0px auto; display: block;
+}
+blockquote .align_right {
+	float: right;
+}
+blockquote .size_thumbnail {
+	width: auto !important; height: auto !important; max-height: 150px; max-width: 150px;
+}
+blockquote .size_medium {
+	width: auto !important; height: auto !important; max-height: 300px; max-width: 300px;
+}
+blockquote .size_large {
+	width: auto !important; height: auto !important; max-height: 1024px; max-width: 1024px;
+}
+blockquote .size_fullsize {
+	width: auto !important; max-width: 100%;
+}
+blockquote .size_fullsize img {
+	overflow: hidden;
+}
+blockquote .caption {
+	text-align: center; font-size: 9px; font-weight: bold; margin-top: 5px;
+}
+blockquote {
+	overflow: hidden;
+}
+#polloptnum {
+	margin-right: 10px;
+}
+#polltimeout {
+	float: none;
+}
+.formcontrols .blockrow input.option {
+	clear: left; margin-bottom: 0.5em; float: left;
+}
+.formcontrols .blockrow input.votes {
+	margin-bottom: 0.5em; margin-left: 0.5em; float: left;
+}
+.pollbar1 {
+	border: 0px transparent; border-image: none; height: 15px; display: inline-block;
+}
+.pollbar2 {
+	border: 0px transparent; border-image: none; height: 15px; display: inline-block;
+}
+.pollbar3 {
+	border: 0px transparent; border-image: none; height: 15px; display: inline-block;
+}
+.pollbar4 {
+	border: 0px transparent; border-image: none; height: 15px; display: inline-block;
+}
+.pollbar5 {
+	border: 0px transparent; border-image: none; height: 15px; display: inline-block;
+}
+.pollbar6 {
+	border: 0px transparent; border-image: none; height: 15px; display: inline-block;
+}
+.pollbar1 {
+	background: rgb(156, 255, 198);
+}
+.pollbar2 {
+	background: rgb(255, 132, 132);
+}
+.pollbar3 {
+	background: rgb(132, 132, 255);
+}
+.pollbar4 {
+	background: rgb(255, 231, 132);
+}
+.pollbar5 {
+	background: rgb(255, 132, 255);
+}
+.pollbar6 {
+	background: rgb(132, 255, 255);
+}
+#pollinfo {
+	margin: 10px 50px 0px; border-radius: 5px; border: 1px solid rgb(194, 210, 223); border-image: none; padding-right: 10px; padding-bottom: 0px; clear: both; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+.polloptionsblock {
+	background: url("images/misc/poll_question_mark.html") no-repeat 30px 10px rgb(243, 243, 243); padding-left: 120px;
+}
+.pollresultsblock {
+	background: rgb(243, 243, 243); padding-left: 10px;
+}
+#pollinfo .blockhead {
+	background: none; padding: 5px 0px 0px; border: 0px currentColor; border-image: none; clear: both;
+}
+#pollinfo .pollsubhead {
+	background: none; padding: 5px 0px 0px; border: 0px currentColor; border-image: none; clear: both;
+}
+#pollinfo .blockrow {
+	background: none; padding: 5px 0px 0px; border: 0px currentColor; border-image: none; clear: both;
+}
+#pollinfo .blockfoot {
+	background: none; padding: 5px 0px 0px; border: 0px currentColor; border-image: none; clear: both;
+}
+#pollinfo .blockbody {
+	background: none;
+}
+#pollinfo .blockhead {
+	width: 100%; clear: both; float: left;
+}
+#pollinfo .blockhead h2 {
+	color: rgb(187, 0, 0); font-size: 19.5px; font-weight: normal; float: left; display: inline-block;
+}
+#pollinfo .blockhead .stats {
+	color: rgb(62, 62, 62); float: right;
+}
+#pollinfo .blockhead .totalvotes {
+	color: rgb(62, 62, 62); font-size: 13px; font-weight: bold; margin-top: 6.5px; display: inline-block;
+}
+#pollinfo .polltitle {
+	color: rgb(62, 62, 62);
+}
+#pollinfo .blockhead .textcontrol {
+	background: none; padding: 0px; border: 0px currentColor; border-image: none; margin-left: 10px; float: left; display: inline-block;
+}
+#pollinfo .blockhead .textcontrol img {
+	top: 8px; right: 0px; position: relative;
+}
+#pollinfo .blockhead .textcontrol:hover img {
+	border-bottom-color: rgb(62, 62, 62); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+#pollinfo .pollsubhead {
+	width: 100%; clear: both;
+}
+#pollinfo .blockfoot {
+	padding-bottom: 10px; margin-left: 20px;
+}
+#polloptions li {
+	padding-top: 5px; margin-left: 20px;
+}
+#polloptions li input {
+	
+}
+#pollresults {
+	background: rgb(243, 243, 243); margin: 10px auto 0px; padding: 10px; border: 1px solid rgb(194, 210, 223); border-image: none; width: 98%; clear: both; float: left;
+}
+#pollresults .blockrow {
+	
+}
+#pollresults :last-child.blockrow {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+#pollresults li p {
+	width: 30%; bottom: 0px; float: left; display: block; position: relative;
+}
+#pollresults li .votes {
+	width: 70%; font-size: 11px; float: left; display: block; position: relative; min-width: 400px;
+}
+#pollresults li .votes .pollbarwrapper {
+	width: 83%; clear: right; float: left; display: block; position: relative;
+}
+#pollresults li .votes .pollbarwrapper div {
+	float: left;
+}
+#pollresults li .votes .numvotes {
+	padding: 0.1em 0.5em; clear: right; margin-left: 0.5em; float: left; display: block;
+}
+#pollresults li .percentvotes {
+	top: 0px; right: 0px; position: absolute;
+}
+#pollresults ol.commalist {
+	padding: 6px 6px 6px 0px; clear: both; font-size: 11px; margin-top: 6px;
+}
+#pollinfo .blockfoot a {
+	vertical-align: middle;
+}
+#pollinfo .blockfoot input {
+	vertical-align: middle;
+}
+ol.previewbit li {
+	margin-left: 1.5em; list-style-type: decimal;
+}
+.formcontrols ul.multifield {
+	padding: 5px; clear: both; margin-left: 207px; max-width: 491px;
+}
+.lightbox {
+	top: 0px; position: absolute;
+}
+.lightbox > div {
+	padding: 14px; border-radius: 14px; background-color: rgb(0, 0, 0); -moz-border-radius: 14px; -webkit-border-radius: 14px;
+}
+.lightbox > div > div {
+	padding: 6px; border-radius: 5px; background-color: rgb(245, 245, 245); -moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+.lightbox .wider {
+	width: 106%;
+}
+.lightbox .picturerow {
+	text-align: center;
+}
+.lightbox .buttonrow {
+	color: rgb(102, 102, 102); padding-top: 4px; font-size: 11px;
+}
+.lightbox .descrow {
+	color: rgb(102, 102, 102); padding-top: 4px; font-size: 11px;
+}
+.lightbox .buttonrow .closebutton {
+	float: right;
+}
+.lightbox .descrow .filename {
+	float: right;
+}
