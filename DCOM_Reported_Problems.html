@@ -1,0 +1,609 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0135)http://forums.dc3.com/showthread.php -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML 
+id="vbulletin_html" lang="en" dir="ltr" 
+xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from gemini-2.com/DCOM_Reported_Problems.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Dec 2018 04:04:34 GMT -->
+<HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+	 
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> 
+<META name="vb_meta_bburl" id="e_vb_meta_bburl" content="http://forums.dc3.com/"> <!--[if IE]></base><![endif]--> 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001">	 <LINK href="favicon.ico" 
+rel="Shortcut Icon" type="image/x-icon"> 
+<SCRIPT type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-eventc0a0.html?v=424"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-minc0a0.html?v=424"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-minc0a0.html?v=424"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/styles/RoyalFlush/misc";
+	var IMGDIR_BUTTON = "images/styles/RoyalFlush/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "424";
+	var BBURL = "http://forums.dc3.com/";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthread7628.html?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67732";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "http://forums.dc3.com/";
+// -->
+</SCRIPT>
+ 
+<SCRIPT src="DCOM_Reported_Problems_files/vbulletin-core.js" type="text/javascript"></SCRIPT>
+	 <LINK href="DCOM_Reported_Problems_files/css.css" rel="stylesheet" type="text/css">
+	 <!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=31&amp;langid=1&amp;d=1493265365&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+	 
+<META name="keywords" content="kb4056892, windows, ascom, telescope, simulator, problems, kb4056898, 8.1, rowland, nailed, archer, 9323, installed, 9322, results, manually, thread, post, solve, 9324, issue, forum, acp, discussion, posting, 6.3, introduced, problem, general, reported, updates, confirmed, security, change, connecting, poth, .net, vb6, tested, alert, clean, started, system, platform, based">
+	 
+<META name="description" content="Microsoft has released Windows 10 Update KB4056892 (OS Build 16299.192) which may be in response to the recently discovered CPU vulnerabilities as described in this article: Meltdown and Spectre CPU Vulnerabilities: What You Need to Know. We have received some reports of this update possibly causing ACP and other client programs to fail when trying to connect to some ASCOM-compatible devices including TheSky X acting as a telescope controller.  &#10; &#10;If you want to see or participate in the">
+	 <TITLE> ALERT: Windows 8.1 and 10 Updates KB4056898 and KB4056892 Reported 
+Problems</TITLE>	 <LINK href="showthreadae69.html?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems" 
+rel="canonical">											 
+<SCRIPT src="DCOM_Reported_Problems_files/vbulletin_lightbox.js" type="text/javascript"></SCRIPT>
+				 <LINK href="DCOM_Reported_Problems_files/css(1).css" rel="stylesheet" type="text/css">
+		 <!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="css.php?styleid=31&amp;langid=1&amp;d=1493265365&amp;td=ltr&amp;sheet=toolsmenu-ie.css,postlist-ie.css,showthread-ie.css,postbit-ie.css,poll-ie.css" /><![endif]--> 
+<LINK href="DCOM_Reported_Problems_files/css(2).css" rel="stylesheet" type="text/css"> 
+<LINK href="DCOM_Reported_Problems_files/css(3).css" rel="stylesheet" type="text/css"> 
+</HEAD> 
+<BODY><!-- Tapatalk Detect body start --> 
+<SCRIPT type="text/javascript">if (typeof(tapatalkDetect) == "function") tapatalkDetect()</SCRIPT>
+ <!-- Tapatalk Detect banner body end -->	 
+<DIV id="pageWrapper">
+<DIV class="pageBottom">
+<DIV class="pageWrap">
+<DIV class="above_body"><!-- closing tag is in template navbar --> 
+<DIV class="floatcontainer doc_header" id="header">
+<DIV class="headerWrap">
+<DIV><A name="top" id="logo" href="http://forums.dc3.com/index.php"><IMG alt="DC-3 Dreams Communication Center - Powered by vBulletin" 
+src="DCOM_Reported_Problems_files/logo.gif"></A></DIV>
+<DIV class="navbar" id="navbar">
+<DIV class="navLeft">
+<DIV class="navRight">
+<UL class="navtabs floatcontainer" id="navtabs">
+  <LI id="vbtab_whatsnew"><A class="navtab" href="http://forums.dc3.com/activity.php">What's 
+  New?</A></LI>
+  <LI class="selected" id="vbtab_forum"><A class="navtab" href="http://forums.dc3.com/forum.php">Forum</A></LI>
+  <UL class="floatcontainer">
+    <LI id="vbflink_faq"><A href="http://forums.dc3.com/faq.php">FAQ</A></LI>
+    <LI id="vbflink_calendar"><A 
+    href="http://forums.dc3.com/calendar.php">Calendar</A></LI>
+    <LI class="popupmenu" id="vbmenu_actions"><A class="popupctrl" href="javascript://">Forum 
+    Actions</A>							 
+    <UL class="popupbody popuphover">
+      <LI id="vbalink_mfr"><A href="http://forums.dc3.com/forumdisplay.php?do=markread&amp;markreadhash=guest">Mark 
+      Forums Read</A></LI></UL></LI>
+    <LI class="popupmenu" id="vbmenu_qlinks"><A class="popupctrl" href="javascript://">Quick 
+    Links</A>							 
+    <UL class="popupbody popuphover">
+      <LI id="vbqlink_leaders"><A 
+      href="http://forums.dc3.com/showgroups.php">View Site 
+    Leaders</A></LI></UL></LI></UL></UL></DIV></DIV></DIV>
+<DIV class="searchBox">
+<FORM action="https://gemini-2.com/search.php?do=process" 
+method="post"><INPUT name="securitytoken" type="hidden" value="guest">
+			 <INPUT name="do" type="hidden" value="process">				 
+<DIV class="boxHeading"><STRONG>Quick search</STRONG>				 </DIV>
+<DIV 
+class="searchInputBox"><INPUT name="query" class="searchInput" type="text"></DIV><INPUT 
+type="image" alt="Search" src="DCOM_Reported_Problems_files/searchButton_left.gif" 
+value="Search">		 </FORM></DIV>
+<DIV class="loginBox">
+<DIV class="memberLogin">
+<DIV class="memberLoginLeft">
+<DIV class="memberLoginRight">
+<DIV class="boxHeading"><STRONG>Member login</STRONG>				 </DIV><!-- login form -->
+		 
+<FORM onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)" 
+action="https://gemini-2.com/login.php?do=login" method="post">
+<SCRIPT src="DCOM_Reported_Problems_files/vbulletin_md5.js" type="text/javascript"></SCRIPT>
+									 
+<UL>
+  <LI class="inputPad">
+  <DIV 
+class="loginBoxInput"><INPUT name="vb_login_username" tabindex="101" class="loginInput" id="navbar_username" accesskey="u" type="text" size="10" value="User Name"></DIV></LI>
+  <LI class="inputPad">
+  <DIV 
+class="loginBoxInput"><INPUT name="vb_login_password" tabindex="102" class="loginInput" id="navbar_password" type="password" size="10"><INPUT name="vb_login_password_hint" tabindex="102" class="loginInput" id="navbar_password_hint" style="display: none;" type="text" size="10" value="Password"></DIV></LI>
+  <LI><LABEL for="cb_cookieuser_navbar"><INPUT name="cookieuser" tabindex="103" 
+  class="cb_cookieuser_navbar" id="cb_cookieuser_navbar" accesskey="c" type="checkbox" 
+  value="1"></LABEL></LI>
+  <LI class="searchButton"><INPUT tabindex="104" accesskey="s" type="image" alt="Submit" 
+  src="DCOM_Reported_Problems_files/loginButton.gif" 
+value="Log in"></LI></UL><INPUT name="securitytoken" type="hidden" value="guest">
+		 <INPUT name="do" type="hidden" value="login">		 <INPUT name="vb_login_md5password" type="hidden">
+		 <INPUT name="vb_login_md5password_utf" type="hidden">	 </FORM>
+<SCRIPT type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</SCRIPT>
+		 <!-- / login form -->			</DIV></DIV></DIV></DIV></DIV></DIV></DIV><!-- closing div for above_body --> <!-- Custom Content Wrap -->
+		 
+<DIV id="contentMain">
+<DIV id="contentBox">
+<DIV class="contentBoxLeft">
+<DIV class="contentBoxRight">
+<DIV class="contentBoxTopLeft">
+<DIV class="contentBoxTopRight"><!-- Custom Content Wrap End --> 
+<DIV class="body_wrapper">
+<DIV class="breadcrumb" id="breadcrumb">
+<DIV class="bcLeft">
+<DIV class="bcRight">
+<UL class="floatcontainer">
+  <LI class="navbithome"><A accesskey="1" 
+  href="http://forums.dc3.com/index.php"><IMG alt="Home" src="DCOM_Reported_Problems_files/navbit-home.png"></A></LI>
+  <LI class="navbit"><A href="http://forums.dc3.com/index.php">Forum</A></LI>
+  <LI class="navbit"><A href="http://forums.dc3.com/forumdisplay.php?9-DC-3-Dreams-Announcements-and-Information">DC-3 
+  Dreams Announcements and Information</A></LI>
+  <LI class="navbit"><A href="http://forums.dc3.com/forumdisplay.php?10-Company-and-Product-Announcements-and-Information">Company 
+  and Product Announcements and Information</A></LI>
+  <LI class="navbit lastnavbit"><SPAN> ALERT: Windows 8.1 and 10 Updates 
+  KB4056898 and KB4056892 Reported Problems</SPAN></LI></UL>
+<HR>
+ </DIV></DIV></DIV>
+<FORM class="notices" id="notices" action="https://gemini-2.com/profile.php?do=dismissnotice" method="post"><INPUT name="do" type="hidden" value="dismissnotice">
+		 <INPUT name="s" type="hidden">
+		 <INPUT name="securitytoken" type="hidden" value="guest">		 <INPUT name="dismiss_noticeid" id="dismiss_notice_hidden" type="hidden">
+		 <INPUT name="url" type="hidden">		 
+<OL>
+  <LI class="restore" id="navbar_notice_1">
+  <P><B> Please note:</B> You are welcome to visit and look around here, but you 
+  will not see the premium support sections until you are a DC-3 Dreams 
+  customer. Also, to protect our performance we have disabled searching for 
+  guests. Contact us for a forum account if you wish to have pre-sales 
+  information.</P></LI></OL></FORM>
+<DIV class="above_postlist" id="above_postlist">
+<DIV class="pagination_top" id="pagination_top">
+<DIV class="postpagestats" id="postpagestats_above">				Results 1 to 5 of 5
+			 </DIV></DIV></DIV>
+<DIV class="pagetitle" id="pagetitle">
+<H1>		Thread: <SPAN class="threadtitle"><A title="Reload this Page" href="http://forums.dc3.com/showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems">ALERT: 
+Windows 8.1 and 10 Updates KB4056898 and KB4056892 Reported Problems</A></SPAN>
+	 </H1></DIV><!-- Start Forum tcat Heading ForumThemes --> 
+<DIV class="tcatBar">
+<DIV class="tcatLeft">
+<DIV class="tcatRight foruminfo L1 collapse">
+<DIV class="tcat_threadlist_controls " id="thread_controls">
+<DIV>
+<UL class="postlist_popups popupgroup" id="postlist_popups">
+  <LI class="popupmenu" id="threadtools">
+  <H6><A class="popupctrl" href="javascript://">Thread Tools</A></H6>
+  <UL class="popupbody popuphover">
+    <LI><A accesskey="3" href="http://forums.dc3.com/printthread.php?t=11182&amp;pp=10&amp;page=1" 
+    rel="nofollow">Show Printable Version</A></LI>
+    <LI></LI></UL></LI>
+  <LI class="popupmenu" id="displaymodes">
+  <H6><A class="popupctrl" href="javascript://">Display</A></H6>
+  <UL class="popupbody popuphover">
+    <LI><A href="http://forums.dc3.com/showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67732&amp;mode=linear#post67732"> 
+    Switch to Linear Mode</A></LI>
+    <LI><A href="http://forums.dc3.com/showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;mode=hybrid"> 
+    Switch to Hybrid Mode</A></LI>
+    <LI><LABEL>Threaded 
+Mode</LABEL></LI></UL></LI></UL></DIV></DIV></DIV></DIV></DIV><!-- End Forum tcat Heading ForumThemes --> 
+<DIV class="postlist restrain" id="postlist">
+<SCRIPT type="text/javascript">
+<!--
+var imgdir_statusicon = "images/styles/RoyalFlush/statusicon";
+var imgdir_misc = "images/styles/RoyalFlush/misc";
+var cleargifurl = "clear.html";
+var guestphrase = "Guest";
+var morephrase = "More replies below current depth...";
+var highlightwords = "";
+//-->
+</SCRIPT>
+ 
+<SCRIPT src="DCOM_Reported_Problems_files/vbulletin_thrdpostlist.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT type="text/javascript">
+<!--
+// initialize some variables
+var curpostid = 67732;
+var quickreply = false;
+
+// cached posts (no page reload required to view)
+pd[67716] = '\r\n<li class="postbit postbitim postcontainer old" id="post_67716">\r\n	<div class="postdetails_noavatar">\r\n		<div class="posthead">\r\n                        \r\n                                <span class="postdate old">\r\n                                        \r\n                                                <span class="date">Jan 6, 2018,&nbsp;<span class="time">18:06</span></span>\r\n                                        \r\n                                </span>\r\n                                <span class="nodecontrols">\r\n                                        \r\n                                                <a name="post67716" href="showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67716#post67716" class="postcounter">#1</a><a id="postcount67716" name="1"></a>\r\n                                        \r\n                                        \r\n                                        \r\n                                </span>\r\n                        \r\n		</div>\r\n\r\n		<div class="userinfo">\r\n			<div class="contact">\r\n				\r\n					<a class="postuseravatarlink" href="member.php?1-Bob-Denny" title="Bob Denny is offline">\r\n						\r\n							<img src="image.php?u=1&amp;dateline=1326825398" alt="Bob Denny\'s Avatar" />\r\n						\r\n					</a>\r\n				\r\n				<div class="username_container">\r\n					\r\n						<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?1-Bob-Denny" title="Bob Denny is offline"><strong>Bob Denny</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?1-Bob-Denny" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://dc3.com/" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n						<img class="inlineimg onlinestatus" src="images/styles/RoyalFlush/statusicon/user-offline.png" alt="Bob Denny is offline" border="0" />\r\n\r\n					\r\n					<span class="usertitle">\r\n						Developer\r\n					</span>\r\n					\r\n\r\n                                        \r\n					\r\n					\r\n						<div class="imlinks">\r\n							    \r\n						</div>\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n				<div class="userinfo_extra">\r\n					<dl class="userstats">\r\n						<dt>Join Date</dt> <dd>Oct 2005</dd>\r\n						<dt>Location</dt> <dd>Mesa, AZ</dd>\r\n						\r\n						<dt>Posts</dt> <dd>22,222</dd>	\r\n						\r\n					</dl>\r\n					\r\n					\r\n				</div>\r\n			\r\n		</div>\r\n	</div>\r\n\r\n	<div class="postbody">\r\n		\r\n		<div class="postrow">\r\n		\r\n		<h2 class="posttitle icon">\r\n			<img src="images/icons/icon1.png" alt="Default" /> ALERT: Windows 8.1 and 10 Updates KB4056898 and KB4056892 Reported Problems\r\n		</h2>\r\n		\r\n				\r\n				\r\n		<div class="content">\r\n			<div id="post_message_67716">\r\n				<blockquote class="postcontent restore">\r\n					Microsoft has released <a href="https://support.microsoft.com/en-us/help/4056892/windows-10-update-kb4056892" target="_blank">Windows 10 Update KB4056892 (OS Build 16299.192)</a> which <i>may</i> be in response to the recently discovered CPU vulnerabilities as described in this article: <a href="https://www.welivesecurity.com/2018/01/05/meltdown-spectre-cpu-vulnerabilities/" target="_blank">Meltdown and Spectre CPU Vulnerabilities: What You Need to Know</a>. We have received some reports of this update <i>possibly </i>causing ACP and other client programs to fail when trying to connect to <i>some </i>ASCOM-compatible devices including TheSky X acting as a telescope controller. <br />\n<br />\nIf you want to see or participate in the discussion here, <u>you will need to have current Support and Upgrades</u>, as the discussion is running in the premium ACP Observatory Control support section:<br />\n<br />\n<font size="4"><a href="http://forums.dc3.com/showthread.php?11179-Windows-Update-KB4057892-Possible-Problems-With-ASCOM-Connections" target="_blank">Windows Update KB4056892 - Possible Problems With ASCOM Connections</a></font><br />\n<br />\nAt this point we don\'t have any solid evidence or cause-effect information. The update just came out a couple of days ago (04-Jan-2018). We posted this alert to let you know that we are aware of possible issues. It is possible, based on reading some of today\'s news traffic, that this was a rushed-out update with some known problems (see the KB article linked above).\r\n				</blockquote>\r\n			</div>\r\n\r\n			\r\n\r\n\r\n		</div>\r\n			\r\n			<!-' + '- edit note -' + '->\r\n			<blockquote class="postcontent lastedited">\r\n				\r\n					Last edited by Bob Denny; Jan 6, 2018 at <span class="time">19:32</span>.\r\n				\r\n				\r\n					<span class="reason">Reason:</span> Updates progressing again\r\n				\r\n			</blockquote>\r\n			<!-' + '- / edit note -' + '->\r\n			\r\n				\r\n			\r\n			\r\n				<blockquote class="signature restore"><div class="signaturecontainer"><div style="margin-left:40px">-' + '- Bob</div></div></blockquote>\r\n			\r\n			\r\n		</div>\r\n	</div>\r\n	<div class="postfoot">\r\n		<div class="textcontrols floatcontainer">\r\n			<span class="postcontrols">\r\n				<img style="display:none" id="progress_67716" src="images/styles/RoyalFlush/misc/progress.gif" alt="" />\r\n				\r\n				\r\n				\r\n				\r\n			</span>\r\n			<span class="postlinking">\r\n				\r\n					\r\n				\r\n				\r\n\r\n				 \r\n				\r\n\r\n					\r\n\r\n					\r\n					 \r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n			</span>\r\n		</div>\r\n	</div>\r\n	<hr />\r\n</li>\r\n';
+pd[67732] = '\r\n<li class="postbit postbitim postcontainer old" id="post_67732">\r\n	<div class="postdetails_noavatar">\r\n		<div class="posthead">\r\n                        \r\n                                <span class="postdate old">\r\n                                        \r\n                                                <span class="date">Jan 6, 2018,&nbsp;<span class="time">23:30</span></span>\r\n                                        \r\n                                </span>\r\n                                <span class="nodecontrols">\r\n                                        \r\n                                                <a name="post67732" href="showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67732#post67732" class="postcounter">#2</a><a id="postcount67732" name="2"></a>\r\n                                        \r\n                                        \r\n                                        \r\n                                </span>\r\n                        \r\n		</div>\r\n\r\n		<div class="userinfo">\r\n			<div class="contact">\r\n				\r\n					<a class="postuseravatarlink" href="member.php?1-Bob-Denny" title="Bob Denny is offline">\r\n						\r\n							<img src="image.php?u=1&amp;dateline=1326825398" alt="Bob Denny\'s Avatar" />\r\n						\r\n					</a>\r\n				\r\n				<div class="username_container">\r\n					\r\n						<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?1-Bob-Denny" title="Bob Denny is offline"><strong>Bob Denny</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?1-Bob-Denny" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://dc3.com/" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n						<img class="inlineimg onlinestatus" src="images/styles/RoyalFlush/statusicon/user-offline.png" alt="Bob Denny is offline" border="0" />\r\n\r\n					\r\n					<span class="usertitle">\r\n						Developer\r\n					</span>\r\n					\r\n\r\n                                        \r\n					\r\n					\r\n						<div class="imlinks">\r\n							    \r\n						</div>\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n				<div class="userinfo_extra">\r\n					<dl class="userstats">\r\n						<dt>Join Date</dt> <dd>Oct 2005</dd>\r\n						<dt>Location</dt> <dd>Mesa, AZ</dd>\r\n						\r\n						<dt>Posts</dt> <dd>22,222</dd>	\r\n						\r\n					</dl>\r\n					\r\n					\r\n				</div>\r\n			\r\n		</div>\r\n	</div>\r\n\r\n	<div class="postbody">\r\n		\r\n		<div class="postrow">\r\n		\r\n		<h2 class="posttitle icon">\r\n			<img src="images/icons/icon1.png" alt="Default" /> \r\n		</h2>\r\n		\r\n				\r\n				\r\n		<div class="content">\r\n			<div id="post_message_67732">\r\n				<blockquote class="postcontent restore">\r\n					I have confirmed this to be a general problem introduced by KB4056892 (and we now know that KB4056898 for Windows 8.1 has the same security change)! I started with a clean Windows 10 system with only ASCOM Platform 6.3. I tested POTH connecting to the ASCOM Telescope Simulator for .NET and the old ASCOM Telescope Simulator (VB6 Based). No problems. Then I manually installed KB4056892. After that here are the results:<br />\n<br />\n<div class="size_fullsize"><img src="http://forums.dc3.com/attachment.php?attachmentid=9322&amp;d=1515281328" border="0" alt="Name:  Snap1.jpg\r\nViews: 484\r\nSize:  155.9 KB" class="thumbnail" /></div><br />\n<br />\n<div class="size_fullsize"><img src="http://forums.dc3.com/attachment.php?attachmentid=9323&amp;d=1515281367" border="0" alt="Name:  Snap2.jpg\r\nViews: 223\r\nSize:  148.9 KB" class="thumbnail" /></div><br />\n<br />\nRowland Archer nailed it in the ACP Forum discussion thread by posting the &quot;known issue&quot;<br />\n<br />\n<div class="size_fullsize"><img src="http://forums.dc3.com/attachment.php?attachmentid=9324&amp;d=1515281422" border="0" alt="Name:  Snap3.jpg\r\nViews: 223\r\nSize:  68.0 KB" class="thumbnail" /></div><br />\n<br />\nThis is it. See the next post for how to solve it.\r\n				</blockquote>\r\n			</div>\r\n\r\n			\r\n\r\n\r\n		</div>\r\n			\r\n			<!-' + '- edit note -' + '->\r\n			<blockquote class="postcontent lastedited">\r\n				\r\n					Last edited by Bob Denny; Yesterday at <span class="time">21:12</span>.\r\n				\r\n				\r\n					<span class="reason">Reason:</span> Add info for Windows 8.1 KB4056898\r\n				\r\n			</blockquote>\r\n			<!-' + '- / edit note -' + '->\r\n			\r\n				\r\n			\r\n			\r\n				<blockquote class="signature restore"><div class="signaturecontainer"><div style="margin-left:40px">-' + '- Bob</div></div></blockquote>\r\n			\r\n			\r\n		</div>\r\n	</div>\r\n	<div class="postfoot">\r\n		<div class="textcontrols floatcontainer">\r\n			<span class="postcontrols">\r\n				<img style="display:none" id="progress_67732" src="images/styles/RoyalFlush/misc/progress.gif" alt="" />\r\n				\r\n				\r\n				\r\n				\r\n			</span>\r\n			<span class="postlinking">\r\n				\r\n					\r\n				\r\n				\r\n\r\n				 \r\n				\r\n\r\n					\r\n\r\n					\r\n					 \r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n			</span>\r\n		</div>\r\n	</div>\r\n	<hr />\r\n</li>\r\n';
+pd[67734] = '\r\n<li class="postbit postbitim postcontainer old" id="post_67734">\r\n	<div class="postdetails_noavatar">\r\n		<div class="posthead">\r\n                        \r\n                                <span class="postdate old">\r\n                                        \r\n                                                <span class="date">Jan 7, 2018,&nbsp;<span class="time">00:08</span></span>\r\n                                        \r\n                                </span>\r\n                                <span class="nodecontrols">\r\n                                        \r\n                                                <a name="post67734" href="showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67734#post67734" class="postcounter">#3</a><a id="postcount67734" name="3"></a>\r\n                                        \r\n                                        \r\n                                        \r\n                                </span>\r\n                        \r\n		</div>\r\n\r\n		<div class="userinfo">\r\n			<div class="contact">\r\n				\r\n					<a class="postuseravatarlink" href="member.php?1-Bob-Denny" title="Bob Denny is offline">\r\n						\r\n							<img src="image.php?u=1&amp;dateline=1326825398" alt="Bob Denny\'s Avatar" />\r\n						\r\n					</a>\r\n				\r\n				<div class="username_container">\r\n					\r\n						<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?1-Bob-Denny" title="Bob Denny is offline"><strong>Bob Denny</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?1-Bob-Denny" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://dc3.com/" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n						<img class="inlineimg onlinestatus" src="images/styles/RoyalFlush/statusicon/user-offline.png" alt="Bob Denny is offline" border="0" />\r\n\r\n					\r\n					<span class="usertitle">\r\n						Developer\r\n					</span>\r\n					\r\n\r\n                                        \r\n					\r\n					\r\n						<div class="imlinks">\r\n							    \r\n						</div>\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n				<div class="userinfo_extra">\r\n					<dl class="userstats">\r\n						<dt>Join Date</dt> <dd>Oct 2005</dd>\r\n						<dt>Location</dt> <dd>Mesa, AZ</dd>\r\n						\r\n						<dt>Posts</dt> <dd>22,222</dd>	\r\n						\r\n					</dl>\r\n					\r\n					\r\n				</div>\r\n			\r\n		</div>\r\n	</div>\r\n\r\n	<div class="postbody">\r\n		\r\n		<div class="postrow">\r\n		\r\n		<h2 class="posttitle icon">\r\n			<img src="images/icons/icon1.png" alt="Default" /> \r\n		</h2>\r\n		\r\n				\r\n				\r\n		<div class="content">\r\n			<div id="post_message_67734">\r\n				<blockquote class="postcontent restore">\r\n					<div class="size_fullsize"><img src="http://forums.dc3.com/attachment.php?attachmentid=9327&amp;d=1515283023" border="0" alt="Name:  Snap6.jpg\r\nViews: 1749\r\nSize:  7.9 KB" class="align_right" /></div>WORKAROUND: As the Microsoft supplied workaround in the <a href="http://forums.dc3.com/showthread.php?11182-ALERT-Windows-10-Update-KB4056892-Reported-Problems&amp;p=67732#post67732" target="_blank">previous post</a> says, the components need to have their call level changed to &quot;Call&quot;. Thank goodness, this can be done using the DCOMCNFG tool, an MMC snap in. The tricky part is going to be identifying the various ASCOM and application servers you need to adjust!!  <span class="highlight">Read all the way to the end or you\'ll miss important and useful stuff.</span><br />\n<br />\n<font size="3"><font color="#b22222">Don\'t do anything unless you actually have a problem.<br />\n</font><font color="#B22222">Note that neither ASCOM nor its client apps use Distributed COM (DCOM). The names are historical only.</font></font><font color="#b22222"><font size="3"><br />\n</font></font><br />\n1. Type DCOMCNFG into the Windows Search box (lower left corner of your screen). You may have to wait a while while it installs the Component Services snap-in the first time you do this. Be patient.<br />\n<br />\n2. Eventually you should see the Component Services window. Expand the tree to see DCOM Config<br />\n<br />\n<div class="size_fullsize"><img src="http://forums.dc3.com/attachment.php?attachmentid=9325&amp;d=1515282278" border="0" alt="Name:  Snap4.jpg\r\nViews: 1764\r\nSize:  50.6 KB" class="thumbnail" /></div><br />\n<br />\n3. Now for the tricky part. Under the DCOM Config &quot;folder&quot; is a long list of components, most of which belong to Windows itself and to the many apps that make use of this Windows feature (COM). Your task is to locate those which you need for your astronomy uses. This will include drivers for devices and anything that may be used by another app. POTH is an example, it is used by other programs because it looks like a telescope, dome, and focuser to its clients. If in doubt just change its authentication level, it\'s harmless. Use the ASCOM Profile Explorer to find the System name for the devices you see in the Chooser. Then find it by system name in DCOMCNFG. Here is the entry for the &quot;Telescope Simulator for .NET&quot; in the ASCOM Profile Explorer<br />\n<br />\n<div class="size_fullsize"><img src="http://forums.dc3.com/attachment.php?attachmentid=9326&amp;d=1515282881" border="0" alt="Name:  Snap7.jpg\r\nViews: 1765\r\nSize:  90.0 KB" class="thumbnail" /></div><br />\n<br />\nNote that it\'s system name is ASCOM.Simulator.Telescope. <br />\n<br />\n4. Now find this in DCOMCNFG\'s list of components. Right click, Properties, then change None to Call in Authentication Level. Then click OK:<br />\n<br />\n<div class="size_fullsize"><img src="http://forums.dc3.com/attachment.php?attachmentid=9328&amp;d=1515283134" border="0" alt="Name:  Snap5.jpg\r\nViews: 1764\r\nSize:  151.4 KB" class="thumbnail" /></div><br />\n<br />\n5. <span class="highlight">If you don\'t find your problematic component in Step 4</span>, then run a 32-bit DCOMCNFG. <br />\n5a. Open a CMD shell enter CMD into the search box)<br />\n5b. Type <span style="font-family: lucida console">C:\\WINDOWS\\SYSWOW64\\mmc comexp.msc /32<br />\n</span>5c. Now look in this DCOMCNFG for your troublesome component (MaxIm DL will appear only here for example!)<br />\n<br />\nContinue finding things in the ASCOM Profile Explorer and the 64-bit and 32-bit DCOMCONFG, setting the Authentication level to Call. If you encounter a non-ASCOM component that stopped working after KB4075892, and you know it has a scripting or programming API then find it in DCOMCNFG and change its Authentication Level to Call as well. This includes ACP itself which is listed ACP Observatory Control Software.<br />\n<br />\n<font size="3"><b>USEFUL HINTS:</b></font><br />\n* For Software Bisque TheSky X look for TheSkyX and TheSkyXAdaptor and change both to Call<br />\n* For MaxIm DL you must look in the 32-bit DCOMCNFG and you\'ll find it as MaxIm.CCDCamera\r\n				</blockquote>\r\n			</div>\r\n\r\n			\r\n\r\n\r\n		</div>\r\n			\r\n			<!-' + '- edit note -' + '->\r\n			<blockquote class="postcontent lastedited">\r\n				\r\n					Last edited by Bob Denny; Jan 10, 2018 at <span class="time">17:06</span>.\r\n				\r\n				\r\n					<span class="reason">Reason:</span> Add 32-bit DCOMCNFG info as well as MaxIm and TheSky identifiers\r\n				\r\n			</blockquote>\r\n			<!-' + '- / edit note -' + '->\r\n			\r\n				\r\n			\r\n			\r\n				<blockquote class="signature restore"><div class="signaturecontainer"><div style="margin-left:40px">-' + '- Bob</div></div></blockquote>\r\n			\r\n			\r\n		</div>\r\n	</div>\r\n	<div class="postfoot">\r\n		<div class="textcontrols floatcontainer">\r\n			<span class="postcontrols">\r\n				<img style="display:none" id="progress_67734" src="images/styles/RoyalFlush/misc/progress.gif" alt="" />\r\n				\r\n				\r\n				\r\n				\r\n			</span>\r\n			<span class="postlinking">\r\n				\r\n					\r\n				\r\n				\r\n\r\n				 \r\n				\r\n\r\n					\r\n\r\n					\r\n					 \r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n			</span>\r\n		</div>\r\n	</div>\r\n	<hr />\r\n</li>\r\n';
+pd[67771] = '\r\n<li class="postbit postbitim postcontainer old" id="post_67771">\r\n	<div class="postdetails_noavatar">\r\n		<div class="posthead">\r\n                        \r\n                                <span class="postdate old">\r\n                                        \r\n                                                <span class="date">Jan 8, 2018,&nbsp;<span class="time">03:57</span></span>\r\n                                        \r\n                                </span>\r\n                                <span class="nodecontrols">\r\n                                        \r\n                                                <a name="post67771" href="showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67771#post67771" class="postcounter">#4</a><a id="postcount67771" name="4"></a>\r\n                                        \r\n                                        \r\n                                        \r\n                                </span>\r\n                        \r\n		</div>\r\n\r\n		<div class="userinfo">\r\n			<div class="contact">\r\n				\r\n					<a class="postuseravatarlink" href="member.php?1-Bob-Denny" title="Bob Denny is offline">\r\n						\r\n							<img src="image.php?u=1&amp;dateline=1326825398" alt="Bob Denny\'s Avatar" />\r\n						\r\n					</a>\r\n				\r\n				<div class="username_container">\r\n					\r\n						<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?1-Bob-Denny" title="Bob Denny is offline"><strong>Bob Denny</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?1-Bob-Denny" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://dc3.com/" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n						<img class="inlineimg onlinestatus" src="images/styles/RoyalFlush/statusicon/user-offline.png" alt="Bob Denny is offline" border="0" />\r\n\r\n					\r\n					<span class="usertitle">\r\n						Developer\r\n					</span>\r\n					\r\n\r\n                                        \r\n					\r\n					\r\n						<div class="imlinks">\r\n							    \r\n						</div>\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n				<div class="userinfo_extra">\r\n					<dl class="userstats">\r\n						<dt>Join Date</dt> <dd>Oct 2005</dd>\r\n						<dt>Location</dt> <dd>Mesa, AZ</dd>\r\n						\r\n						<dt>Posts</dt> <dd>22,222</dd>	\r\n						\r\n					</dl>\r\n					\r\n					\r\n				</div>\r\n			\r\n		</div>\r\n	</div>\r\n\r\n	<div class="postbody">\r\n		\r\n		<div class="postrow">\r\n		\r\n		<h2 class="posttitle icon">\r\n			<img src="images/icons/icon1.png" alt="Default" /> \r\n		</h2>\r\n		\r\n				\r\n				\r\n		<div class="content">\r\n			<div id="post_message_67771">\r\n				<blockquote class="postcontent restore">\r\n					<b>NOTES</b><br />\n* This all relates to Windows 10 only, not Windows 7/8/8.1<br />\n* This affects inbound connections to EXE based drivers and programs with APIs. DLL based drivers are not affected.<br />\n* If you have not yet updated your Windows 10 to the Fall Creators Update v1709 but are still on the old Windows 10 v1703, you will get this patch as a slightly different KB number. It\'s still the January 2018 Security rollup. But you may not have any trouble at all. Therefore ...<br />\n* <b>DO NOT DO ANYTHING UNLESS AND UNTIL YOU ACTUALLY HAVE A PROBLEM!</b><br />\n* There are several workarounds circulating that include uninstalling the KB4057892. It will just get installed again. Then there is one that recommends using a tool to hide the patch from Windows. Not a good idea as this one may be a prerequisite to future patches and you\'ll end up not getting those or they may fail. Then you could have a mess. Another one suggests using the Windows Update settings to Pause updates, which will stop patches for a month or so, then uninstalling this KB patch. These just prolong the inevitable. By doing the DCOMCNFG changes you are making a permanent workaround that is harmless for future usage.<br />\n<b><br />\n32 BIT ONLY COMPONENTS</b><br />\nWe had one gent report that he could not find the EQMOD listed in DCOMCNFG. While analyzing this further today (see below) we found that there is a 32-bit DCOMCNFG which will see 32-bit-only components. We have updated the <a href="http://forums.dc3.com/showthread.php?11182-ALERT-Windows-10-Update-KB4056892-Reported-Problems&amp;p=67734#post67734" target="_blank">workaround post on our Comm Center</a> with additional instructions for getting the 32-bit DCOMCNFG running. In short:<br />\n<br />\n<ol class="decimal"><li style="">Open a CMD shell (cmd.exe)</li><li style="">Enter  the command C:\\WINDOWS\\SYSWOW64\\mmc comexp.msc /32</li></ol><br />\nYou will see a DCOMCNFG open that looks just like the original one, but may contain a listing for your troublesome component. <br />\n<br />\n<b>MAXIM DL AND THESKY X</b><br />\nMaxIm DL is listed in the 32-bit one only as MaxIm.CCDCamera. FYI TheSky X is listed twice, as TheSkyX and TheSkyXAdaptor, and these show in the 64-bit one. Changing in the 64-bit one makes the changes to both 64- and 32-bit info.<br />\n<b><br />\nADDITIONAL BACKGROUND</b><br />\nToday we analyzed this issue further and have found that it is related to the DCOM permissions which were added to ASCOM components 10 years ago in order to make them compatible with TheSky 6, which uses DCOM for the old SB Internet Astronomy Suite.  Those LocalServer components which do not have DCOM compatibility info registered with them will accept inbound connections with no problems. This is why some things work and some don\'t. Unfortunately, <a href="http://ascom-standards.org/Developer/DriverDist.htm" target="_blank">the Installer Generator tool for ASCOM driver developers</a> has this DCOM stuff baked in. Rather than risk compatibility problems with TheSky 6 (and yes there are still people using it), the right way to fix this is to <a href="http://forums.dc3.com/showthread.php?11182-ALERT-Windows-10-Update-KB4056892-Reported-Problems&amp;p=67734#post67734" target="_blank">change the DCOM authentication level as described in our article</a>, and doing this within the Installer Generator.\r\n				</blockquote>\r\n			</div>\r\n\r\n			\r\n\r\n\r\n		</div>\r\n			\r\n			<!-' + '- edit note -' + '->\r\n			<blockquote class="postcontent lastedited">\r\n				\r\n					Last edited by Bob Denny; Jan 10, 2018 at <span class="time">17:05</span>.\r\n				\r\n				\r\n					<span class="reason">Reason:</span> Note about EXE only\r\n				\r\n			</blockquote>\r\n			<!-' + '- / edit note -' + '->\r\n			\r\n				\r\n			\r\n			\r\n				<blockquote class="signature restore"><div class="signaturecontainer"><div style="margin-left:40px">-' + '- Bob</div></div></blockquote>\r\n			\r\n			\r\n		</div>\r\n	</div>\r\n	<div class="postfoot">\r\n		<div class="textcontrols floatcontainer">\r\n			<span class="postcontrols">\r\n				<img style="display:none" id="progress_67771" src="images/styles/RoyalFlush/misc/progress.gif" alt="" />\r\n				\r\n				\r\n				\r\n				\r\n			</span>\r\n			<span class="postlinking">\r\n				\r\n					\r\n				\r\n				\r\n\r\n				 \r\n				\r\n\r\n					\r\n\r\n					\r\n					 \r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n			</span>\r\n		</div>\r\n	</div>\r\n	<hr />\r\n</li>\r\n';
+pd[67785] = '\r\n<li class="postbit postbitim postcontainer old" id="post_67785">\r\n	<div class="postdetails_noavatar">\r\n		<div class="posthead">\r\n                        \r\n                                <span class="postdate old">\r\n                                        \r\n                                                <span class="date">Jan 8, 2018,&nbsp;<span class="time">23:20</span></span>\r\n                                        \r\n                                </span>\r\n                                <span class="nodecontrols">\r\n                                        \r\n                                                <a name="post67785" href="showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67785#post67785" class="postcounter">#5</a><a id="postcount67785" name="5"></a>\r\n                                        \r\n                                        \r\n                                        \r\n                                </span>\r\n                        \r\n		</div>\r\n\r\n		<div class="userinfo">\r\n			<div class="contact">\r\n				\r\n					<a class="postuseravatarlink" href="member.php?1-Bob-Denny" title="Bob Denny is offline">\r\n						\r\n							<img src="image.php?u=1&amp;dateline=1326825398" alt="Bob Denny\'s Avatar" />\r\n						\r\n					</a>\r\n				\r\n				<div class="username_container">\r\n					\r\n						<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?1-Bob-Denny" title="Bob Denny is offline"><strong>Bob Denny</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?1-Bob-Denny" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://dc3.com/" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n						<img class="inlineimg onlinestatus" src="images/styles/RoyalFlush/statusicon/user-offline.png" alt="Bob Denny is offline" border="0" />\r\n\r\n					\r\n					<span class="usertitle">\r\n						Developer\r\n					</span>\r\n					\r\n\r\n                                        \r\n					\r\n					\r\n						<div class="imlinks">\r\n							    \r\n						</div>\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n				<div class="userinfo_extra">\r\n					<dl class="userstats">\r\n						<dt>Join Date</dt> <dd>Oct 2005</dd>\r\n						<dt>Location</dt> <dd>Mesa, AZ</dd>\r\n						\r\n						<dt>Posts</dt> <dd>22,222</dd>	\r\n						\r\n					</dl>\r\n					\r\n					\r\n				</div>\r\n			\r\n		</div>\r\n	</div>\r\n\r\n	<div class="postbody">\r\n		\r\n		<div class="postrow">\r\n		\r\n		<h2 class="posttitle icon">\r\n			<img src="images/icons/icon1.png" alt="Default" /> \r\n		</h2>\r\n		\r\n				\r\n				\r\n		<div class="content">\r\n			<div id="post_message_67785">\r\n				<blockquote class="postcontent restore">\r\n					UPDATE ON THESKY -' + '- After some testing today, I\'ve found that TheSky\'s ASCOM Telescope Control is still not working right, even though there is no longer a problem connecting for ASCOM. So the DCOM changes work to allow access. However several other things aren\'t working such as getting lat/long/elev, sidereal time is always 0h, tracking is always off and is reported to be stuck off. I have reported this along with a Pipe trace.<br />\n<br />\n<a href="http://www.bisque.com/sc/forums/p/32569/167028.aspx#167028" target="_blank">http://www.bisque.com/sc/forums/p/32...28.aspx#167028</a>\r\n				</blockquote>\r\n			</div>\r\n\r\n			\r\n\r\n\r\n		</div>\r\n			\r\n			<!-' + '- edit note -' + '->\r\n			<blockquote class="postcontent lastedited">\r\n				\r\n					Last edited by Bob Denny; Jan 10, 2018 at <span class="time">17:08</span>.\r\n				\r\n				\r\n			</blockquote>\r\n			<!-' + '- / edit note -' + '->\r\n			\r\n				\r\n			\r\n			\r\n				<blockquote class="signature restore"><div class="signaturecontainer"><div style="margin-left:40px">-' + '- Bob</div></div></blockquote>\r\n			\r\n			\r\n		</div>\r\n	</div>\r\n	<div class="postfoot">\r\n		<div class="textcontrols floatcontainer">\r\n			<span class="postcontrols">\r\n				<img style="display:none" id="progress_67785" src="images/styles/RoyalFlush/misc/progress.gif" alt="" />\r\n				\r\n				\r\n				\r\n				\r\n			</span>\r\n			<span class="postlinking">\r\n				\r\n					\r\n				\r\n				\r\n\r\n				 \r\n				\r\n\r\n					\r\n\r\n					\r\n					 \r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n			</span>\r\n		</div>\r\n	</div>\r\n	<hr />\r\n</li>\r\n';
+
+// next/previous post info
+pn[67716] = "67785,67732";
+pn[0] = ",67716";
+pn[67732] = "67716,67734";
+pn[67734] = "67732,67771";
+pn[67771] = "67734,67785";
+pn[67785] = "67771,67716";
+
+// cached usernames
+pu[0] = guestphrase;
+pu[1] = "Bob Denny";
+
+// -->
+</SCRIPT>
+ 
+<DIV id="threaded_view">
+<H4>Threaded View</H4>
+<DIV id="posttree">
+<SCRIPT type="text/javascript">
+		<!--
+			writeLink(67716, 0, 0, 1, "", "ALERT: Windows 8.1 and 10 Updates KB4056898 and...", "Jan 6, 2018", "18:06", 0, "showthread16f0.html?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67716#post67716");
+  writeLink(67732, 0, 0, 1, "T", "<i>I have confirmed this to be a general problem...</i>", "Jan 6, 2018", "23:30", 0, "showthread7628.html?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67732#post67732");
+  writeLink(67734, 0, 0, 1, "T", "<i>9327WORKAROUND: As the Microsoft supplied...</i>", "Jan 7, 2018", "00:08", 0, "showthreadd84e.html?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67734#post67734");
+  writeLink(67771, 0, 0, 1, "T", "<i>NOTES \n* This all relates to Windows 10 only, not...</i>", "Jan 8, 2018", "03:57", 0, "showthread4883.html?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67771#post67771");
+  writeLink(67785, 0, 0, 1, "L", "<i>UPDATE ON THESKY -" + "- After some testing today,...</i>", "Jan 8, 2018", "23:20", 0, "showthread024d.html?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67785#post67785");
+
+		//-->
+		</SCRIPT>
+	 </DIV></DIV>
+<DIV align="center"><A href="javascript:showPrevNextPost(0)">Previous Post</A>
+	 <A href="javascript:showPrevNextPost(0)"><IMG class="inlineimg" alt="Previous Post" 
+src="DCOM_Reported_Problems_files/sortdesc.png" border="0"></A>	&nbsp;	 <A href="javascript:showPrevNextPost(1)"><IMG 
+class="inlineimg" alt="Next Post" src="DCOM_Reported_Problems_files/sortasc.png" 
+border="0"></A>	 <A href="javascript:showPrevNextPost(1)">Next Post</A> </DIV>
+<DIV class="forumbitBody">
+<OL class="posts" id="posts" start="1">
+  <LI class="postbit postbitim postcontainer old" id="post_67732">
+  <DIV class="postdetails_noavatar">
+  <DIV class="posthead"><SPAN class="postdate old"><SPAN class="date">Jan 6, 
+  2018,&nbsp;<SPAN class="time">23:30</SPAN></SPAN>                              
+                                             </SPAN><SPAN 
+  class="nodecontrols"><A name="post67732" class="postcounter" href="http://forums.dc3.com/showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67732#post67732">#2</A><A 
+  name="2" id="postcount67732"></A>                                              
+                                                                                 
+                              </SPAN>                        		 </DIV>
+  <DIV class="userinfo">
+  <DIV class="contact"><A title="Bob Denny is offline" class="postuseravatarlink" 
+  href="http://forums.dc3.com/member.php?1-Bob-Denny"><IMG alt="Bob Denny's Avatar" 
+  src="DCOM_Reported_Problems_files/bob.jpg">											 </A>
+  <DIV class="username_container">
+  <DIV class="popupmenu memberaction"><A title="Bob Denny is offline" class="username offline popupctrl" 
+  href="http://forums.dc3.com/member.php?1-Bob-Denny"><STRONG>Bob 
+  Denny</STRONG></A>	 
+  <UL class="popupbody popuphover memberaction_body">
+    <LI class="left"><A class="siteicon_profile" href="http://forums.dc3.com/member.php?1-Bob-Denny">
+    				View Profile			 </A></LI>
+    <LI class="right"><A class="siteicon_forum" href="http://forums.dc3.com/search.php?do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" 
+    rel="nofollow">				View Forum Posts			 </A></LI>
+    <LI class="left"><A class="siteicon_homepage" href="http://dc3.com/">
+    				Visit Homepage			 </A></LI></UL></DIV>						 <IMG class="inlineimg onlinestatus" 
+  alt="Bob Denny is offline" src="DCOM_Reported_Problems_files/user-offline.png" 
+  border="0">										 <SPAN class="usertitle">						Developer					 </SPAN>
+  <DIV class="imlinks"></DIV></DIV></DIV>
+  <DIV class="userinfo_extra">
+  <DL class="userstats">
+    <DT>Join Date</DT>
+    <DD>Oct 2005</DD>
+    <DT>Location</DT>
+    <DD>Mesa, AZ</DD>
+    <DT>Posts</DT>
+    <DD>22,222</DD></DL></DIV></DIV></DIV>
+  <DIV class="postbody">
+  <DIV class="postrow">
+  <H2 class="posttitle icon"><IMG alt="Default" src="DCOM_Reported_Problems_files/icon1.png"> 
+  		</H2>
+  <DIV class="content">
+  <DIV id="post_message_67732">
+  <BLOCKQUOTE class="postcontent restore">					I have confirmed this to be a 
+    general problem introduced by KB4056892 (and we now know that KB4056898 for 
+    Windows 8.1 has the same security change)! I started with a clean Windows 10 
+    system with only ASCOM Platform 6.3. I tested POTH connecting to the ASCOM 
+    Telescope Simulator for .NET and the old ASCOM Telescope Simulator (VB6 
+    Based). No problems. Then I manually installed KB4056892. After that here 
+    are the results:<BR><BR>
+    <DIV class="size_fullsize"><IMG class="thumbnail" alt="Name:  Snap1.jpg&#10;Views: 484&#10;Size:  155.9 KB" 
+    src="DCOM_Reported_Problems_files/Snap1.jpg" border="0"></DIV><BR><BR>
+    <DIV class="size_fullsize"><IMG class="thumbnail" alt="Name:  Snap2.jpg&#10;Views: 223&#10;Size:  148.9 KB" 
+    src="DCOM_Reported_Problems_files/Snap2.jpg" border="0"></DIV><BR><BR>
+    Rowland Archer nailed it in the ACP Forum discussion thread by posting the 
+    "known issue"<BR><BR>
+    <DIV class="size_fullsize"><IMG class="thumbnail" alt="Name:  Snap3.jpg&#10;Views: 223&#10;Size:  68.0 KB" 
+    src="DCOM_Reported_Problems_files/Snap3.jpg" border="0"></DIV><BR><BR>This 
+    is it. See the next post for how to solve it.				 </BLOCKQUOTE></DIV></DIV><!-- edit note -->
+  			 
+  <BLOCKQUOTE class="postcontent lastedited">									Last edited by Bob 
+    Denny; Yesterday at <SPAN class="time">21:12</SPAN>.													 <SPAN 
+    class="reason">Reason:</SPAN> Add info for Windows 8.1 KB4056898				
+  			 </BLOCKQUOTE><!-- / edit note -->																	 
+  <BLOCKQUOTE class="signature restore">
+    <DIV class="signaturecontainer">
+    <DIV style="margin-left: 40px;">-- Bob</DIV></DIV></BLOCKQUOTE></DIV></DIV>
+  <DIV class="postfoot">
+  <DIV class="textcontrols floatcontainer"><SPAN class="postcontrols"><IMG id="progress_67732" 
+  style="display: none;" alt="" src="DCOM_Reported_Problems_files/progress.gif">
+  																			 </SPAN>			 <SPAN class="postlinking"></SPAN>
+		 </DIV></DIV>
+  <HR>
+   </LI></OL></DIV>
+<DIV class="bottomBar">
+<DIV class="bottomBarLeft">
+<DIV class="bottomBarRight">&nbsp;</DIV></DIV></DIV><BR>&nbsp;                
+<DIV class="separator"></DIV>
+<DIV class="postlistfoot"></DIV></DIV>
+<DIV class="noinlinemod below_postlist" id="below_postlist">
+<DIV class="pagination_bottom" id="pagination_bottom">
+<DIV class="clear"></DIV>
+<DIV class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup"><SPAN 
+class="shade">Quick Navigation</SPAN>		 <A class="popupctrl" href="http://forums.dc3.com/showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems"><SPAN 
+class="ctrlcontainer">Company and Product Announcements and 
+Information</SPAN></A>		 <A class="textcontrol" onclick="document.location.hash='top';return false;" 
+href="http://forums.dc3.com/showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67732#top">Top</A>
+		 
+<UL class="navpopupbody popupbody popuphover">
+  <LI class="optionlabel">Site Areas</LI>
+  <LI><A href="http://forums.dc3.com/usercp.php">Settings</A></LI>
+  <LI><A href="http://forums.dc3.com/private.php">Private Messages</A></LI>
+  <LI><A href="http://forums.dc3.com/subscription.php">Subscriptions</A></LI>
+  <LI><A href="http://forums.dc3.com/online.php">Who's Online</A></LI>
+  <LI><A href="http://forums.dc3.com/search.php">Search Forums</A></LI>
+  <LI><A href="http://forums.dc3.com/index.php">Forums Home</A></LI>
+  <LI class="optionlabel">Forums</LI>
+  <LI><A href="http://forums.dc3.com/forumdisplay.php?9-DC-3-Dreams-Announcements-and-Information">DC-3 
+  Dreams Announcements and Information</A>
+  <OL class="d1">
+    <LI><A href="http://forums.dc3.com/forumdisplay.php?10-Company-and-Product-Announcements-and-Information">Company 
+    and Product Announcements and Information</A></LI>
+    <LI><A href="http://forums.dc3.com/forumdisplay.php?68-Application-Notes-Technology-Performance-and-Capabilities">Application 
+    Notes - Technology, Performance, and Capabilities</A></LI></OL></LI>
+  <LI><A 
+  href="http://forums.dc3.com/forumdisplay.php?13-Premium-Support-Forums">Premium 
+  Support Forums</A></LI>
+  <LI><A href="http://forums.dc3.com/forumdisplay.php?61-Help-with-Our-Products-and-Services">Help 
+  with Our Products and Services</A>
+  <OL class="d1">
+    <LI><A href="http://forums.dc3.com/forumdisplay.php?43-Customer-and-Pre-Sales-Service-(non-technical)">Customer 
+    and Pre-Sales Service (non-technical)</A></LI>
+    <LI><A href="http://forums.dc3.com/forumdisplay.php?21-Pre-Sales-Technical-Questions-and-Help">Pre-Sales 
+    Technical Questions and Help</A></LI>
+    <LI><A href="http://forums.dc3.com/forumdisplay.php?11-Help-Using-the-Comunication-Center">Help 
+    Using the Comunication Center</A></LI>
+    <LI><A href="http://forums.dc3.com/forumdisplay.php?16-ACP-Planner">ACP 
+    Planner</A></LI></OL></LI>
+  <LI><A href="http://forums.dc3.com/forumdisplay.php?20-General-Information-(public-areas)">General 
+  Information (public areas)</A>
+  <OL class="d1">
+    <LI><A href="http://forums.dc3.com/forumdisplay.php?56-Add-Ons-Enhancements-and-Helper-Components">Add-Ons, 
+    Enhancements, and Helper Components</A>
+    <OL class="d2">
+      <LI><A href="http://forums.dc3.com/forumdisplay.php?67-ACP-Log-Analyzer-2017">ACP 
+      Log Analyzer 2017</A></LI>
+      <LI><A href="http://forums.dc3.com/forumdisplay.php?64-ImageMan-for-ACP-and-ACP-Expert-(Scheduler)">ImageMan 
+      for ACP and ACP Expert (Scheduler)</A></LI>
+      <LI><A href="http://forums.dc3.com/forumdisplay.php?58-Planalyzer-Analyze-ACP-Plan-Timing">Planalyzer 
+      - Analyze ACP Plan Timing</A></LI></OL></LI>
+    <LI><A href="http://forums.dc3.com/forumdisplay.php?54-Hardware-Software-Driver-Topics-Not-Directly-Related-to-Our-Software">Hardware/Software/Driver 
+    Topics Not Directly Related to Our Software</A></LI>
+    <LI><A href="http://forums.dc3.com/forumdisplay.php?49-FocusMax-and-PoleAlignMax-Questions">FocusMax 
+    and PoleAlignMax Questions</A></LI>
+    <LI><A href="http://forums.dc3.com/forumdisplay.php?22-Success-Stories-amp-Kind-Words">Success 
+    Stories &amp; Kind Words</A></LI>
+    <LI><A 
+    href="http://forums.dc3.com/forumdisplay.php?45-Astro-Image-Gallery">Astro 
+    Image Gallery</A></LI>
+    <LI><A href="http://forums.dc3.com/forumdisplay.php?24-General-Astronomy-Related">General 
+    Astronomy-Related</A></LI>
+    <LI><A href="http://forums.dc3.com/forumdisplay.php?46-Off-Topic-Discussions">Off-Topic 
+    Discussions</A></LI></OL></LI></UL></DIV>
+<DIV class="clear"></DIV></DIV></DIV><!-- next / previous links -->	 
+<DIV class="navlinks"><STRONG>«</STRONG>			 <A href="http://forums.dc3.com/showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;goto=nextoldest" 
+rel="nofollow">Previous Thread</A>			|			 <A href="http://forums.dc3.com/showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;goto=nextnewest" 
+rel="nofollow">Next Thread</A>			 <STRONG>»</STRONG>			 </DIV><!-- / next / previous links --> 
+<DIV class="thread_info block" id="thread_info">
+<H4 class="threadinfohead blockhead">Thread Information</H4>
+<DIV class="thread_info_block blockbody formcontrols" id="thread_onlineusers">
+<DIV class="inner_block">
+<H5>Users Browsing this Thread</H5>
+<DIV>
+<P>There are currently 1 users browsing this thread. <SPAN class="shade">(0 
+members and 1 guests)</SPAN></P>
+<OL class="commalist"></OL></DIV></DIV></DIV>
+<DIV id="similar_threads">
+<H4 class="threadinfohead blockhead">Similar Threads</H4>
+<DIV class="thread_info_block blockbody formcontrols" id="similar_threads_list">
+<OL class="similar_threads">
+  <LI class="floatcontainer">
+  <DIV class="titleblock">
+  <H6><A title="So Windows 10 is going to be around and they are going to send big updates that make the user reinstall ACP and enter the key again.    This time the..." 
+  href="http://forums.dc3.com/showthread.php?11162-Windows-10-updates-causing-issues-with-ACP">Windows 
+  10 updates causing issues with ACP</A></H6>
+  <DIV class="starter_forum">       By Dean Salman in forum 
+  Hardware/Software/Driver Topics Not Directly Related to Our Software     
+  </DIV></DIV>
+  <DIV class="dateblock"><SPAN class="shade">Replies:</SPAN> 12       
+  <DIV class="starter_forum"><SPAN class="shade">Last Post:</SPAN> Jan 8, 2018, 
+  <SPAN class="time">04:32</SPAN>       </DIV></DIV></LI>
+  <LI class="floatcontainer">
+  <DIV class="titleblock">
+  <H6><A title='From the Diffraction (MaxIm) forum - I was trying to help a fellow "JayStar" with MaxPoint failing to work after a Windows 10 update.  Some of us...' 
+  href="http://forums.dc3.com/showthread.php?10469-Windows-10-uninstall-reinstall-problems-a-fix-from-Microsoft">Windows 
+  10 uninstall reinstall problems - a fix from Microsoft</A></H6>
+  <DIV class="starter_forum">       By Colin Haig in forum 
+  Hardware/Software/Driver Topics Not Directly Related to Our Software     
+  </DIV></DIV>
+  <DIV class="dateblock"><SPAN class="shade">Replies:</SPAN> 1       
+  <DIV class="starter_forum"><SPAN class="shade">Last Post:</SPAN> Jan 3, 2017, 
+  <SPAN class="time">22:41</SPAN>       </DIV></DIV></LI>
+  <LI class="floatcontainer">
+  <DIV class="titleblock">
+  <H6><A title="I've switch ota's back to the FSQ-106 and am using my STL-11000 camera. It's been piggybacked on the RC, I just moved the camera over to the FSQ...." 
+  href="http://forums.dc3.com/showthread.php?6268-Mount-failed-to-flip-based-on-its-reported-pier-side-info-Wrong-Alt-Az-reported-pos">Mount 
+  failed to flip based on its reported pier side info. Wrong Alt/Az reported 
+  pos</A></H6>
+  <DIV class="starter_forum">       By Steve Reilly in forum 
+  Hardware/Software/Driver Topics Not Directly Related to Our Software     
+  </DIV></DIV>
+  <DIV class="dateblock"><SPAN class="shade">Replies:</SPAN> 5       
+  <DIV class="starter_forum"><SPAN class="shade">Last Post:</SPAN> Jun 28, 2012, 
+  <SPAN class="time">02:18</SPAN>       </DIV></DIV></LI></OL></DIV></DIV>
+<DIV class="options_block_container">
+<DIV class="options_block">
+<H4 class="collapse blockhead options_correct"><A class="collapse" id="collapse_posting_rules" 
+href="http://forums.dc3.com/showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67732#top"><IMG 
+alt="" src="DCOM_Reported_Problems_files/collapse_40b.png"></A>				Posting 
+Permissions			 </H4>
+<DIV class="thread_info_block blockbody formcontrols floatcontainer options_correct" 
+id="posting_rules">
+<DIV class="info_subblock" id="forumrules">
+<UL class="youcandoblock">
+  <LI>You <STRONG>may not</STRONG> post new threads</LI>
+  <LI>You <STRONG>may not</STRONG> post replies</LI>
+  <LI>You <STRONG>may not</STRONG> post attachments</LI>
+  <LI>You <STRONG>may not</STRONG> edit your posts</LI>
+  <LI>&nbsp;</LI></UL>
+<DIV class="bbcodeblock">
+<UL>
+  <LI><A href="http://forums.dc3.com/misc.php?do=bbcode" target="_blank">BB 
+  code</A> is <STRONG>On</STRONG></LI>
+  <LI><A href="http://forums.dc3.com/misc.php?do=showsmilies" 
+  target="_blank">Smilies</A> are <STRONG>On</STRONG></LI>
+  <LI><A href="http://forums.dc3.com/misc.php?do=bbcode#imgcode" 
+  target="_blank">[IMG]</A> code is <STRONG>On</STRONG></LI>
+  <LI><A href="http://forums.dc3.com/misc.php?do=bbcode#videocode" target="_blank">[VIDEO]</A> 
+  code is <STRONG>On</STRONG></LI>
+  <LI>HTML code is <STRONG>Off</STRONG></LI></UL></DIV>
+<P class="rules_link"><A href="http://forums.dc3.com/misc.php?do=showrules" 
+target="_blank">Forum Rules</A></P></DIV></DIV></DIV></DIV></DIV><!-- lightbox scripts -->
+	 
+<SCRIPT type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "posts", 1);
+	//-->
+	</SCRIPT>
+ <!-- / lightbox scripts --> 
+<DIV class="floatcontainer footer" id="footer">
+<FORM class="footer_select" id="footer_select" action="https://gemini-2.com/index.php" 
+method="get"><SELECT name="styleid" 
+  onchange="switch_id(this, 'style')"><OPTGROUP 
+    label="Quick Style Chooser"><OPTION class="hidden"></OPTION></OPTGROUP>				
+  										 <OPTGROUP label="&nbsp;Standard Styles"><OPTION value="26">-- 
+    Blissfully Simple - Fluid</OPTION>	 <OPTION selected="selected" 
+    value="31">-- Royal Flush - Fluid</OPTION>	 <OPTION value="28">-- 
+    TwistedBlue - Fluid</OPTION>	 <OPTION value="23">-- vB4 Default 
+    Style</OPTION>										 </OPTGROUP>																												 <OPTGROUP 
+  label="&nbsp;Mobile Styles"><OPTION value="32">-- Default Mobile 
+    Style</OPTION>										 </OPTGROUP>																	 </SELECT>								</FORM>
+<UL class="footer_links" id="footer_links">
+  <LI><A href="http://dc3.com/">DC-3 Dreams, SP</A></LI>														 
+  <LI><A onclick="document.location.hash='top'; return false;" href="http://forums.dc3.com/showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67732#top">Top</A></LI>
+	 </UL>
+<SCRIPT type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</SCRIPT>
+         </DIV></DIV><!-- closing div for body_wrapper --> 
+<DIV class="below_body"></DIV><!-- Custom Content Wrap -->
+					 </DIV></DIV></DIV></DIV></DIV></DIV>
+<DIV class="footerNav">
+<DIV class="footerNavLeft">
+<DIV class="footerNavRight">
+<DIV class="skinSelect">
+<FORM class="footer_select" id="footer_select" action="https://gemini-2.com/index.php" 
+method="get"><SELECT name="styleid" 
+  onchange="switch_id(this, 'style')"><OPTGROUP 
+  label="Quick Style Chooser"></OPTGROUP>			 </SELECT>								</FORM></DIV>
+<UL>
+  <LI><A href="http://dc3.com/">DC-3 Dreams, SP</A></LI>
+  <LI><A onclick="document.location.hash='top'; return false;" href="http://forums.dc3.com/showthread.php?11182-ALERT-Windows-8-1-and-10-Updates-KB4056898-and-KB4056892-Reported-Problems&amp;p=67732#top">Top</A></LI></UL></DIV></DIV></DIV>
+<DIV id="footerBar">
+<DIV class="footerBarLeft">
+<DIV class="footerBarRight"><A class="backTop" 
+href="http://forums.dc3.com/#">Back to top</A>			 </DIV></DIV></DIV>
+<DIV id="footerMain">
+<DIV class="copyright">
+<DIV><!-- Do not remove this copyright notice -->	Powered by <A id="vbulletinlink" 
+href="https://www.vbulletin.com/">vBulletin®</A> Version 4.2.4 <BR>Copyright © 
+2018 vBulletin Solutions, Inc. All rights reserved. 	 <!-- Do not remove this copyright notice -->	
+</DIV>
+<DIV><!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	 <IMG width="1" height="1" alt="" src="DCOM_Reported_Problems_files/cron.gif" 
+border="0">	 <!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright © 2005-2017 by Robert B. Denny, Mesa, AZ	 </DIV>
+<DIV>All times are GMT. The time now is <SPAN class="time">07:00</SPAN>.</DIV>
+<DIV>vBulletin 4.0 skin by <A href="http://www.completevb.com/" 
+target="_blank">CompleteVB</A></DIV></DIV>
+<DIV class="footerLogo"><A name="top" 
+href="http://forums.dc3.com/index.php"><IMG alt="DC-3 Dreams Communication Center - Powered by vBulletin" 
+src="DCOM_Reported_Problems_files/footerLogo.gif"></A>
+			 </DIV></DIV></DIV></DIV></DIV><!-- Custom Content Wrap End --> 
+</BODY>
+<!-- Mirrored from gemini-2.com/DCOM_Reported_Problems.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Dec 2018 04:05:08 GMT -->
+</HTML>

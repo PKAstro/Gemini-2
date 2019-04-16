@@ -1,0 +1,1598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<!-- Mirrored from gemini-2.com/firmware-changes.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Dec 2018 04:02:45 GMT -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Firmware changes for Gemini 2</title>
+
+<link href="gemini-2.css" rel="stylesheet" type="text/css" />
+
+
+<!DOCTYPE html 
+      PUBLIC "-//W3C//DTD HTML 4.01//EN"
+      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US">
+<head profile="http://www.w3.org/2005/10/profile">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+<link rel="stylesheet" href="ajxmenu.css" type="text/css">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="en-us" http-equiv="Content-Language" />
+<title>Gemini 2 Mount Controller</title>
+
+<link href="gemini-2.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+a {
+	color: #FF0000;
+}
+</style>
+
+
+</head>
+<body>
+<table align="center" style="width: 900px">
+	<tr><td align="center">
+	<span class="h1">
+		Gemini-2 and Gemini-1 Telescope Mount Controllers</span> <br />
+		<span class="h2">Website and Tutorials </span>
+		</td>
+	</tr>
+</table>
+
+
+<table align="center" style="width: 900px">
+	<tr>
+		<td align="center">
+<form action="https://www.google.com/search" method="get"> <div style="border:1px solid black;padding:4px;width:20em;"> <table align="center" border="0" cellpadding="0"> 
+<tbody> 
+<tr><td> <input maxlength="255" name="q" size="25" type="text" value="" /> <input type="submit" value="Google Search" /></td></tr> 
+<tr><td align="center" style="font-size:75%"> <input checked="" name="sitesearch" type="checkbox" value="gemini-2.com" />
+ only search Gemini-2.com<br /> </td></tr></tbody></table> </div> </form>
+		
+		</td>
+	</tr>
+</table>
+<!--
+<table align="center" style="width: 900px">
+	<tr>
+		<td class="style7" >
+		There is a new <a href="http://wiki.gemini-2.com" target="_blank">Question and Answer Wiki</a> section where you can ask searchable questions.  		
+		</td>
+	</tr>
+</table>
+-->
+
+<table align="center" style="width: 900px">
+	<tr>
+		<td align="center">
+		</td>
+	</tr>
+</table>
+
+<div class="AJXMenueDFaTFD"><!-- AJXFILE:ajxmenu.css -->
+<ul>
+ <li class="tfirst"><!--[if IE]><!--><a class="ajxsub" href="index-2.html" target="_self"><!--<![endif]-->Home/Start&nbsp;Here
+  <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+  <ul>
+   <li class="sfirst"><a href="Getting_started.html" target="_blank">1 - New Users Start Here</a></li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="front_panel_pinouts.html" target="_blank"><!--<![endif]-->2.- Front Panel Pinouts
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="front_panel_pinouts.html" target="_blank">Orginal Gemini-2 Version</a></li>
+     <li class="slast"><a href="front_panel_pinouts_mini-gemini-2.html" target="_blank">New Gemini-2 Mini</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><a href="definitions.html" target="_blank">3 - Definitions</a></li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->4.- Tutorials
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="quickstart/index.html" target="_blank">4.1 Quick Start &amp; Screen Alignment</a></li>
+     <li><a href="hc/index.html" target="_blank">4.2  Hand Controller</a></li>
+     <li class="slast"><a href="alt-alignment.html" target="_blank" title="Manual method for adding a star to models.">4.3  Add a star to a model</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->5 - Videos
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="Losmandy_Videos.html" target="_blank">5a - Videos by Scott Losmandy on YouTube</a></li>
+     <li class="slast"><a href="gemini2_videos.html" target="_blank">5b - Gemini.com  Videos</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->6 - Connecting Gemini-2 to Computer
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="connecting_Gemini_to_computers.html" target="_blank">6a- Connecting Gemini-2 to a computer</a></li>
+     <li><a href="Installing_ASCOM.html" target="_blank">6b-Using ASCOM with windows</a></li>
+     <li class="slast"><a href="faqGII.html#Q3" target="_blank">6c - Multiple Gemini-2 on network</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><a href="G2_Verse_G1-Modeling.html" target="_blank">7 - G2 Verse G1 modeling</a></li>
+   <li><a href="web/index.html" target="_blank">8 - Web Interface Pages</a></li>
+   <li><a href="limits.html" target="_blank">9 - Setting Limits - Very Important</a></li>
+   <li><a href="Installing_ASCOM.html" target="_blank">10 - Installing Gemini.net ASCOM driver</a></li>
+   <li><a href="faqGII.html" target="_blank">11 - FAQ about Gemini-2</a></li>
+   <li><a href="tellfirmwareversion.html" target="_blank">12 - Firmware versions and updating.</a></li>
+   <li><a href="Simple_Rules_Gemini_Uses.html" target="_blank">13 - Rules that Gemini-2 follows:</a></li>
+   <li class="slast"><a href="https://www.gemini-2.com/credits.php" target="_blank">13 - A little history</a></li>
+  </ul>
+  <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+ </li>
+ <li><!--[if IE]><!--><a class="ajxsub" href="#" title="All Things Gemini-2"><!--<![endif]-->Gemini&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;
+  <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+  <ul>
+   <li class="sfirst"><a href="troubleshooting.html" target="_blank">Trouble Shooting Tips</a></li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#" title="Start here for Gemini 2"><!--<![endif]-->Using the Gemini 2 controller
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="definitions.html" target="_blank">Definitions</a></li>
+     <li><a href="alignment_procedure.html" target="_blank">Initial Alignment and Startup</a></li>
+     <li><a href="hc/index.html" target="_blank">Navigating Hand Controller Menus</a></li>
+     <li><a href="web/index.html" target="_blank">Navigating the Internal Web Pages</a></li>
+     <li><a href="hc/En-SAE-01.html" target="_blank">Semi-Automatic Alignment Method</a></li>
+     <li><a href="limits.html" target="_blank">Setting Limit switch drawing</a></li>
+     <li class="slast"><a href="hc/E026.html" target="_blank" title="Will help you polar align the mount">Polar Axis Assist</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#" title="Connect G2 to Ethernet"><!--<![endif]-->Connectiong to Ethernet Port
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="ConnectingtoG2.html" target="_blank" title="connecting to web interface">Connecting to Ethernet Port</a></li>
+     <li><a href="crossovernetwork.html" target="_blank" title="G2 directly to Computer">Configuring Win 10, Win7 &amp; XP for Static IP</a></li>
+     <li><a href="Enabling_netbios.html" target="_blank">Enabling NetBios on Windows Networks</a></li>
+     <li><a href="travel_routers.html" target="_blank">Adding WiFi to Gemini-2</a></li>
+     <li><a href="ethernet_connections.html" target="_blank">Ethernet Connection methods/drawings</a></li>
+     <li><a href="configuringEthernetASCOMdriver.html" target="_blank">Configuring The ASCOM Driver's Ethernet connection</a></li>
+     <li class="slast"><a href="network-places.html" target="_blank">Adding the Gemini-2 to FTP network places</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#" target="_blank" title="5 ways to update firmware"><!--<![endif]-->Updating Gemini FIrmware
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="tellfirmwareversion.html" target="_blank">How to tell firmware versions</a></li>
+     <li><a href="updatefirmwaremethods.html" target="_blank">Update Gemini Firmware Methods     </a></li>
+     <li><a href="gfu.html" target="_blank">Using the Gemini Firmware Updater Program</a></li>
+     <li><a href="Removing_SDCards.html" target="_blank">Removing and Replacing micro-SDcards</a></li>
+     <li class="slast"><a href="copycatalogs.html" target="_blank">Adding Catalogs to the Handcontroller</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><a href="faqGII.html" target="_blank" title="For Gemini 2">Frequently Asked Questions</a></li>
+   <li class="slast"><!--[if IE]><!--><a class="ajxsub" href="#" title="Wiring"><!--<![endif]-->Gemini-2 Documentation
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="gemini2_videos.html" target="_blank">Movies produced for this site</a></li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#" target="_blank"><!--<![endif]-->Front Panel Pinouts and Connection Function Discriptions
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="front_panel_pinouts.html" target="_blank">Original Gemini-2</a></li>
+       <li class="slast"><a href="front_panel_pinouts_mini-gemini-2.html" target="_blank">Gemini-2 Mini</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Cable Wiring
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="cable_wiring.html" target="_blank" title="Both G1 and G2">Serial Port Wiring</a></li>
+       <li><a href="serial_port_modes.html" target="_blank" title="G2 only">Serial Port Modes</a></li>
+       <li><a href="Losmandy_Serial_Cable.html" target="_blank" title="Inside of Losmandy Serial Cable">Losmandy Serial Cable </a></li>
+       <li><a href="handcontroller-cable-ends.html" target="_blank">Hand Controller Cable</a></li>
+       <li class="slast"><a href="hand_controller_extender.html" target="_blank">Hand controler Extender Addon</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><a href="Losmandy-motors.html" target="_blank">Losmandy Motors</a></li>
+     <li><a href="GPS.html" target="_blank">GPS Receivers</a></li>
+     <li><a href="Gemini2_features.html" target="_blank">Gemini-2 Features</a></li>
+     <li><a href="error-reporting.html" target="_blank">Reporting Gemini-2 and ASCOM Driver Errors</a></li>
+     <li class="slast"><a href="Cksum.html" target="_blank" title="Courtesy of Paul Kanevsky">Gemini Command Checksum Calculator</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+  </ul>
+  <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+ </li>
+ <li><!--[if IE]><!--><a class="ajxsub" href="hc/index.html" target="_blank"><!--<![endif]-->G-2&nbsp;HC&nbsp;Tutorial
+  <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+  <ul>
+   <li class="sfirst"><a href="hc/E019A.html" target="_blank">Site</a></li>
+   <li><a href="hc/E023A.html" target="_blank">Time</a></li>
+   <li><a href="hc/En-networkmenu_A.html" target="_blank">Network</a></li>
+   <li class="slast"><a href="hc/En-SAE-01.html" target="_blank">Modeling</a></li>
+  </ul>
+  <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+ </li>
+ <li><!--[if IE]><!--><a class="ajxsub" href="web/index.html" target="_blank" title="Web Tutorial"><!--<![endif]-->G-2&nbsp;Web&nbsp;Tutorial
+  <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+  <ul>
+   <li class="sfirst"><a href="web/web-site-time.html" target="_blank" title="Web Site Time">Site Time</a></li>
+   <li><a href="web/web-network.html" target="_blank" title="Web Network">Network</a></li>
+   <li><a href="web/web-battery-ports.html" target="_blank" title="battery">Battery Voltage</a></li>
+   <li class="slast"><a href="web/web-firmware-sram.html" target="_blank" title="Firmware Sram">Firmware SRAM</a></li>
+  </ul>
+  <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+ </li>
+ <li><!--[if IE]><!--><a class="ajxsub" href="#" title="All Things Gemini 1"><!--<![endif]-->Gemini&nbsp;1
+  <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+  <ul>
+   <li class="sfirst"><a href="faqG1.html" target="_blank">FAQ</a></li>
+   <li><a href="G1drivers.html" target="_blank">G1 Driver/Manuals</a></li>
+   <li><a href="pcb-pictures.html" target="_blank">Gemini 1 Versions</a></li>
+   <li><a href="G1-repairers.html" target="_blank">Gemini Repair Facilities/People</a></li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Changing batteries
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="videos/Losmandy_Gemini_Battery_CR2354.mp4" target="_blank">Changing CR2354</a></li>
+     <li class="slast"><a href="videos/changing_CR2032_battery.mp4" target="_blank">Changing CR2032</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><a href="cable_wiring.html" target="_blank">RS-232 Cable wiring</a></li>
+   <li><a href="G1_EPROM.html" target="_blank">Eprom Programming Sources and Source Code</a></li>
+   <li><a href="usbtoserial.html" target="_blank" title="USB to Serial Converter recomendations">USB to Serial Port converter Recommendations</a></li>
+   <li><a href="http://www.docgoerlich.de/L4Features.html" target="_blank">Level 4  Features</a></li>
+   <li><a href="Gemini-1%20mods.html" target="_blank">Recommend Mod to extend battery life</a></li>
+   <li class="slast"><a href="2nd_Communication_Port_Cable.html" target="_blank">2nd Communication Port Cable for Gemini 1</a></li>
+  </ul>
+  <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+ </li>
+ <li><!--[if IE]><!--><a class="ajxsub" href="#" title="Windows Only"><!--<![endif]-->ASCOM/USB/GPS
+  <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+  <ul>
+   <li class="sfirst"><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->ASCOM Related
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="Installing_ASCOM.html" target="_blank">Installing ASCOM</a></li>
+     <li><a href="Gemini2_drivers/GeminiTelescopeInstaller(1.0.72.0).exe" target="_blank" title="Version (1.0.72.0) supports G11T &amp; G811 + all others">ASCOM-Gemini.net Installer (Version 1.0.72.0)</a></li>
+     <li><a href="configuringASCOMfirsttime.html" target="_blank">Setting up ASCOM for first time</a></li>
+     <li><a href="Gemini2_drivers/Gemini_Telescope_Net_Installation_and_Operation.pdf" target="_blank">Gemini ASCOM Driver manual</a></li>
+     <li><a href="configuringEthernetASCOMdriver.html" target="_blank">Setup ASCOM Ethernet Interface</a></li>
+     <li><a href="DCOM-FIX-EXPLAIN.html" target="_blank">DCOM_Fix</a></li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->ASCOM Menu
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="select_Ascom_options.html" target="_blank">How to select the different ASCOM menus</a></li>
+       <li><a href="configuringASCOMSetuppage.html" target="_blank" title="Configure Telescope">Configure Telescope Menu</a></li>
+       <li><a href="configuringASCOMAdvancedSetuppage.html" target="_blank" title="Advanced Gemini Setting">Advanced Gemini Setting</a></li>
+       <li class="slast"><a href="Ascom_park_menu.html" target="_blank">The Park Menu</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><a href="theSkyX_to_Gemini.html" target="_blank">Installing Gemini.net into TheSkyX</a></li>
+     <li><a href="getting-GPS-into-ASCOMdriver.html" target="_blank">Get GPS data into Gemini.net Driver</a></li>
+     <li><a href="scripting_examples.html" target="_blank">Example VB scripts</a></li>
+     <li class="slast"><a href="Gemini2_drivers/UPD_Protocol/Gemini_UDP_Protocol_Specification_1.0.pdf" target="_blank">UPD Protol Specifications</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->USB Related
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="Gemini2_drivers/L5-USB/USB_Drivers_for_Level_5_Firmware_after_June-4-2013.zip" target="_blank">Level 5 USB Drivers for Firmware dated Jun 4 2013 and later.</a></li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->For Firmware previous to Jun 4, 2013 USB drivers 
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="Gemini2_drivers/Gemini2_32bit_USB_driver.zip" target="_blank">USB - Windows 32 Bit-PreLevel 5</a></li>
+       <li><a href="Gemini2_drivers/Gemini2_64bit_USB_driver.zip" target="_blank">USB Windows 64 Bit -Pre Level5</a></li>
+       <li class="slast"><a href="installing_usb_drivers.html" target="_blank">USB Driver installion Instructions</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><a href="featureport-serialport.html" target="_blank">USB cable for Feature Port</a></li>
+     <li class="slast"><a href="usb-ethernet.html" target="_blank">Alternative to USB Drivers</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li class="slast"><a href="GPS.html" target="_blank">GPS Receivers</a></li>
+  </ul>
+  <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+ </li>
+ <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Help&nbsp;Topics
+  <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+  <ul>
+   <li class="sfirst"><a href="https://wiki.gemini-2.com/" target="_blank">Gemini 1 &amp; 2 Question and Answer WIKI</a></li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#" title="Mount and Misc Manuals"><!--<![endif]-->Manuals
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Gemini Programming
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="Gemini2_drivers/UPD_Protocol/Gemini_UDP_Protocol_Specification_1.2.pdf" target="_blank">UDP Protocol's</a></li>
+       <li><a href="web/L5V2_1serial.html" target="_blank">Serial Command Description</a></li>
+       <li class="slast"><a href="downloads/CGICodes/CGIcodes.pdf" target="_blank">CGI codes</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Losmandy Mounts
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="http://www.losmandy.com/losmandygoto/Gemini-II_Quick_Start_Guide_2_23b.pdf" target="_blank">Losmandy Gemini 2 Quick Start Guide</a></li>
+       <li><a href="http://www.losmandy.com/pdf/gm-8-manual.pdf" target="_blank">Losmandy G8</a></li>
+       <li><a href="http://www.losmandy.com/g-11-manual.html" target="_blank">Losmandy G11</a></li>
+       <li><a href="http://www.losmandy.com/pdf/titan-instructions.pdf" target="_blank">Losmandy Titan</a></li>
+       <li><a href="http://www.losmandy.com/pdf/polar-finder.pdf" target="_blank">Using Losmandy Polar Finder</a></li>
+       <li><a href="downloads/pdf/GeminiL4UserManual.pdf" target="_blank">G1 Level 4 Manual</a></li>
+       <li><a href="http://losmandy.com/gemini_servo_motor_install.html" target="_blank">Servo Mounting Instructions</a></li>
+       <li class="slast"><a href="http://helixgate.net/G11opw.html" target="_blank" title="This is from Helixgate.net by Michael A. Siniscalchi">Assembling  One Piece Worm</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Mountain Instruments
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="https://www.mi250.com/downloads/MI250 Go-To Manual 2007.pdf" target="_blank">MI-250 Old - 2007 </a></li>
+       <li class="slast"><a href="https://www.mi250.com/downloads/MI250 Manual 2009.pdf" target="_blank">MI-250 New - 2009</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Guiding
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->PHD1
+        <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul>
+         <li class="sfirst"><a href="http://www.rosecityastronomers.org/resources/pdf/GuideToGuiding.pdf" target="_blank">PHD Guiding manual</a></li>
+         <li class="slast"><a href="http://www.stark-labs.com/phdguiding.html" target="_blank">PHD Guiding Software</a></li>
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+       </li>
+       <li class="slast"><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->PHD2
+        <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul>
+         <li class="sfirst"><a href="http://openphdguiding.org/" target="_blank">PHD2 Software</a></li>
+         <li><a href="http://openphdguiding.org/man/index.html" target="_blank">PHD2 On-Line Manual</a></li>
+         <li><a href="https://openphdguiding.org/man-dev/Tools.htm#Guiding_Assistant" target="_blank">Guiding Assistant</a></li>
+         <li><a href="https://openphdguiding.org/man-dev/Trouble_shooting.htm" target="_blank">Trouble Shooting</a></li>
+         <li class="slast"><a href="https://openphdguiding.org/man-dev/Tools.htm#Star_cross_tool" target="_blank">Star-Cross Tool</a></li>
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+       </li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><a href="GPS.html" target="_blank">GPS</a></li>
+     <li><a href="Losmandy-motors.html" target="_blank">ID Losmandy motor types</a></li>
+     <li class="slast"><a href="http://screenshots.portforward.com/" target="_blank" title="Screeshots of most routers">Router Screen Shots</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#" target="_blank"><!--<![endif]-->Trouble Shooting
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="troubleshooting.html" target="_blank">Trouble Shooting tips</a></li>
+     <li><a href="error-reporting.html" target="_blank">Reporting Problems</a></li>
+     <li class="slast"><a href="handcontroller_errors.html" target="_blank">Trouble Shooting the touch screen.</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Time Zone Tips
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="hc/time_zone_offset_chart.html" target="_blank">Time Zone Offset Table for USA</a></li>
+     <li class="slast"><a href="hc/timezonefacts.html" target="_blank">Time Zone Facts</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Tips from other sites
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><!--[if IE]><!--><a class="ajxsub" href="http://www.wilmslowastro.com/tips/g11gemini.htm" target="_blank"><!--<![endif]-->G11/Gemini Tips from Mark Crossley
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="http://www.wilmslowastro.com/index.htm" target="_blank">Mark Crossley Home page</a></li>
+       <li class="slast"><a href="https://www.google.com/search?q=methods+of+doing+polar+alignment+with+EQ+scopes&amp;sourceid=ie7&amp;rls=com.microsoft:en-US:IE-Address&amp;ie=&amp;oe=" target="_blank">Precision Polar Alignment -Astro-Tom.com</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><a href="http://frazmtn.com/~bwallis/GEMINI_II_docx.pdf" target="_blank">Field Manual from Brad Wallis</a></li>
+     <li><a href="http://www.company7.com/library/losmandy/notes.html" target="_blank">Gemini 1 info from Company 7</a></li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="http://www.michaelherman.net/#!losmandy-g11-mount" target="_blank"><!--<![endif]-->Michael Herman G11 Tips
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="downloads/Michael_Herman/RA_Extension_Spacer.pdf" target="_blank">Installing the Partridge RA Extension.pdf</a></li>
+       <li><a href="downloads/Michael_Herman/Improving_OPW.pdf" target="_blank">Improving G11 OPW.pdf</a></li>
+       <li><a href="downloads/Michael_Herman/Making_7lb_counterweight.pdf" target="_blank">7 LB Counter Weight.pdf</a></li>
+       <li><a href="downloads/Michael_Herman/Polar_Scope_Improvements.pdf" target="_blank">New Rericle in the G11 Polar scope.pdf</a></li>
+       <li class="slast"><a href="downloads/Michael_Herman/Leveling_Handles.pdf" target="_blank">Leveling handles for Clutch Knobs</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><a href="downloads/TitanTipsByBobAllevo.pdf" target="_blank" title="Posted here till I can find the correct link for it">Titan Tips by Bob Allevo</a></li>
+     <li><a href="downloads/Losmandy_Titan_Reassembly.pdf" target="_blank">Titan Reassembly courtesy of Ed Wily</a></li>
+     <li class="slast"><a href="https://www.youtube.com/watch?v=gi3-VeQn7K0" target="_blank">Cable Management U-tube</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Polar Alignment tips
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="http://www.sharpcap.co.uk/sharpcap/polar-alignment" target="_blank" title="Polar Alignment">Polar Alignment using SharpCap</a></li>
+     <li><a href="http://astro-tom.com/tips_and_advice/precision_polar_alignment.htm" target="_blank">Precision Polar Alignment-Astro-Tom</a></li>
+     <li><a href="http://www.astro-baby.com/simplepolar/simple_polar_alignment.htm" target="_blank">Simple Polar Alignment</a></li>
+     <li><a href="http://www.themcdonalds.net/richard/index.php?title=Polar_Alignment_of_your_Equatorial_Mount" target="_blank">Polar Alignment of your Equatorial Mount</a></li>
+     <li><a href="http://astropixels.com/main/polaralignment.html" target="_blank">Polar Alignment using Drift Method</a></li>
+     <li class="slast"><a href="https://www.youtube.com/watch?v=ArU5vC1o1Jk" target="_blank">PHD2 Drift Tool Tutorial</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Gearboxs and Mods
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="Losmandy_New_Gearbox.html" target="_blank">Losmandy's New Gearbox</a></li>
+     <li><a href="Gearbox_mod.html" target="_blank">Repairing the gearbox used on MI-250 and G11</a></li>
+     <li class="slast"><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Mclennan Gearbox upgrade
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="http://www.horizontalheavens.com/mclennan_gearbox_upgrade.htm" target="_blank">Mclennan Gearbox upgrade by Horizontal Heavens</a></li>
+       <li><a href="Mclennan_Gearboxes.html" target="_blank">Mclennan Gearbox upgrade by Hilmi Al-Kindy</a></li>
+       <li class="slast"><a href="http://www.wilmslowastro.com/tips/mclennan_gbox.html" target="_blank">Replacomg the Losmandy Gearbox by Wilmslow Astro on MI-250</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Balancing your mount
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="http://www.wilmslowastro.com/tips/g11gemini.htm#balancing" target="_blank" title="Balancing your Mount">Balancing You Mount  by wilmslowastro.com</a></li>
+     <li class="slast"><a href="http://starizona.com/acb/ccd/settingupbal.aspx" target="_blank">Balancing your mount by Starizona</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Useful Programs
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Polar Alignment methods
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->2 Star Alignment
+        <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul>
+         <li class="sfirst"><a href="http://www.alignmaster.de/" target="_blank">Using 2 Stars with AlignMaster</a></li>
+         <li class="slast"><a href="http://www.sharpcap.co.uk/sharpcap" target="_blank">SharpCap for use with Alignmaster</a></li>
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+       </li>
+       <li><a href="http://www.astro-tom.com/tips_and_advice/precision_polar_alignment.htm" target="_blank">Polar Alignment from Astro-Tom</a></li>
+       <li><a href="http://www.celestialwonders.com/articles/polaralignment/" target="_blank">Polar Alignment Star offset method</a></li>
+       <li><a href="http://celestialwonders.com/articles/polaralignment/polaralignmentsurvey.html" target="_blank">Survey of Polar Alignment Methods</a></li>
+       <li><a href="http://canburytech.net/DriftAlign/" target="_blank">Understanding Drift Alignment</a></li>
+       <li><a href="http://eqalign.net/e_index.html" target="_blank">EQAling</a></li>
+       <li><a href="http://www.petesastrophotography.com/" target="_blank">Polar Alignment by Paul Kennett</a></li>
+       <li><a href="http://www.andysshotglass.com/DriftAlignment.html" target="_blank">Polar Alignment by Andy's Shot Glass</a></li>
+       <li class="slast"><a href="http://www.astrosurf.com/re/polar.html" target="_blank">Polar Alignment by Astrosurf</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Observatory programs
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="http://www.stellarium.org/" target="_blank">Stellarium</a></li>
+       <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Gude Programs
+        <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul>
+         <li class="sfirst slast"><a href="http://www.astrogeeks.com/Bliss/MetaGuide/" target="_blank">MetaGude</a></li>
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+       </li>
+       <li><a href="http://www.bytearts.com/stellarium/" target="_blank" title="Make Stellarium ASCOM compatible for Windows">StellariumScope</a></li>
+       <li><a href="http://www.ap-i.net/skychart/" target="_blank">SkyChart / Cartes du Ciel</a></li>
+       <li><a href="http://zytratechnologies.com/2012/05/09/g11-gemini-ii-ascom/" target="_blank">Setting up Stellarium</a></li>
+       <li><a href="http://sourceforge.net/p/astrotortilla/home/Home/" target="_blank">AstroTortilla Astrophotography assistant</a></li>
+       <li class="slast"><a href="http://lightvortexastronomy.blogspot.com/2013/08/tutorial-imaging-setting-up-and-using.html" target="_blank">Plate Solving with Astrotortilla</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Misc Programs
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="http://darkhorizons.emissionline.com/GMB/gmb.htm" target="_blank">Gemini Model Builder</a></li>
+       <li><a href="http://www.nirsoft.net/utils/usb_devices_view.html" target="_blank">View USB Port assignments </a></li>
+       <li class="slast"><a href="http://www.7-zip.org/" target="_blank">7-Zip FIle archiver use to zip and unzip all files on this site</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Disk and Partition Programs
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="https://www.sdcard.org/downloads/formatter_4/" target="_blank">Micro SDcard Formatter</a></li>
+       <li><a href="http://www.partitionwizard.com/" target="_blank">MiniTool Partition Wizard</a></li>
+       <li class="slast"><a href="http://www.7-zip.org/" target="_blank">7-Zip</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->FTP Programs for Windows
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="http://filezilla-project.org/download.php?type=client" target="_blank">FileZilla</a></li>
+       <li><a href="http://www.wsftple.com/download.aspx" target="_blank">WS_FTP LE (V12)</a></li>
+       <li><a href="http://www.oldversion.com/WS_FTP_Limited_Edition.html" target="_blank">WS_FTP V6</a></li>
+       <li class="slast"><a href="http://winscp.net/eng/index.php" target="_blank">WinSCP</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->FTP Programs For Mac
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="http://www.kekaosx.com/en/" target="_blank">Keka (7zip ported to OS X)</a></li>
+       <li><a href="http://www.apple.com/downloads/macosx/internet_utilities/classicftpformac.html" target="_blank">Classic FTP</a></li>
+       <li><a href="http://fetchsoftworks.com/">Fetch FTP</a></li>
+       <li><a href="http://www.macorchard.com/filetransfer/" target="_blank">List of Many Mac FTP</a></li>
+       <li class="slast"><a href="http://blog.hostilefork.com/trashes-fseventsd-and-spotlight-v100/" target="_blank">Hidden Files A MAC puts on the SDcard</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->GPS Related programs
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="downloads/GPSrelated/redirect.zip" target="_blank">GPS_Port_Director (No install necessary)</a></li>
+       <li class="slast"><a href="downloads/GPSrelated/VisualGPSInstall.zip" target="_blank">Visual GPS Installer</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Network Scanners
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="http://www.softperfect.com/products/networkscanner/" target="_blank">Softperfect Network Scanner</a></li>
+       <li><a href="http://www.radmin.com/products/ipscanner/" target="_blank">Advanced IP Scaner</a></li>
+       <li class="slast"><a href="http://free-ip-scanner.eusing-software.qarchive.org/" target="_blank">Free IP Scanner</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li class="slast"><a href="downloads/USV_View/usbdeview.zip" target="_blank">USB View - USB port scanner</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li class="slast"><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Power Controllers
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="http://www.digital-loggers.com/ac.html" target="_blank">AC Controlled Relay</a></li>
+     <li><a href="http://www.digital-loggers.com/lpc7.html" target="_blank">Web Power Switch</a></li>
+     <li class="slast"><a href="http://www.digital-loggers.com/EPCR5.html" target="_blank">Ethernet Power Controller 5</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+  </ul>
+  <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+ </li>
+ <li class="tlast"><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Favorites
+  <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+  <ul>
+   <li class="sfirst"><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->User Groups
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="https://groups.io/g/Gemini-II/" target="_blank">Gemini-II at groups.io</a></li>
+     <li><a href="https://groups.io/g/Gemini_users/" target="_blank">Gemini User Group at Groups.io</a></li>
+     <li><a href="https://groups.io/g/Losmandy_users/" target="_blank">Losmandy User Group at Groups.io</a></li>
+     <li><a href="http://groups.yahoo.com/neo/groups/Titan_Mount/info" target="_blank">Titian User Group</a></li>
+     <li><a href="https://groups.io/g/MI-250/" target="_blank">MI-250 Users Group</a></li>
+     <li><a href="https://groups.io/g/Gemini_ASCOM_Driver/" target="_blank">Gemini Ascom Driver Group at Groups.io</a></li>
+     <li class="slast"><a href="http://groups.yahoo.com/neo/groups/ASCOM-Talk/info" target="_blank">Ascom Talk Group</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->Web Sites
+    <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+     <li class="sfirst"><a href="http://www.docgoerlich.de/Gemini.html" target="_blank">René Görlich's Web Site</a></li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="http://losmandy.com/" target="_blank"><!--<![endif]-->Losmand Links -Web Site
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="http://www.losmandy.com/eq-mounts.html" target="_blank">Equatorial Mounts</a></li>
+       <li><a href="http://www.losmandy.com/secondary.html" target="_blank">D Series Dovetail Systems</a></li>
+       <li><a href="http://www.losmandy.com/v-series.html" target="_blank">Y Series Dovetail Systems</a></li>
+       <li><a href="http://www.losmandy.com/losmandygoto/gemini2.html" target="_blank">Gemini 2 Goto Syste,</a></li>
+       <li><a href="http://www.losmandy.com/starlapse.html" target="_blank">StarLapse System</a></li>
+       <li><a href="http://www.losmandy.com/access.html" target="_blank">Telescope Accessories</a></li>
+       <li><a href="http://www.losmandy.com/replacement.html" target="_blank">Replacement parts</a></li>
+       <li><a href="http://www.losmandy.com/distributors.html" target="_blank">Dealers</a></li>
+       <li><a href="http://www.losmandy.com/pricelist.html" target="_blank">Price List</a></li>
+       <li><a href="http://www.losmandy.com/support.html" target="_blank">Technical Support</a></li>
+       <li><a href="http://store.losmandy.com/">Ordering inside USA</a></li>
+       <li><a href="https://secure28.securewebsession.com/losmandy.com/order.shtml" target="_blank">Ording International or custom parts</a></li>
+       <li><a href="http://www.losmandy.com/whatsnew.html" target="_blank">Whats New</a></li>
+       <li class="slast"><a href="https://www.valvoline.com/en-ecuador/our-products/grease/durablend-synthetic-blend-grease" target="_blank">Recommend Grease by Losmandy</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><a href="https://www.mi250.com/" target="_blank">MI-250 Web Site</a></li>
+     <li><a href="https://www.arizonaskys.com/" target="_blank">ArizonaSkys (my obsevatory web site - under construction</a></li>
+     <li><a href="http://www.ascom-standards.org/index.htm" target="_blank">Ascom Standards Org</a></li>
+     <li><a href="https://www.nightskiesnetwork.ca/" target="_blank" title=" worldwide astronomy broadcast site">Night Skys Network</a></li>
+     <li><a href="http://www.wilmslowastro.com/tips/g11gemini.htm" target="_blank">Wilmslow Astro G11 tips</a></li>
+     <li><a href="http://astronomy.tools/" target="_blank">Astronomy Tools - Calculators - FOV - Star Charts</a></li>
+     <li><a href="http://www.skippysky.com.au/" target="_blank">SkippySky Astro-Weather Forcast</a></li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#" target="_blank"><!--<![endif]-->Tuning the G11
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="http://www.astromaster.org/esperienze_file/G11maintenance_e.htm" target="_blank">Maintain and tune a G11 mount</a></li>
+       <li class="slast"><a href="http://www.astro.uni-bonn.de/~mischa/mounts/g11_tuning.html" target="_blank">Tuning a G11- for 2000 or older mounts</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><a href="http://garriou.didier.free.fr/astro/gemini_anglais.html" target="_blank">Didier Garriou Gemini Catalogs building site</a></li>
+     <li><a href="downloads/TitanTipsByBobAllevo.pdf" target="_blank">Titan Tips by Bob Allevo</a></li>
+     <li><a href="http://www.stargps.ca/" target="_blank">Star GPS Web Site</a></li>
+     <li><!--[if IE]><!--><a class="ajxsub" href="#"><!--<![endif]-->PHD2
+      <!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+      <ul>
+       <li class="sfirst"><a href="https://openphdguiding.org/" target="_blank">PHD2 Home</a></li>
+       <li><a href="https://code.google.com/p/open-phd-guiding/wiki/DriftAlignmentWithPHD2" target="_blank">Open-phd-guiding</a></li>
+       <li><a href="https://groups.google.com/forum/#!forum/open-phd-guiding" target="_blank">Discussion Group </a></li>
+       <li class="slast"><a href="https://www.youtube.com/watch?v=LXFGRta98rs" target="_blank">Introduction to optimal auto - guiding: How to get the most from your set - up</a></li>
+      </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+     </li>
+     <li><a href="http://www.sharpcap.co.uk/" target="_blank">SharpCap</a></li>
+     <li class="slast"><a href="https://sites.google.com/site/astropipp/" target="_blank">Planetary Imaging Software</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+   </li>
+   <li class="slast"><a href="all-links.html" target="_blank">300+ Astronomy Links</a></li>
+  </ul>
+  <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+ </li>
+</ul>
+ <br >
+</div>
+
+</body>
+
+
+
+<style type="text/css">
+.auto-style1 {
+	margin-left: 80px;
+}
+</style>
+
+</head>
+
+<body style="color: #FFFFFF; background-color: #000000">
+<table align="center" style="width: 900px">
+	<tr>
+		<td class="h2">
+			<br/>
+				Gemini 2 Firmware Changes</td>
+	</tr>
+</table>
+	<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			
+			<em>There is no guarantee that this list is complete.</em>&nbsp; 
+			Latest changes listed first.<br />
+			</td>
+			</tr>
+</table>				
+
+<hr class="style2" style="width: 900px" />
+
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul>
+				<li>
+				March 12 2017  Firmware Version Level 1.20 Hand Controller<ul>
+					<li>&nbsp;new mainboard firmware to to support the new G11T 
+					and G811 mount combinations. , </li>
+					<li>&nbsp;This new firmware also supports all the older version mounts except the Titan 25, which has been removed from this firmware.</li>
+				</ul>
+				
+				</li>
+				</ul>
+			</td>
+			</tr>
+</table>
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul>
+				<li>
+				March 12 2017 Firmware Version Level 5.21 Main Unit<ul>
+					<li>&nbsp;new mainboard firmware to to support the new G11T 
+					and G811 mount combinations. , </li>
+					<li>&nbsp;This new firmware also supports all the older version mounts except the Titan 25, which has been removed from this firmware.</li>
+				</ul>
+				
+				</li>
+				</ul>
+			</td>
+			</tr>
+</table>
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul>
+				<li>
+				August 23, 2016  Firmware Version Level 5.21 <ul>
+					<li>&nbsp;new mainboard firmware to improve the GoTos (starting the 
+					RA axis one after the DEC axis to reduce current drain, </li>
+					<li>&nbsp;improve satellite 
+				tracking by getting rid of leap-frogging, </li>
+					<li>&nbsp;getting rid of the 
+				worm contact problems by slightly overshooting targets to the East 
+					then stopping and moving to the west at centering speed till 
+					target is reached, then continuing at side rail speed. This 
+					will ensure gears are fully messed at start of side rail 
+					tracking.</li>
+					<li>&nbsp;and also implemented an Network Time Protocal (NTP) 
+					to receive time/date from the many NIST Internet Time 
+					Services for time/date 
+				setting at startup and over the web interface&nbsp; See
+					<a href="hc/E023.html" target="_blank">HC time/date</a>,
+					<a href="web/web-NTP.html" target="_blank">web-NTP</a>,
+
+					<a href="web/web-network.html" target="_blank">web network</a> 
+					and
+					<a href="web/web-site-time.html" target="_blank">
+					web site/time</a>.<ul>
+						<li>If a NIST Internet Time Server IP addtess has been 
+						set up in the Gemini-2 Network Web page, then at boot 
+						up, the Gemini-2 will go out to that NIST Internet Time 
+						Server IP address and get the current UTC time and Date,</li>
+					</ul>
+					</li>
+				</ul>
+				
+				</li>
+				</ul>
+			</td>
+			</tr>
+</table>
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul>
+				<li>
+				August 6, 2016<ul>
+					<li>&nbsp;two new catalogs added.  Barnard catalogs and a revised LDN_EN with additional objects added.</li>
+					<li>Small change to hand controller to allow proper display 
+					of Barnard catalog.</li>
+				</ul>
+				
+				</li>
+				</ul>
+			</td>
+			</tr>
+</table>
+
+
+
+
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul>
+				<li>Main unit Version Level 5.2 dated July 2015 and hand 
+					controller Version 1.2 dated 14 Feb 2016 was released 23 Feb 
+					2016 to everyone.
+				</li>
+				</ul>
+			</td>
+			</tr>
+</table>
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>Feb 18, 2016</li>
+					<ul><li>Main web pages updated to show new firmware dates.</li>
+						<li>The Gemini Firmware Update program removed from Web 
+						interface.</li>
+					</ul>
+				</ul>	
+			</td>
+			</tr>
+</table>
+
+<!--<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>date</li>
+					<ul><li>Fix</li>
+					</ul></ul>
+			</td>
+			</tr>
+</table>
+-->
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>Feb 14 2016</li>
+					<ul><li>PAC has a little more fine tuning done.&nbsp; Please 
+						note that PAC is not going to get you as close as a 
+						drift alignment.&nbsp; It will probably get you within 5 
+						arc-mins.&nbsp; For more polar alignment methods' please 
+						see <br /> "Manuals/Tips/Misc"--&gt;"Polar Alignment Tips"</li>
+					</ul></ul>
+			</td>
+			</tr>
+</table>
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>Feb 08 2016</li>
+					<ul><li>PAC has been redone. René found a bug and also updated the 
+						mathematics. René said his testing even impressed him.</li>
+					</ul></ul>
+			</td>
+			</tr>
+</table>
+
+
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>Jan  14 2016</li>
+					<ul><li>Hand-Controller update: Some of the return paths for the back buttons was corrected for the Jan 3 update.</li>
+					</ul></ul>
+			</td>
+			</tr>
+</table>
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>Jan 03 2016</li>
+				<ul>
+					<li>Hand-Controller update: A checkbox has been added to the PEC menu 
+						which will allow PEC to start with tracking if checked.
+					</li>
+					<li>At the bottom of the Park screen, is a new button called Park Modes.
+						It will take you to a new screen that will let you select how you get out
+						of a parked condition. See
+						<a href="hc/E014.html" target="_blank">Park screen</a> and 
+						<a href="hc/E014b.html" target="_blank">Park mode</a>.
+					</li>
+				</ul>
+				</ul>
+			</td>
+			</tr>
+</table>
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>Dec 28 2015</li>
+					<ul>
+						<li>&nbsp;Hand-Controller update: A new System Screen that 
+						replaces the Site Screen.&nbsp; This screen adds some control to 
+						the HC that has previously only been in the Web interface.&nbsp; 
+						This is mainly the ability to: 
+					<ol type="a">
+						<li> Store the SRAM contents into the Micro SDcard of the main unit,
+						</li>
+						<li>the ability to reload these stored values, 
+						</li>
+						<li> The ability to reset the Gemini-2 to Default HGM200 values.&nbsp; 
+						</li>
+					</ol>
+						<li> At the top of the screen is buttons to go to previous "Site," "Time," 
+							and "Network" screens.&nbsp; You can see this in the
+							<a href="hc/index.html" target="_blank">Hand Controller Tutorial</a>.
+						</li>
+					</li>
+				</ul>
+				</ul>
+			</td>
+			</tr>
+</table>
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>22 July 2015
+				<ul><li>Option to start PEC when when tracking starts. Only from 
+					the <a href="web/web-functions.html" target="_blank">Function page</a> of the Web interface at this time. 
+					A new version of the
+					<a href="http://www.gemini-2.com/Gemini2_drivers/GeminiTelescopeInstaller.exe" target="_blank">
+					ASCOM Gemini.net driver</a> now supports this feature.&nbsp; 
+					It is under Tracking on the Advanced Menu. The
+					<a href="Gemini2_drivers/Gemini_Telescope_Net_Installation_and_Operation.pdf" target="_blank">
+					ASCOM manual</a> was also updated.</li>
+					<li>Fixed a state bug in the PEC routine that stopped PEC 
+					when least expected.</li>
+					<li>New <a href="web/L5V1serial.html" target="_blank">Serial commands</a> added:<ul>
+						<li>51 - Return 0 for original Gemini-2, Return 1 for 
+						Gemini-2 Mini.</li>
+						<li>321 - Return Main Battery Voltage in Volts, This is 
+						floating Point value.</li>
+						<li>322 - Return Lithium battery Voltage in Volts. This 
+						is floating Point value.</li>
+						<li>508 - Enable (1) or disable (0) PEC Playback at boot 
+						time, if PEC data is available.</li>
+					</ul>
+					</li>
+					<li>Updated 
+					<a href="downloads/CGICodes/CGIcodes.txt" target="_blank">CGIcodes.txt</a> file.</li>
+					<li>The Keil middleware still has a bug in file handling, 
+					especially erasing an old file if it is opened in write 
+					mode. René added a workaround for writing the Gemini.cfg and 
+					the model file.</li>
+					</ul></li>
+				</ul>
+			</td>
+			</tr>
+</table>
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>5 July, 2015</li>
+					<ul>
+					<li>The Hand Controller info page page now tells you what 
+					processor is being used.&nbsp; This indicates which model of 
+					hand controller you have.&nbsp; If it says "Himax Graphic chip 
+					detected"&nbsp; under the build date, then you have the new 
+					version the Losmandy designed from scratch.&nbsp;This 
+					version started shipping sometime in 2012.&nbsp; If it says 
+					anything else, or does not say anything then you have one of the older versions.
+					</li>
+						<li>The HC screen for the newer version (Himax Graphic 
+						chip, Green PCB) of the hand controller can be rotated 
+						180°.&nbsp; Use the Menu--&gt;HC--&gt;Display screen, and at the 
+						bottom of the screen is a place to put a checkmark to 
+						flip the screen.&nbsp; Once this is done, for it to stay you 
+						have to hit the "Back" button then "Store Setting". <span class="style3">
+						Caution: 
+						Screen Calibration has to be done in non-flipped mode</span>.
+						<a href="hc/En-hcdisplay.html" target="_blank">
+						Example page</a>.&nbsp; <span class="style3">&nbsp;The screen calibration must never be done when the 
+						screen is in the flipped mode (cord coming out the top).</span> </li>
+				</ul>
+			</ul>
+			</td>
+			</tr>
+</table>				
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+	<table align="center" style="width: 880px">
+		<tr><td class="style6">
+				<a name="LowBattery"></a>
+				<ul><li>3 July 2015
+			</li>
+		
+		<ul>
+			<li>Bug fix of the Clock Frequency fixed.&nbsp; The Time displayed on the 
+			lower right of the main screen should remain constant now.&nbsp; The main 
+			unit time is what all GOTO are calculated from, and it maintains 
+			correct time.&nbsp; Only the hand controller had this bug.</li>
+			
+			<li>
+				Bug fix: The hash, CR, LF, NL signs of object information of 
+				catalog objects are no longer displayed.
+			</li>
+
+				
+			<li>The hand controller has new battery warning screens. There are 
+			two, a yellow one for when the Battery is between 2.7V and 2.5V, and red if battery is 
+			2.5V or less. They stay on the screen for about 40 Seconds. <br />
+			You must have updated the main unit to Level 5.2, 23 June 2015 or 
+			newer firmware for these to work. If you have not then you will get a message 
+			from the hand controller to 
+			<a href="http://www.gemini-2.com/hc/En-update-main-board-firmware.php" target="_blank">update the main board firmware</a>. The hand controller version must also be V1.2 dated 5 July 2015 or newer. </li>
+		</ul>
+		</ul>
+		</td>
+	</tr>
+</table>
+
+	<table align="center" style="width: 880px" >
+		<tr>
+		
+		<td class="style7">
+				 Here is the below 2.7V warning image<br />
+
+				<img alt="" height="583" src="hc/En-Images/Battery-below-2_7V.jpg" width="430" />				
+				</td>
+				<td class="style7">
+				 Here is the below 2.5V 
+				 warning image<br />
+
+				<img alt="" height="583" src="hc/En-Images/Battery-below-2_5V.jpg" width="430" />			
+				</td>
+				</tr>
+				</table>
+		</td>
+	</tr>
+</table>
+
+
+<table align="center">
+	<tr>
+		<td class="style7">
+		
+		New L5.2 Firmware above this Line</td>
+	</tr>
+</table>
+		<hr class="style16" style="width: 800px" />
+<table align="center">
+	<tr>
+		<td>
+		
+		</td>
+	</tr>
+</table>
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>15 Feb 2015</li>
+				<ul>
+				<li>Web interface updated to include the Videos Losmandy 
+					produced. </li>
+					<li>Web interface updated to include the Mobile Hand 
+					Controller.
+				</li>
+				</ul>
+			</ul>
+			</td>
+			</tr>
+</table>				
+
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>5 Nov, 2014</li><ul>
+					<li>When the Gemini-2 Mini was released, René made the 
+					necessary changes to support it's wiring changes.&nbsp; He also 
+					made it backwards compatible with the Original Gemini-2 
+					versions.&nbsp; No changes was made to add and features or fix 
+					anything except the wiring changes for the Gemini-2 Mini.</li>
+				</ul>
+			</ul>
+			</td>
+			</tr>
+</table>				
+
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>1 May, 2014</li>
+				<ul>
+					<li>Gemini Firmware Updater is now also stored on the micro-SDcard, 
+				and can be installed from the Gemini-2 onto you computer 
+				(Windows only for this version).&nbsp; It is selected from Tab 
+				GFU, of the Web interface.&nbsp; It makes no change in version 
+				dates. </li>
+				</ul>
+			</ul>
+			</td>
+			</tr>
+</table>				
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>23 Feb, 2014</li><ul>
+					<li>Fix the Start tracking in the web interface for all three stop 
+				modes </li>
+					<li>A new script that sets all three passwords from the given input. 
+				The telnet password can be changed by using telnet, no separate change is possible for ftp yet.<br />
+					</li>
+					<li>A German page updated to show motor cgi page published.</li>
+				</ul>
+			</ul>
+			</td>
+			</tr>
+</table>				
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>20 Feb, 2014</li><ul>
+					<li>The Modeling Functions has been updated to fix a bug in the hand 
+				controller.</li>
+				</ul>
+			</ul>
+			</td>
+			</tr>
+</table>				
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>Oct 25, 2013</li><ul>
+					<li>The buttons on the
+					<a href="ClassicHandController.html" target="_blank">classic hand 
+				controller</a> have been made to react the same as they did with 
+				the Gemini-1 system.</li>
+				</ul>
+			</ul>
+			</td>
+			</tr>
+</table>				
+
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>30 Sept, 2013</li><ul>
+					<li>Corrections to HC Bookmark screen and HC cosmetics </li>
+					<li>The delete model buttons now only delete the selected model, 
+				either east or west. This is implemented in both the hand 
+				controller and the web interface.</li>
+				</ul>
+			</ul>
+			</td>
+			</tr>
+</table>				
+
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>22 Aug, 2013</li><ul>
+					<li>Adaptive tracking on the HC.
+			If you GOTO Sun, tracking is changed to Solar, for Moon to Lunar, 
+			all other objects to Sidereal.&nbsp; </li>
+					<li>Limited Comet Tracking is implemented.<br />Comet Tracking - On hand controller 
+				Menu--&gt;Track--&gt;Comet/User Defined</li>
+					<li>The tactual buttons on the back of the hand controller is now 
+				active in the Balance menu and also the RA tactual buttons are 
+				now active on the Hand controller Limits menu.<span class="smalltext">
+					</span></li>
+					<li>There have been many internal improvements.
+				</li>
+					<li>Micro-SDcards up to 32Gbytes now work in both the hand 
+				controller and main unit. Please make sure you use a premium 
+				brand, such as Panasonic, SanDisk, Toshiba or Kingston if you 
+				do.&nbsp; </li>
+				</ul>
+			</ul>
+			</td>
+			</tr>
+</table>				
+
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+				<ul><li>13 Aug, 2013
+				</li>
+				<ul>
+					<li>New parking levels 0,1, 2.<br />While the mount resumed tracking in the former (now level 0) parking 
+			mode at every button touch, there are two additional parking levels.<br />Level 1 allows that GOTO commands are executed and resume tracking.<br />Level 2 insist on an Unpark 
+					command. This function is available at the HC, 
+			the GoTo button changes to Unpark as long as the mount is parked. It 
+			is also available at the Park screen, and in the ASCOM Gemini.net 
+			driver (1.0.51.0 and later).</li>
+					<li>Serial status command &lt;97 was extended (it returns 8 instead of 6 
+			characters now, there's no change in the ENQ macro).</li>
+					<li>Serial command 92 was added for managing the parking level. There's 
+			no selection for parking levels on the HC yet, it must be done using 
+			the serial command over a communication path, ASCOM or the Functions 
+			web page.</li>
+					<li>Ruggedized TCP socket support.&nbsp;<br />The transparent socket access, using the serial commands, over the 
+			default TCP port 4030 has been extended in several ways. First, Keil 
+			reacted to the error reports René sent while trying to connect to 
+			Southern Stars' Sky Safari. In fact, SkySafari is programmed in a 
+			really cruel way that René now uses to shock his students: For each command 
+			(like :GR# or :GD#) a TCP socket is opened, then these few bytes are 
+			put into the output buffer and the socket is closed. Keil was not 
+			prepared for this behavior (although it complies to RF793), but now 
+			they are.<br />It's evident (and you can watch the socket port numbers climb up 
+			quickly on the Network Statistics web page) that opening and closing 
+			several sockets a second doesn't improve SkySafari's performance, 
+			but this is the problem of Southern Stars. The iPhone 4 Rene tested 
+			with reacts pretty lame.</li>
+					<li>There are good news about using 
+					<a href="http://www.stellarium.org/" target="_blank">Stellarium</a>. This is a really 
+			nice free planetarium program that works on Linux, Mac and Windows. 
+			For Windows, there is a 
+			<a href="http://www.welshdragoncomputing.ca/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=31&amp;Itemid=39" target="_blank">StellariumScope</a> software available that 
+			connects over ASCOM. In René's tests it worked flawlessly over ASCOM and 
+			Ethernet. René started to work on a Linux driver, once available it 
+			should be possible to port it to MacOS.</li>
+					<li>Since the transparent sockets are not password protected, René has added 
+			some features to switch them off (by setting the TCP port to zero) 
+			and to specify a peer IP address to reject all other hosts. In the 
+			future this will be possibly to specify a range of IP 
+			addresses (similar to a firewall rule).</li>
+					<li>Protection for UDP:
+			The same security measures (switching off by setting the port to 
+			zero and selecting a peer IP) apply here. <br />The settings (both UDP and TCP) can be done over the Network web 
+			page. </li>
+					<li>Sebastian Mrozek contributed professionally designed buttons for the 
+			HC. They replace the built-in buttons. <span class="smalltext">(Aug 22, 2013)</span></li>
+				</ul>
+			</ul>
+			</td>
+			</tr>
+</table>				
+
+
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>22 Jun 2013</li><ul>
+					<li>The HC has a new 
+					<a href="hc/En-balance.html" target="_blank">Balance Menu.</a>&nbsp; See Menu--Mount--&gt;Balance 
+					<span class="x-smalltext">(See note 1 )</span></li>
+					<li>The HC now starts up in the Centering speed.</li>
+					<li>The <strong>default mount type is now G11</strong></li>
+					<li>The Model building menus have been reworked.</li>
+					<li>The Dec calibration and Dec guiding has been reworked.
+					</li>
+			</ul></ul>
+			</td>
+			</tr>
+		<tr><td class="smalltext">
+			
+				<p class="auto-style1">NOTE 1: This menu will not function if the Servo processors, (Separate 
+				from the ARM processor) has not been programmed with the 
+				firmware for them that was released around Sept 2012. This 
+				firmware requires a separate hardware PIC programmer and special 
+				cables to install this 
+				firmware and is not part of any firmware download for either the 
+				main unit or hand controller.&nbsp; All newer Gemini-2 units are shipped with 
+				this firmware installed. If your balance menu functions, 
+				then you have it.</p>
+			</td></tr>
+</table>
+<!--				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>date Here</li><ul>
+					<li>change </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+			</ul></ul>
+			</td>
+			</tr>
+</table>				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>date Here</li><ul>
+					<li>change </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+			</ul></ul>
+			</td>
+			</tr>
+</table>				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>date Here</li><ul>
+					<li>change </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+			</ul></ul>
+			</td>
+			</tr>
+</table>				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>date Here</li><ul>
+					<li>change </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+			</ul></ul>
+			</td>
+			</tr>
+</table>				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>Aug 20, 2010</li><ul>
+					<li>Added most functionality of HC using Serial commands </li>
+					<li>Web interface </li>
+					<ul>
+						<li>Can now click on catalog data to move it to textbox 
+						</li>
+						<li>Added Solar System Objects </li>
+					</ul>
+					
+					
+			</ul></ul>
+			</td>
+			</tr>
+</table>				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>Aug 19, 2010</li><ul>
+					<li>Modified HC Dimming</li><ul>
+						<li>Made PWM Frequench 100Hz </li>
+					</ul>
+					
+			</ul></ul>
+			</td>
+			</tr>
+</table>				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>Aug 15, 2010</li><ul>
+					<li>ASCOM Driver Update 
+					<ul>
+						<li>Added the Ethernet port support </li>
+					</ul>
+					</li>
+			</ul></ul>
+			</td>
+			</tr>
+</table>				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>Aug 14, 2010</li><ul>
+					<li>Web interface 
+					<ul>
+						<li>Added Roberts HC emulation </li>
+						<li>added SRAM reset for HGM and MI-250</li>
+					</ul>
+					</li>
+					</ul></ul>
+			</td>
+			</tr>
+</table>				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>Aug 10, 2010</li><ul>
+					<li>HC Update 
+					<ul>
+						<li>Updated the screen calibration </li>
+						<li>Menu -> Setup -> HC screen Radio buttons larger  </li>
+						<li>Added a Dim button to reduce the backlight </li>
+					</ul>
+					</li>
+					
+			</ul></ul>
+			</td>
+			</tr>
+</table>				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>Aug 4 2010</li>
+				<ul>
+					<li>Main board updates 
+					<ul>
+						<li>Serial Command set pretty complete, except are obs log commands, PEC and native command 220 for setting limits. 
+						</li>
+						<li>Physical Goto Park is implemented </li>
+						<li>A bug in the precession calculations was removed 
+						</li>
+						<li>GoTo's can be interrupted using the classical HC and the :Q# command. 
+						</li>
+					</ul>
+					</li>
+				</ul>
+			</ul>
+			</td>
+			</tr>
+</table>				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>Aug 2, 2010</li><ul>
+					<li>Firmware updates for both HC and Main units 
+					<ul>
+						<li>More forgiving syntax check for :Sr and :Sd commands. An asterisk is 
+						accepted as a delimiter, also colon and degree sign. 
+						</li>
+						<li>TheSky6 should GoTo now, as my EXphem does. </li>
+						<li>Completed SRAM checksum recalculation calls that site settings does not cause a CMOS reset 
+						</li>
+						<li>Added web commands for moving the mount</li>
+					</ul>
+					</li>
+					
+					<li>Robert developed a Hand controller for the Web interface 
+					and Rene did CGI interface for it. </li>
+					
+			</ul></ul>
+			</td>
+			</tr>
+</table>				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr>
+			<td class="style6">
+			<ul>
+				<li>July 31, 2010</li>
+					<ul>
+					<li>HC Boot Loader update to fix some bugs </li>
+			</ul></ul>
+			</td>
+			</tr>
+</table>				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>July 29 2010</li><ul>
+					<li>USB PC Driver provided </li>
+			</ul></ul>
+			</td>
+			</tr>
+</table>				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>July 29 2010</li><ul>
+					<li>USB PC Driver provided </li>
+			</ul></ul>
+			</td>
+			</tr>
+</table>				
+
+
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>July 27 2010</li><ul>
+					<li>Hand Controller change<ul>
+						<li>Time Display in lower right corner </li>
+						<li>Go To button now Functional </li>
+						<li>Only Solar System button works </li>
+						<li>Time Menu Corrected </li>
+					</ul>
+					</li>
+			</ul></ul>
+			</td>
+			</tr>
+		<tr><td class="style6">
+			&nbsp;</td>
+			</tr>
+</table>				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>July 22 2010</li><ul>
+					
+					
+					<li>The Gemini-2 has a Web interface and Ethernet </li>
+
+					<li>The web interface only accepts Static IP addresses</li>
+					<li>What the Gemini-2 is missing that the Gemini-1 has. 
+					<ul>
+						<li>Mount Modeling </li>
+						<li>Tracking Rate Calculations </li>
+						<li>GoTo is partially working, no commanded meridian flip yet, Western
+						Safety limit is ignored. </li>
+						<li>No PEC yet </li>
+					</ul>
+					</li>
+					
+
+			</ul></ul>
+			</td>
+			</tr>
+</table>				
+<table align="center" style="width: 900px" class="tableborder1">
+		<tr><td class="style6">
+			<ul>
+				<li>Jun 9 2010</li><ul>
+					<li>Received first beta type </li>
+			</ul></ul>
+			</td>
+			</tr>
+</table>				
+-->
+<table  align="center" style="width:900px">
+	<tr>
+		<td class="style7whiteborder" >
+		Page last updated on Sept 12, 2016
+		</td>
+	</tr>
+</table>
+
+
+	
+<br />
+</body>
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US">
+<head profile="http://www.w3.org/2005/10/profile">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+
+<head>
+<title>Bottom page</title>
+<link href="gemini-2.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
+
+
+</head>
+
+<body style="color: #FFFFFF; background-color: #000000" >
+<table align="center" style="width: 900px">
+	<tr>
+		<td class="tableborder1"> <span class="style6" style="font-size:small">This site is not for profit 
+		and sells nothing and asks for no money for any help it provides.&nbsp; This 
+		site is 
+		here to help fellow Gemini-2 and Gemini-1 owners. This Web Site is not 
+		associated with Losmandy-Hollywood General Machining Inc. or any of 
+		their employees and never has been. There is no guarantee that all the 
+		information is correct, but strives to provide the best information 
+		possible. The use of any information is at your own risk.&nbsp; The webmaster 
+		is an unpaid beta tester, and tries to work with other beta testers, and 
+		René the writer of the firmware.&nbsp;
+		If you would like to help keep this web site going send your gift to <a href="http://paypal.me/geminitwo">paypal.me/geminitwo</a> 
+		Your gift will be used to defray the cost of keeping this web site up, unless you specify otherwise.</span></td>
+	</tr>
+</table>
+<table align="center" style="width: 900px">
+	<tr>
+		<td class="tableborder1"> <span class="style6" style="font-size:small">
+		I have tried many times to make a PDF of this site with no luck. Every program
+		to do this screws up the links and images. I am not going to write a manual either.
+		I developed this web site for my own use in the beginning, but it soon went public.</span></td>
+	</tr>
+</table>
+
+	<table align="center" style="width: 900px">
+		<tr>
+			<td>
+<div class="AJXMenuSPDSMNA"><!-- AJXFILE:ajxmenu_bottom.css -->
+ <div class="ajxmw1">
+  <div class="ajxmw2">
+<ul>
+ <li class="tfirst tlast"><a href="index.html" target="_self">HOME</a></li>
+</ul>
+  </div>
+ </div>
+ <br >
+</div>
+</td>
+</tr>
+</table>
+
+<!--
+<table align="center"style="width: 50px">
+	<tr>
+	<td class="style6">Hit counter by<a href="http://digits.net"> http://digits.net</a></td>
+	
+	
+	<td class="style6R" width="45%">
+  <a href="http://www.digits.net" target="_blank">
+    <img src="https://counter.digits.net/?counter={921ba194-f2d6-95c4-2981-2437d185efba}&template=simple" 
+     alt="Hit Counter by Digits" border="0"  />
+  </a>
+  </td>
+  </tr>
+</table>
+-->
+&nbsp;<table align="center" cellpadding="4" cellspacing="4" style="width: 70%">
+	<tr class="style6">
+		<td class="style1">Your Privacy Policy
+<br>No Information is collected by this site.&nbsp; Cookies are set in your browser, 
+but only for visited<br/>links to change color.
+</td>
+	</tr>
+	<tr class="style6">
+		<td class="style13"><b>Your use of any information on this site is at your own risk.</b></td>
+	</tr>
+</table>
+		
+	<p class="style7" align="center"><!--webbot bot="HTMLMarkup" startspan --><script language=javascript>
+
+	  <!--
+	  var contact = "Thomas Hilton"
+	  var email = "tomh"
+	  var emailHost = "gemini-2.com"
+	  document.write("copyright&copy; - 2017-2011 -<a href=" + "mail" + "to:" + email + "@" + emailHost+ ">" + contact + "</a>" )
+	 //-->
+	</script><!--webbot bot="HTMLMarkup" endspan -->
+	and <a href="index.html">https://www.gemini-2.com</a>
+	<br />Gemini-2 and Gemini is a registered trade names of Hollywood General Machining Inc.</p>
+
+	
+</body>
+
+
+
+
