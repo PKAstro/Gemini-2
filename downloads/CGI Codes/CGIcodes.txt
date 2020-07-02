@@ -1,0 +1,505 @@
+Gemini-II web interface
+-----------------------
+Rev. 1.04 - Jul 22, 2015
+
+
+1. Introduction
+
+Gemini's internal web server searches the files requested by the HTTP URLs first on the SD card. Only very few pages, like an initial index.htm, sd.cgi and error pages are stored hard-coded in the firmware as a fallback if the SD card is empty, freshly formatted or faulty. This gives the user the possibility to customize the web interface at will. He can put static files on the SD card (HTML, JPEG, PNG, ...) if the browser can interpret them correctly. 
+
+Important to find the files is their location. Currently Gemini's web server supports four languages: English, German, French and Spanish. For these languages, directories EN, DE, FR and ES exist on the SD card, which contain the web pages in the respective languages.
+
+Whenever a web page is requested, the web server examines the language code in the HTTP header the browser sent according to its setup, changes to the directory (or defaults to EN if the language is not (yet) supported and tries to open the file. If this is successful and the file name extension does not mark it as a dynamic HTML file, the file content is transmitted to the browser.
+
+All commands and parameters described below are case sensitive!
+
+
+2. Dynamic .cgi files
+2.1. Format description
+
+These files are analyzed and interpreted line by line. A line must not exceed 120 characters. 
+Each line starts with a character describing how to to interpret it:
+
+'#'	A hash mark tells the interpreter to ignore this line
+'t'	Text. The line will be sent to the browser without any changes
+'i'	This line will be replaced by the file with the given name included,
+'c'	This line will be interpreted, the output will be dynamically build. 
+'.'	End of file.
+
+Lines starting with the character 'c' will have some more characters following determining how to interpret them. The second character will be ignored, the third character will be used for the first and most important selection. Depending on this, the fifth character may be used as a secondary choice.
+
+Dynamic files are examined and the returned content is generated at runtime. If you don't want to build your own .cgi-file, there's a dummy file "command.cgi" included in the Gemini firmware image, that allows to work with the parameters given below.
+
+2.2 cgi file parameter list
+
+'a'	Network parameters
+		i	current IP address
+		m	current netmask
+		g	current default gateway
+		p	current primary DNS server
+		q	current secondary DNS server
+		a	current MAC address
+		I	static IP address
+		M	static netmask
+		G	static default gateway
+		P	static primary DNS server
+		Q	static secondary DNS server
+		A	static MAC address
+		T	DHCP timeout span
+		d	displays "checked" if DHCP is selected
+		U	UDP Port number 
+		u	accepted IP address for UDP communication or 0 for all
+		t	TCP Port number for transparent BSD socket
+		c	accepted IP address for TCP BSD socket or 0 for all
+
+'A'	A/D (battery, 12V, Feature port)
+		1
+		..
+		6
+
+'b'	Default Boot mode
+		0
+		..
+		3
+
+'B'	Preferred Browser language
+
+'C'	Coordinates
+		p	current PRA position
+		q	current DEC position
+		r	current apparent RA position
+		d	current apparent DEC position
+		i	current telescopic RA position
+		j	current telescopic DEC position
+		R	target RA position
+		D	target DEC position
+		a	current Az position
+		e	current El position
+		A	target Az position
+		E	target El position
+		n	target name
+		s	apparent target TRA position
+		t	apparent target TDEC position
+		h	telescopic target TRA position
+		m	telescopic target TDEC position
+		u	difference target RA - telescope RA
+		v	difference target DEC - telescope DEC
+		U	difference unmodelled target RA - telescope RA
+		V	difference unmodelled target DEC - telescope DEC
+		Y	current RA worm PEC pointer position
+		S	Serial Emulator output string
+'c'	TCP status
+
+'D'	Databases
+		D	name of current directory 
+		d	complete directory
+		f	catalog files directory
+		F	catalogue files
+		t	catalogue content
+		S	object selection
+		s	flash chip selection
+		i	object info (state.cgi)
+	
+'d'	System password - file 'system.cgi'
+
+'E'	Axis encoder
+		R	resolution X / RA
+		D	resolution Y / DEC
+		r	current value X / RA
+		d	current value Y / DEC
+		x	X / RA readout errors
+		y	Y / RA readout errors
+
+'e'	Encoder Port Usage
+
+'F'	Firmware
+		f	SD card label
+		i	current firmware info
+		B	firmware .bin file names
+		b	firmware .bin file directory entries
+		s	board serial #
+
+'g'	Graphic HC brightness
+'G'	Graphic HC color scheme
+
+'H'	Hardware
+		S	Get Serial Number
+	
+'h'	Classic HC mode
+		0	Visual Mode
+		1	Photo Mode
+		2	All Speeds Mode
+
+'I'	Information
+	  'I' Information Buffer Content
+	  'H' Hand Controller Display
+	  'S' Serial emulation return string
+'i'	returns currently selected site (1..4)
+
+'K'	returns current Parking mode preselection (0..2)
+
+'k'	returns current PEC state
+
+'L'	Safety Limits in steps
+	   	r	right
+	   	l	left
+	   	g	Western GoTo Limit
+		t	Time to western limit 
+'l'	Browser Language - file 'language.cgi'
+
+'M'	Gearing: 
+		W 	RA worm ratio
+		w 	DEC ...
+		S 	RA spur ratio (unsigned int)
+		s 	DEC ...
+		X 	RA spur ratio (double)
+		Y 	DEC ...
+		R 	RA motor nominal encoder resolution
+		r	DEC
+		A	RA step size	(double)
+		a	DEC ...
+		T	DEC TVC step count
+'m'	Mount Type 
+		0
+		..
+		6
+
+'N'	Mount Design
+		0	(German) Equtorial
+		1	Alt/Az
+
+
+'n'	tracking rate selection
+		0	Sidereal
+		1	King
+		2	Lunar
+		3	Solar
+		4	Terrestrial
+		5	Closed Loop
+		6	Comet/User Defined
+'O'	Object
+	   	'n'	name of selected object or "---"
+
+'Q'	Filename to store the currently selected telescope pointing model
+
+'P'	Model parameters
+	   	E 	Alignment count in the East
+		W	... West
+		a 	Azimuth
+		e 	Elevation
+		c 	Non-Polarity at the Meridian
+		n 	Non-Polarity at the Pole
+		h 	Index error in HA
+		d 	Index error in DEC
+		t 	Tube Flexure
+		C 	Counterweight flexure
+		F	Flip in RA
+		f	Flip in DEC
+	   	0..1 	currently selected model
+		s	swap :CM# and :Cm#
+
+'p'	serial port setings - file 'serial.cgi
+
+'Q'	Parking mode preselection
+		0	Unpark on any Move command
+		1	Unpark on GoTo or Unpark commands
+		2	Unpark only after Unpark command
+
+'q'	GPS port
+
+'R'	Axis Movement
+		r	RA/AZ
+		d	DEC/EL
+
+'S'	Safety Limits in degrees/minutes
+	 	r 	right
+	  	l 	left
+	  	g	WestGoToLimit	
+'s'	Site Settings
+		n	name of site
+		t	timezone
+		o	longitude
+		a	latitude
+		e	elevation
+		#	site number
+		
+'T'	time: 
+		U 	UTC date
+		u 	UTC time
+		C 	Civil Date
+		c 	Civil time
+		s 	Sidereal time
+		m	Julian Date	(floating poit)
+'t'	moving mode
+	 	x	RA axis state, f.i. currently active tracking rate 
+			(sidereal, solar, lunar, terrestrial, comet, ...), 
+			Slewing, No Motion, Centering, Guiding, STALL 	(language-dependend string)
+		y	DEC axis state...
+		L	RA axis lag [steps], range -400..400
+		l	DEC axis lag [steps], range -400..400
+		P	RA motor PWM duty cycle, -100..100
+		p	DEC motor PWM duty cycle, -100..100
+		T	warning treshold for offset in RA/Az while holding position/guiding/tracking
+		t	warning treshold for offset in DEC/El while holding position/guiding/tracking
+		H	warning treshold for heavy load (high PWM duty cycle) in RA/Az while holding position/guiding/tracking
+		h	warning treshold for heavy load (high PWM duty cycle) in DEC/El while holding position/guiding/tracking
+		S	warning treshold for heavy load (high PWM duty cycle) in RA/Az while slewing
+		s	warning treshold for heavy load (high PWM duty cycle) in DEC/El while slewing
+
+'V'	Velocities: 
+		S 	Manual Slewing RA
+		s 	Manual Slewing DEC
+		M 	Move Speed RA
+		m 	Move Speed DEC
+		T 	GoTo Slewing RA
+		t 	GoTo Slewing DEC
+		A 	Slewing Acceleration RA
+		a 	Slewing Acceleration DEC
+		C 	Centering RA
+		c 	Centering DEC
+		G 	Guiding RA
+		g	Guiding DEC
+
+'X'	Servo motor curve parameters (Attention: Wrong values could burn the motors!)
+		P	Proportional value for the X axis (RA, AZ)
+		p	Proportional value for the Y axis (DEC, EL)
+		D	Differential value for the X axis (RA, AZ)
+		d	Differential value for the Y axis (DEC, EL)
+
+'z'	State	(may be expanded later, please test single bits)
+		0	currently waiting for startup mode selection
+		1	Gemini started up
+
+
+2.3 Serial Port Emulator
+
+This emulator bridges the gap between the HTTP-based web interface and the serial commands. Commands sent as string value of the SE= parameter are executed by the serial command interpreter. It is possible to send several serial commands at once, but it must be assured that the responses not exceed 64 bytes, the length of a special output buffer used for the interpreter. This output can be obtained with the cgi command line "c C S %s".
+
+
+
+2.4 Forms input
+2.4.1 POST parameter
+
+So far, the HTTP POST method is only used for file uploading and SD card formating.
+
+2.4.2 GET parameter
+
+Syntax:
+
+Several command strings don't need any parameter values given (nothing noted after the equal sign) or simply ignore them, but most commands need them formed exactly as described below in C-printf syntax:
+
+%d	integer
+%u	unsigned integer
+%f	floating point number
+%s	string
+
+All other characters have to appear exactly as they are shown.
+
+Parameter list:
+
+MR=e 		Move Eastward
+MR=w 		Move Westward
+MR=q 		Stop moving RA
+MD=n 		Move Northward
+MD=s 		Move Southward
+MD=q	 	Stop moving DEC
+
+PH=		Park at Home Position
+Ph=		Set Home Position
+PC=		Park at CWD Position
+PZ=		Park at Zenith
+PS=		Sleep Telescope
+PW=		Wakeup Telescope
+
+hc=0..2		Set Hand Controler into Visual (0), Photo(1) or All Speed Mode
+hB=0..7		Hand Controler brightness
+hC=0..2		Hand Controler color scheme (day, dawn, night)
+ts=0..6		Set Tracking Mode (Sidereal, King, ...)
+
+du="%u.%u.%u"	UTC Date
+dc="%u.%u.%u"	Civil Date	
+tu="%u:%u:%u"	UTC Time
+tc="%u:%u:%u"	Civil Time
+
+tr="%u:%u:%u"	Target Right Ascension
+td="%d:%u:%u"	Target Declination
+tR="%u"		Target Physical Right Ascension
+tD="%u"		Target Physical Declination
+ta="%d:%u:%u"	Target Azimuth
+te="%u:%u:%u"	Target Elevation
+tn="%s"		Target Name
+
+mn="%u"		Current model number 0..1
+sm="%u"		Store current model under number 0..1
+cm="%u"		clear model number #
+aa=		Additional Alignment
+Sm=		Synchronize
+ia=		Initial Alignment
+
+ML=%s		Load model under the given name from the Models subdirectory
+MS=%s		Store model with the given name in the Models subdirectory
+
+mD="%u"		mount design
+mt="%u"		mount type
+wr="%d"		Worm ratio in right ascension
+wd="%d"		Worm ratio in declination
+sr="%u"		Spur ratio in right ascension
+sd="%u"		Spur ratio in declination
+mr="%u"		Motor encoder resolution in right ascension
+md="%u"		Motor encoder resolution in declination
+dt="%u"		DEC TVC step count
+
+SP="%u"		Proportional parameter for X servo (RA/AZ) for High Speed
+Sp="%u"		Proportional parameter for X servo (RA/AZ) for Low Speed
+SQ="%u"		Proportional parameter for Y servo (DEC/EL) for High Speed
+Sq="%u"		Proportional parameter for Y servo (DEC/EL) for Low Speed
+SD="%u"		Differential parameter for X servo (RA/AZ) for High Speed
+Sd="%u"		Differential parameter for X servo (RA/AZ) for Low Speed
+SF="%u"		Differential parameter for Y servo (DEC/EL) for High Speed
+Sf="%u"		Differential parameter for Y servo (DEC/EL) for Low Speed
+ST="%u"		warning treshold for offset in RA/Az while holding position/guiding/tracking
+St="%u"		warning treshold for offset in DEC/El while holding position/guiding/tracking
+SH="%u"		warning treshold for heavy load (high PWM duty cycle) in RA/Az while holding position/guiding/tracking
+Sh="%u"		warning treshold for heavy load (high PWM duty cycle) in DEC/El while holding position/guiding/tracking
+SS="%u"		warning treshold for heavy load (high PWM duty cycle) in RA/Az while slewing
+Ss="%u"		warning treshold for heavy load (high PWM duty cycle) in DEC/El while slewing
+
+R1="%c"		Move Speed: G=Guide, C=Center, M=Move, S=Slew
+
+VM="%d"		Manual Slewing Speed RA
+Vm="%d"		Manual Slewing Speed DEC
+VT="%d"		GoTo Slewing Speed RA
+Vt="%d"		GoTo Slewing Speed DEC
+VV="%d"		Move Speed RA
+Vv="%d"		Move Speed DEC
+Vi="%d"		Increment Move Speeds by the given value. If omitted, default is 50.
+Vd="%d"		Decrement Move Speeds by the given value. If omitted, default is 50.
+
+VA="%f"		RA Slewing Acceleration
+Va="%f"		DEC Slewing Acceleration
+VC="%u"		RA Centering Speed
+Vc="%u"		DEC Centering Speed
+
+VG="%u.%u"	RA Guiding Speed
+Vg="%u.%u"	DEC Guiding Speed
+
+Sr="%u°%u"	Right Safety Limit
+Sl="%u°%u"	Left Safety Limit
+Sg="%u°%u"	Western GoTo Limit
+
+ER="%d"		Axis Encoder RA resolution
+ED="%d"		Axis Encoder DEC resolution
+ep="%u"		encoder port usage, 0..15
+
+si="%u"		select location
+sn="%s"		site name
+st="%d:%u:%u"	Timezone (minutes and seconds can be omitted)
+so="%d°%u'%u"	Longitude
+sa="%d°%u'%u"	Latitude
+se="%d"		Elevation
+s#="%u"		site number
+gp="%u"		Query GPS receiver at serial ports 0..3
+
+bm="%u"		default boot mode, 0..3 for Cold Start, Warm Start, Warm Restart, Ask, if possible
+bo="%u"		select boot mode, 0..2 for Cold Start, Warm Start, Warm Restart
+
+bO=		Reboot (if possible, ask for startup mode)
+bC=		Reboot, enforcing a Cold Start
+
+s0="%u"		Baud rate selection, serial port 0
+s1="%u"		Baud rate selection, serial port 1
+s2="%u"		Baud rate selection, serial port 2
+s3="%u"		Baud rate selection, serial port 3
+sg="%u"		Baud rate selection for GPS receiver
+
+ct="%u"		Catalog selection (active catalog file id)
+ff="%u"		Firmware flashing (selected firmware file id)
+CN="%s"		Catalog Name selection
+DN="%s"		Directory to change to
+Df="%s"		Delete File in current path
+DF="%s"		Delete File with absolute path given
+DM=		Delete modeling log file /LOGS/POINTING.DAT
+
+co="%s"		Catalog object string
+SO="%u"		Solar System object number (Sun=0, ...)
+gtf=		enforce meridian flip
+pac=		reset MA and ME for Polar Axis Correction
+GT=		start GoTo
+GP=		start Physical GoTo
+GA=		start Alt/Az GoTo
+
+AbH="%c"	'1': List only catalog object currently above horizon, '0': list all objects
+prec="%u"	always precess ('1') given coordinates or not ('0')
+swCM="%u"	swap serial commands :CM# and :Cm# functionality: Synchronize<->Additional Align 
+sdo=		precess given object coordinates
+
+ip="%u.%u.%u.%u"	current IP Address
+msk="%u.%u.%u.%u"	current IP Netmask
+gw="%u.%u.%u.%u"	current IP default gateway
+pdns"%u.%u.%u.%u"	current Primary DNS server
+sdns"%u.%u.%u.%u"	current Secondary DNS server
+Ip="%u.%u.%u.%u"	static IP Address
+Msk="%u.%u.%u.%u"	static IP Netmask
+Gw="%u.%u.%u.%u"	static IP default gateway
+Pdns"%u.%u.%u.%u"	static Primary DNS server
+Sdns"%u.%u.%u.%u"	static Secondary DNS server
+mac="%x:%x:%x:%x:%x:%x" MAC address
+UP="%u"			UDP socket port number
+TP="%u"			TCP socket port number
+Tp="%u.%u.%u.%u"	Accepted TCP Peer for transparent TCP sockets
+Up="%u.%u.%u.%u"	Accepted UDP Peer for UDP socket communication
+
+CL=		SRAM reset to default Losmandy HGM settings
+CM=		SRAM reset to default MI-250 settings
+CS=		Store SRAM configuration parameters to \config\Gemini.cfg
+CR=		Load SRAM configuration parameters from \config\Gemini.cfg
+
+PM="%u"		Parking Mode preseclection (0..2)
+
+pt=		Start PEC training
+pa=		Abort PEC training
+ps=		Start PEC replay
+pe=		Stop PEC replay
+pb="%u"		Activate PEC playback at boot time, if PEC data are available.
+
+
+3. Character encoding
+
+Gemini-II supports internationalized messages. Special characters have to be displayed by the HC, browsers as well as they have to be exchanged between browser. 
+
+XML-like character encoding is the only form of encoding that is fully supported by most browsers not only for displaying HTML pages, but also for Ajax technologies, which requires valid XML. For this reason, special characters should be coded in UCS Universal Character Set as defined by ISO/IEC 10646. Characters are encoded as numeric entities using the format 
+	&#nnnn;
+where nnnn is the numeric representation of the character (leading zeros my be omitted).
+
+The graphical HC supports XML encoded Greek lowercase characters with nnnn reaching from 945 to 969:
+
+945:	alpha	(coded: &#945;)
+946:	beta	&#946;
+947:	gamma	&#947;
+948:	delta	&#948;
+949:	epsilon	&#949;
+... until ...
+969:	omega	&#969;
+
+The HC also supports the most common German, French and Spanish special characters. So far that are:
+
+196:	Ä
+205:	Í
+214:	Ö
+218:	Ú
+220:	Ü
+224:	à
+225:	á
+228:	ä
+231:	c cedilla
+232:	è
+233:	é
+234:	ê
+237:	í
+241:	~n (n with tilde above)
+243:	ó
+246:	ö
+250:	ú
+252:	ü
+
+Other characters used may show up correctly in browsers but the HC will display a question mark '?'at its place.

@@ -1,0 +1,45 @@
+t <form>
+# UTC Date
+c T U <text><id>UTCDate</id><value>%02u.%02u.%04u</value></text>
+# UTC Time
+c T u <text><id>UTCTime</id><value>%02u.%02u.%02u</value></text>
+# RA, DEC Axis movement
+c t x <text><id>VelocityR</id><value>%s</value></text>
+c t y <text><id>VelocityD</id><value>%s</value></text>
+# physical positions
+c C p <text><id>HA_PhP</id><value>%08d</value></text>
+c C s <text><id>TR_PhP</id><value>%08d</value></text>
+c C Y <text><id>RA_PeP</id><value>%05d</value></text>
+c C t <text><id>TD_PhP</id><value>%08d</value></text>
+c C h <text><id>TR_uPhP</id><value>%08d</value></text>
+c C m <text><id>TD_uPhP</id><value>%08d</value></text>
+c C q <text><id>DEC_PhP</id><value>%08d</value></text>
+# telescopic unmodelled RA, DEC
+c C i <text><id>RA_t</id><value>%02d:%02u:%02u</value></text>
+c C j <text><id>DEC_t</id><value>%c%02u:%02u:%02u</value></text>
+# telescope apparent RA, DEC
+c C r <text><id>RA_hP</id><value>%02d:%02u:%02u</value></text>
+c C d <text><id>DEC_hP</id><value>%c%02u:%02u:%02u</value></text>
+c L t <text><id>HA_TrT</id><value>%02d:%02u:%02u</value></text>
+#target name
+c O n <text><id>OName</id><value>%s</value></text>
+# target object RA, DEC
+c C R <text><id>RA_TP</id><value>%02d:%02u:%02u</value></text>
+c C D <text><id>DEC_TP</id><value>%c%02u:%02u:%02u</value></text>
+# target object delta RA, DEC
+c C u <text><id>RA_DP</id><value>%c%02u:%02u:%02u</value></text>
+c C v <text><id>DEC_DP</id><value>%c%02u:%02u:%02u</value></text>
+# target object Az, El
+t <text><id>AZ_TP</id>
+c C A <value>%03d:%02u:%02u</value></text>
+t <text><id>EL_TP</id>
+c C E <value>%c%02u:%02u:%02u</value></text>
+# Infomation Buffer Content
+t <text><id>Info</id>
+c I I <value>%s</value></text>
+t <text><id>HC</id>
+c I H <value>%s</value></text>
+t <text><id>HP</id>
+c I P <value>%s</value></text>
+t </form>
+.

@@ -1,0 +1,226 @@
+﻿.h4 {
+	text-align: center;
+	font-size: small;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FF0000;
+	font-style: normal;
+}
+.h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-large;
+	font-weight: bolder;
+	font-style: normal;
+	color: #FF0000;
+	text-align: center;
+}
+.h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: large;
+	font-weight: bold;
+	font-style: normal;
+	color: #FF0000;
+	text-align: center;
+}
+.h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	font-weight: bolder;
+	font-style: normal;
+	color: #FF0000;
+	text-align: center;
+}
+.h5 {
+	text-align: center;
+	font-size: medium;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FF0000;
+	font-style: normal;
+}
+.style1 {
+	text-align: center;
+}
+.style2 {
+	color: #FF0000;
+}
+.style3 {
+	color: #FFFF00;
+}
+.style4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: large;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-align: center;
+	font-style: normal;
+}
+.style5 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style5a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FFFFFF;
+	font-weight: normal;
+	font-style: normal;
+}
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	color: #FFFFFF;
+	text-align: left;
+	font-style: normal;
+	margin: 10px;
+	font-weight: normal;
+}
+.style6L {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	color: #FFFFFF;
+	text-align: left;
+	margin: 10px;
+	font-weight: normal;
+	font-style: normal;
+}
+.style6R {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	color: #FFFFFF;
+	text-align: right;
+	margin: 10px;
+	font-weight: normal;
+	font-style: normal;
+}
+.style6C {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	color: #FFFFFF;
+	text-align: center;
+	margin: 10px;
+	font-weight: normal;
+	font-style: normal;
+}
+.style6s {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	text-align: justify;
+	margin: 10px;
+	font-weight: normal;
+	font-style: normal;
+}
+.style6wborder {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	color: #FFFFFF;
+	text-align: justify;
+	margin: 10px;
+	border: 1px solid #FF0000;
+	font-weight: normal;
+	font-style: normal;
+}
+.style7 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	text-align: center;
+	color: #FFFFFF;
+	margin: 10px;
+	font-weight: normal;
+	font-weight: normal;
+	font-style: normal;
+}
+.style7wborder {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	text-align: center;
+	color: #FFFFFF;
+	margin: 10px;
+	border: 1px solid #FF0000;
+	font-weight: normal;
+	font-style: normal;
+}
+.style8 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	font-weight: bold;
+	font-style: italic;
+	color: #FF0000;
+	text-align: center;
+	font-weight: normal;
+	font-style: normal;
+}
+.style9 {
+	color: #FFFF00;
+	font-weight: normal;
+}
+.style10 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	color: #FFFFFF;
+	text-align: left;
+	margin-left: 40px;
+	font-style: normal;
+}
+.style11 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	color: #FFFFFF;
+	text-align: left;
+	margin: 10px;
+	border: 1px solid #FF0000;
+	font-weight: normal;
+	font-style: normal;
+}
+.style12 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	text-align: center;
+	color: #FFFFFF;
+	margin: 10px;
+	border: 1px solid #FF0000;
+	font-weight: normal;
+	font-style: normal;
+}
+.style13 {
+	color: #FF0000;
+	text-align: center;
+	font-weight: normal;
+	font-style: normal;
+}
+.style14 {
+	color: #00FFFF;
+}
+.style16 {
+	color: #FFFFFF;
+}
+.style17 {
+	border: 4px solid #FF0000;
+	text-align: left;
+}
+.style18 {
+	border: 4px solid #FF0000;
+	text-align: justify;
+}
+.style19 {
+	text-align: center;
+	color: #FF0000;
+	margin: 2px;
+}
+.style21 {
+	margin: 4px;
+}
+.style22 {
+	border: 4px solid #FF0000;
+}
+a {
+	color: #00FFFF;
+}
+a:visited {
+	color: #FFFF00;
+}
+a:hover {
+	color: #00FF00;
+}
+a:active {
+	color: #00FF00;
+}
+<body style="color: #FFFFFF; background-color: #000000">

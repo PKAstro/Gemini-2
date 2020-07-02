@@ -1,0 +1,912 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE, NO-STORE">
+	<meta http-equiv="PRAGMA" content="NO-CACHE">
+	<meta http-equiv="EXPIRES" content="-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Hand Controller</title>
+	<link rel="stylesheet" href="jquery-mobile-1-1-0-min.css" />
+	<link rel="stylesheet" href="gemini.css" />
+	<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" src="gemini.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+</head> 
+<body leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px">
+<!-- Start of first page -->
+<div data-role="page" id="Main" data-theme="a" style="margin: 0px">
+	
+	<div data-role="content" style="margin: 0px;">	
+	<div class="content-primary">
+	    <div>
+			<div class="ui-div-black-border">
+				<table style="width:100%;padding: 0;border-collapse: collapse">
+		            <tr>
+		                <td>
+		                    LST/Limit:</td>
+		                <td style="text-align: right" nowrap>
+		                    <div id="LSTToLimit">00:00:00:00 00:00:00</div></td>
+		            </tr>
+		            <tr>
+		                <td>
+		                    RA/DEC:</td>
+		                <td style="text-align: right" nowrap>
+		                    <div id="RADEC">00:00:00:00 +00:00:00:00</div></td>
+		            </tr>
+		            <tr id="DisplayRow">
+		            	<td colspan="2"><div id="Display">&nbsp;</div></td>
+		            </tr>
+		        </table>
+	        </div>
+			<div style="text-align:center;margin: 0px;" >
+	        	<table style="width:100%;padding: 0;border-collapse: collapse">
+	                    <tr>
+	                        <td style="vertical-align: top;text-align: left;">
+	                            <div id="State">STOP</div>
+	                        </td>
+	                        <td>
+	                            <img id="buttonnorth" alt="" src="images/buttonup.gif" class="ui-btn-diamond" /></td>
+	                        <td style="vertical-align: top;text-align: right;">
+	                            <div id="Park">
+	                            	&nbsp;
+	                            </div>
+	                        </td>  
+	                    </tr>
+	                    <tr>
+	                        <td>
+	                            <img alt="" src="images/buttonup.gif"  class="ui-btn-diamond" id="buttonwest" />
+	                        </td>
+	                        <td style="text-align: center">
+	                            <input type="button" class="ui-btn-stop" data-role="none" value="" onclick="AllStop()" />
+	                        </td>
+	                        <td>
+	                            <img alt="" src="images/buttonup.gif"  class="ui-btn-diamond" id="buttoneast" /></td>
+	                    </tr>
+	                    <tr>
+	                        <td style="text-align: left; color: FFFFFF">
+	                        	   <input id="CheckboxRevRa" type="checkbox" name="CheckboxRevRa" class="custom" data-theme="a" />
+	                               <label for="CheckboxRevRa" id="CheckboxRevRaLabel">!Ra</label>
+	                               <input id="CheckboxTracking" type="checkbox" name="CheckboxTracking" class="custom" data-theme="a" />
+	                               <label for="CheckboxTracking" id="CheckboxTrackingLabel">Track</label>
+							</td>
+	                        <td>
+	                            <img alt="" src="images/buttonup.gif"  class="ui-btn-diamond" id="buttonsouth" />
+	                        </td>
+	                        <td style="text-align: right;">
+	                               <input id="CheckboxRevDec" type="checkbox" name="CheckboxRevDec" class="custom" data-theme="a" />
+	                               <label for="CheckboxRevDec" id="CheckboxRevDecLabel">!Dec</label>
+	                               <input type="checkbox" name="CheckboxPec" id="CheckboxPec" class="custom" data-theme="a"/>
+									<label for="CheckboxPec" id="CheckboxPecLabel">PEC</label>
+	                        </td>
+	                    </tr>
+	                </table>
+	       			<table style="padding: 0;border-collapse: collapse">
+	       				<tr style="height:45px;vertical-align:bottom">
+	       					<td style="text-align:left;">
+	       						<div id="CurrentSpeed" style="margin: 8px;">GUIDE</div>
+	        				</td>
+	        				<td style="text-align:left;">
+		        				<div id="movespeed"  data-role="controlgroup" data-type="horizontal" style="border-style:none;margin-left:0px;margin-right:0px;height:15px"> 
+		        					<input type="button" data-role="button" onclick="MoveSpeedDown()" data-theme="a" data-icon="arrow-d" data-iconpos="notext" value="-"/>
+									<input type="button" data-role="button" onclick="MoveSpeedUp()" data-theme="a" data-icon="arrow-u" data-iconpos="notext" value="+"/>
+		        				</div>
+	        				</td>
+	       				</tr>
+	       			</table>
+	       			</div>
+	       			<fieldset class="ui-grid-b">
+					<div class="ui-block-a">
+						<a data-role="button" data-theme="a" id="ButtonRate"  onclick="SetSpeed()">Rate</a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#Menu" data-role="button" data-theme="a" id="ButtonMenu">Menu</a>
+					</div>
+					<div class="ui-block-c">
+						<a href="#Goto" data-role="button" data-theme="a" id="ButtonGoto">Goto</a>
+					</div>	   
+					</fieldset>
+			
+	        	</div>	
+        	</div><!--/content-primary-->
+        <div class="content-secondary">
+			<ul data-role="listview" data-theme="a" data-dividertheme="a">
+				<li data-role="list-divider">Goto</li>
+				<li><a href="#Catalog">Catalog Object</a></li>
+				<li><a href="#SolarSystem">Solar System</a></li>
+				<li><a href="#GotoCoords">Coordinate Input</a></li>
+				<li><a href="javascript:void()" onclick="Flip()">Meridian Flip</a></li>
+				<li><a href="#Park">Park</a></li>
+				<li data-role="list-divider">Observation</li>
+				<li><a href="javascript:void()" onclick="Alignment('add','')">Align</a></li>
+				<li><a href="javascript:void()" onclick="Alignment('','')">Sync</a></li>
+				<li><a  href="javascript:void()" onclick="Alignment('reset','')">Reset Model</a></li>
+			</ul>
+			
+		</div><!--/content-secondary-->
+	</div><!-- /content -->
+</div><!-- /page -->
+<div data-role="page" id="Goto" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-theme="a" data-dividertheme="a" data-inset="true">
+				<li data-role="list-divider">Goto</li>
+				<li><a href="#Catalog">Catalog Object</a></li>
+				<li><a href="#SolarSystem">Solar System</a></li>
+				<li><a href="#GotoCoords">Coordinate Input</a></li>
+				<li><a href="javascript:void()" onclick="Flip()">Meridian Flip</a></li>
+				<li><a href="#Park">Park</a></li>
+			</ul>
+			
+	</div>
+	
+	
+</div>
+<div data-role="page" id="SolarSystem" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content">
+		<div data-inline="true">
+			<ul data-role="listview" data-theme="g">
+				<li onclick="GotoSolarSystem('0')"><a>Sun</a></li>
+				<li onclick="GotoSolarSystem('1')"><a>Mercury</a></li>
+				<li onclick="GotoSolarSystem('2')"><a>Venus</a></li>
+				<li onclick="GotoSolarSystem('3')"><a>Moon</a></li>
+				<li onclick="GotoSolarSystem('4')"><a>Mars</a></li>
+				<li onclick="GotoSolarSystem('5')"><a>Jupiter</a></li>
+				<li onclick="GotoSolarSystem('6')"><a>Saturn</a></li>
+				<li onclick="GotoSolarSystem('7')"><a>Uranus</a></li>
+				<li onclick="GotoSolarSystem('8')"><a>Neptune</a></li>
+				<li onclick="GotoSolarSystem('9')"><a>Pluto</a></li>
+			</ul>
+		</div>
+			
+	</div>
+</div>
+<div data-role="page" id="SolarSystemBelowHorizon" data-theme="a">
+	<div data-role="content">
+		
+		<div data-inline="true">
+			<b>Object Below the Horizon!</b>
+			<a href="#SolarSystem" data-role="button" data-theme="a">Ok</a>
+		</div>
+			
+	</div>
+</div>
+<div data-role="page" id="Park" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-theme="a" data-dividertheme="a" data-inset="true">
+			<li><a href="javascript:void()" onclick="Park('cwd')">CWD Position</a></li>
+			<li><a href="javascript:void()" onclick="Park('home')">Home Position</a></li>
+			<li><a href="javascript:void()" onclick="Park('current')">Current Position</a></li>
+			<li><a href="javascript:void()" onclick="Park('zenith')">Zenith</a></li>
+			<li><a href="javascript:void()" onclick="Unpark()">Unpark</a></li>
+		</ul>
+			
+	</div>
+</div>
+<div data-role="page" id="Menu" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-theme="a" data-dividertheme="a"  data-inset="true">
+				<li data-role="list-divider">Observation</li>
+				<li><a href="javascript:void()" onclick="Alignment('add','')">Align</a></li>
+				<li><a href="javascript:void()" onclick="Alignment('','')">Sync</a></li>
+				<li><a  href="javascript:void()" onclick="Alignment('reset','')">Reset Model</a></li>
+				<li data-role="list-divider">Setup</li>
+				<li><a href="#Site">Site</a></li>
+				<li><a href="#Time">Time</a></li>
+				<li><a href="#Mount">Mount</a></li>
+				<li><a href="#Track">Tracking/HC Mode</a></li>
+				<li><a href="#Model">Model</a></li>
+				<li><a href="#Pec">PEC</a></li>
+				<li><a href="#Boot">Boot</a></li>
+				<li><a href="#Power">Power Status</a></li>
+				<li><a href="#Options">Options</a></li>
+			</ul>
+			
+	</div>
+</div>
+<div data-role="page" id="Catalog" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content">
+		<div data-inline="true" id="cataloglist"></div>
+		<div data-inline="true" id="catalogbookmark"></div>
+	</div>
+</div>
+<div data-role="page" id="CatalogContent" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content">
+		<div id="catalogcontent-div"></div>
+		<div data-inline="true" id="catalogcontentbookmark"></div>
+	</div>
+</div>
+<div data-role="page" id="CatalogIndex" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content">
+		<div id="catalogindex-div"></div>
+		<div data-inline="true" id="catalogindexbookmark"></div>
+	</div>
+</div>
+<div data-role="page" id="GotoCoords" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content">
+		<table>
+			<tr>
+				<td>Object Name:&nbsp;&nbsp;</td>
+				<td><input type="text" name="ObjectName" value="PC Object" id="ObjectName" /></td>
+			</tr>
+			<tr>
+				<td>RA:</td>
+				<td><input type="text" name="ObjectRa" id="ObjectRa" /></td>
+			</tr>
+			<tr>
+				<td>Dec:</td>
+				<td><input type="text" name="ObjectDec" id="ObjectDec" /></td>
+			</tr>
+			<tr>
+				<td>
+					<input id="CheckboxJ2000" type="checkbox" name="CheckboxJ2000" class="custom" data-theme="a" />
+					<label for="CheckboxJ2000">J2000</label>
+				</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>
+				<input type="button" data-role="button" data-theme="a" onclick="GotoCoordinates()" value="Goto" />
+				</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+			
+	</div>
+</div>
+<div data-role="page" id="CoordinatesBelowHorizon" data-theme="a">
+	<div data-role="content">
+		
+		<div data-inline="true">
+			<b>Object Below the Horizon!</b>
+			<a href="#GotoCoords" data-role="button" data-theme="a">Ok</a>
+		</div>
+			
+	</div>
+</div>
+<div data-role="page" id="CatalogObjectBelowHorizon" data-theme="a">
+	<div data-role="content">
+		
+		<div data-inline="true">
+			<b>Object Below the Horizon!</b>
+			<a href="#CatalogContent" data-role="button" data-theme="a">Ok</a>
+		</div>
+			
+	</div>
+</div>
+<div data-role="page" id="Site" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content">		
+		
+
+			<fieldset class="ui-grid-a">
+					<div class="ui-block-a"><input type="button" data-role="button"	data-theme="a" onclick="ChangeSite()" value="Select" /></div>
+					<div class="ui-block-b"><select name="SavedSiteList" id="SavedSiteList">
+					</select>
+					</div>	   
+			</fieldset>
+					
+
+					
+
+		<table>
+			<tr>
+				<td>Name:&nbsp;&nbsp;</td>
+				<td colspan="3">
+					<input type="text" name="SiteName" id="SiteName" />
+				</td>
+			</tr>
+			<tr>
+				<td>Longitude:</td>
+				<td>
+					<input type="text" name="LongitudeDegrees"
+						id="LongitudeDegrees" style="width: 40px" />
+				</td>
+				<td>
+					<input type="text" name="LongitudeMinutes"
+						id="LongitudeMinutes" style="width: 20px" />
+				</td>
+				<td>
+					<input type="text" name="LongitudeSeconds"
+						id="LongitudeSeconds" style="width: 20px" />
+				</td>
+			</tr>
+			<tr>
+				<td>Latitude:</td>
+				<td>
+					<input type="text" name="LatitudeDegrees"
+						id="LatitudeDegrees" style="width: 40px" />
+				</td>
+				<td>
+					<input type="text" name="LatitudeMinutes"
+						id="LatitudeMinutes" style="width: 20px" />
+				</td>
+				<td>
+					<input type="text" name="LatitudeSeconds"
+						id="LatitudeSeconds" style="width: 20px" />
+				</td>
+			</tr>
+			<tr>
+				<td>Elevation:</td>
+				<td colspan="3">
+					<input type="text" name="Elevation" id="Elevation" />
+				</td>
+			</tr>
+		</table>
+		<fieldset class="ui-grid-a">
+					<div class="ui-block-a"><input type="button" data-role="button"	data-theme="a" onclick="SetSite()" value="Save" /></div>
+					<div class="ui-block-b"><select name="SaveSite" id="SaveSite">
+				<option value="">NONE</option>
+				<option value="1">Position 1</option>
+				<option value="2">Position 2</option>
+				<option value="3">Position 3</option>
+				<option value="4">Position 4</option>
+				</select>
+					
+					</div>	   
+			</fieldset>
+
+					
+
+				
+
+		<table>
+			<tr>
+				<td colspan="4">
+					Browser GPS:
+				</td>
+			</tr>
+			<tr>
+				<td>Longitude:</td>
+				<td>
+					<div id="gpslongitudedegrees">NA</div>
+				</td>
+				<td>
+					<div id="gpslongitudeminutes">NA</div>
+				</td>
+				<td>
+					<div id="gpslongitudeseconds">NA</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Latitude:</td>
+				<td>
+					<div id="gpslatitudedegrees">NA</div>
+				</td>
+				<td>
+					<div id="gpslatitudeminutes">NA</div>
+				</td>
+				<td>
+					<div id="gpslatitudeseconds">NA</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Elevation:</td>
+				<td colspan="3">
+					<div id="gpselevation">NA</div>
+				</td>
+			</tr>
+			<tr>
+			</table>
+
+				<fieldset class="ui-grid-a">
+					<div class="ui-block-a"><input type="button" data-role="button"	data-theme="a" onclick="SetGPS()" value="Use" /></div>
+					<div class="ui-block-b"><input type="button" data-role="button" data-theme="a" onclick="LoadMap()" value="Map" /></div>	   
+			</fieldset>
+					
+
+					
+
+	</div>
+</div>
+<div data-role="page" id="Time" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content">
+		
+		<div data-inline="true">
+			<table>
+				<tr>
+					<td colspan="2"><div data-role="header"><b>Gemini Time</b></div></td>
+				</tr>
+				<tr>
+					<td>Local Sidereal:</td>
+					<td><div id="LocalSiderealTime"></div></td>
+				</tr>
+				<tr>
+					<td>Universal:</td>
+					<td><div id="UniversalTime"></div></td>
+				</tr>
+				<tr>
+					<td>Civil:</td>
+					<td><div id="CivilTime"></div></td>
+				</tr>
+				<tr>
+					<td>Time Zone:</td>
+					<td>
+						<div id="TimeZone"></div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="2"><div data-role="header"><b>Device Time</b></div></td>
+				</tr>
+				<tr>
+					<td>Local:</td>
+					<td><div id="LocalTime"></div></td>
+				</tr>
+				<tr>
+					<td>Time Zone:</td>
+					<td>
+						<div id="DeviceTimeZone"></div>
+					</td>
+				</tr>
+				<tr>
+			
+				<td>
+					<input type="button" data-role="button"
+						data-theme="a" onclick="SetTime()" value="Set Time" />
+				</td>
+				<td colspan="3">
+				&nbsp;
+				</td>
+			</tr>
+			</table>
+		</div>
+			
+	</div>
+</div>
+<div data-role="page" id="Mount" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content">
+		
+		<div data-inline="true">
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a">
+					<select name="MountType" id="MountType">
+					<option value="0">Custom</option>
+					<option value="1">GM-8</option>
+					<option value="2">G11</option>
+					<option value="3">HGM-200</option>
+					<option value="4">MI-250</option>
+					<option value="5">Titan</option>
+					<option value="6">Titan50</option>
+					</select>
+				</div>	  
+				<div class="ui-block-b"><input type="button" data-role="button"
+						data-theme="a" onclick="SelectMountType()" value="Set Type" /></div> 
+			</fieldset>
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a">
+					<select name="BootMode" id="BootMode">
+					<option value="0">Cold Start</option>
+					<option value="1">Warm Start</option>
+					<option value="2">Warm Restart</option>
+					<option value="3">Prompt</option>
+					</select>
+				</div>	  
+				<div class="ui-block-b"><input type="button" data-role="button"
+						data-theme="a" onclick="SelectBootMode()" value="Set Boot" /></div> 
+			</fieldset>
+			<br />
+			<table class="Standard">
+				<tr><td colspan="4"><b>Gearing</b></td></tr>
+				<tr><td>RA Worm Ratio</td>
+				<TD><INPUT type="text" id="RAWormRatio" name="RAWormRatio" SIZE="4" MAXLENGTH="4"></TD>
+				</tr>
+				<tr>
+				<td>DEC Worm Ratio</td>
+				<TD><INPUT type="text" id="DECWormRatio" name="DECWormRatio" SIZE="4" MAXLENGTH="4"></TD></TR>
+				
+				<tr><td>RA Spur Ratio</td>
+				<TD><INPUT type="text" id="RASpurRatio" name="RASpurRatio" SIZE="4" MAXLENGTH="4"></TD>
+				</tr>
+				<tr>
+				<td>DEC Spur Ratio</td>
+				<TD><INPUT type="text" id="DECSpurRatio" name="DECSpurRatio" SIZE="4" MAXLENGTH="4"></TD></TR>
+				
+				<tr><td>RA Encoder Resolution</td>
+				<TD><INPUT type="text" id="RAEncoder" name="RAEncoder" SIZE="4" MAXLENGTH="4"></TD>
+				</tr>
+				<tr>
+				<td>DEC Encoder Resolution</td>
+				<TD><INPUT type="text" id="DECEncoder" name="DECEncoder" SIZE="4" MAXLENGTH="4"></TD></TR>
+				
+				<tr><td>RA Resolution</td>
+				<TD><div id="RAResolution"></div></td>
+				</tr>
+				<tr>
+				<td>DEC Resolution</td>
+				<TD><div id="DECResolution"></div></td></tr>
+				
+				<tr>
+				<td>DEC TVC Step Count</td>
+				<TD><INPUT type="text" id="DECTVCStep" name="DECTVCStep" SIZE="4" MAXLENGTH="4"></TD></TR>
+				<tr>
+				<td colspan="2"><input type="button" data-role="button"
+						data-theme="a" onclick="SetGearing()" value="Set Gearing" /></td>
+				</TR>
+			</table>
+			<br />
+			<table class="Standard">
+				<tr><td colspan="4"><b>Speeds</b></td></tr>
+				<tr><td>RA Manual Slew Rate</td>
+				<TD><INPUT type="text" id="RAManual" name="RAManual" SIZE="4" MAXLENGTH="4"></TD>
+				</tr>
+				<tr>
+				<td>DEC Manual Slew Rate</td>
+				<TD><INPUT type="text" id="DECManual" name="DECManual" SIZE="4" MAXLENGTH="4"></TD></TR>
+				
+				<tr><td>RA GoTo Slew Rate</td>
+				<TD><INPUT type="text" id="RAGoto" name="RAGoto" SIZE="3" MAXLENGTH="3"></TD>
+				</tr>
+				<tr>
+				<td>DEC GoTo Slew Rate</td>
+				<TD><INPUT type="text" id="DECGoto" name="DECGoto" SIZE="3" MAXLENGTH="3"></TD></TR>
+				
+				<tr><td>RA Move Speed</td>
+				<TD><INPUT type="text" id="RAMove" name="RAMove" SIZE="4" MAXLENGTH="4"></TD>
+				</tr>
+				<tr>
+				<td>DEC Move Speed</td>
+				<TD><INPUT type="text" id="DECMove" name="DECMove" SIZE="4" MAXLENGTH="4"></TD></TR>
+				
+				<tr><td>RA Slewing Accel</td>
+				<TD><INPUT type="text" id="RAAccel" name="RAAccel" SIZE="4" MAXLENGTH="4"></TD>
+				</tr>
+				<tr>
+				<td>DEC Slewing Accel</td>
+				<TD><INPUT type="text" id="DECAccel" name="DECAccel" SIZE="4" MAXLENGTH="4"></TD></TR>
+				
+				<tr><td>RA Centering Speed</td>
+				<TD><INPUT type="text" id="RACenter" name="RACenter" SIZE="4" MAXLENGTH="4"></TD>
+				</tr>
+				<tr>
+				<td>DEC Centering Speed</td>
+				<TD><INPUT type="text" id="DECCenter" name="DECCenter" SIZE="4" MAXLENGTH="4"></TD></TR>
+				
+				<tr><td>RA Guiding Speed</td>
+				<TD><INPUT type="text" id="RAGuide" name="RAGuide" SIZE="4" MAXLENGTH="4"></TD>
+				</tr>
+				<tr>
+				<td>DEC Guiding Speed</td>
+				<TD><INPUT type="text" id="DECGuide" name="DECGuide" SIZE="4" MAXLENGTH="4"></TD></TR>
+				
+				<tr>
+				<td colspan="2"><input type="button" data-role="button"
+						data-theme="a" onclick="SetSpeeds()" value="Set Speeds" /></td>
+				</TR>
+			</table>
+			<br />
+			<table class="Standard">
+				<tr><td colspan="4"><b>Safety Limits</b></td></tr>
+				<tr><td>Left Limit</td>
+				<TD><INPUT type="text" id="LeftLimit" name="LeftLimit" SIZE="6" MAXLENGTH="6"></TD>
+				</tr>
+				<tr>
+				<td>Right Limit</td>
+				<TD><INPUT type="text" id="RightLimit" name="RightLimit" SIZE="6" MAXLENGTH="6"></TD></TR>
+				
+				<tr><td>GoTo Limit</td>
+				<TD><INPUT type="text" id="GotoLimit" name="GotoLimit" SIZE="6" MAXLENGTH="6"></TD>
+				</tr>
+				<tr>
+				<td colspan="2"><input type="button" data-role="button"
+						data-theme="a" onclick="SetSafety()" value="Set Safety" /></td>
+				</TR>
+			</table>
+			<br />
+			<table class="Standard">
+				<tr><td colspan="4"><b>Axis Encoders</b></td></tr>
+				<tr><td>RA Encoder</td>
+				<TD><INPUT type="text" id="RAAxisEncoder" name="RAAxisEncoder" SIZE="4" MAXLENGTH="4"></TD>
+				</tr>
+				<tr>
+				<td>DEC Encoder</td>
+				<TD><INPUT type="text" id="DECAxisEncoder" name="DECAxisEncoder" SIZE="4" MAXLENGTH="4"></TD></TR>
+				<tr>
+				<td colspan="2"><input type="button" data-role="button"
+						data-theme="a" onclick="SetEncoders()" value="Set Encoders" /></td>
+				</TR>
+			</table>
+		</div>
+			
+	</div>
+</div>
+<div data-role="page" id="Track" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content">
+		
+		<div data-inline="true">
+			<fieldset class="ui-grid-a">
+				
+				<div class="ui-block-a">
+					<select name="HCMode" id="HCMode">
+					<option value="0">Visual</option>
+					<option value="1">Photo</option>
+					<option value="2">All Speeds</option>
+					</select>
+				</div>	   
+				<div class="ui-block-b"><input type="button" data-role="button"
+						data-theme="a" onclick="SelectHCMode()" value="Set HC Mode" /></div>
+			</fieldset>
+			<fieldset class="ui-grid-a">
+				
+				<div class="ui-block-a">
+					<select name="TrackMode" id="TrackMode">
+					<option value="0">Sidereal</option>
+					<option value="1">King</option>
+					<option value="2">Lunar</option>
+					<option value="3">Solar</option>
+					<option value="4">Terrestial</option>
+					<option value="5">Closed Loop</option>
+					<option value="6">Comet/User Defined</option>
+					</select>
+				</div>	 
+				<div class="ui-block-b"><input type="button" data-role="button"
+						data-theme="a" onclick="SelectTrackMode()" value="Set Rate" /></div>  
+			</fieldset>
+		</div>
+			
+	</div>
+</div>
+<div data-role="page" id="Model" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-theme="a" data-dividertheme="a" data-inset="true">
+			<li data-role="list-divider">Menu</li>
+			<li><a  href="javascript:void()" onclick="Alignment('add','model')">Align</a></li>
+			<li><a  href="javascript:void()" onclick="Alignment('','model')">Sync</a></li>
+			<li><a  href="javascript:void()" onclick="Alignment('undo','model')">Undo Last</a></li>
+			<li><a  href="javascript:void()" onclick="Alignment('reset','model')">Reset Model</a></li>
+			<li><a  href="javascript:void()" onclick="Alignment('initial','model')">Reset And Align</a></li>
+			</ul>
+		<div data-inline="true">
+			<table class="Standard">
+				<tbody>
+					<tr><td colspan="4"><B>Alignment Count</B></td></tr>
+					<tr>
+					<td>East Side:</td><td><div id="eastalign"></div></td>
+					<td>West Side:</td><td><div id="westalign"></div></td>
+					</tr>
+
+					<tr><td colspan="4"><B>Polar Axis Misalignment</B></td></tr>
+					<tr>
+					<td>Azimuth:</td><td><div id="azimuthpole"></div></td>
+					<td>Elevation:</td><td><div id="elevationpole"></div></td>
+					</tr>
+
+					<tr><td colspan="4"><B>Orthogonality Errors</B></td></tr>
+					<tr>
+					<td>Meridian:</td><td><div id="meridianortho"></div></td>
+					<td>Pole:</td><td><div id="poleortho"></div></td>
+					</tr>
+
+					<tr><td colspan="4"><B>Flexure</B></td></tr>
+					<tr>
+					<td>Tube:</td><td><div id="tubeflex"></div></td>
+					<td>Cantilever:</td><td><div id="cantileverflex"></div></td>
+					</tr>
+
+					<tr><td colspan="4"><B>Index Errors</B></td></tr>
+					<tr>
+					<td>RA Axis:</td><td><div id="raerror"></div></td>
+					<td>DEC Axis:</td><td><div id="decerror"></div></td>
+					</tr>
+					
+					<tr><td colspan="4"><B>Flip Errors</B></td></tr>
+					<tr>
+					<td>RA Axis:</td><td><div id="flipra"></div></td>
+					<td>DEC Axis:</td><td><div id="flipdec"></div></td>
+					</tr>
+				</tbody>
+			</table>
+			<fieldset class="ui-grid-b">
+				<div class="ui-block-a"><input type="button" data-role="button"
+						data-theme="a" onclick="SelectModel()" value="Select" /></div>
+				<div class="ui-block-b"><input type="button" data-role="button"
+						data-theme="a" onclick="SaveModel()" value="Save" /></div>
+				<div class="ui-block-c">
+					<select name="SaveModel" id="SaveModel">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					</select>
+				</div>	   
+			</fieldset>
+			<fieldset class="ui-grid-a">	   
+				<div class="ui-block-a"><input type="button" data-role="button"
+						data-theme="a" onclick="SaveNamedModel()" value="Save Named Model" /></div>
+				<div class="ui-block-b">
+					<input type="text" id="ModelName" name="ModelName" />
+				</div>
+			</fieldset>
+			<fieldset class="ui-grid-a">	   
+				<div class="ui-block-a"><input type="button" data-role="button"
+						data-theme="a" onclick="LoadNamedModel()" value="Load Named Model" /></div>
+				<div class="ui-block-b" id="NamedModelList">
+					
+				</div>
+			</fieldset>
+			<fieldset class="ui-grid-a">	   
+				<div class="ui-block-a"><input type="button" data-role="button"
+						data-theme="a" onclick="DeleteNamedModel()" value="Delete Named Model" /></div>
+				<div class="ui-block-b" id="DeleteModelList">
+					
+				</div>
+			</fieldset>
+			
+		</div>
+			
+	</div>
+</div>
+<div data-role="page" id="Map" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content"> 
+			<div id="mapcanvas" style="height:300px;"></div>
+	</div>
+</div>
+<div data-role="page" id="Target" data-theme="a" style="width:100%; height:100%;">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content"> 
+			<table class="Standard">
+				<tbody>
+					<tr><td colspan="4"><B>Object: </B><div id="targetobject"></div></td></tr>
+					<tr><td colspan="4"><B>Current</B></td></tr>
+					<tr>
+					<td>RA: <div id="racurrent"></div></td>
+					<td>DEC: <div id="deccurrent"></div></td>
+					</tr>
+
+					<tr><td colspan="4"><B>Target</B></td></tr>
+					<tr>
+					<td>RA: <div id="targetra"></div></td>
+					<td>DEC: <div id="targetdec"></div></td>
+					</tr>
+
+					<tr><td colspan="4"><B>Delta</B></td></tr>
+					<tr>
+					<td>RA: <div id="targetradelta"></div></td>
+					<td>DEC: <div id="targetdecdelta"></div></td>
+					</tr>
+
+					<tr><td colspan="4"><B>Motion</B></td></tr>
+					<tr>
+					<td>RA: <div id="ramotion"></div></td>
+					<td>DEC: <div id="decmotion"></div></td>
+					</tr>
+					<tr><td colspan="4"><div id="Display2"></div>&nbsp;</td></tr>
+				</tbody>
+			</table>
+			<a data-role="button" data-theme="a" onclick="AllStop()">Stop</a>
+	</div>
+</div>
+<div data-role="page" id="Boot" data-theme="a" style="width:100%; height:100%;">
+	<div data-role="footer">
+		<table style="width:100%;height:40px">
+			<tr>
+				<td style="width:25%">&nbsp;</td>
+				<td style="width:50%;text-align:center">Losmandy Gemini</td>
+				<td style="width:25%;text-align:right;'">&nbsp;</td>
+			</tr>
+		</table>
+		
+		
+	</div>
+	<div data-role="content"> 
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a">
+					<select name="BootGemini" id="BootGemini">
+					<option value="0">Cold Start</option>
+					<option value="1">Warm Start</option>
+					<option value="2">Warm Restart</option>
+					</select>
+				</div>	  
+				<div class="ui-block-b"><input type="button" data-role="button"
+						data-theme="a" onclick="BootGemini()" value="Boot Gemini" /></div> 
+			</fieldset>
+	</div>
+</div>
+<div data-role="page" id="Options" data-theme="a" style="width:100%; height:100%;">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content"> 
+			<div data-role="fieldcontain">
+				<label for="sliderRefresh">Refresh Time (s):</label>
+ 				<input type="range" name="sliderRefresh" id="sliderRefresh" value="1" min="1" max="30"  />
+ 				<input type="button" data-role="button" data-theme="a" onclick="SetRefreshTime()" value="Set" />
+			</div>
+	</div>
+</div>
+<div data-role="page" id="Power" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content"> 
+			Power Supply:<br />
+			<canvas id="powersource" width="275px" height="150px"></canvas>
+			<div id="powersourcevalue" style="text-align:center;border-radius: 5px;color:white;width:275px;">0</div>
+			<br />
+			Lithium Battery:<br />
+			<canvas id="lithiumsource" width="275px" height="150px"></canvas>
+			<div id="lithiumsourcevalue" style="text-align:center;border-radius: 5px;color:white;width:275px;">0</div>
+	</div>
+</div>
+<div data-role="page" id="Pec" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Losmandy Gemini</h1>
+		<a href="#Main" data-role="button" data-icon="home" data-transition="fade" class="ui-btn-right">Home</a>
+	</div>
+	<div data-role="content"> 
+			<table class="Standard">
+				<tbody>
+					<tr><td colspan="4"><B>PEC Available: </B><div id="pecavailable"></div></td></tr>
+					<tr>
+					<td><input type="button" data-role="button" data-theme="a" onclick="TrainPec()" value="Train PEC" /></td>
+					<td><input type="button" data-role="button" data-theme="a" onclick="AbortTrainPec()" value="Abort Training" /></td>
+					</tr>
+				</tbody>
+			</table>
+	</div>
+</div>
+<input type="hidden" name="savedlatitude" id="savedlatitude">
+<input type="hidden" name="savedlongitude" id="savedlongitude">
+<input type="hidden" name="currentradecimal" id="currentradecimal">
+<input type="hidden" name="currentdecdecimal" id="currentdecdecimal">
+</body>
+</html>

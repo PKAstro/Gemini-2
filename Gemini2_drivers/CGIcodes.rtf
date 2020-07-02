@@ -1,0 +1,361 @@
+{\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 Courier New;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\lang1033\f0\fs22 Gemini-II web interface\par
+-----------------------\par
+Rev. 0.91 - March 27, 2011\par
+\par
+\par
+1. Introduction\par
+\par
+Gemini's internal web server accesses files on the SD card. Only very few pages, like an initial index.htm and error pages are held in the code. This gives the user the possibility to customize the web interface at will. He can put static files on the SD card (HTML, JPEG, PNG, ...) if the browser can interpret them correctly. \par
+\par
+Important to find the files is their location. Currently Gemini's web server supports three languages: English, German and French. For these languages, directories EN, DE and FR exists on the SD card, which contain the web pages in the respective languages.\par
+\par
+Whenever a web page is requested, the web server examines the language code in the HTTP header the browser sent according to its setup, changes to the directory (or defaults to EN if the language is not (yet) supported and tries to open the file. If this is successful and the file name extension does not mark it as a dynamic html file, the file content is transmitted to the browser.\par
+\par
+All commands and parameters described below are case sensitive!\par
+\par
+\par
+2. Dynamic .cgi files\par
+2.1. Format description\par
+\par
+These files are analyzed and interpreted line by line. A line must not exceed 120 characters. \par
+Each line starts with a character describing how to to interpret it:\par
+\par
+'#'\tab A hash mark tells the interpreter to ignore this line\par
+'t'\tab Text. The line will be sent to the browser without any changes\par
+'i'\tab This line will be replaced by the file with the given name included,\par
+'c'\tab This line will be interpreted, the output will be dynamically build. \par
+'.'\tab End of file.\par
+\par
+Lines starting with the character 'c' will have some more characters following determining how to interpret them. The second character will be ignored, the third character will be used for the first and most important selection. Depending on this, the fifth character may be used as a secondary choice.\par
+\par
+Dynamic files are examined and the returned content is generated at runtime. If you don't want to build your own .cgi-file, there's a dummy file "command.cgi" included in the Gemini firmware image, that allows to work with the parameters given below.\par
+\par
+2.2 cgi file parameter list\par
+\par
+'a'\tab Network parameters\par
+\tab\tab i\tab current IP address\par
+\tab\tab m\tab current netmask\par
+\tab\tab g\tab current default gateway\par
+\tab\tab p\tab current primary DNS server\par
+\tab\tab q\tab current secondary DNS server\par
+\tab\tab I\tab static IP address\par
+\tab\tab M\tab static netmask\par
+\tab\tab G\tab static default gateway\par
+\tab\tab P\tab static primary DNS server\par
+\tab\tab Q\tab static secondary DNS server\par
+\tab\tab T\tab DHCP timeout span\par
+\par
+'A'\tab A/D (battery, 12V, Feature port)\par
+\tab\tab 1\par
+\tab\tab ..\par
+\tab\tab 6\par
+'b'\tab Default Boot mode\par
+\tab\tab 0\par
+\tab\tab ..\par
+\tab\tab 3\par
+'B'\tab Preferred Browser language\par
+'C'\tab Coordinates\par
+\tab\tab p\tab current PRA position\par
+\tab\tab q\tab current DEC position\par
+\tab\tab r\tab current apparent RA position\par
+\tab\tab d\tab current apparent DEC position\par
+\tab\tab i\tab current telescopic RA position\par
+\tab\tab j\tab current telescopic DEC position\par
+\tab\tab R\tab target RA position\par
+\tab\tab D\tab target DEC position\par
+\tab\tab a\tab current Az position\par
+\tab\tab e\tab current El position\par
+\tab\tab A\tab target Az position\par
+\tab\tab E\tab target El position\par
+\tab\tab n\tab target name\par
+\tab\tab s\tab apparent target TRA position\par
+\tab\tab t\tab apparent target TDEC position\par
+\tab\tab h\tab telescopic target TRA position\par
+\tab\tab m\tab telescopic target TDEC position\par
+\tab\tab u\tab difference target RA - telescope RA\par
+\tab\tab v\tab difference target DEC - telescope DEC\par
+\tab\tab U\tab difference unmodelled target RA - telescope RA\par
+\tab\tab V\tab difference unmodelled target DEC - telescope DEC\par
+\tab\tab S\tab Serial Emulator output string\par
+'c'\tab TCP status\par
+'D'\tab Databases\par
+\tab\tab D\tab name of current directory \par
+\tab\tab d\tab complete directory\par
+\tab\tab f\tab catalog files directory\par
+\tab\tab F\tab catalogue files\par
+\tab\tab t\tab catalogue content\par
+\tab\tab S\tab object selection\par
+\tab\tab s\tab flash chip selection\par
+\tab\tab i\tab object info (state.cgi)\par
+\tab\par
+'d'\tab System password - file 'system.cgi'\par
+'E'\tab Motor encoder resolution\par
+\tab\tab R\par
+\tab\tab D\par
+'e'\tab Encoder Port Usage\par
+'F'\tab Firmware\par
+\tab\tab f\tab SD card label\par
+\tab\tab i\tab current firmware info\par
+\tab\tab B\tab firmware .bin file names\par
+\tab\tab b\tab firmware .bin file directory entries\par
+\tab\tab s\tab board serial #\par
+'h'\tab HC mode\par
+\tab\tab 0\tab Visual Mode\par
+\tab\tab 1\tab Photo Mode\par
+\tab\tab 2\tab All Speeds Mode\par
+'I'\tab Information\par
+\tab   'I' Information Buffer Content\par
+\tab   'H' Hand Controller Display\par
+\tab   'S' Serial emulation return string\par
+'i'\tab returns currently selected site (1..4)\par
+'L'\tab Safety Limits in steps\par
+\tab    \tab r\tab right\par
+\tab    \tab l\tab left\par
+\tab    \tab g\tab Western GoTo Limit\par
+\tab\tab t\tab Time to western limit \par
+'l'\tab Browser Language - file 'language.cgi'\par
+'M'\tab Gearing: \par
+\tab\tab W \tab RA worm ratio\par
+\tab\tab w \tab DEC ...\par
+\tab\tab S \tab RA spur ratio\par
+\tab\tab s \tab DEC ...\par
+\tab\tab R \tab RA motor nominal encoder resolution\par
+\tab\tab r\tab DEC\par
+\tab\tab A\tab RA step size\tab (floating point)\par
+\tab\tab a\tab DEC ...\par
+\tab\tab T\tab DEC TVC step count\par
+'m'\tab mount type \par
+\tab\tab 0\par
+\tab\tab ..\par
+\tab\tab 6\par
+'n'\tab tracking rate selection\par
+\tab\tab 0\tab Sidereal\par
+\tab\tab 1\tab King\par
+\tab\tab 2\tab Lunar\par
+\tab\tab 3\tab Solar\par
+\tab\tab 4\tab Terrestrial\par
+\tab\tab 5\tab Closed Loop\par
+\tab\tab 6\tab Comet/User Defined\par
+'O'\tab Object\par
+\tab    \tab 'n'\tab name of selected object or "---"\par
+'Q'\tab Number of currently selected telescope pointing model\par
+'P'\tab Model parameters\par
+\tab    \tab E \tab Alignment count in the East\par
+\tab\tab W\tab ... West\par
+\tab\tab a \tab Azimuth\par
+\tab\tab e \tab Elevation\par
+\tab\tab c \tab Non-Polarity at the Meridian\par
+\tab\tab n \tab Non-Polarity at the Pole\par
+\tab\tab h \tab Index error in HA\par
+\tab\tab d \tab Index error in DEC\par
+\tab\tab t \tab Tubve Flexure\par
+\tab\tab C \tab Counterweight flexure\par
+\tab    \tab 0..9 \tab currently selected model\par
+'p'\tab serial port setings - file 'serial.cgi\par
+'q'\tab GPS port\par
+'\par
+'S'\tab Safety Limits in degrees/minutes\par
+\tab  \tab r \tab right\par
+\tab   \tab l \tab left\par
+\tab   \tab g\tab WestGoToLimit\tab\par
+'s'\tab Site Settings\par
+\tab\tab n\tab name of site\par
+\tab\tab t\tab timezone\par
+\tab\tab o\tab longitude\par
+\tab\tab a\tab latitude\par
+\tab\tab e\tab elevation\par
+\tab\tab #\tab site number\par
+\tab\tab\par
+'T'\tab time: \par
+\tab\tab U \tab UTC date\par
+\tab\tab u \tab UTC time\par
+\tab\tab C \tab Civil Date\par
+\tab\tab c \tab Civil time\par
+\tab\tab s \tab Sidereal time\par
+\tab\tab m\tab Julian Date\tab (floating poit)\par
+'t'\tab moving mode\par
+\tab  \tab x\tab RA axis state, f.i. currently active tracking rate \par
+\tab\tab\tab (sidereal, solar, lunar, terrestrial, comet, ...), \par
+\tab\tab\tab Slewing, No Motion, Centering, Guiding, STALL \tab\tab\tab (language-dependend string)\par
+\tab\tab y\tab DEC axis state...\par
+\par
+'V'\tab Velocities: \par
+\tab\tab S \tab Manual Slewing RA\par
+\tab\tab s \tab Manual Slewing DEC\par
+\tab\tab M \tab Move Speed RA\par
+\tab\tab m \tab Move Speed DEC\par
+\tab\tab T \tab GoTo Slewing RA\par
+\tab\tab t \tab GoTo Slewing DEC\par
+\tab\tab A \tab Slewing Acceleration RA\par
+\tab\tab a \tab Slewing Acceleration DEC\par
+\tab\tab C \tab Centering RA\par
+\tab\tab c \tab Centering DEC\par
+\tab\tab G \tab Guiding RA\par
+\tab\tab g\tab Guiding DEC\par
+'z'\tab State\tab (may be expanded later, please test single bits)\par
+\tab\tab 0\tab currently waiting for startup mode selection\par
+\tab\tab 1\tab Gemini started up\par
+\par
+\par
+2.3 Serial Port Emulator\par
+This emulator bridges the gap between the HTTP-based web interface and the serial command. Commands sent as string value of the SE= parameter are executed by the serial command interpreter. It is possible to send several serial commands at once, but it must be assured that the responses not exceed 64 byte, the length of a special output buffer for the interpreter. This output can be obtained with the cgi command line "c C S %s".\par
+\par
+\par
+\par
+2.4 Forms input\par
+2.4.1 POST parameter\par
+\par
+Only used for file uploading and SD card formating so far.\par
+\par
+2.4.2 GET parameter\par
+\par
+Syntax:\par
+\par
+Sometimes the command strings don't need and examine parameter values given (nothing noted after the equal sign), but most commands need them formed exactly as described below in C-printf syntax:\par
+\par
+%d\tab integer\par
+%u\tab unsigned integer\par
+%f\tab floating point number\par
+%s\tab string\par
+\par
+All other characters have to appear exactly as they are shown.\par
+\par
+Parameter list:\par
+\par
+MR=e \tab Move Eastward\par
+MR=w \tab Move Westward\par
+MR=q \tab Stop moving RA\par
+MD=n \tab Move Northward\par
+MD=s \tab Move Southward\par
+MD=q \tab Stop moving DEC\par
+\par
+PH=\tab Park at Home Position\par
+Ph=\tab Set Home Position\par
+PC=\tab Park at CWD Position\par
+PS=\tab Sleep Telescope\par
+PW=\tab Wakeup Telescope\par
+\par
+\par
+hc=0..2\tab\tab Set Hand Controler into Visual (0), Photo(1) or All Speed Mode\par
+ts=0..6\tab\tab Set Tracking Mode (Sidereal ,King, ...)\par
+\par
+du="%u.%u.%u"\tab UTC Date\par
+dc="%u.%u.%u"\tab Civil Date\tab\par
+tu="%u:%u:%u"\tab UTC Time\par
+tc="%u:%u:%u"\tab Civil Time\par
+\par
+tr="%u:%u:%u"\tab Target Right Ascension\par
+td="%d:%u:%u"\tab Target Declination\par
+tR="%u"\tab\tab Target Physical Right Ascension\par
+tD="%u"\tab\tab Target Physical Declination\par
+ta="%d:%u:%u"\tab Target Azimuth\par
+te="%u:%u:%u"\tab Target Elevation\par
+\par
+mn="%u"\tab\tab Current model number 0..1\par
+sm="%u"\tab\tab Store current model under number 0..1\par
+cm="%u"\tab\tab clear model number #\par
+aa=\tab\tab Additional Alignment\par
+Sm=\tab\tab Synchronize\par
+ia=\tab\tab Initial Alignment\par
+\par
+mt="%u"\tab\tab mount type\par
+wr="%d"\tab\tab Worm ratio in right ascension\par
+wd="%d"\tab\tab Worm ratio in declination\par
+sr="%u"\tab\tab Spur ratio in right ascension\par
+sd="%u"\tab\tab Spur ratio in declination\par
+mr="%u"\tab\tab Motor encoder resolution in right ascension\par
+md="%u"\tab\tab Motor encoder resolution in declination\par
+dt="%u"\tab\tab DEC TVC step count\par
+\par
+R1="%c"\tab\tab Move Speed: G=Guide, C=Center, M=Move, S=Slew\par
+\par
+VM="%d"\tab\tab Manual Slewing Speed RA\par
+Vm="%d"\tab\tab Manual Slewing Speed DEC\par
+VT="%d"\tab\tab GoTo Slewing Speed RA\par
+Vt="%d"\tab\tab GoTo Slewing Speed DEC\par
+VV="%d"\tab\tab Move Speed RA\par
+Vv="%d"\tab\tab Move Speed DEC\par
+Vi="%d"\tab\tab Increment Move Speeds by the given value. If omitted, default is 50.\par
+Vd="%d"\tab\tab Decrement Move Speeds by the given value. If omitted, default is 50.\par
+\par
+VA="%f"\tab\tab RA Slewing Acceleration\par
+Va="%f"\tab\tab DEC Slewing Acceleration\par
+VC="%u"\tab\tab RA Centering Speed\par
+Vc="%u"\tab\tab DEC Centering Speed\par
+\par
+VG="%u.%u"\tab RA Guiding Speed\par
+Vg="%u.%u"\tab DEC Guiding Speed\par
+\par
+Sr="%u\'b0%u"\tab Right Safety Limit\par
+Sl="%u\'b0%u"\tab Left Safety Limit\par
+Sg="%u\'b0%u"\tab Western GoTo Limit\par
+\par
+ER="%d"\tab\tab Axis Encoder RA resolution\par
+ED="%d"\tab\tab Axis Encoder DEC resolution\par
+ep="%u"\tab\tab encoder port usage, 0..15\par
+\par
+si="%u"\tab\tab select location\par
+sn="%s"\tab\tab site name\par
+st="%d:%u:%u"\tab Timezone (minutes and seconds can be omitted)\par
+so="%d\'b0%u'%u"\tab Longitude\par
+sa="%d\'b0%u'%u"\tab Latitude\par
+se="%d"\tab\tab Elevation\par
+s#="%u"\tab\tab site number\par
+gp="%u"\tab\tab Query GPS receiver at serial ports 0..3\par
+\par
+bm="%u"\tab\tab default boot mode, 0..3 for Cold Start, Warm Start, Warm Restart, Ask, if possible\par
+bo="%u"\tab\tab select boot mode, 0..2 for Cold Start, Warm Start, Warm Restart\par
+\par
+s0="%u"\tab\tab Baud rate selection, serial port 0\par
+s1="%u"\tab\tab Baud rate selection, serial port 1\par
+s2="%u"\tab\tab Baud rate selection, serial port 2\par
+s3="%u"\tab\tab Baud rate selection, serial port 3\par
+sg="%u"\tab\tab Baud rate selection for GPS receiver\par
+\par
+ct="%u"\tab\tab Catalog selection (active catalog file id)\par
+ff="%u"\tab\tab Firmware flashing (selected firmware file id)\par
+CN="%s"\tab\tab Catalog Name selection\par
+DN="%s"\tab\tab Directory to change to\par
+co="%s"\tab\tab Catalog object string\par
+SO="%u"\tab\tab Solar System object number (Sun=0, ...)\par
+gtf=\tab\tab enforce meridian flip\par
+GT=\tab\tab start GoTo\par
+GP=\tab\tab start Physical GoTo\par
+GA=\tab\tab start Alt/Az GoTo\par
+\par
+prec="%u"\tab always precess ('1') given coordinates or not ('0')\par
+sdo=\tab\tab precess given object coordinates\par
+\par
+ip="%u.%u.%u.%u"\tab current IP Address\par
+msk="%u.%u.%u.%u"\tab current IP Netmask\par
+gw="%u.%u.%u.%u"\tab current IP default gateway\par
+pdns""%u.%u.%u.%u"\tab current Primary DNS server\par
+sdns""%u.%u.%u.%u"\tab current Secondary DNS server\par
+Ip="%u.%u.%u.%u"\tab static IP Address\par
+Msk="%u.%u.%u.%u"\tab static IP Netmask\par
+Gw="%u.%u.%u.%u"\tab static IP default gateway\par
+Pdns""%u.%u.%u.%u"\tab static Primary DNS server\par
+Sdns""%u.%u.%u.%u"\tab static Secondary DNS server\par
+\par
+\par
+3. Character encoding\par
+\par
+Gemini-II supports internationalized messages. Special characters have to be displayed by the HC, browsers as well as they have to be exchanged between browser. \par
+\par
+Several characters can be encoded in ISO/IEC 8859 form, f.i. the German and French characters. \par
+\par
+The graphical HC supports XML encoded Greek lowercase characters:\par
+alpha\tab &#945;\par
+beta\tab &#946;\par
+gamma\tab &#947;\par
+delta\tab &#948;\par
+epsilon\tab &#949;\par
+... until ...\par
+omega\tab &#969;\par
+\par
+The HC also supports the common German anf French special characters.\par
+\par
+\par
+}
+ 

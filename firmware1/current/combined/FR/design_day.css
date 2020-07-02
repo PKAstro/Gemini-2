@@ -1,0 +1,111 @@
+﻿.frame
+{
+	border: 1px #000080 solid; /* border color*/
+	background-image: url('llblue.jpg');   /*frame background*/
+	background-color:white;
+	background-repeat: repeat-y;
+	width: 805px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	margin:0 auto; /*auto centering*/
+}
+
+.frame
+{
+	border: 1px #000080 solid; /* border color*/
+	background-image: url('llblue.jpg');   /*frame background*/
+	background-color:white;
+	background-repeat: repeat-y;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	margin:0 auto; /*auto centering*/
+}
+
+body
+{
+	background-color: #CCCCFF; /* background color*/
+	margin: auto;              /* frame center */ 
+	margin-top: 0;             
+	color: black;              /*text color*/   
+}
+
+/* Links properties : */
+a:hover /* Quand le visiteur pointe sur le lien */
+{
+   text-decoration: underline;
+   color: #0066FF;
+}
+a /* normal link */
+{
+   text-decoration: none;
+   color: #000080;
+   font-style: italic;
+   font-weight:bold;
+}
+/*************************/
+
+/* form properties */
+input, textarea
+{
+	background-color:white;
+	color:black;
+}
+/*******************/
+
+
+.logo
+{
+	width:600px;
+	margin:auto;
+	text-align:center;
+	margin-bottom:20px;
+}
+
+img
+{
+	border:0px;
+}
+
+.losmandy_logo
+{
+	height:67px;
+	width:600px;
+}
+
+.gemini_logo
+{
+	width: 250px;
+	height: 137px;
+}
+
+.menu
+{
+	margin: 0 auto;
+	width:100%;
+}
+
+.menu_title
+{
+	text-align:right;
+	font-weight:bolder;
+	/*width: 130px;*/
+}
+
+.menu_link
+{
+	text-align:center;
+}
+
+.footer
+{
+	font-size:x-small;
+	text-align:center;
+}
+
+.style_switcher
+{
+	text-align:center;
+	font-size:small;
+}

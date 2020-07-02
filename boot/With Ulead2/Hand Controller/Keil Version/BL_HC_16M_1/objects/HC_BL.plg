@@ -1,0 +1,14 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Blue_Screen_TFT\BL\BL_HC_16M_1\BL_HC_16M_1.uvproj
+Project File Date:  07/14/2010
+
+<h2>Output:</h2>
+Load "C:\\Blue_Screen_TFT\\BL\\BL_HC_16M_1\\objects\\HC_BL.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...

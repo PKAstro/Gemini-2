@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>G2 IP Static connections</title>
+<link href="http://gemini-2.com/gemini-2.css" rel="stylesheet" type="text/css" />
+
+
+<?php include("topv.php"); ?>
+
+
+
+
+<style type="text/css">
+.auto-style1 {
+	border-style: solid;
+	border-width: 2px;
+}
+.auto-style2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	color: #FFFFFF;
+	text-align: left;
+	margin: 10px 10px 10px 50px;
+}
+</style>
+
+</head>
+
+<body style="color: #FFFFFF; background-color: #000000;">
+
+	
+
+	<table align="center" style="width: 900px" >
+		<tr>
+			<td class="h2"> 
+				Configuring Win 10 Win7, or XP for direct connection to PC
+				using Static IP Address</td>
+		</tr>
+		<tr>
+			<td class="style7"><br /> 
+				This page will help you configure Win10, 8.1, <a href="#Win7">7</a>,&nbsp;or
+			<a href="#WinXP">XP</a> <br/>for 
+			using a network&nbsp; directly connecting the Gemini 2 to a 
+			computers Ethernet port using a static IP address.&nbsp; If you are 
+			connecting your Gemini-2 to a router, hub, or switch this not the 
+			page for you. See Connecting to
+			<a href="ConnectingtoG2.php" target="_blank">Web interface of the 
+			Gemini-2</a>. Note: If your laptop is not rated for 10/100/1000mhz 
+			ethernet connection (Called Gigi-Bit), you must use an crossover 
+			Ethernet cable.</td>
+		</tr>
+		<tr>
+			<td class="style6"><br />
+				This section is divided into 
+			3 sections. The first is for Windows 10, second is <a href="#Win7">Windows 
+			7</a>, last is for <a href="#WinXP">Windows XP</a>
+				<br />
+			</td>
+		</tr>
+	</table>
+	
+<hr class="style2" style="width: 900px; height: 10px" />
+
+	<table align="center" style="width: 900px" >
+		<tr>
+			<td class="style7">
+					This Section is for Configuring Windows 10 <br />
+					Win 8.1 Should be very Similar.:
+				</td>
+				</tr>
+		</table>
+<table align="center" style="width: 900px" >
+	<tr>
+    	<td class="style6">
+		<ol>
+			<li>
+			You need to open up the Network control window.&nbsp; Here is two 
+			methods to do that. a-d or <a href="#e." target="_self">e.</a><ol type="a">
+				<li>You first need to access the taskbar at the bottom of the screen.
+				<div align="center">
+					<img height="38" src="gemini-images/NetworkConfiguration/WIN10/1-Win10-taskbar.jpg" width="186" /><br />
+					<br /></div>
+				</li>
+				<li>Right mouse click on the network icon 
+				<img alt="" height="30" src="gemini-images/NetworkConfiguration/WIN10/1a-network_icon.jpg" width="27" /><br />
+				<br /></li>
+				<li>The Select Open Menu should come up. 
+			
+				<img alt="" height="62" src="gemini-images/NetworkConfiguration/WIN10/2-select-open-network.jpg" width="327" /><br />
+				<br /></li>
+				<li>Mouse click on the "Open Network and Sharing center"
+			this page should open.
+			</li>
+			</ol>
+			</li>
+		</ol>
+		</td>
+		</tr>
+</table>
+<table align="center" style="width: 900px" >
+	<tr>
+    	<td class="auto-style2">
+			<div align="center">
+				<img alt="" height="541" src="gemini-images/NetworkConfiguration/WIN10/3-network-setting.jpg" width="900" /><br />Fig 2</div>
+		</td>
+	</tr>
+</table>
+
+		<table align="center" style="width: 820px" >
+			<tr>
+				<td class="style6"><br />  <a name="e.">e.</a> An alternate method is Type Windows KEY+R. When the 
+			block comes up, type ncpa.cpl into it.&nbsp; Goto Step 4.<br /> <br /></td>
+			</tr>
+	</table>
+
+		
+<table align="center" style="width: 900px">
+	<tr>
+		<td class="style6">			
+			<ol start="2">
+					<li>Mouse click or select the "Change adapter Setting" on the left side.<br />
+					</li>
+					<li>If using a laptop, the a page very similar to this one should come up. 
+			</li>
+			</ol>
+		</td>
+		</tr>
+</table>
+<table align="center" style="width: 900px" >
+	<tr>
+    	<td class="style6">
+			<div align="center">
+			
+				<img alt="" height="540" src="gemini-images/NetworkConfiguration/WIN10/4-change_adapter_setting.jpg" width="900" /><br />Fig 3</div>
+			
+			<br /><br />
+		<ol start="4">
+			<li>
+			
+			Right Mouse Click in the one that says "Local Area Connection."&nbsp; 
+			You should see this:
+			<div align="center">
+			
+				<img alt="" height="312" src="gemini-images/NetworkConfiguration/WIN10/6-LAN_adapter_properties.jpg" width="421" /><br />Fig 4</div><br /><br /></li>
+			<li>
+			
+			Select the "Properties" setting.&nbsp; This should come up:
+			<div align="center">
+			
+				<img alt="" height="574" src="gemini-images/NetworkConfiguration/WIN10/7-selecting_IVP4.jpg" width="479" /><br />Fig 5</div><br /><br /></li>
+			<li>
+			
+			Move the mouse down to the "Internet Protocol 4 (TCP/IPv4) and 
+			select "Properties" at the bottom of the drop drown box.&nbsp; This 
+			window should open:
+			<div align="center">
+			
+				<img alt="" height="559" src="gemini-images/NetworkConfiguration/WIN10/8-IVP4_Properites.jpg" width="470" /><br />Fig 6</div>
+				<br /><br /></li>
+			<li>
+			
+			Select the circle Left of "Use the following IP address" where the 
+			page should change to this (except the Items will be not filled in.)
+			<div align="center">
+			
+				<img alt="" height="564" src="gemini-images/NetworkConfiguration/WIN10/9-Setting_Static_IP.jpg" width="469" /><br />Fig 7</div>
+				<div align="center">
+				<img alt="" height="541" src="gemini-images/NetworkConfiguration/WIN7/thumbnails/G2-staticIP_small.jpg" width="400" /><br />Fig 8</div>
+			
+			<br /><br />
+			</li>
+			<li>
+			
+			I suggest that you fill in the default IP address with 19.1.68.0.100&nbsp; 
+			Note it cannot be any address that you presently use on your 
+			network.&nbsp; It also should not be the 192.168.0.111 that is on 
+			the hand controller.&nbsp; Every device on a network has to have 
+			it's own unique address.<br /><br /></li>
+			<li>
+			
+			Fill the subnet mask in with 255.255.255.0<br /><br /></li>
+			<li>
+			
+			Now fill the default gateway in with 192.168.0.1&nbsp; Note this 
+			should be the base address of your network.&nbsp; If you base 
+			address is 192.168.0.1 then that is what you will use. If you network 
+			uses something like 192.168.1.1 then use that.&nbsp; Also change the 
+			IP address to match such as 192.168.1.100.&nbsp;&nbsp;
+			
+			<br /><br /></li>
+			<li>
+			
+			The Gemini-2 Default gateway address is going to have to match the 
+			one in step 13.&nbsp; The Gemini-2 IP address will also have to be 
+			in the same network.&nbsp; If the gateway is 192.168.1.1 then make 
+			the Gemini-2 IP address 192.168.1.111 for instant.<br /><br /></li>
+			<li>
+			You are going to want to make sure Netbios is working on your network.&nbsp; <br /><br /></li>
+			<li>
+			Click the Advanced Box (see fig 7 above.) The below menu should come 
+			up.<br /><br />
+						<div align="center">
+
+				<img alt=""  src="gemini-images/NetworkConfiguration/WIN10/IPSetting.jpg" height="610" width="500" /><br />
+			
+				
+							Fig 9</div>
+				<br /><br /></li>
+			<li>
+
+			Now click on the WINS tab.&nbsp; 
+			The below menu should come up.<br /><br />
+						<div align="center">
+			
+			
+				<img alt=""  src="gemini-images/NetworkConfiguration/WIN10/advancedsetting.jpg" /><br />
+							Fig 10</div>
+				<br /><br />
+				
+				</li>
+				<li>
+				Now you have two choices here.&nbsp; If the Default box is 
+				checked, and <a href="http://gemini/">http://gemini/</a> will 
+				not bring up the Web Interface. Then Click the "Enable NetBios 
+				over TCP/IP" check box.&nbsp; It the link works then leave the 
+				setting at default.&nbsp; Hit the OK button and close out of 
+				each window in turn.<br /><br />This ends the Windows 10 configuration.</li>
+
+			</ol>
+			<p>&nbsp;</p>
+			</td>
+			</tr>
+	</table>
+
+
+	<hr class="style2" style="width: 900px; height: 10px" />
+
+	<table align="center" style="width: 900px" >
+		<tr>
+			<td class="style7">
+					<a name="Win7"></a>This 
+					Section is for Configuring Windows 7 <br />
+					Vista Should be very Similar.:
+				</td>
+				</tr>
+				<tr>
+				<td class="style6">
+				1. You need to get to the window shown in figure 1. This is the 
+				Network and Sharing Center.&nbsp; You can get to it by clicking 
+				on the network icon (looks like a small computer screen) in the 
+				lower right side of the Taskbar (the taskbar is normally at the 
+				bottom of the main Windows screen) and select 
+				Open Network and Sharing center, or by clicking Start Balloon, 
+				select Network, then Network and Sharing center.	
+				</td>
+				</tr>
+				<tr>
+				<td class="style7">
+				
+				<a href="gemini-images/NetworkConfiguration/WIN7/nwin7-1.jpg" target="_blank">
+				<img alt="" src="gemini-images/NetworkConfiguration/thumbnails/nwin7-1_small.jpg" class="auto-style1" height="434" width="700" /></a>
+	`			<br />Fig 1 Click on image to see larger version
+				</td>
+				</tr>
+				<tr>
+				<td class="style6">
+				2. 
+				Click on &quot;Change Adapter Setting&quot; Fig 2 should open up.<br />
+				In figure 2, you will see all the Network hardware devices you 
+				have. If your computer has just a wired connection you should 
+				see one similar to Fig 2, but with only one connection.&nbsp; My 
+				laptop has 3 connections. One is a Ethernet hardware connection 
+				which is the first on on the top left. That is the one we will 
+				configure to work with the Gemini-2.<br />
+				
+				</td>
+				</tr>
+				<tr>
+				<td class="style7">
+					<a href="gemini-images/NetworkConfiguration/WIN7/nwin7-2.jpg" target="_blank">
+					<img alt="" class="auto-style1" height="379" src="gemini-images/NetworkConfiguration/thumbnails/nwin7-2_small.jpg" width="700" /></a><br />Fig 2 					Click to see larger image 
+				<br />
+				</td>
+				</tr>
+				<tr>
+				<td class="style6">
+				3.&nbsp; If your computer has both a hardware and wireless connection you will see 
+				at least two devices.  We are not interested in the one for the wireless 
+				network.<br />
+				Right mouse click on the one for the hardware connection, it should not have the word wireless in it anywhere, and select Properties.
+				The window shown in Fig 3 should appear.
+				</td>
+				</tr>
+				<tr>
+				<td class="style7">
+					<a href="gemini-images/NetworkConfiguration/WIN7/nwin7-3.jpg" target="_blank">
+					<img alt="" height="875" src="gemini-images/NetworkConfiguration/thumbnails/nwin7-3_small.jpg" width="700" class="auto-style1" /></a>
+								<br />Fig 3 Click on image it see larger version
+				</td>
+				</tr>
+				<tr>
+				<td class="style6">
+				4.&nbsp;Highlight the line that says "Internet Protocol 
+				Version 4 (TCP/IPv4)&quot; and click &quot;Properties&quot; Figure 
+				4 should 
+				appear.&nbsp;
+				</td>
+				</tr>
+			</table>
+	<table align="center" style="width: 900px" >
+		<tr>
+			<td class="style7">
+				<img alt="" height="556" src="gemini-images/NetworkConfiguration/WIN7/nwin7-4.jpg" width="500" /><br />
+				Fig. 4<br />
+			</td>
+				<td class="style7">
+				
+				<img alt="" height="541" src="gemini-images/NetworkConfiguration/WIN7/thumbnails/G2-staticIP_small.jpg" width="400" />
+				<br /> Fig4A What the Gemini-2 is set to.<br />
+				NOTICE: DHCP is UNCHECKED!<br />
+				Use Menu-->Mount-->Network to get to this page.
+				</td>
+				</tr>
+	</table>
+	<table align="center" style="width: 900px" >
+		<tr>
+			<td class="style6">
+				5.&nbsp; Note: it will have Obtain an IP address automatically selected more than likely. 
+				<ul>
+				<li>We are going to change to "Use the following IP address" so select that.</li>
+				<li>The IP address box will now be un-grayed out.</li>
+				<li>Put in 192.168.0.100 (can be anything from 192.168.0.2 to 192.168.0.255 except 192.168.0.111
+				(If you do have a wireless connection also, do not use that IP address either, 
+				or any IP address of any of your other connected devices. 
+				All Devices connected via Ethernet must use there on distinct 
+				address.)</li>
+				<li>For the subnet put in 255.255.255.0</li>
+				<li>For the Default Gateway put in 192.168.0.1</li>
+				<li>Do not change any other setting and click "OK"</li>
+				<li>Close all the other windows.</li>
+				<li>&nbsp;You should now be able to get
+				to the Gemini by using either http://gemini or http://192.168.0.111</li>
+					</ul>
+				<br /><br />
+				Please note that all of the instructions assumes that your base default gateway
+				is 192.168.0.1.  If you have a Router such as a NetGear, your base default gateway
+				will probably be 192.168.1.1  <br />
+				If that is the case then you what to use that
+				address as a base for all your setting.  Such as:<br />
+				<ul>
+				<li>Put in 192.168.0.100 (can be anything from 192.168.1.2 to 192.168.1.255 except 192.168.1.111
+				(If you do have a wireless connection also, do not use that IP address either, 
+				or any IP address of any of your other connected devices. 
+				All Devices connected via Ethernet must use there on distinct 
+				address.)</li>
+				<li>For the subnet put in 255.255.255.0</li>
+				<li>For the Default Gateway put in 192.168.1.1</li>
+</ul>
+				</td>
+				</tr>
+				<tr>
+				<td class="style6">
+				6.&nbsp; If you also have wireless, you may have to turn off the wireless connection to get the computer to use this static 						connection.				
+		</td>
+	</tr>
+	</table>	
+	<table align="center" style="width: 900px" >
+		<tr>
+			<td class="style6">
+			<strong>If http://gemini does not work, but using an IP address does, then NetBios is probably 
+	disabled in your computer.&nbsp; You need to enable it.&nbsp; See Enabling 
+			NetBios on Windows Networks.</strong></td></tr>
+	</table>	
+
+
+	<hr class="style2" style="width: 900px; height: 10px" />
+
+
+	<table align="center" style="width: 900px" >
+		<tr>
+			<td class="h2">
+					<a name="WinXP"></a>This Section is for 
+					Configuring XP:
+				</td>
+			</tr>
+			<tr>
+				<td class="style6">
+				1. You need to get to the window shown in figure 1. This is the 
+				Network Connections.&nbsp; You can get to it by clicking 
+				on the Start Selection in the taskbar, then select &quot;My Network 
+				Places&quot; and the in the left column, select &quot;View Network 
+				connections&quot;.	
+				</td>
+			</tr>
+			<tr>
+				<td class="style7">
+				
+				<img alt="" height="409" src="gemini-images/NetworkConfiguration/XP/nxp1.jpg" width="674" />
+				
+				</td>
+			</tr>
+			<tr>
+				<td class="style6">
+				2. In figure 1, you will see all the Network hardware devices you have. If your computer has just a wired connection you should see one 
+				similar to Fig 1.<br />
+				If your computer has both a hardware and wireless connection you will see 
+				two devices.  We are not interested in the one for the wireless 
+				network.<br />
+				Right mouse click on the one for the hardware connection, it should not have the word wireless in it anywhere, and select Properties.
+				The window shown in Fig 2 should appear.
+				</td>
+			</tr>
+			<tr>
+				<td class="style7">
+				<a href="gemini-images/NetworkConfiguration/XP/nxp3.jpg" target="_blank">
+				<img alt="" src="gemini-images/NetworkConfiguration/thumbnails/nxp3_small.jpg" class="auto-style1" height="869" width="700" /></a>
+								<br />Fig 2 Click on image to see larger version
+				</td>
+			</tr>
+			<tr>
+				<td class="style6">
+				3.&nbsp;Highlight the line that says "Internet Protocal (TCP/IPv4)&quot; and click &quot;Properties&quot; Figure 4 should 
+				appear.&nbsp;
+				</td>
+			</tr>
+		</table>
+		<table align="center" style="width: 900px" >
+			<tr>
+				<td class="style7">
+				<img alt="" height="560" src="gemini-images/NetworkConfiguration/XP/nxp4.jpg" width="500" /><br />
+				<br />Fig 3 <br />
+				</td>
+				<td class="style7">
+					<img alt=""  height="541" src="gemini-images/NetworkConfiguration/WIN7/thumbnails/G2-staticIP_small.jpg" width="400" />
+				<br /> Fig3A What the Gemini-2 is set to.
+				<br />NOTICE: DHCP is UNCHECKED!<br />
+				Use Menu-->Mount-->Network to get to this page.
+				</td>
+			</tr>
+	</table>
+	<table align="center" style="width: 900px" >
+			<tr>
+				<td class="style6">
+				4.&nbsp; Note: it will have Obtain an IP address automatically selected more than likely. 
+				<ul>
+				<li>We are going to change to "Use the following IP address" so select that.</li>
+				<li>The IP address box will now be un-grayed out.</li>
+				<li>Put in 192.168.0.100 (can be anything from 192.168.0.2 to 192.168.0.255 except 192.168.0.111
+				(If you do have a wireless connection also, do not use that IP address either, 
+				or any IP address of any of your other connected devices. 
+				All Devices connected via Ethernet must use there on distinct 
+				address.)</li>
+				<li>For the subnet put in 255.255.255.0</li>
+				<li>For the Default Gateway put in 192.168.0.1</li>
+				<li>Do not change any other setting and click "OK"</li>
+				<li>Close all the other windows.</li>
+				<li>&nbsp;You should now be able to get
+				to the Gemini by using either http://gemini or http://192.168.0.111</li></ul>
+			5.&nbsp; If you also have wireless, you may have to turn off the wireless connection to get the computer to use this static connection.
+							
+		</td>
+			
+		</tr>
+	</table>
+	<table align="center" style="width: 900px" >
+		<tr>
+			<td class="style6">
+			<strong>If http://gemini does not work, but using an IP address does, then NetBios is probably 
+	disabled in your computer.&nbsp; You need to enable it.&nbsp; See Enabling 
+			NetBios on Windows Networks.</strong></td></tr>
+	</table>	
+
+	<table align="center" style="width: 900px" >
+		<tr>
+			<td class="style6">
+
+
+<p>Below are the steps for setting up your Windows 8 computer with a static IP address. </p>
+
+<ol>
+	<li>From the Start Menu (Tiles), open the Charms bar by moving the mouse to the right bottom corner of the screen or press the Windows Key + C and click on <b>Search</b>.</li>
+	<li>Highlight <b>Settings</b>.</li>
+	<li>In the Search box type Network to search for any network related options</li>
+	<li>From the list options choose <b>Network and Sharing Center</b>.</li>
+</ol>
+
+
+<p>(<b>Note:</b> As an alternate option, you can also use Windows key+X from the Start Menu (Tiles) to open the "classic" menu and choose Control Panel, then choose Network and Sharing Center).</p>
+
+<ol>
+	<li>From the View Your Active Networks section, select <b>Local Area Connection</b>.</li>
+	<li>Go to Properties.<br/>
+<em>Result:</em> The Local Area Connection Properties screen appears.</li>
+	<li>Highlight <b>Internet Protocol Version 4 (TCP/IPv4)</b> and click on <b>Properties</b>.<br/>
+<em>Result</em>: The Internet Protocol Version 4 (TCP/IPv4) Properties screen appears.</li>
+	<li>Click <b>Use the following IP address</b>.</li>
+	<li>Complete the configuration fields as shown below. This part of the configuration requires attention to detail, because one error will prevent you from getting on the network. Be sure you have this information at hand when you start to configure the TCP/IP protocol:
+	<ul>
+		<li>IP Address: 18.x.y.z (where x,y, and z are numbers)</li>
+		<li>Subnet mask: 255.255.0.0</li>
+		<li>Default gateway: 18.x.0.1 (Where x matches the x in your IP address)</li>
+		<li>DNS (Domain Name Servers): 18.71.0.151, 18.70.0.160, 18.72.0.3</li>
+	</ul>
+	</li>
+	<li>Enter these numbers in the appropriate fields and click <b>OK</b>.</li>
+	<li>Continue to click <b>OK</b> or <b>Close</b> as appropriate until you return to the Network Connections screen. The Local Area Connection icon text should now say "Enabled".</li>
+	<li>Test your TCP/IP Settings: Launch your web browser. If you have completed the configuration successfully, the browser opens at your designated home page. If you have not completed the configuration, you will receive an error message that says that your browser was unable to connect properly. Go back and check your settings.</li>
+</ol>
+</td></tr>
+</table>	
+<table  align="center" style="width:900px">
+	<tr>
+		<td class="style7whiteborder" >
+		Page last updated on Oct 31, 2017
+		</td>
+	</tr>
+</table>
+</body>
+</html>
+
+
+<?php include("bottom.php"); ?>
+
+
+
+

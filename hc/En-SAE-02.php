@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="REFRESH" content="20;url=En-SAE-03.php">
+<meta content="text..html; charset=utf-8" http-equiv="Content-Type" />
+<title>Semi Automatic Modeling East 2</title>
+
+<?php include("topv.php"); ?>
+
+
+<link href="
+/gemini-2.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body style="color: #FFFFFF; background-color: #000000" class="h1" >
+<table align="center" style="width: 900px">
+	<tr>
+		<td class="h5" align="center">Interactive Hand-Controller Menus - click on green button to Navigate</td>
+	</tr>
+</table>
+
+<table align="center" style="width: 900px">
+	<tr>
+		<td class="style7">
+		
+		<td class="style7">
+		<map id="ImgMap0" name="ImgMap0">
+			<area coords="30, 119, 400, 477" href="En-SAE-03.php" shape="rect" />
+		</map>
+		<img height="611"src="En-Images/En-SAE-2S.jpg" width="450"usemap="#ImgMap0" /><br />
+		For Versions L5.1 dated 20 Oct 2012 and after.</td>
+		
+		<td class="style6">The mount is now slewing to the target.<br />
+		When the slewing is finished you will receive a message that <br />
+		GOTO DONE: Center Object.<br />
+		<br />
+		<span class="auto-style1">It will take about 10 seconds for the mount to reach it target. If you 
+		cannot wait,
+		<br />
+		Hit any of the 4 directional buttons to be taken to the next screen 
+		or the Stop button on the right screen. 
+		This action is not what will happen with the mount, I only provided it 
+		to allow for you to get to the next screen sooner.&nbsp; On Firmware 
+		hand controller firmware dated July 7 or later the Goto button has been 
+		renamed Menu</span></td>
+	</tr>
+</table>
+<!--
+<table align="center" style="width: 900px">
+	<tr>
+		<td class="style6">
+		
+		</td>
+	</tr>
+</table>
+-->
+</body>
+
+<?php include("bottom.php"); ?>
+
+

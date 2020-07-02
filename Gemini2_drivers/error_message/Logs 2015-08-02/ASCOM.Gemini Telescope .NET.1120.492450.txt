@@ -1,0 +1,36 @@
+11:20:49.245 Log started: Gemini Teles TID:1 8/2/2015 6:20:49 PM
+11:20:49.261 User Settings             TID:1 [2]: False, False, False, True, False, False
+11:20:49.261 Comm Settings             TID:1 [2]: Ethernet, 57600, 8, None, One
+11:20:49.261 Scan COM ports            TID:1 [2]: False
+11:20:49.261 Geo Settings              TID:1 [2]: 33.4483333333333, -112.073833333333, 333.9
+11:20:49.261 Pass Through Port         TID:1 [2]: COM10, 9600, False
+11:20:49.261 Boot Settings             TID:1 [2]: Prompt
+11:20:49.261 Focuser Settings          TID:1 [2]: 5000, 2147483647, 100, False, 0, 50, 0, 1
+11:20:49.261 GetProfileSettings        TID:1 [Exit] 
+11:20:49.261 GeminiHardware            TID:1 [Enter] 1.0.59.0, 8/2/2015 11:20:49 AM, Trace=4
+11:20:49.261 GeminiHardware            TID:1 [Exit] 
+11:20:58.028 buttonGps_Click           TID:1 [Enter] 
+11:20:58.028 NmeaInterpreter           TID:1 [Enter] 
+11:20:58.028 NmeaInterpreter           TID:1 [Exit] 
+11:20:58.043 frmGPS                    TID:1 [Enter] 
+11:20:58.043 frmGPS                    TID:1 [Exit] 
+11:20:58.059 set_ComPort               TID:1 [Enter] COM8
+11:20:58.059 set_ComPort               TID:1 [Exit] COM8
+11:20:58.059 set_BaudRate              TID:1 [Enter] 4800
+11:20:58.059 set_BaudRate              TID:1 [Exit] 4800
+11:20:58.059 frmGPS_Load               TID:1 [Enter] 
+11:20:58.075 frmGPS_Load               TID:1 [Exit] 
+11:21:03.488 frmGps_Closing            TID:1 [Enter] 
+11:21:03.488 set_Connected             TID:1 [Enter] False
+11:21:03.488 set_Connected port open   TID:1 [4]: False
+11:21:03.488 set_Connected             TID:1 [Exit] False
+11:21:03.488 frmGps_Closing            TID:1 [Exit] 
+11:21:03.488 buttonGps_Click           TID:1 [Exit] 
+11:21:17.027 buttonGps_Click           TID:1 [Enter] 
+11:21:17.027 NmeaInterpreter           TID:1 [Enter] 
+11:21:17.027 NmeaInterpreter           TID:1 [Exit] 
+11:21:17.027 frmGPS                    TID:1 [Enter] 
+11:21:17.027 frmGPS                    TID:1 [Exit] 
+11:21:17.027 set_ComPort               TID:1 [Enter] COM8
+11:21:17.027 Exception                 TID:1 [Error]: System.NullReferenceException: Object reference not set to an instance of an object.[0D][0A]   at ASCOM.GeminiTelescope.frmGps.set_ComPort(String value) in c:\proj\GeminiUpdateDriver\GeminiTelescope\frmGps.cs:line 250[0D][0A]   at ASCOM.GeminiTelescope.TelescopeSetupDialogForm.buttonGps_Click(Object sender, EventArgs e) in c:\proj\GeminiUpdateDriver\GeminiTelescope\TelescopeSetupDialogForm.cs:line 566[0D][0A]   at System.Windows.Forms.Control.OnClick(EventArgs e)[0D][0A]   at System.Windows.Forms.Button.OnClick(EventArgs e)[0D][0A]   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)[0D][0A]   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)[0D][0A]   at System.Windows.Forms.Control.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.ButtonBase.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.Button.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)[0D][0A]   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+11:21:17.043 ThreadException           TID:1 [Error]: Object reference not set to an instance of an object., ASCOM.GeminiTelescope,    at ASCOM.GeminiTelescope.frmGps.set_ComPort(String value) in c:\proj\GeminiUpdateDriver\GeminiTelescope\frmGps.cs:line 250[0D][0A]   at ASCOM.GeminiTelescope.TelescopeSetupDialogForm.buttonGps_Click(Object sender, EventArgs e) in c:\proj\GeminiUpdateDriver\GeminiTelescope\TelescopeSetupDialogForm.cs:line 566[0D][0A]   at System.Windows.Forms.Control.OnClick(EventArgs e)[0D][0A]   at System.Windows.Forms.Button.OnClick(EventArgs e)[0D][0A]   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)[0D][0A]   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)[0D][0A]   at System.Windows.Forms.Control.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.ButtonBase.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.Button.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)[0D][0A]   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam), null

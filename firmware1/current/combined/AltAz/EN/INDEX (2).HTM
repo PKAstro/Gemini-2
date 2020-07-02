@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type">
+<META http-equiv=Content-Language content=en-us>
+<META http-equiv="X-UA-Compatible" content="IE=8">
+<link rel="stylesheet" type="text/css" href="design_night.css">
+<link rel="alternate stylesheet" type="text/css" title="design_day" href="design_day.css">
+<script type="text/javascript" src="styleswitcher.js"></script>
+<script type="text/javascript">
+if (top != self) top.location = self.location;
+</script>
+<script type="text/javascript">
+function OpenStateWindow(Link_Address) {
+ StateWindow = window.open(Link_Address, "Current Gemini State", "width=850, height=850, left=20, top=20");
+ StateWindow.focus();
+}</script>
+<script type="text/javascript">
+function OpenHCWindow(Link_Address) {
+ HCWindow = window.open(Link_Address, "Gemini Hand Controller Emulation", "width=650, height=950, left=10, top=10");
+ HCWindow.focus();
+}</script>
+<script type="text/javascript">
+function OpenMobileHCWindow(Link_Address) {
+ MobileHCWindow = window.open(Link_Address, "Gemini Mobile HC");
+ MobileHCWindow.focus();
+}</script>
+<title>Gemini Web Server</title>
+</head>
+<body>
+
+<div class="frame" align="center">
+	<div class="logo">
+	<a target="_blank"  href="http://www.losmandy.com"><img src="Losmandy_Logo.gif" class="losmandy_logo" alt="" ></a> 
+	<br><br>
+	<a target="_blank" href="http://www.DocGoerlich.com"><img src="Gemini_Logo.jpg" class="gemini_logo" alt="" ></a>
+</div>
+		<table class="menu" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="menu_title">Observation :</td>
+				<td class="menu_link">
+					[ <a href="/state.cgi" onclick="OpenStateWindow(this.href); return false">State</a> |  
+					<a href="/HC/HandControl.html" onclick="OpenHCWindow(this.href); return false">Hand Control</a> | 
+					<a href="/MHC/mhc.html" onclick="OpenMobileHCWindow(this.href); return false">Mobile HC</a> | 
+					<a href="/functions.cgi">Functions</a> |
+					<a href="/cats.htm">Objects</a> ] 
+				</td>
+			</tr>
+			<tr>
+				<td class="menu_title">Setup :</td>
+				<td class="menu_link">
+					[ <a href="/mountpar.cgi">Mount</a> |
+					<a href="/sitetime.cgi">Site/Time</a> |
+					<a href="/modeling.cgi">Modeling</a> ]
+				</td>
+			</tr>
+			<tr>
+				<td class="menu_title">Storage Media :</td>
+				<td class="menu_link">
+					[ <a href="/sd.cgi">SD Card</a> |
+					 <a href="/Flash.cgi">Flash</a> ]
+				</td>
+			</tr>
+			<tr>
+				<td class="menu_title">Connectivity :</td>
+				<td class="menu_link">
+					[ <a href="/network.cgi">Network</a> |
+					<a href="/system.cgi">Acces</a> |
+					<a href="/serial.cgi">Serial</a> |
+					<a href="/tcp.cgi">Statistics</a> ]
+				</td>
+			</tr>
+			<tr>
+				<td class="menu_title">Hardware :</td>
+				<td class="menu_link">
+					[ <a href="/ad.cgi">Battery, Ports</a> | 
+					<a href="/firmware.cgi">Firmware/SRAM</a> ]
+				</td>
+			</tr>
+			<tr>
+				<td class="menu_title">Documentation :</td>
+				<td class="menu_link">
+					[ <a href="/L5V1manual.pdf">Manual</a> | 
+					<a href="/L5V1serial.html">Serial Command Set</a> ]
+			</tr>
+			<tr>
+				<td class="menu_title">Tutorials : </td>
+				<td class="menu_link"> 
+					[ <a href="../DOC/PAA_Tutorial.pdf">PAA </a>&nbsp;| 
+					<a href="../DOC/HC-Tutorial.pdf">HC </a>&nbsp;]
+				</td>
+			</tr>
+		</table>
+		
+<p style="text-align:center; font-size:small;">These Web pages access the New Losmandy Gemini 
+telescope control system.<br>
+Click on the links above to get status information about the system and operate it.<br>
+
+For additional information about Losmandy products, please visit:</p>
+<p style="text-align:center; font-size:large;">
+<a href="http://www.losmandy.com" target="_blank">www.losmandy.com</a> <br>
+</p>
+
+<p class="footer">Copyright© 2008-2012 <a href="http://www.docgoerlich.com/" target="_blank">René Görlich</a>.
+ All rights reserved.</p>
+
+<p class="style_switcher">
+<a href="#" onclick="setActiveStyleSheet('standard'); return false;">Night mode</a> -----
+<a href="#" onclick="setActiveStyleSheet('design_day'); return false;">Day mode</a>
+</p>
+
+</div>
+
+</body>

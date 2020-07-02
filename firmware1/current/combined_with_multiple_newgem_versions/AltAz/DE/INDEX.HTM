@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type">
+<META http-equiv=Content-Language content=de-de>
+<META http-equiv="X-UA-Compatible" content="IE=8">
+<link rel="stylesheet" type="text/css" href="design_night.css">
+<link rel="alternate stylesheet" type="text/css" title="design_day" href="design_day.css">
+<script type="text/javascript" src="styleswitcher.js"></script>
+<script type="text/javascript">
+if (top != self) top.location = self.location;
+</script>
+<script type="text/javascript">
+function OpenStateWindow(Link_Address) {
+ StateWindow = window.open(Link_Address, "Status", "width=850, height=850, left=20, top=20");
+ StateWindow.focus();
+}</script>
+<script type="text/javascript">
+function OpenHCWindow(Link_Address) {
+ HCWindow = window.open(Link_Address, "Handsteuerung", "width=650, height=950, left=10, top=10");
+ HCWindow.focus();
+}</script>
+<script type="text/javascript">
+function OpenMobileHCWindow(Link_Address) {
+ MobileHCWindow = window.open(Link_Address, "Mobiler HC");
+ MobileHCWindow.focus();
+}</script>
+<title>Gemini Web Server</title>
+</head>
+<body>
+
+<div class="frame">
+	<div class="logo">
+	<a target="_blank"  href="http://www.losmandy.com"><img src="Losmandy_Logo.gif" class="losmandy_logo" alt="" ></a> 
+	<br><br>
+	<a target="_blank" href="http://www.DocGoerlich.com"><img src="Gemini_Logo.jpg" class="gemini_logo" alt="" ></a>
+</div>
+
+
+
+
+<TABLE class=menu border=0 cellSpacing=0 cellPadding=0>
+  <TBODY>
+  <TR>
+    <TD class=menu_title>Beobachtung:</TD>
+    <TD class=menu_link>[ <A 
+      onclick="OpenStateWindow(this.href); return false" 
+      href="http://gemini/state.cgi">Status</A> | <A 
+      onclick="OpenHCWindow(this.href); return false" 
+      href="http://gemini/HC/HandControl.html">Handsteuerung</A> | <!--<a href="/MHC/mhc.html" onclick="OpenMobileHCWindow(this.href); return false">Mobiler HC</a> | --><A 
+      href="http://gemini/functions.cgi">Funktionen</A> | <A 
+      href="http://gemini/cats.htm">Kataloge</A> ] </TD>
+  </TR>
+ 
+  <TR>
+    <TD class=menu_title>Externe Handsteuerung:</TD>
+    <TD class=menu_link>[ <A 
+      onclick="OpenMobileHCWindow(this.href); return false" 
+      href="http://gemini/MHC/mhc.html">Mobiler HC</A>] </TD>
+  </TR>
+  
+  <TR>
+    <TD class=menu_title>Einstellungen:</TD>
+    <TD class=menu_link>[ <A href="http://gemini/mountpar.cgi">Montierung</A> 
+      | <A href="http://gemini/sitetime.cgi">Standort/Zeit</A> | <A 
+      href="http://gemini/modeling.cgi">Modellierung</A> ] </TD>
+  </TR>
+  
+  <TR>
+    <TD class=menu_title>Speichermedien:</TD>
+    <TD class=menu_link>[ <A href="http://gemini/sd.cgi">SD-Karte</A> | <A 
+      href="http://gemini/Flash.cgi">Flash</A> <!--| <A 
+      href="http://gemini/GFU/gfu_instructions.htm">GFU</A>--> ] </TD>
+  </TR>
+  
+  <TR>
+    <TD class=menu_title>Verbindungen:</TD>
+    <TD class=menu_link>[ <A href="http://gemini/network.cgi">Netzwerk</A> | 
+      <A href="http://gemini/system.cgi">Zugriff</A> | <A 
+      href="http://gemini/serial.cgi">Serielle Schnittstellen</A> | <A 
+      href="http://gemini/tcp.cgi">Statistik</A> ] </TD>
+  </TR>
+  
+  <TR>
+    <TD class=menu_title>Hardware:</TD>
+    <TD class=menu_link>[ <A href="http://gemini/ad.cgi">Batterie, 
+      Anschlüsse</A> | <A href="http://gemini/firmware.cgi">Firmware/SRAM</A> | 
+      <A href="http://gemini/motor.cgi">Servos</A> ] </TD>
+  </TR>
+  
+  <TR>
+    <TD class=menu_title>Dokumentation:</TD>
+    <TD class=menu_link>[ <A href="http://gemini/L5V2serial.html">Serieller 
+      Befehlssatz</A> ] </TD>
+  <TR>
+    <TD class=menu_title>Anleitungen:</TD>
+    <TD class=menu_link>[ <A href="http://gemini/VIDEO-INDEX.htm">Videos von 
+      Scott Losmandy (nur Englisch)</A> ] </TD>
+  </TR>
+  </TBODY>
+</TABLE>
+
+		
+<p style="text-align:center; font-size:small;">Diese Webseiten werden von einer 
+Losmandy Gemini-2 Steuerung erzeugt. <BR>Mit den Links kann dieses Gemini-System 
+überwacht und gesteuert werden.<BR>Zusätzliche Informationen zu Produkten von 
+Losmandy HGM finden Sie unter</p>
+<p style="text-align:center; font-size:large;">
+<a href="http://www.losmandy.com" target="_blank">www.losmandy.com</a> <br>
+</p>
+
+<p class="footer">Copyright© 2008-2015 <A href="http://www.docgoerlich.com/" 
+target=_blank>René Görlich</A>. Alle Rechte reserviert.</p>
+
+<p class="style_switcher">
+<a href="#" onclick="setActiveStyleSheet('standard'); return false;">Nachtmodus</a> -----
+<a href="#" onclick="setActiveStyleSheet('design_day'); return false;">Tagmodus</a>
+</p>
+
+</div>
+
+</body>

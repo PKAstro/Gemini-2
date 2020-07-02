@@ -1,0 +1,18 @@
+1.) Install FlashMagic.
+2.) Unzip hc_bl.zip where you want to have stored. you get the .hex file.
+3.) Open the HC cover plate. If you like to experiment: J1 ("Boot") 
+is on the left side, the single jumper. It has to be closed at powering 
+up to active the ARM boot loader. The usual way is to put a jumper on it. 
+For this I'd suggest you screw the display off (1/16" Allen wrench). 
+Dont forget to put the display back in place.
+4.) Connect the Gemini serial adapter cable to the HC and, over the 
+DB-9 null-modem adapter, to your PC.
+5.) Set the PC serial port to 115,8,n,1 bps, no handshake.
+6.) Power the display by connecting the miniUSB port at the top to 
+your PC's USB port. This is the moment where J1 must be closed.
+7.) Start FlashMagic and set it up according to the screenshot. 
+Don't check "Fill unused Flash" or you would erase the HC code. 
+Point to the hc_bl.hex file and press "Start"
+8.) If it worked, remove the jumper... if not, check the 
+settings and cycle the display power. If there is an 
+"Autobaud failure" message, your cabling is not correct.
