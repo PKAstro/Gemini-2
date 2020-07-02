@@ -1,0 +1,40 @@
+/*
+ Ajatix Pure CSS Menu
+ Copyright (C) 2010 Ajatix. All rights reserved.
+ http://www.ajatix.com
+*/
+.AJXMenuDGKBDTA {position:relative;z-index:100;width:100%;min-width:588px;height:28px;border:1px solid #3770b5;background:#689fe0;text-align:center;}
+* html .AJXMenuDGKBDTA .ajxmw1 {float:left;height: 1px;border-left:590px solid #fff;}
+* html .AJXMenuDGKBDTA .ajxmw2 {position:relative;margin-left:-590px;height:1px;background:#689fe0;}
+.AJXMenuDGKBDTA ul {position:relative;display:inline-block;margin:0;padding:0;list-style-type:none;}
+* html .AJXMenuDGKBDTA ul {display:inline;}
+*+html .AJXMenuDGKBDTA ul {display:inline;}
+.AJXMenuDGKBDTA li {float:left;margin:0;padding:2px 0px 2px 0;}
+.AJXMenuDGKBDTA li.tfirst {padding-left:2px;}
+.AJXMenuDGKBDTA li.tlast {padding-right:2px;}
+.AJXMenuDGKBDTA li:hover,.AJXMenuDGKBDTA li a:hover {position:relative;}
+.AJXMenuDGKBDTA a {display:block;float:left;height:22px;white-space:nowrap;padding:0 11px 0 11px;font:bold 13px/22px Verdana,Arial,Helvetica,sans-serif;text-decoration:none;text-align:left;border:1px solid #689fe0;color:#000000;}
+.AJXMenuDGKBDTA li:hover a,.AJXMenuDGKBDTA a:hover {border-color:#c2d5e2;background:#7cabe4;}
+.AJXMenuDGKBDTA a.ajxsub {padding:0 20px 0 11px;background:url("../hc/ajxmenuhc_files/top-sub.gif") no-repeat center right;}
+.AJXMenuDGKBDTA li:hover a.ajxsub,.AJXMenuDGKBDTA a.ajxsub:hover {background:#7cabe4 url("../hc/ajxmenuhc_files/top-sub.gif") no-repeat center right;}
+.AJXMenuDGKBDTA ul ul {position:absolute;display:block;left:-9999px;top:-9999px;width:166px;height:auto;border:none;background:#0080c0;}
+.AJXMenuDGKBDTA table {margin-top:-1px;border-collapse:collapse;}
+.AJXMenuDGKBDTA ul :hover ul {left:-3px;top:28px;}
+* html .AJXMenuDGKBDTA :hover ul {left:-4px;top:25px;}
+.AJXMenuDGKBDTA .tfirst:hover ul {left:-1px;}
+.AJXMenuDGKBDTA li li {width:160px;border:1px solid #3770b5;border-width:0 1px;padding:0 2px 0px 2px;}
+.AJXMenuDGKBDTA li li.sfirst {border-top:1px solid #3770b5;}
+.AJXMenuDGKBDTA li li.slast {border-bottom:1px solid #3770b5;padding-bottom:2px;}
+.AJXMenuDGKBDTA ul ul a,.AJXMenuDGKBDTA ul :hover ul a,.AJXMenuDGKBDTA ul :hover ul :hover ul a,.AJXMenuDGKBDTA ul :hover ul :hover ul :hover ul a {float:none;margin:0;width:142px;height:auto;white-space:normal;padding:5px 8px 5px 8px;font:12px/12px Verdana,Arial,Helvetica,sans-serif;text-decoration:none;border:1px solid #689fe0;color:#000000;background:none;}
+.AJXMenuDGKBDTA ul :hover ul .sfirst a,.AJXMenuDGKBDTA ul :hover ul :hover ul .sfirst a,.AJXMenuDGKBDTA ul :hover ul :hover ul :hover ul .sfirst a {margin-top:2px;}
+.AJXMenuDGKBDTA ul ul :hover a,.AJXMenuDGKBDTA ul ul a:hover,.AJXMenuDGKBDTA ul ul :hover ul :hover a,.AJXMenuDGKBDTA ul ul :hover ul :hover ul :hover a,.AJXMenuDGKBDTA ul ul :hover ul a:hover,.AJXMenuDGKBDTA ul ul :hover ul :hover ul a:hover {font-weight:bold;border-color:#c2d5e2;background:#7cabe4;}
+.AJXMenuDGKBDTA ul ul a.ajxsub,.AJXMenuDGKBDTA ul :hover ul a.ajxsub,.AJXMenuDGKBDTA ul :hover ul :hover ul a.ajxsub {width:138px;padding:5px 12px 5px 8px;background:url("../hc/ajxmenuhc_files/sub-sub.gif") no-repeat center right;}
+.AJXMenuDGKBDTA ul ul :hover a.ajxsub,.AJXMenuDGKBDTA ul ul :hover ul :hover a.ajxsub,.AJXMenuDGKBDTA ul ul a.ajxsub:hover ,.AJXMenuDGKBDTA ul ul a.ajxsub:hover a.ajxsub:hover  {background:#7cabe4 url("../hc/ajxmenuhc_files/sub-sub.gif") no-repeat center right;}
+.AJXMenuDGKBDTA ul :hover ul ul,.AJXMenuDGKBDTA ul :hover ul :hover ul ul,* html .AJXMenuDGKBDTA ul :hover ul :hover ul ul {position:absolute;left:-9999px;top:-9999px;}
+.AJXMenuDGKBDTA ul :hover ul :hover ul,.AJXMenuDGKBDTA ul :hover ul :hover ul :hover ul {left:159px;top:-3px;}
+* html .AJXMenuDGKBDTA ul :hover ul :hover ul,* html .AJXMenuDGKBDTA ul :hover ul :hover ul :hover ul {left:156px;top:-4px;}
+.AJXMenuDGKBDTA ul :hover ul .sfirst:hover ul,.AJXMenuDGKBDTA ul :hover ul :hover ul .sfirst:hover ul {top:-1px;}
+.AJXMenuDGKBDTA br {clear:both;height:0;font-size: 1px;line-height: 0px;}
+
+
+

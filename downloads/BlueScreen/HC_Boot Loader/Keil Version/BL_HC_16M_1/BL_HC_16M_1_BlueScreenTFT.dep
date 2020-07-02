@@ -1,0 +1,3 @@
+Dependencies for Project 'BL_HC_16M_1', Target 'BlueScreenTFT': (DO NOT MODIFY !)
+F (.\IAP\IAP.c)(0x00000000)( --thumb -c --cpu ARM7TDMI -O3 --apcs=interwork --asm --interleave -I "C:\Keil\\ARM\INC" -I "C:\Keil\\ARM\INC\Philips" -o ".\objects\iap.o" --omf_browse ".\objects\iap.crf" --depend ".\objects\iap.d")
+F (.\IAP\lpc2000_sector.c)(0x00000000)( --thumb -c --cpu ARM7TDMI -O3 --apcs=interwork --asm --interleave -I "C:\Keil\\ARM\INC" -I "C:\Keil\\ARM\INC\Philips" -o ".\objects\lpc2000_sector.o" --omf_browse ".\objects\lpc2000_sector.crf" --depend ".\objects\lpc2000_sector.d")

@@ -1,0 +1,19 @@
+11:19:06.930 Log started: Gemini Teles TID:1 8/2/2015 6:19:06 PM
+11:19:06.930 User Settings             TID:1 [2]: False, False, False, True, False, False
+11:19:06.946 Comm Settings             TID:1 [2]: Ethernet, 57600, 8, None, One
+11:19:06.946 Scan COM ports            TID:1 [2]: False
+11:19:06.946 Geo Settings              TID:1 [2]: 33.4483333333333, -112.073833333333, 333.9
+11:19:06.946 Pass Through Port         TID:1 [2]: COM10, 9600, False
+11:19:06.946 Boot Settings             TID:1 [2]: Prompt
+11:19:06.946 Focuser Settings          TID:1 [2]: 5000, 2147483647, 100, False, 0, 50, 0, 1
+11:19:06.946 GetProfileSettings        TID:1 [Exit] 
+11:19:06.946 GeminiHardware            TID:1 [Enter] 1.0.59.0, 8/2/2015 11:19:06 AM, Trace=4
+11:19:06.946 GeminiHardware            TID:1 [Exit] 
+11:19:27.179 buttonGps_Click           TID:1 [Enter] 
+11:19:27.179 NmeaInterpreter           TID:1 [Enter] 
+11:19:27.179 NmeaInterpreter           TID:1 [Exit] 
+11:19:27.195 frmGPS                    TID:1 [Enter] 
+11:19:27.195 frmGPS                    TID:1 [Exit] 
+11:19:27.195 set_ComPort               TID:1 [Enter] COM8
+11:19:27.335 Exception                 TID:1 [Error]: System.NullReferenceException: Object reference not set to an instance of an object.[0D][0A]   at ASCOM.GeminiTelescope.frmGps.set_ComPort(String value) in c:\proj\GeminiUpdateDriver\GeminiTelescope\frmGps.cs:line 250[0D][0A]   at ASCOM.GeminiTelescope.TelescopeSetupDialogForm.buttonGps_Click(Object sender, EventArgs e) in c:\proj\GeminiUpdateDriver\GeminiTelescope\TelescopeSetupDialogForm.cs:line 566[0D][0A]   at System.Windows.Forms.Control.OnClick(EventArgs e)[0D][0A]   at System.Windows.Forms.Button.OnClick(EventArgs e)[0D][0A]   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)[0D][0A]   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)[0D][0A]   at System.Windows.Forms.Control.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.ButtonBase.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.Button.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)[0D][0A]   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+11:19:28.443 ThreadException           TID:1 [Error]: Object reference not set to an instance of an object., ASCOM.GeminiTelescope,    at ASCOM.GeminiTelescope.frmGps.set_ComPort(String value) in c:\proj\GeminiUpdateDriver\GeminiTelescope\frmGps.cs:line 250[0D][0A]   at ASCOM.GeminiTelescope.TelescopeSetupDialogForm.buttonGps_Click(Object sender, EventArgs e) in c:\proj\GeminiUpdateDriver\GeminiTelescope\TelescopeSetupDialogForm.cs:line 566[0D][0A]   at System.Windows.Forms.Control.OnClick(EventArgs e)[0D][0A]   at System.Windows.Forms.Button.OnClick(EventArgs e)[0D][0A]   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)[0D][0A]   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)[0D][0A]   at System.Windows.Forms.Control.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.ButtonBase.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.Button.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)[0D][0A]   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)[0D][0A]   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam), null

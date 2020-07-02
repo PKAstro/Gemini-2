@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Gemini 2 Mount Controller</title>
+
+<link href="../gemini-2.css" rel="stylesheet" type="text/css" />
+
+
+<?php include("topv.php"); ?>
+
+
+
+</head>
+
+<body style="color: #FFFFFF; background-color: #000000">
+<table align="center" style="width: 900px">
+	<tr>
+		<td class="style7">
+		<map id="ImgMap0" name="ImgMap0">
+			<area alt="" coords="79, 801, 138, 828" href="index.php" shape="rect" />
+		</map>
+		<img alt="" height="876" src="images/battery-ports.jpg" width="900" usemap="#ImgMap0" /></td>
+	</tr> 
+	<tr>
+		<td class="style7">Here is where you can monitor the port pin for all 
+		the external inputs, input voltage, and internal battery voltage.</td>
+	</tr> 
+	<tr>
+		<td class="style6">
+		<ul>
+			<li>Power Supply Voltage - This bar graph shows the external power being supplied to the Gemini-2.  It will turn Yellow, and then Red if the power supply voltage is not high enough.  Note that the Internal Processor has code that will try and save the current setting, but stop motor movement if the power supply drops too low.&nbsp; 
+			<em>Remember this is just a demo page, use the link at the bottom to see 
+			the real value.</em></li>
+			<li>Lithium Battery Voltage - This is the bar graph of the internal 
+			Lithium battery.&nbsp; This battery is used to back up the internal 
+			SRam and Clock circuits.&nbsp; Without it, the Gemini-2 would not 
+			remember much of the current setting, and they would have to be 
+			reprogrammed upon power up.&nbsp; The internal battery is a CR2354.
+			<em>Remember this is just a demo page, use the link at the bottom to see 
+			the real value.</em></li>
+			
+			<li>PIN Status - This is the pin status of all the external ports on 
+			the Gemini-2<ul>
+				<li>HC buttons - These are the buttons on the
+				<a href="images/HC.jpg">Classic hand controller</a>, that can be 
+				plugged into the Classic hand controller jack.&nbsp; This hand 
+				controller can be purchased from Losmandy. It is on there
+				<a href="http://www.losmandy.com/replacement.html" target="_blank">
+				replacement parts web page.</a>&nbsp; I really recommend it.&nbsp; 
+				It can also be used to test the Guider inputs.</li>
+				<li>Use the Periodic check box to have these inputs show up as 
+				they are activated. Otherwise you will have to use the Refresh 
+				button to try and catch them.</li>
+			</ul>
+			</li>
+			<li>Port E Usage - This port has several usages:<ul>
+				<li>Ignore/off - pretty much means what it says.&nbsp; This port 
+				is not monitored.</li>
+				<li>Axis Encoders - This would use external encoders if plugged 
+				into this port and this selection selected. The only problem 
+				with this is that the Firmware in the Gemini-2 does not at this 
+				time use the external encoder values, as the ones sold by 
+				Losmandy has a much lower resolution than the ones on the back 
+				of the motors.&nbsp; This cause the Gemini-2 to loose accuracy 
+				if the external encoders are use.</li>
+				<li>End Switches -&nbsp; If this is selected, then any one of 
+				the pins 1, 3, 5, 7 if taken to ground (shorted to pin 8) will 
+				stop all motor movement in both RA and DEC.&nbsp; Note that 
+				these pins are +3.3V inputs Max, and supplying more than that 
+				could damage the internal ARM processor.&nbsp; These pins need 
+				to be pulled up to +3.3v through&nbsp; 1K resistors for each 
+				input. </li>
+				<li>The +5V pins on this jack was intended to supply power to 
+				external encoders.&nbsp; Do not use this voltage to provide 
+				pull-up voltage for the inputs of this jack.</li>
+			</ul>
+			</li>
+			<li>Port F Pins - These check boxes are used to activate the 
+			associated pin, so that it can be used.&nbsp; If the checkbox is not 
+			checked, that input pin is not used. </li>
+		</ul>
+		&nbsp;</td>
+	</tr> 
+			<tr><td></td></tr>
+</table>
+<table align="center" width="900px" class="tableborder1">
+	<tr><td class="style6-border-white"><em>If your Gemini-2 is connected Via Ethernet, 
+		turned ON, and Responds to <a href="http://gemini/ad.cgi" target="_blank">Gemini-2 internal battery port page</a> then this link 
+		will open this page in the Gemini-2 web interface, after prompting for a 
+		log-in.</em></td></tr>
+</table>
+
+</body>
+
+
+
+
+<?php include("bottom.php"); ?>
+
+
+

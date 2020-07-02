@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Servo Programming</title>
+
+
+<?php include("topv.php"); ?>
+
+<link href="gemini-2.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.auto-style1 {
+	border-style: solid;
+	border-width: 2px;
+}
+.auto-style2 {
+	text-decoration: underline;
+}
+</style>
+
+</head>
+<body style="color: #FFFFFF; background-color: #000000">
+
+<table align="center" style="width: 900px">
+	<tr>
+		<td class="h2">
+		Servo Programmer and Adapter
+		</td>
+	</tr>
+</table>
+	<table align="center" style="width: 900px">
+		<tr><td Class="style6"><span class="style2"><br />
+					Now updating this firmware yourself will be at your 
+		own risk, and Hollywood General Machining, Inc. (Losmandy) or any one 
+		associated with them, or anyone associated with 
+		<a href="http://www.gemini-2.com">
+		http://www.gemini-2.com</a> will and can not be held 
+		liable if anything goes wrong. YOU DO THIS AT YOUR OWN RISK. I have 
+			provided the best instructions that I can, but there is absolutely 
+			no guarantee, that everything will work as expected.&nbsp;&nbsp; If 
+			you want this firmware professionally installed you will have to 
+			contact Hollywood General Machining, Inc. (Losmaandy) for cost and time 
+			estimates. &nbsp; &nbsp; <span class="auto-style2">
+			<strong>AGAIN, YOU DO THIS AT YOUR OWN RISK.</strong></span> Current shipping 
+			Gemini-2 have this firmware already installed.</span><br />
+		</td></tr>
+	<tr>
+		<td class="h3">
+			<br />
+			Click on pictures to see a larger version.
+		</td>
+	</tr>
+</table>
+
+
+	<table align="center" style="width: 900px">
+
+	<tr >
+		<td class="style6" width="550px">
+		<ol>
+		<li>
+		I used a PicKit 3 Programmer from 
+		<a href="http://www.microchipdirect.com/ProductSearch.aspx?keywords=PG164130" target="_blank">Microchipdirect</a>. Part number 
+		PG164130 at a cost of $44.95 plus shipping. They normally ship 2nd day FedEx.&nbsp; 
+		I do not recommend purchasing any of the Chinese knock-off versions sold 
+		on ebay. It 
+		might save you a few dollars, but also might not program the servo 
+		firmware correctly.</li>
+			<li>
+			Downloaded the
+			<a href="downloads/mplab/MPLAB_IDE_8_91.zip" target="_blank">MPLAB software</a> this version 
+			is V8.91&nbsp; A user guide is available
+			<a href="downloads/mplab/MPLAB_User_Guide_51519c.pdf">here</a></li>
+			<li>
+			You will also have to make an adapter.&nbsp; Here is a picture of 
+			the parts I started with to make the adapter. This adapter has 
+			2.54mm (0.1.00") spacing male pins on one end to go into the Pickit3 connector, and 
+			2.0mm (0.079") spacing with small diameter pins to fit into the 
+			sockets on the Gemini-2 board.&nbsp; This adapter uses 5 positions, to 
+			fit into the connectors of the Gemini-2. Please note that not all 
+			Gemini-2 boards was shipped with sockets.&nbsp; If your board does 
+			not have the sockets, then you will have to try and find 
+			<a href="http://www.mouser.com/ProductDetail/Harwin/M22-7130642/?qs=%2fha2pyFaduh01RJvhljiEl3c%2fgXog6eOJO3ToPvNv%252bc5MLoOU05HVg%3d%3d" target="_blank">2mm pin 
+			sockets</a>, and install them yourself. (not recommended as the 
+			circuit might have the holes filled with solder.)</li></ol>
+		</td>
+		<td width="50px"></td>
+		<td class="style7">
+		<img alt="" height="300" src="gemini-images/servo_program/pickit3.jpg" width="300" /><br />
+		PicKit 3
+		</td>
+	</tr>
+</table>
+	<table align="center" style="width: 900px">
+
+
+	<tr >
+		<td class="style7">
+		<a href="gemini-images/servo_program/PB212472.jpg" target="_blank">
+		<img alt="" height="1000" src="gemini-images/servo_program/thumbnails/PB212472_small.jpg" width="750" class="auto-style1" /></a><br />Fig 1</td>
+	</tr>
+	</table>	
+	<table align="center" style="width: 900px">
+
+	<tr >
+		<td class="style6">
+		<ol start="4"><li>
+		I started with a Female RS-232 to RJ45 adapter, that I purchased from my local electronics supplier. I also 
+			got 1/16 diameter heat shrink and a double .100 inch breakoff tab 
+			header.&nbsp; Use a small screw driver to push out the wire 
+			assembly you see between the bagged RS-232 to RJ45 adapter and the 
+			.100 inch breakoff headers from the RS-232 to RJ45 adapter.&nbsp; If 
+			you don't have a local distributor that carries these then
+			<a href="https://www.cablewholesale.com/buy/modular-adaptors.htm" target="_blank">
+			cablewholesale</a> sells them in many different colors.&nbsp; Just 
+			make sure you get the Modular Adapter DB9 <span class="style3">
+			Female </span>to RJ45 adapter. The 
+			<a href="http://www.frys.com/product/3221351?site=sr:SEARCH:MAIN_RSLT_PG" target="_blank">heat shrink</a> and  
+			<a href="http://www.frys.com/product/2068954?site=sr:SEARCH:MAIN_RSLT_PG" target="_blank"> double.100 breakoff tab header</a> was from 
+			<a href="http://www.frys.com/" target="_blank">Fry's 
+			Electronics</a>.&nbsp; I don't 
+			recommend the DB9F to RJ45 adapter that Frys Electronics sells as it 
+			does not come apart very easy.&nbsp; The one from Cablewholesale 
+			does. </li>
+			</ol>
+		</td>
+		</tr>
+	</table>
+	<table align="center" style="width: 900px">
+
+	<tr >
+		<td class="style7">
+		<img alt="" height="371" src="gemini-images/servo_program/guts-of-rs232.jpg" width="900" /><br />
+		Fig 2</td>
+		</tr>
+	</table>
+	<table align="center" style="width: 900px">
+
+	<tr >
+		<td class="style6">
+		<ol start="5"><li>
+			
+			
+			The above picture 
+			(Fig 2) is of the harness removed from the RJ45 to DB9 
+			adapter.
+			
+			
+			Bend all the pins straight and pulled them out of the 
+			Red plastic end.&nbsp; These pins are perfect diameter to fit the header J18 
+			and J19 in the Gemini-2.&nbsp; Cut the header strip&nbsp; shown on 
+			the right of the top picture (Fig 1) to 6 pins long.</li>
+			<li>
+			Next solder the wires (the end towards the 
+			left&nbsp; end in Fig 2) in 
+			the following order to the 6 pin header.&nbsp; They will slip easily 
+			over one end of the pins of the 6 pin header.&nbsp; Pin 1 - Orange; 
+			Pin 2 - Red; Pin 3 - Yellow; Pin 4 - Green; and Pin 5 - Blue.&nbsp; 
+			Leave pin 6 empty.</li>
+			<li>
+			Next cut 5 pieces of heat shrink and slide it all the way up the 
+			wires to the 6 pin header.&nbsp; About .7 inches long each. Use a 
+			heat source to shrink down the tubing.&nbsp; I happen to already own 
+			a heat gun made for this.&nbsp; It came from Harbor Freight for 
+			$15.00</li>
+			<li>
+			Now cut 5 more peace's of heat shrink to fit over the other ends, 
+			about 1/2 inch long each. Shrink them down.</li>
+			<li>
+			now cut the fine pins to length.&nbsp; 0.200 inches is about the 
+			correct distant.&nbsp; The pin strip has it pins spaced 0.100 so you 
+			can use 2 of these spacing to judge the distant.&nbsp; You now have 
+			your adapter made.</li></ol></td></tr>
+			<tr><td class="style6"> I have found pins from 
+				<a href="http://www.mouser.com/ProductDetail/Harwin/M22-2511005/?qs=%2fha2pyFaduh01RJvhljiEoUw7JD8Ep6bmIRNmnvHzjMpv79eTH2dWw%3d%3d" target="_blank">Mouser</a>, Part number 855-M22-2511005 
+				that will fit into the sockets in the main circuit board, but 
+				have not made a cable using them.&nbsp;They are similar to the 
+				ones pictured above but with 2mm spacing.<br /><br /> </td>
+	</tr>
+	<tr >
+		<td class="style6">
+		Here are some pictures of the PICKit3 connected to J19 of the Gemini-2</td>
+	</tr>
+	<tr >
+		<td class="style7">
+		<a href="gemini-images/servo_program/PB212471.jpg" target="_blank">
+		<img alt="" height="1000" src="gemini-images/servo_program/thumbnails/PB212471_small.jpg" width="750" /></a>
+		<br />Fig 3
+		</td>
+	</tr>
+	<tr >
+		<td class="style7">
+		<a href="gemini-images/servo_program/PB212470.jpg" target="_blank">
+		<img alt="" height="1000" src="gemini-images/servo_program/thumbnails/PB212470_small.jpg" width="750" /></a>
+		<br />Fig 4
+		</td>
+	</tr>
+	<tr >
+		<td class="style7">
+		<a href="gemini-images/servo_program/PB212469.jpg" target="_blank">
+		<img alt="" height="1000" src="gemini-images/servo_program/thumbnails/PB212469_small.jpg" width="750" /></a>
+		<br />Fig 5
+		</td>
+	</tr>
+	</table>
+	<table align="center" style="width: 900px">
+	<tr >
+		<td class="style6">
+		<ol start="10"><li>
+		If you have not already installed MPLAB the do so now.  After installing it you need to run it.<br /><br />
+		</li>
+			<li>
+			On the file menu, <span class="style3">use the import button and browse to the firmware 
+			update for the servo's.</span>&nbsp; You must use the import 
+			function. Using any other function to get the file into MPLAB will 
+			not program the servo's correctly. It is available at this link:&nbsp; 
+			<a href="http://gemini-2.com/downloads/servo/Gemini_New_Baseline21.zip" target="_blank">Gemini_New_Baseline21.zip</a> that you will 
+			import.&nbsp; If you download it from the link on the left, it will 
+			come in as a zipped file called Gemini_New_Baseline21.zip and you 
+			will need to put it into a clean folder, and unzip it with a utility 
+			such as 7-Zip.&nbsp; It's filename will be Gemini_New_Baseline21.hex 
+			after you unzip it. &nbsp; It must have the .hex extension for MPLab to use it. <span class="style3">Once 
+			you have it into MPLAB, in the CHECKSUM window make sure it says 
+			0x251D, if it does not, then you have a corrupted or wrong file.</span><br /><br /></li>
+			<li>
+			Next connect the PICkit3 using the supplied USB cable.&nbsp; A 
+			driver should install and tell you that it is ready to use.<br /><br /></li>
+			<li>
+			Now go to the programmer tab, and select the PICKit3 as the 
+			programmer.&nbsp; If your Pickit3 is like mine, the MPLAB will detect the 
+			PICkit3 and tell you there is a software update for it.&nbsp; Let it 
+			do the update.<br /><br /></li>
+			<li>
+			You need to set the PIC type. On the top menu is a button called 
+			configure. Select it, and the menu in Fig 5 will come up:</li>
+			</ol>
+		</td>
+	</tr>
+	</table>
+	<table align="center" style="width: 900px">
+	<tr >
+		<td class="style7">
+		<img alt="" height="558" src="gemini-images/servo_program/congfigure.jpg" width="592" /><br />Fig 6</td>
+	</tr>
+	</table>
+
+	<table align="center" style="width: 900px">
+	<tr >
+		<td class="style6">
+		<ol start="15">
+			<li>In the top left corner is a device block.  Please put dsPIC33FJ12MC201 into it, and then select OK at the bottom.<br /><br />
+			</li>
+			<li>
+			Now plug in the wires into the Gemini 2 board sockets J18 or J19.&nbsp; 
+			Then plug the 6 pin header into the PICkit3 programmer. You will have 
+			to do both J18 and J19.&nbsp; The pictures shows the pins in J19 
+			which is the DEC servo programming chip.</li>
+		</ol>
+		</td>
+	</tr>
+	</table>
+	<table align="center" style="width: 900px">
+
+	<tr >
+		<td class="style7">
+		<img alt="" height="613" src="gemini-images/servo_program/Programming.jpg" width="622" />
+		<br />Fig 7</td>
+	</tr>
+	</table>
+	<table align="center" style="width: 900px">
+	<tr >
+		<td class="style6">
+		<ol start="17"><li>
+		You 
+			should see a window similar to the above picture.&nbsp; It should 
+			only be showing up to the red "You must connect a target"&nbsp; </li>
+			<li>
+			Power on the Gemini-2.&nbsp; The line target Detected should appear.&nbsp; 
+			You are ready to program the first device. </li></ol></td>
+	</tr>
+	</table>
+	<table align="center" style="width: 900px">
+
+	<tr >
+		<td class="style7">
+		<img alt="" height="82" src="gemini-images/servo_program/Programbutton.jpg" width="410" />
+		<br />Fig 8</td>
+	</tr>
+	</table>
+	<table align="center" style="width: 900px">
+
+	<tr >
+		<td class="style6">
+		<ol start="19"><li>
+			The blue arrow in Fig 8 is the programming button.&nbsp; 
+			It will be highlighted. Press it now.&nbsp; The programmer will 
+			program the first device.&nbsp; It only takes a couple of seconds.&nbsp; 
+			After Programming is complete and verified, Power off the Gemini-2&nbsp; </li>
+			<li>
+			Next remove the pins from the Gemini-2 and put them into the other 
+			connector (either J18 or J19).</li>
+			<li>
+			Go to Step 16 and repeat steps 17 through 29.&nbsp; After step 17 is 
+			done for the second connector, Power off the Gemini-2 and disconnect 
+			everything.&nbsp; You are done.</li></ol></td>
+	</tr>
+	</table>
+	<table align="center" style="width: 900px">
+
+	<tr><td class="style7">
+	
+		<a href="gemini-images/servo_program/programming_full_image.JPG" target="_blank">
+		<img alt="" height="576" src="gemini-images/servo_program/thumbnails/programming_full_image_small.JPG" width="900" class="auto-style1" /></a>
+	<br /> This is what a verified page would look like.</td></tr>
+	
+	<tr><td class="style6"></td></tr>
+	<tr><td class="style6">Now after doing this programming to the servo motor 
+		IC, if you see either the RA or DEC shaft momentary rotate as the power 
+		is turned on, then the 
+		following modifications might have to be done to the circuit board.&nbsp; 
+		Note that this modification is not requires on all of the Gemini-2 
+		circuit boards.&nbsp;
+		<a href="Gemini-2_Modifications/Modifications%20G2%2017102011-1.pdf">
+		Gemini-2 circuit board modification.</a>&nbsp; 
+		If your system shows these symptoms, either before or after the 
+		programming of the servo processors, then you need to contact Losmandy 
+		to see if they will do the modification for you.&nbsp;&nbsp; This modifications do not need to be done unless you intend to use PEC.&nbsp; 
+		It will only effect being off on the PEC index.&nbsp; Synchronizing or 
+		aligning of the first star corrects any index error, that an initial 
+		motor rotation might cause.&nbsp;&nbsp; Now only a small percentage of 
+		boards have been shown to have this problem.</td></tr>
+</table>
+
+</body>
+
+</html>
+
+
+<?php include("bottom.php"); ?>
+

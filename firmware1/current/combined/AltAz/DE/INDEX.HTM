@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type">
+<META http-equiv=Content-Language content=de-de>
+<META http-equiv="X-UA-Compatible" content="IE=8">
+<link rel="stylesheet" type="text/css" href="design_night.css">
+<link rel="alternate stylesheet" type="text/css" title="design_day" href="design_day.css">
+<script type="text/javascript" src="styleswitcher.js"></script>
+<script type="text/javascript">
+if (top != self) top.location = self.location;
+</script>
+<script type="text/javascript">
+function OpenStateWindow(Link_Address) {
+ StateWindow = window.open(Link_Address, "Status", "width=850, height=850, left=20, top=20");
+ StateWindow.focus();
+}</script>
+<script type="text/javascript">
+function OpenHCWindow(Link_Address) {
+ HCWindow = window.open(Link_Address, "Handsteuerung", "width=650, height=950, left=10, top=10");
+ HCWindow.focus();
+}</script>
+<script type="text/javascript">
+function OpenMobileHCWindow(Link_Address) {
+ MobileHCWindow = window.open(Link_Address, "Mobiler HC");
+ MobileHCWindow.focus();
+}</script>
+<title>Gemini Web Server</title>
+</head>
+<body>
+
+<div class="frame">
+	<div class="logo">
+	<a target="_blank"  href="http://www.losmandy.com"><img src="Losmandy_Logo.gif" class="losmandy_logo" alt="" ></a> 
+	<br><br>
+	<a target="_blank" href="http://www.DocGoerlich.com"><img src="Gemini_Logo.jpg" class="gemini_logo" alt="" ></a>
+</div>
+		<table class="menu" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="menu_title">Beobachtung:</td>
+				<td class="menu_link">
+					[ <a href="/state.cgi" onclick="OpenStateWindow(this.href); return false">Status</a> |  
+					<a href="/HC/HandControl.html" onclick="OpenHCWindow(this.href); return false">Handsteuerung</a> | 
+					<!--<a href="/MHC/mhc.html" onclick="OpenMobileHCWindow(this.href); return false">Mobiler HC</a> |--> 
+					<a href="/functions.cgi">Funktionen</a> |
+					<a href="/cats.htm">Objekte</a> ] 
+				</td>
+			</tr>
+			<tr>
+				<td class="menu_title">Einstellungen:</td>
+				<td class="menu_link">
+					[ <a href="/mountpar.cgi">Montierung</a> |
+					<a href="/sitetime.cgi">Standort/Zeit</a> |
+					<a href="/modeling.cgi">Modellierung</a> ]
+				</td>
+			</tr>
+			<tr>
+				<td class="menu_title">Speichermedien:</td>
+				<td class="menu_link">
+					[ <a href="/sd.cgi">SD-Karte</a> |
+					 <a href="/Flash.cgi">Flash</a> ]
+				</td>
+			</tr>
+			<tr>
+				<td class="menu_title">Verbindungen:</td>
+				<td class="menu_link">
+					[ <a href="/network.cgi">Netzwerk</a> |
+					<a href="/system.cgi">Zugriff</a> |
+					<a href="/serial.cgi">Serielle Schnittstellen</a> |
+					<a href="/tcp.cgi">Statistik</a> ]
+				</td>
+			</tr>
+			<tr>
+				<td class="menu_title">Hardware:</td>
+				<td class="menu_link">
+					[ <a href="/ad.cgi">Batterie, Anschlüsse</a> | 
+					<a href="/firmware.cgi">Firmware/SRAM</a> |
+					<a href="/motor.cgi">Servos</a> ]
+				</td>
+			</tr>
+			<tr>
+				<td class="menu_title">Dokumentation:</td>
+				<td class="menu_link">
+					[ <a href="/L5V1manual.pdf">Handbuch</a> | 
+					<a href="/L5V1serial.html">Serieller Befehlssatz</a> ]
+			</tr>
+			<tr>
+				<td class="menu_title">Tutorials:</td>
+				<td class="menu_link"> 
+					[ <a href="../DOC/PAA_Tutorial.pdf">PAA</a> ]
+				</td>
+			</tr>
+		</table>
+		
+<p style="text-align:center; font-size:small;">Diese Webseiten werden von einer Losmandy Gemini-2 Steuerung erzeugt. <br>
+Mit den Links kann dieses Gemini-System überwacht und gesteuert werden.<br>
+
+Zusätzliche Informationen zu Produkten von Losmandy HGM finden Sie unter</p>
+<p style="text-align:center; font-size:large;">
+<a href="http://www.losmandy.com" target="_blank">www.losmandy.com</a> <br>
+</p>
+
+<p class="footer">Copyright© 2008-2012 <a href="http://www.docgoerlich.com/" target="_blank">René Görlich</a>.
+ Alle Rechte reserviert.</p>
+
+<p class="style_switcher">
+<a href="#" onclick="setActiveStyleSheet('standard'); return false;">Nachtmodus</a> -----
+<a href="#" onclick="setActiveStyleSheet('design_day'); return false;">Tagmodus</a>
+</p>
+
+</div>
+
+</body>

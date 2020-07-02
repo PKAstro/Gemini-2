@@ -1,0 +1,30 @@
+t <status>
+c T U <utcdate>%02u.%02u.%04u</utcdate>
+c T u <utctime>%02u.%02u.%02u</utctime>
+c T C <civildate>%02u.%02u.%04u</civildate>
+c T c <civiltime>%02u.%02u.%02u</civiltime>
+c T s <lst>%02u.%02u.%02u</lst>
+c C r <ra>%02u:%02u:%02u</ra>
+c C d <dec>%c%02u:%02u:%02u</dec>
+c C p <ha>%08d</ha>
+c t x <velocityra>%s</velocityra>
+c t y <velocitydec>%s</velocitydec>
+c A 1 <poweradvalue>0x%03X</poweradvalue>
+c A 2 <powervoltage>%5.3f</powervoltage>
+c A 3 <powervoltagepercent>%d%%</powervoltagepercent>
+c A 4 <lithiumadvalue>0x%03X</lithiumadvalue>
+c A 5 <lithiumvoltage>%5.3f</lithiumvoltage>
+c A 6 <lithiumvoltagepercent>%d%%</lithiumvoltagepercent>
+c C R <targetra>%02d:%02u:%02u</targetra>
+c C D <targetdec>%c%02u:%02u:%02u</targetdec>
+c C u <targetradelta>%c%02u:%02u:%02u</targetradelta>
+c C v <targetdecdelta>%c%02u:%02u:%02u</targetdecdelta>
+c O n <object>%s</object>
+c L t <timetolimit>%02d:%02u:%02u</timetolimit>
+c I H <display>%s</display>
+c I I <info>%s</info>
+c I S <serial>%s</serial>
+c z   <state>%u</state>
+c k   <pec>%u</pec>
+t </status>
+.

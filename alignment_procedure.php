@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Gemini 2 Mount Controller</title>
+
+<link href="http://gemini-2.com/gemini-2.css" rel="stylesheet" type="text/css" />
+
+
+<?php include("topv.php"); ?>
+
+
+
+</head>
+
+<body style="color: #FFFFFF; background-color: #000000">
+
+
+<table align="center" style="width: 900px">
+	<tr>
+		<td class="h2">This is the Start-up and Alignment proceedure</td>
+	</tr>
+</table>
+
+<table align="center" style="width: 900PX">
+	<tr>
+		<td class="style6">
+		This page only applies to firmware dated August 16, 
+		2011 through Dec 28, 2011.&nbsp; A new
+		<a href="semi-automatic-alignment-procedure.php" target="_blank">
+		Semi-Automatic-Assisted-Alignment-method</a> was added after Dec 28, 
+		2011.&nbsp; I recommend you see that for doing your alignments.&nbsp; Of 
+		course the alignment procedures on this page still work, so if you 
+		prefer to use them you are more than welcome to. In previous 
+		version of the firmware, there was a Initial Alignment and additional 
+		Alignment buttons.&nbsp; The Initial Alignment was used on the first 
+		star, and additional alignment was use on all stars after that. With 
+		the August 16, 2011 version, both buttons was replaced with one button 
+		called Alignment.<br />
+		<br />
+		Definition of terms: The Definition of terms have been moved to
+		<a href="definitions.php" target="_blank">definitions page.</a><br /><br />
+	</td></tr>
+	</table>
+<!--
+<table align="center" style="width: 80%">
+	<tr>
+		<td class="style6">
+		<a href="http://www.gemini-2.com/downloads/Gemini-2_QS_Guide.pdf" target="_blank">Here's for Quick Start Guide by Losmandy</a>&nbsp; Please 			note that 
+		most of the menus has changed since this quick start guide was written.</b>&nbsp; 
+		I only include it here, but don't recommend you use it as it is wrong.</td>
+	</tr>
+</table>
+-->
+
+<table align="center" style="width: 900PX">
+	<tr>
+		<td class="style6">
+		<br />	
+		<span class="style3"><strong>Here are the suggested steps to get started building a model the first time.</strong>
+		</span> 
+		<br />It will take you through adding 
+		two stars to the model.&nbsp; <br />
+		<span class="style2">
+		<em>Note: If you need to have the mount start up on the opposite side of 
+		the mount, "that is do a flip to get to the target", you cannot use the 
+		Menu-&gt;Align-&gt;goto bright star as outlined in steps 7 and 9 below.&nbsp; 
+		You will have to use the GOTO menu selection instead. So select GOTO, 
+		then Catalog, then BSL.guc, and then type in the name of the star you 
+		want to go to.&nbsp; When that name comes up, there will be a selection 
+		box at the bottom called flip.&nbsp; Check this box, then select goto. 
+		wait for the mount to stop and then center star.&nbsp; Goto next step in 
+		list below.
+		</em></span> <br />
+	<ol>
+		<li>Put the mount with the counterweights down, and the Dec pointing to your respective pole.
+		</li>
+		<li>Power up and do a screen alignment if this is the first time 
+			powering up. A good screen alignment is very important. I use a stylus 
+			from my PDA to do this. You do this by touching the alignment screen 
+			before it disappears, and then touch the three alignment places.&nbsp; 
+			The screen will then count down from 5 and then go onto the next screen. 
+		</li>
+		<li>Select either Quick Start or Cold Start. Quick Start is used if you 
+		have changed any of your setting such as time or location.&nbsp; It will 
+		prompt you for all the setting. Cold start is used if no model is built. 
+		see 5, 6 and 7 below where you will be entering latitude and longitude and time. 
+		Don't forget to hit set after changing the time or it will not take.
+		</li>	
+		<li>Make sure that your mount type is selected correctly. Most new Titans are Titan 50's.
+		</li>
+		<li>Make sure the civil time and civil date is entered correctly. (the 
+			Gemini will calculate the correct UTC time and date from that.
+		</li>
+		<li>Make sure your time zone is correct. Positive for East Longitude time zones and negative for West.<br />
+			Time zones in the USA are negative, and Europe Positive.
+		</li>
+		<li>Make sure your site is entered correctly.  Longitude is Positive of East and Negative for West locations. 
+			In the hand controller Longitude and Latitude is entered in Degrees and&nbsp; 
+			full minutes (no decimal minutes is allowed.) The only way to enter seconds is by using the web interface.
+		</li>
+		<li>Do Menu->align->GOTO bright star->select star, wait for mount to stop then center star.
+		</li>
+		<li>Do Menu->align->alignment&nbsp; (this add the first star to the alignment).
+		</li>
+		<li>Do Menu->align->GOTO bright star->select a star, wait for mount to stop then center star.
+		</li>
+		<li>Do Menu->align->Alignment (this adds the second star to the	model)
+		</li>
+		<li>Go to star or catalog object of your choice, or repeat steps 9 and 10 to add more stars. 
+			You can add more stars to a model at any time, even days later, as long as 
+			you have not done a cold start after building a model.
+		</li>
+	</ol>
+	</td>
+	</tr>
+</table>
+
+	
+<table align="center" style="width: 900PX">
+	<tr>
+		<td class="style7">
+<hr />
+		<br />Additional comments about building a model.
+		<br />
+		</td>
+	</tr>
+	
+</table>
+
+<table align="center" style="width: 900PX">
+	<tr>
+		<td class="style6">
+	<ol>
+		<li>Steps 1 through 11 only builds a model on one side.&nbsp; Normally the East side for the Northern Hemisphere 
+			and the West side for the Southern Hemisphere. 
+			To do a model on the other side you have to have the DEC cross the pole, 
+			which is normally associated with a a meridian flip of the mount, but if 
+			you can cross the pole and continue to track without a meridian flip, 
+			then the mount will switch models. (crossing the meridian does not 
+			switch models, unless the DEC has also crossed the Pole. See #2 below.)
+		</li>
+		<li>
+			After building your model on one side of the meridian, you should 
+			select stars on the opposite side of the meridian for alignment. 
+			&nbsp;The first such star should be selected such that the mount will 
+			perform a "meridian flip" as it crosses over the meridian. &nbsp;A 
+			meridian flip is when the mount flips around so that the telescope 
+			tube moves from one side of the mount (left or right) to the 
+			opposite side. &nbsp;The declination axis will also flip around and cross 
+			through 90 degrees as it moves to the other side (Cross the Pole). 
+			&nbsp;Depending on how your safety limits are set, you may need to choose 
+			a star fairly far from the meridian to ensure that a meridian flip 
+			occurs. &nbsp;Alternatively, if your mount moves to the star *without* 
+			flipping the mount, you can use the HC to GOTO the same object and 
+			check "Force Flip" to force a meridian flip.
+		</li>
+		<li>An alternate method of entering an alignment point would be to use the 
+			GOTO button, then select Catalog Object, any of the catalogs, such as 
+			BSL.guc (Bright Star List), and enter the name of the object you want to 
+			go to.&nbsp; This give several options.&nbsp; For 1: it tells you if the 
+			object is below the Horizontal, 2: It give you the chance to select a Flip, 
+			and 3: you can change which coordinate system you are using, normally 
+			JD2000.<br />
+			If you want to add this object to the model, 
+			then do a Menu-&gt;align-&gt;alignment.
+		</li>
+	</ol>
+	
+	</td></tr>
+</table>
+
+
+
+<p class="style6">
+
+<table align="center" style="width: 900px">
+
+<hr />
+
+	<tr>
+		<td class="style6">
+
+		This section is René Görlich's explanation of how the to build 
+		a model using the current firmware, and how it works.&nbsp; He also goes 
+		into the guiding process.&nbsp; <br />
+		<br />
+
+		Alignment is&nbsp; much simpler now and a bit safer, because you cannot delete the model by pressing "Initial Alignment" instead of "Additional Alignment".
+
+The Alignment buttons does everything automatically. If you already have a model 
+		built (on this side of the pole) it will do the "Additional Alignment", if not, it will do the Initial Alignment.
+
+Crossing the pole changes between the 2 models. They are completely separated. So if you've build a model working nicely and then flip to the other side, there will be no model and the pointing will be off! So you have to do several (not only one as before) Alignments on the other side of the meridian, too.
+
+This is a bit more work, but the results are much better for precise pointing at both hemispheres than with a single model for both sides, so it is well worth the effort.
+
+		<br />
+		<br />
+		If you use the Reset button and then Alignment, the result is the same as with the Initial Alignment before. The model on this side of the pole will be deleted and the object will be the reference object for the next alignments on this side, setting only the Index errors IH, ID.
+
+		<br />
+		<br />
+		The Synchronize button does only touch these Index errors and does not change the other model parameters. You should use it after a Warm Restart (one time on each side) if you've a good model already, or if you want the best pointing in a certain area of the sky, f.i. to find a very faint object.
+
+		<br />
+		<br />
+		How to choose the stars? Imagine the selection of the stars span up an area of the sky that covers all that's within this area. Within this area the pointing will be improved.&nbsp; Don't use stars near the horizon or the pole. Doing the alignments this way (one star at one hour angle, the next object many hours in RA away, then some in between) should give good results (_on this side of the pole_). How much, depends on your setup. If the telescope is very well aligned even the first alignment will bring huge improvement, since the biggest error causes will be the Index errors.  If the perpendicularity of you mount and the OTA is great in both axes, an alignment at the second, far away star will give a good estimate for the MA and ME terms and the third object (if it's hour angle is between the first two objects) should already be placed well in the eyepiece.
+
+In reality, one may need some more stars (at each side) to have the parameters converge nicely. 
+		<br />
+		<br />
+		To have the two robotic telescopes pointing precisely over the whole sky at high magnification we had to select 8..10 objects on each side of the pole. In the field, where the biggest error usually will be polar misalignment, you may get sufficient pointing to find every object even with very few alignments (2..4) on each side.
+
+Regarding the object: They work at markers that are at a well-known position of the sky at a certain time. Their beauty  can be enjoyed later, during the modeling it is pure astrometrics. 
+		You can do more then one alignment on the same object - if it moved some 
+		hours, or if you did a meridian flip (using it for the other model).
+		<br />
+		<br />
+		For a correct guiding is it necessary to fix the settings to photo ?
+Photo or All-Speeds mode, the AG port works in both settings. There may have been a problem in an earlier software version, but it works fine on the bench.
+
+	BTW, with the latest HC software you can also check/set the mode under MENU -> HC -> Mode.
+	>
+	> and set the speed to guide ?
+This may depend on how the guiding setup works. The AG port is completely separated, guiders that connect to the AG port should work on all for speed settings of the HC or other software.
+		<br />
+		<br />
+		For software guiding, it depends. If the guiding software sends the normal move commands for guiding (:Me#, :Mw#, :Mn#, :Ms#) it has to definitely send a Rate Guiding command :RG# before and whenever something has changed. There are many ways to communicate with G2, but there are only two motors ... pushing the SPEED button on the HC sends the respective Rate command and this will interact with software using the same commands.
+
+		<br />
+		<br />
+		Guiding software that uses Precision Guiding commands should not be 
+		affected. </td></tr>
+</Table>
+<!--		
+<table align="center" style="width: 80%">
+	<tr>
+		<td class="style6">
+
+		ALL THE PEOCEDURES BELOW HAVE TO HAVE THE TIME, TIME ZONE, LATITUDE, and 
+		LONGITUDE SET<br />
+		FIRST. I recommend using a GPS for this.
+		<a href="http://www.losmandy.com/access.html" title="The GPS2 is halfway down the page">
+		Losmandy Part number GPS2</a>&nbsp; or
+		<a href="http://www.stargps.ca/" title="Make sure you select the GPS-Gemini-2 Cable">
+		Star GPS NX01 with GPS-Cemini2 cable.</a><br />
+		<br />
+		Now for the start-up procedures and alignment.<br />
+		1. Get the mount as close to Polar Alignment as possible. You can use a
+		Polar scope or drift method to do this.<br />
+		2. If this is the first time doing an alignment, Manually put mount at
+		CWD. Select Cold Start.<br />
+		3. Now select a bright star and use go-to to go to it. Center it, and
+		then use Synchronize<br />
+		4. Now go to a Second bright star.(They need to be separated in RA by at
+		least 2 hours or more in angle to build a good alignment)
+		Center on it, and do an additional align. Do this for more stars. Note: 
+		2 separate models are built in the Gemini-2 while doing this. One for 
+		the East side and one for the West side. This is an automatically done 
+		for you as you build a model.&nbsp; The correct model will be select and 
+		used, according to which side of the meridian you are on. <br />
+		<br />
+		If you have not moved the mount (permanently mounted, in Latitude and Longitude), 
+		but moved the telescope in either RA or DEC and have built a model using 
+		the procedure above:<br />
+		1. Select Warm Start.<br />
+		2. Now select a bright star and use go-to to goto it. Center it, and
+		then use Synchronize (continue with step 3 below if<br />
+		you want to refine your model. If you just want to use the model you
+		built in the above procedure, skip step 3.<br />
+		3. (Optional) Now goto a Second bright star.(They need to be separated
+		in RA by at least a hour in angle to build a good alignment)&nbsp;
+		Center on it, and do an additional align. Do this for more stars. For 
+		now please on one side of the Meridian if possible. This will change in 
+		future firmware releases.<br />
+		<br />
+		Warm ReStart. This mode assumes that the mount has not been moved in
+		Latitude or Longitude and also RA and Dec has not been moved.&nbsp; Your 
+		time has to also be correct in the Gemini 2.&nbsp; You do not start from 
+		CWD, but start from the current RA and DEC
+		position. You just power up the Gemini, select warm restart,
+		and start observing. You can use step 3 above to refine your model if
+		you desire.<br />
+		<br />
+		<br />
+		</td>
+	</tr>
+</table>
+-->
+<table  align="center" style="width:900px">
+	<tr>
+		<td class="style7whiteborder" >
+		Page last updated on May 12, 2016
+		</td>
+	</tr>
+</table>
+</body>
+
+
+
+
+<?php include("bottom.php"); ?>
+
+
+

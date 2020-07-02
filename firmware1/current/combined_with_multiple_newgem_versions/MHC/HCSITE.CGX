@@ -1,0 +1,13 @@
+t <site>
+c s n <name>%s</name>
+c s t <timezone>%d:%02d</timezone>
+c s o <longitude>%c%d%~%02d~%02d</longitude>
+c s a <latitude>%c%d~%02d~%02d</latitude>
+c s e <elevation>%d</elevation>
+c s # <sitenumber>%d</sitenumber>
+c i 0 <site1>%s~%s</site1>
+c i 1 <site2>%s~%s</site2>
+c i 2 <site3>%s~%s</site3>
+c i 3 <site4>%s~%s</site4>
+t </site>
+.
