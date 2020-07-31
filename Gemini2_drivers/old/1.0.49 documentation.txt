@@ -1,1 +1,0 @@
-Fix for UTCDate G2 format, SideOfPier and DestinationSideOfPier, plus Conform changes 
