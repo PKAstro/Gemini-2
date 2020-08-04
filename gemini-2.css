@@ -1,12 +1,13 @@
 ﻿body {
-	background-color:black;
-	color:white;
+	background-color:#F0F8FF; /*AliceBlue */
+	color:black;
 }
-a:link { color:aqua }
+/*a:link { color:aqua }
 a:visited {color:yellow }
 a:hover { color: #00FF00 }    
 a:active { color: #00FF00 }
-}
+*/
+
 .Red {
 	color: #FF0000 }
 .h1 {
@@ -84,10 +85,10 @@ a:active { color: #00FF00 }
 .tableborder1 {
 	border-style: solid;
 	border-width: 2px;
-	border: 2px solid #FFFFFF;
+	border: 2px solid #000000;
 }
-.whiteborder {
-	border: 2px solid #FFFFFF;
+.border {
+	border: 2px solid #000000;
 }
 .style1 {
 	text-align: center;
@@ -102,7 +103,7 @@ a:active { color: #00FF00 }
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: large;
 	font-weight: bold;
-	color: #FFFFFF;
+	color: #000000;
 	text-align: center;
 }
 .style5 {
@@ -111,12 +112,10 @@ a:active { color: #00FF00 }
 .style5a {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;
-	color: #FFFFFF;
 }
 .style6 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: medium;
-	color: #FFFFFF;
 	text-align: left;
 	margin: 10px;
 }
@@ -137,21 +136,18 @@ a:active { color: #00FF00 }
 .style6L {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: medium;
-	color: #FFFFFF;
 	text-align: left;
 	margin: 10px;
 }
 .style6R {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: medium;
-	color: #FFFFFF;
 	text-align: right;
 	margin: 10px;
 }
 .style6C {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size:large;
-	color: #FFFFFF;
 	text-align: center;
 	margin: 10px;
 }
@@ -162,28 +158,24 @@ a:active { color: #00FF00 }
 	text-align:justify;
 	margin: 10px;
 }
-.style6-border-white{
-	border: 2px solid #FFFFFF;
+.style6-border{
+	border: 2px solid;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: medium;
-	color: #FFFFFF;
 	text-align: left;
 	margin: 10px;
 }
 .style6s {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
-	color: #FFFFFF;
 	text-align: justify;
 	margin: 10px;
 }
 .style6wborder {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: medium;
-	color: #FFFFFF;
 	text-align: justify;
 	margin: 10px;
-	border: 2px solid #FFFFFF;
 }
 .style6-Yellow {
 	font-family: Arial, Helvetica, sans-serif;
@@ -204,15 +196,13 @@ a:active { color: #00FF00 }
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: medium;
 	text-align: left;
-	color: #FFFFFF;
 	margin: 10px;
-	border: 1px solid #FFFFFF;
+	border: 1px solid;
 }
 .style7 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: medium;
 	text-align: center;
-	color: #FFFFFF;
 	margin: 10px;
 }
 
@@ -221,7 +211,6 @@ a:active { color: #00FF00 }
 	font-size: medium;
 	text-align: center;
 	font-weight: bold;
-	color: #FFFFFF;
 	margin: 10px;
 
 }
@@ -237,23 +226,20 @@ a:active { color: #00FF00 }
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: medium;
 	text-align: center;
-	color: #FFFFFF;
 	margin: 10px;
-	border: 1px solid #FFFFFF;
+	border: 1px solid 
 }
 .style7whiteborder-aligh-left {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: medium;
 	text-align: left;
-	color: #FFFFFF;
 	margin: 10px;
-	border: 1px solid #FFFFFF;
+	border: 1px solid ;
 }
 .style7wborder {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: medium;
 	text-align: center;
-	color: #FFFFFF;
 	margin: 10px;
 	border: 1px solid #FF0000;
 }
@@ -271,14 +257,12 @@ a:active { color: #00FF00 }
 .style10 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: medium;
-	color: #FFFFFF;
 	text-align: left;
 	margin-left: 40px;
 }
 .style11 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: medium;
-	color: #FFFFFF;
 	text-align: left;
 	margin: 10px;
 	border: 1px solid #FF0000;
@@ -287,7 +271,6 @@ a:active { color: #00FF00 }
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: medium;
 	text-align: center;
-	color: #FFFFFF;
 	margin: 10px;
 	border: 1px solid #FF0000;
 }
@@ -299,7 +282,7 @@ a:active { color: #00FF00 }
 	color: #00FFFF;
 }
 .style16 {
-	color: #FFFFFF;
+	
 }
 .style17 {
 	border: 4px solid #FF0000;
