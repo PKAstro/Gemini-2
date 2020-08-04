@@ -112,7 +112,7 @@ a {
 	
 	function getLatLng(address)
 	{
-		var geocodeRequest = "http://dev.virtualearth.net/REST/v1/Locations?query=" + encodeURIComponent(address) + "&jsonp=GeocodeCallback&key="+atob(k);
+		var geocodeRequest = "https://dev.virtualearth.net/REST/v1/Locations?query=" + encodeURIComponent(address) + "&jsonp=GeocodeCallback&key="+atob(k);
 		CallRestService(geocodeRequest);
 	}
 
