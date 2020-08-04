@@ -2,7 +2,7 @@
 
 var style_cookie_name = "style" ;
 var style_cookie_duration = 30 ;
-var style_domain = "Gemini-2.net" ;
+// var style_domain = "" ;
 
 // *** END OF CUSTOMISABLE SECTION ***
 // You do not need to customise anything below this line
@@ -23,7 +23,10 @@ function switch_style ( css_title )
       }
     }
     set_cookie( style_cookie_name, css_title,
-      style_cookie_duration, style_domain );
+      style_cookie_duration);
+	//set_cookie( style_cookie_name, css_title,
+    //  style_cookie_duration, style_domain );
+
   }
 }
 function set_style_from_cookie()
