@@ -3,7 +3,7 @@
       "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US">
 
-<!-- Mirrored from gemini-2.net/lat_long_from_address.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Dec 2018 04:01:47 GMT -->
+<!-- Mirrored from gemini-2.net/lat_long_from_address_web.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Dec 2018 04:04:32 GMT -->
 <head profile="http://www.w3.org/2005/10/profile">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
@@ -99,22 +99,90 @@ a {
 
 <base target="_self" />
 
+<script>
+	var k = "QXJxRTZHUG1pZW1DMzhkMktLQUl1UVdGWmt1NFl5MVZac1daU2l2R2pGZWNVWmY3a21yWExjSWkwUk9CRWphYQ==";
+
+	function CallRestService(request) {
+		var script = document.createElement("script");
+		script.setAttribute("type", "text/javascript");
+		script.setAttribute("src", request);
+		document.body.appendChild(script);
+	}
+	
+	
+	function getLatLng(address)
+	{
+		var geocodeRequest = "http://dev.virtualearth.net/REST/v1/Locations?query=" + encodeURIComponent(address) + "&jsonp=GeocodeCallback&key="+atob(k);
+		CallRestService(geocodeRequest);
+	}
+
+	function getTimeZone(point)
+	{
+		var geocodeRequest = "https://dev.virtualearth.net/REST/v1/TimeZone/" + point + "?jsonp=GeocodeCallback&key="+atob(k);
+		CallRestService(geocodeRequest);
+	}
+
+	function GeocodeCallback(result) 
+	{   
+		if (result.statusCode==200)
+		{
+			var r = result.resourceSets[0].resources[0];
+			if (r!=null) {
+
+				if (r.timeZone)
+				{
+					document.getElementById('utcOffset').innerHTML =r.timeZone.convertedTime.utcOffsetWithDst; 
+				}
+				else // address/location 
+				{
+					document.getElementById('addr').innerHTML = r.name;
+					document.getElementById('latlng').innerHTML = convertDMS(r.point.coordinates[0],r.point.coordinates[1]);
+					getTimeZone(r.point.coordinates[0]+","+r.point.coordinates[1]);
+				}
+				return;
+			}
+		}
+		document.getElementById('addr').innerHTML = "not found!";
+		document.getElementById('latlng').innerHTML = "not found!";
+	}
+
+	Number.prototype.pad = function(size) {
+		var s = String(this);
+		while (s.length < (size || 2)) {s = "0" + s;}
+		return s;
+	}
+	function convertDMS( lat, lng ) {
+ 
+		var convertLat = Math.abs(lat);
+		var LatDeg = Math.floor(convertLat);
+		var LatMin = (Math.floor((convertLat - LatDeg) * 60));
+		var LatSec = (Math.floor(((convertLat - LatDeg) * 60 - LatMin) * 60));
+		//var LatCardinal = ((lat > 0) ? "N" : "S");
+  
+		var LatSign = ((lat > 0) ? "" : "-");
+
+		var convertLng = Math.abs(lng);
+		var LngDeg = Math.floor(convertLng);
+		var LngMin = (Math.floor((convertLng - LngDeg) * 60));
+		var LngSec = (Math.floor(((convertLng - LngDeg) * 60 - LngMin)*60));
+		//var LngCardinal = ((lng > 0) ? "E" : "W");
+		var LngSign = ((lng > 0) ? "" : "-");
+		 return LatSign + LatDeg + ":" +  LatMin.pad(2) + ":" + LatSec.pad(2)  + " &nbsp; " + 
+		 		LngSign + LngDeg + ":" + LngMin.pad(2) + ":" + LngSec.pad(2);
+}
+
+
+	</script>
 
 </head>
 
 <body style="color: #FFFFFF; background-color: #000000" class="tableborder1"> 
 
-
-
-
-
-
-
 <table align="center" style="width: 900px">
 	<tr>
 		<td  align="center"style="width: 900px">
 		<h2>Compute Latitude and Longitude from your Address<br />
-		Show UTC Date and Time based on this browsers location.</h2>
+		Show UTC Timezone Offset</h2>
 		</td>
 	</tr>
 </table>
@@ -123,34 +191,34 @@ a {
 	<tr>	
 	<td class="style6"  align="center"style="width: 450px">
 		
-		<p><span class="error">Enter only Text, numbers and white spaces.<br /> 
-		<span class="Red">NO COMMA's ALLOWED</span>.</span> <br />
-		<span class="error">* required field</span></p>
-		<form method="post" action="https://gemini-2.net/lat_long_from_address.php">  
-			 Address: <input type="text" name="address" value="">
+		<p><br /> 
+		 <br />
+		 	Enter your full address here:<input type="text" name="address" id="address" value="" style="width:90%">
 			  <span class="error">
 			  *&nbsp;&nbsp;&nbsp;&nbsp; 
 			  </span>
 			  <!--<br /><br />-->
-			 <input type="submit" name="submit_address" value="Submit">
-		<br />If result = zero hit "Submit" again.
-		</form>
+			 <input type="button"" name="submit_address" value="Submit" onclick="getLatLng(document.getElementById('address').value)" />
+		<br /><div class="style6s">If no result, please wait a little while and press Submit again</div>
 		
 	</td>
 	<td  style="width: 500px" class="style6" >
 			
-	<script>	
+<!--	<script>	
 			currentTimeZoneOffsetInHours = myTimezoneFunction();
 	</script>
-
-Your Latitude and Longitude should show up below when you hit "Submit"
-	</td>
-  </tr>
+-->
+Closest matching address:
+<div id="addr" class="style3"></div><br>	
+Latitude & Longitude:<br><div id="latlng" class="style3"></div><br>
+Current UTC TimeZone Offset:<br><div id="utcOffset" class="style3"></div>
+</td>
+</tr>
 </table>
 
 
-
-<table align="center" style="width: 900px" class="auto-style5">
+<br>
+<table align="center" style="width: 900px" class="auto-style4">
 	<tr>
 		<td class="style7">
 		<a href="web/web-NTP.html" target="_self">New Network Time Protocol Instructions</a>
@@ -161,7 +229,7 @@ Your Latitude and Longitude should show up below when you hit "Submit"
 		<br>
 		
 		<a href="hc/time_zone_offset_chart.html" target="_blank">Time Zone Offset Table</a> 
-		and <a href="hc/timezonefacts.html" target="_blank">Time Zone Facts</a>. <br /><br />
+		and <a href="hc/timezonefacts.html" target="_blank">Time Zone Facts</a><br /><br />
 		
 </td>
 
@@ -170,8 +238,8 @@ Your Latitude and Longitude should show up below when you hit "Submit"
 
 <table  align="center" style="width:900px">
 	<tr>
-		<td class="style7whiteborder" >
-		Page last updated on May 19, 2018 		</td>
+		<td class="syle7" align="center" >
+		Page last updated on August 4, 2020 		</td>
 	</tr>
 </table>
 
