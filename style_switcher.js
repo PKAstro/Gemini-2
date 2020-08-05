@@ -2,7 +2,7 @@
 
 var style_cookie_name = "style" ;
 var style_cookie_duration = 30 ;
-// var style_domain = "" ;
+var style_domain = "Gemini-2.net" ;
 
 // *** END OF CUSTOMISABLE SECTION ***
 // You do not need to customise anything below this line
@@ -23,15 +23,15 @@ function switch_style ( css_title )
       }
     }
     set_cookie( style_cookie_name, css_title,
-      style_cookie_duration);
-	//set_cookie( style_cookie_name, css_title,
-    //  style_cookie_duration, style_domain );
-
+      style_cookie_duration, style_domain );
   }
 }
 function set_style_from_cookie()
 {
+  
   var css_title = get_cookie( style_cookie_name );
+  
+  
   if (css_title.length) {
     switch_style( css_title );
   }
@@ -39,6 +39,7 @@ function set_style_from_cookie()
 function set_cookie ( cookie_name, cookie_value,
     lifespan_in_days, valid_domain )
 {
+
     // https://www.thesitewizard.com/javascripts/cookies.shtml
     var domain_string = valid_domain ?
                        ("; domain=" + valid_domain) : '' ;
@@ -47,11 +48,18 @@ function set_cookie ( cookie_name, cookie_value,
                        "; max-age=" + 60 * 60 *
                        24 * lifespan_in_days +
                        "; path=/" + domain_string ;
+
+    alert("set_cookie: " + cookie_name +
+      "=" + encodeURIComponent( cookie_value ) +
+      "; max-age=" + 60 * 60 *
+      24 * lifespan_in_days +
+      "; path=/" + domain_string);
 }
 function get_cookie ( cookie_name )
 {
     // https://www.thesitewizard.com/javascripts/cookies.shtml
-	var cookie_string = document.cookie ;
+  var cookie_string = document.cookie ;
+  alert("get_cookie: " + cookie_string);
 	if (cookie_string.length != 0) {
 		var cookie_array = cookie_string.split( '; ' );
 		for (i = 0 ; i < cookie_array.length ; i++) {
