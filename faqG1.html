@@ -7,15 +7,11 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>Frequency Asked Questions About Gemini 1</title>
 
-<link href="gemini-2.css" rel="stylesheet" type="text/css" />
+
 
 </head>
 
 
-<!DOCTYPE html 
-      PUBLIC "-//W3C//DTD HTML 4.01//EN"
-      "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en-US">
 <head profile="http://www.w3.org/2005/10/profile">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
@@ -26,13 +22,10 @@
 <meta content="en-us" http-equiv="Content-Language" />
 <title>Gemini 2 Mount Controller</title>
 
-<link href="gemini-2.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-a {
-	color: #FF0000;
-}
-</style><script src="w3data.js"></script></head>
-<body>
+<link href="gemini-2.css" rel="stylesheet" title = "light" type="text/css">
+<link href="gemini-2-dark.css" rel="stylesheet" title = "dark" type="text/css">
+<script src="style_switcher.js"></script><script src="w3data.js"></script></head>
+<body onload="set_style_from_cookie()">
 <table align="center" style="width: 900px">
 	<tr><td align="center">
 	<span class="h1">
@@ -78,7 +71,7 @@ a {
 
 
 
-<body style="color: #FFFFFF; background-color: #000000">
+<body>
 
 <table align="center" style="width: 900px">
 	<tr>
@@ -174,7 +167,7 @@ a {
 
 	<tr>
 		<td class="style6"><br />
-		<a href="#Q12" class="style6-Yellow" >12.&nbsp;&nbsp;&nbsp;Can you run the Gemini without the motors 
+		<a href="#Q12" class="style6" >12.&nbsp;&nbsp;&nbsp;Can you run the Gemini without the motors 
 		connected safely?</a>
 		</td>
 	</tr>
@@ -287,7 +280,7 @@ a {
 		<td>&nbsp;</td>
 	</tr>
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 
 		<a name="Q1"></a>1.&nbsp;&nbsp;&nbsp;Warning about parking the mount and leaving power on?
 		</td>
@@ -313,7 +306,7 @@ a {
 
 
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 
 			<a name="Q2"></a>2.&nbsp;&nbsp;&nbsp;Why does the Gemini Stop and wait for startup 
 			instructions if the hand controller is not present?
@@ -335,7 +328,7 @@ a {
 	</tr>
 
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q3"></a>3.&nbsp;&nbsp;&nbsp;&nbsp;What is a ground loop and how can you test for one?
 		</td>
 	</tr>
@@ -343,7 +336,7 @@ a {
 		<td class="style6">
 		Answer: A ground loop is a difference of potential in voltage between connected devices.  It is normal to have a small difference due to the resistance in cables and connectors. However it should not be more than 1 volt in practice.  Here is a good article that explains ground loops: 
 		<a href="downloads/pdf/ground-loops.pdf" target="_blank" title="Ground Loops ">Ground Loops Article</a>
-		<span class="style6-Yellow">Answer for how do you test for one.</span><br />
+		<span class="style6">Answer for how do you test for one.</span><br />
 		<Span class="style6">Ground loops and power supplies are tricky thing.
 		Take these steps to find out if you have a possible ground loop.
 		<br />
@@ -403,7 +396,7 @@ a {
 	</tr>
 
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 		<a name="Q4"></a>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How do you disable the Gemini modeling, to use T-Point or ACP
 		</td>
 	</tr>
@@ -422,7 +415,7 @@ a {
 	</tr>
 
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q5"></a>5.&nbsp;&nbsp;&nbsp;Is it possible to use more than one USB-serial adapter at 
 			one time on a laptop?
 		</td>		
@@ -453,7 +446,7 @@ a {
 	</tr>
 
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q6"></a>6.&nbsp;&nbsp;&nbsp;&nbsp;How do you install the ASCOM Driver in TheSKY6?
 		</td>
 	</tr>
@@ -466,13 +459,13 @@ a {
 			This plugin allows Software Bisque's TheSky to communicate with
 			ASCOM-compliant telescopes via TheSky's "TeleAPI" feature.<br />
 			<br />
-			<span class="style6-Yellow">Installation</span>
+			<span class="style6">Installation</span>
 			<ol class="style6">
 			<li>Rename the file C:\Program Files\Common Files\System\TeleAPI.dll
 			to TeleAPI-Original.dll</li>
 			<li> Copy the ASCOM TeleAPI.dll to C:\Program Files\Common Files\System\TeleAPI.dll</li>
 			</ol>
-			<span class="style6-Yellow">One-time Telescope Setup</span>
+			<span class="style6">One-time Telescope Setup</span>
 			<ol class="style6">
 			<li>In TheSky, Telescope menu, select Setup...</li>
 			<li> In the Control System box, select "Telescope API"</li>
@@ -484,7 +477,7 @@ a {
 			<li> Close all windows including the TheSky Telescope Setup
 			window by clicking OK or Close. Do not click any Cancel buttons.</li>
 			</ol>
-			<span class="style6-Yellow">Operation</span>
+			<span class="style6">Operation</span>
 			<ol class="style6">			
 			<li>Make sure both your telescope and TheSky are set for the same
 			geographic location and time.</li>
@@ -503,7 +496,7 @@ a {
 	</tr>
 
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q7"></a>7.&nbsp;&nbsp;&nbsp;&nbsp;How do you determine the Com Port of a connected USB 
 			to Serial Adapter and change it?
 			</td>
@@ -539,7 +532,7 @@ a {
 	</tr>
 
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q8"></a>8.&nbsp;&nbsp;&nbsp;&nbsp;What is the different between the old and new 
 			auto-guider ports?
 		</td>
@@ -644,7 +637,7 @@ a {
 	</tr>
 
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q9"></a>9.&nbsp;&nbsp;&nbsp;&nbsp;How do you get Windows 2000, XP, Vista &amp; Win7 to 
 			show all the com ports that have been allocated?
 		</td>
@@ -717,7 +710,7 @@ a {
 	</td></tr>
 
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q10"></a>10.&nbsp;&nbsp;&nbsp;What are the changes between L4V1.02 and 
 			L4V1.04 EPROMS?
 		</td>
@@ -740,7 +733,7 @@ a {
 	</tr>
 
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q11"></a>11. How do you determine if the RS232 chip in the Gemini is bad?
 		</td>
 	</tr>
@@ -795,7 +788,7 @@ a {
 	</tr>
 
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q12"></a>12.&nbsp;&nbsp;Can you run the Gemini without the motors connected safely?
 		</td>
 	</tr>
@@ -807,7 +800,7 @@ a {
 	</tr>
 
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q13"></a>13.&nbsp;&nbsp;&nbsp;What will cause the Gemini to shut down 
 			the handcontroller or not boot?
 		</td>
@@ -843,7 +836,7 @@ a {
 	</tr>
 
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q14"></a>14. &nbsp;&nbsp;&nbsp;&nbsp;What does the red dots on the hand controller mean 
 			during boot?
 		</td>
@@ -931,7 +924,7 @@ a {
 
 <table align="center" style="width: 900px">
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q15"></a>15.&nbsp;&nbsp;&nbsp;&nbsp;How do you measure the CMOS RAM chip 
 			battery voltage and partial schematic?
 		</td>
@@ -973,7 +966,7 @@ a {
 
 <table align="center" style="width: 900px">
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q16"></a>16.&nbsp;&nbsp;&nbsp;How should the guide cable from a ShoeAstronomy GPUSB be wired for the Gemini 2 or Gemini 1? 
 				</td>
 		</tr>
@@ -993,7 +986,7 @@ a {
 
 <table align="center" style="width: 900px">
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q17"></a>17.&nbsp;&nbsp;&nbsp;How to test the Gemini-1 guider input circuit. 
 		</td>
 	</tr>
@@ -1035,11 +1028,11 @@ a {
 
 
 	<tr>
-		<td class="style6-Yellow">&nbsp;
+		<td class="style6">&nbsp;
 		</td>
 	</tr>
 	<tr>
-		<td class="style6-Yellow">
+		<td class="style6">
 		<a name="Q18"></a>18.&nbsp;&nbsp;&nbsp;What type of Battery does the Gemini 1 and Gemini-2 units use? 
 		</td>
 	</tr>
@@ -1059,11 +1052,11 @@ a {
 			for the processor that is being used in the Gemini-2 units.</td>
 	</tr>
 	<tr>
-		<td class="style6-Yellow">&nbsp;
+		<td class="style6">&nbsp;
 		</td>
 	</tr>
 	<tr>
-		<td class="style6-Yellow"><a name="Q19"></a>19.&nbsp;&nbsp;&nbsp;A suggested hand controller cable replacement for the Gemini-1. 
+		<td class="style6"><a name="Q19"></a>19.&nbsp;&nbsp;&nbsp;A suggested hand controller cable replacement for the Gemini-1. 
 		</td>
 	</tr>
 	<tr>
@@ -1073,11 +1066,11 @@ a {
 			</td>
 	</tr>
 	<tr>
-		<td class="style6-Yellow">&nbsp;
+		<td class="style6">&nbsp;
 		</td>
 	</tr>
 	<tr>
-		<td class="style6-Yellow"><a name="Q20"></a>20.&nbsp;&nbsp;&nbsp;Extending the battery life of the 3V battery in an Gemini-1. 
+		<td class="style6"><a name="Q20"></a>20.&nbsp;&nbsp;&nbsp;Extending the battery life of the 3V battery in an Gemini-1. 
 		 This will also possibly help fix CMOS resets. This is a copy of message 3584 from the Gemini_Users Group. 
 		</td>
 	</tr>
@@ -1132,7 +1125,7 @@ a {
 		</td>
 	</tr>
 		<tr> 
-		<td class="style6-Yellow"><a name="Q21"></a>21.&nbsp;&nbsp;&nbsp;Some sources of the Gemini-1 power plug. 
+		<td class="style6"><a name="Q21"></a>21.&nbsp;&nbsp;&nbsp;Some sources of the Gemini-1 power plug. 
 		</td>
 	</tr>
 	<tr>
@@ -1159,7 +1152,7 @@ a {
 				</tr>
 
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 
 		<a name="Q22"></a>22.&nbsp;&nbsp;&nbsp;What does it take to add a second 
 		communication port to the Gemini Controller?
@@ -1253,7 +1246,7 @@ a {
 	</table>
 <table align="center" style="width: 900px">
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q23"></a>23.&nbsp;&nbsp;&nbsp;Suggested replacement for the 4 pin Gemini-1 CONN CIRCULAR DIN 4 PIN MALE 
 		power connector. 
 		</td>
@@ -1281,7 +1274,7 @@ a {
 </table>
 <table align="center" style="width: 900px">
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q24"></a>24.&nbsp;&nbsp;&nbsp;How to replace the encoder in the original Losmand 
 		synchronous motor, by Rainer Ehlert.</td>
 	</tr>
@@ -1295,7 +1288,7 @@ a {
 </table>
 <table align="center" style="width: 900px">
 	<tr>
-		<td class="style6-Yellow"><br />
+		<td class="style6"><br />
 			<a name="Q25"></a>25.&nbsp;&nbsp;&nbsp;Part numbers for the slide power switches on the Gemini-1 units</td>
 	</tr>
 </table>
@@ -1338,13 +1331,13 @@ a {
 
 <head>
 <title>Bottom page</title>
-<link href="gemini-2.css" rel="stylesheet" type="text/css" />
+
 <link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
 
 
 </head>
 
-<body style="color: #FFFFFF; background-color: #000000" >
+<body>
 <table align="center" style="width: 900px">
 	<tr>
 		
