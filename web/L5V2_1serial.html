@@ -7,7 +7,7 @@
 <body bgcolor="#f8f8f8">
 <h2>Gemini Level 5, Version 2.1 Serial Interface Command Description</h2>
 <h3>Gemini's LX200-like Commands</h3>
-<p>The Gemini system supports a subset of the Meade® LX200 Command
+<p>The Gemini system supports a subset of the Meadeï¿½ LX200 Command
 Set making it compatible to many planetarium programs using this command set.
 Programs featuring special Gemini drivers can make use of the additional LX200-style extensions.
 Gemini also supports a Native Command Set as described below.
@@ -193,7 +193,7 @@ synchronized to the selected object. <font color="RED">NEW in L5</font></td>
 <br>In High Precision mode:
 <br>{+-}&lt;dd&gt;:&lt;mm&gt;:&lt;ss&gt;#
 <br>In Low Precision mode:
-<br>{+-}&lt;dd&gt;°&lt;mm&gt;#</td>
+<br>{+-}&lt;dd&gt;ï¿½&lt;mm&gt;#</td>
 <td>Get Altitude (from L1, V2.0 up)</td>
 </tr>
 
@@ -221,7 +221,7 @@ n=0: 100% n=6: 6.6% n=7: blank display n=8: test mode (all pixels lit).</td>
 <br>In High Precision mode:
 <br>{+-}&lt;dd&gt;:&lt;mm&gt;:&lt;ss&gt;#
 <br>In Low Precision mode:
-<br>{+-}&lt;dd&gt;°&lt;mm&gt;#</td>
+<br>{+-}&lt;dd&gt;ï¿½&lt;mm&gt;#</td>
 <td>Apparent (refraction included) Declination the telescope is pointing
 to, to the equinox of the date. Except during GoTo operations, the coordinates
 are corrected according to the pointing model.&nbsp;
@@ -235,7 +235,7 @@ Precision mode is the character 0xDF.</td>
 <br>In High Precision mode:
 <br>{+-}&lt;dd&gt;:&lt;mm&gt;:&lt;ss&gt;#
 <br>In Low Precision mode:
-<br>{+-}&lt;dd&gt;°&lt;mm&gt;#</td>
+<br>{+-}&lt;dd&gt;ï¿½&lt;mm&gt;#</td>
 <td>Selected object's declination.
 <font color="RED">New in L5.1</font></td>
 </tr>
@@ -256,7 +256,7 @@ Minutes and seconds will be omitted if both are zero.</font></td>
 
 <tr>
 <td>:Gg#</td>
-<td> {+-}&lt;ddd&gt;°&lt;mm&gt;#
+<td> {+-}&lt;ddd&gt;ï¿½&lt;mm&gt;#
 <br>In Double Precision mode:
 <br>{+-}&lt;dd&gt;.&lt;dddddd&gt;#
 </td>
@@ -340,7 +340,7 @@ are corrected according to the pointing model.&nbsp;
 <br>In High Precision mode:
 <br>{+-}&lt;dd&gt;:&lt;mm&gt;:&lt;ss&gt;#
 <br>In Low Precision mode:
-<br>{+-}&lt;dd&gt;°&lt;mm&gt;#</td>
+<br>{+-}&lt;dd&gt;ï¿½&lt;mm&gt;#</td>
 <td>Selected object's right ascension.
 <font color="RED">New in L5.1</font></td>
 </tr>
@@ -355,7 +355,7 @@ are corrected according to the pointing model.&nbsp;
 
 <tr>
 <td>:Gt#</td>
-<td>{+-}&lt;dd&gt;°&lt;mm&gt;#
+<td>{+-}&lt;dd&gt;ï¿½&lt;mm&gt;#
 <br>In Double Precision mode:
 <br>{+-}&lt;hh&gt;.&lt;hhhhhh&gt;#</td>
 <td>Get Site Latitude (from L1, V2.0 up).</td>
@@ -421,7 +421,7 @@ are corrected according to the pointing model.&nbsp;
 <br>In High Precision mode:
 <br>&lt;ddd&gt;:&lt;mm&gt;:&lt;ss&gt;#
 <br>In Low Precision mode:
-<br>&lt;ddd&gt;°&lt;mm&gt;#</td>
+<br>&lt;ddd&gt;ï¿½&lt;mm&gt;#</td>
 <td>Get Azimuth. From North over East. (From L4, V1.0 up)</td>
 </tr>
 
@@ -860,9 +860,9 @@ with 6 digits after the decimal point. "Set" parameters can be send the same way
 <tr></tr>
 
 <tr>
-<td>:Sa{+-}&lt;dd&gt;{*°}&lt;mm&gt;#
+<td>:Sa{+-}&lt;dd&gt;{*ï¿½}&lt;mm&gt;#
 <br>or
-<br>:Sa{+-}&lt;dd&gt;{*°:}&lt;mm&gt;:&lt;ss&gt;#</td>
+<br>:Sa{+-}&lt;dd&gt;{*ï¿½:}&lt;mm&gt;:&lt;ss&gt;#</td>
 
 <td>0 if invalid or&nbsp;
 <br>1 if valid</td>
@@ -889,9 +889,9 @@ to the timezone set. The internal calender/clock uses GMT.</td>
 </tr>
 
 <tr>
-<td>:Sd{+-}&lt;dd&gt;{*°}&lt;mm&gt;#
+<td>:Sd{+-}&lt;dd&gt;{*ï¿½}&lt;mm&gt;#
 <br>or
-<br>:Sd{+-}&lt;dd&gt;{*°:}&lt;mm&gt;:&lt;ss&gt;#</td>
+<br>:Sd{+-}&lt;dd&gt;{*ï¿½:}&lt;mm&gt;:&lt;ss&gt;#</td>
 
 <td>0 if invalid or&nbsp;
 <br>1 if valid</td>
@@ -994,9 +994,9 @@ The minus sign indicates southern latitudes, the positive sign may be omitted.</
 </tr>
 
 <tr>
-<td>:Sz&lt;ddd&gt;{*°}&lt;mm&gt;#
+<td>:Sz&lt;ddd&gt;{*ï¿½}&lt;mm&gt;#
 <br>or
-<br>:Sz&lt;ddd&gt;{*°:}&lt;mm&gt;:&lt;ss&gt;#</td>
+<br>:Sz&lt;ddd&gt;{*ï¿½:}&lt;mm&gt;:&lt;ss&gt;#</td>
 
 <td>0 if invalid or&nbsp;
 <br>1 if valid</td>
@@ -2027,9 +2027,10 @@ in hexadecimal format whenever a discrepancy is detected. A command sent with a 
 f.i. the string "1q#" if the mount type is set to GM-8 or "2r#"
 if G-11 is selected. </li></ul>
 <br>
-<p>Meade® is a trademark registered by Meade Instruments Corporation,
+<p>Meadeï¿½ is a trademark registered by Meade Instruments Corporation,
 California, USA.
 </p>
+<div w3-include-html="../themeSelector.html"></div>
 </body>
 <!-- Mirrored from gemini-2.net/web/L5V2_1serial.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Dec 2018 04:01:03 GMT -->
 </html>

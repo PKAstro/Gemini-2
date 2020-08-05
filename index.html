@@ -25,6 +25,9 @@
 <link href="gemini-2.css" rel="stylesheet" title = "light" type="text/css">
 <link href="gemini-2-dark.css" rel="stylesheet" title = "dark" type="text/css">
 
+
+<link href="theme-selector.css" rel="stylesheet" type="text/css">
+
 <script src="w3data.js"></script>
 
 </head>
@@ -135,9 +138,6 @@
 	</tr>
 </table>
 
-<button type="button" onclick="switch_style('light');return false;" name="theme" value="Light Theme" id="light">Light Theme</button>
-<button type="button" onclick="switch_style('dark');return false;" name="theme" value="Dark Theme" id="dark">Dark Theme</button> 
-
 <table align="center" style="min-width:500px; max-width:900px">
 	<tr>
 		<td class="tableborder1"> <span class="style6" style="font-size:small">This site is not for profit 
@@ -152,26 +152,11 @@
 </table>
 <table align="center" style="min-width:500px; max-width:900px">
 
-<!--	
-</table>
 
-	<table align="center" style="width: 900px">
-		<tr>
-			<td>
-<div class="AJXMenuSPDSMNA"><!-- AJXFILE:ajxmenu_bottom.css -->
-<!-- <div class="ajxmw1">
-  <div class="ajxmw2">
-<ul list-style-type="none" >
- <li class="tfirst tlast"><a href="index.html" target="_self">HOME</a></li>
-</ul>
-  </div>
- </div>
- <br >
-</div>
-</td>
-</tr>
-</table>
--->
+
+	
+
+	
 
 &nbsp;<table align="center" cellpadding="4" cellspacing="4" style="width: 70%">
 	<tr class="style6">
@@ -195,7 +180,8 @@ but only to aid with navigation
 	
 	</script><!--webbot bot="HTMLMarkup" endspan -->
 </div>
-	
+
+<div w3-include-html="themeSelector.html"></div>
 </body>
 
 
