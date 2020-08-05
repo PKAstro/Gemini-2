@@ -90,14 +90,15 @@ a {
 			
 		<td></td>
 		<td class="style6">
-		The Western Goto Limit determines how far pass the meridian that the
-		Gemini-2 will do a flip.&nbsp; It is calculated like this. Note
-		that the Meridian is at 90&#176. The point of Meridian Flip = Western
-		Safety Limit - Goto Limit.&nbsp; An example is if you have the Western
+		The Western Goto Limit determines how far past the meridian 
+		Gemini-2 will do a meridian flip on a GoTo command.&nbsp; It is calculated like this
+		(Note
+		that the Meridian is at 90&#176):<br> <br>The point of Meridian Flip = Western
+		Safety Limit - Goto Limit.&nbsp; An example: if you have the Western
 		Safety limit set to 100&#176 - The Western GoTo limit of 2.5&#176
-		(default) you end up with a point of flip of 97.5&#176, or 7.5
-		degrees past the meridian. Any target selected that is past this
-		will do a meridian flip.&nbsp; Any target on the East side (Northern
+		(default) you end up with a point of flip at 97.5&#176, or 7.5
+		degrees past the meridian. Any target selected for GoTo that is past this point
+		will cause a meridian flip.&nbsp; Any target on the East side (Northern
 		Hemisphere) will not do a meridian flip.<br />
 		<br />
 		100&#176 - 90&#176 = 10&#176 - 2.5&#176 = 7.5&#176.<br />
