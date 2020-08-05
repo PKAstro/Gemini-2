@@ -311,3 +311,13 @@ border-color: #F0F8FF;
 }
 
 	
+/* Dropdown Button */
+.dropbtn {
+	background-color: transparent;
+	color:lightblue;
+	padding: 4px;
+	font-size: 10pt;
+	border: none;
+	cursor: pointer;
+  }
+  
