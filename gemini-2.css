@@ -309,3 +309,14 @@ border-color: DarkSlateGrey;
 .auto-style3 {
 	border: 1px solid #00FFFF;
 }
+
+/* Dropdown Button */
+.dropbtn {
+	background-color: transparent;
+	color:blue;
+	padding: 4px;
+	font-size: 10pt;
+	border: none;
+	cursor: pointer;
+  }
+ 
