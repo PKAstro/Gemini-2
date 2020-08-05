@@ -46,7 +46,7 @@ function set_cookie ( cookie_name, cookie_value,
                        "=" + encodeURIComponent( cookie_value ) +
                        "; max-age=" + 60 * 60 *
                        24 * lifespan_in_days +
-                       "; path=/" + domain_string ;
+                       "; path=/" ;
 }
 function get_cookie ( cookie_name )
 {
