@@ -160,14 +160,13 @@ a {
 left. (it is under Menu--&gt;Mount--&gt;Limits<br />
 	Note that the Web limits are set for left and right side, while the hand 
 	controller uses East and West.&nbsp; If 
-		using the hand controller, follow these steps. (The hand controller 
-	method only works correctly on August 16 or later firmware.) Also the safety 
-limits are referenced to the CCW startup position.&nbsp; If you did not start up 
-with a Cold start, or Warm Start with the mount at CCW, you must do this before 
+		using the hand controller, follow these steps. Also the safety 
+limits are referenced to the CWD startup position.&nbsp; If you did not start up 
+with a Cold start, or Warm Start with the mount at CWD, you must do this before 
 setting the limits.<br />
 It a very bad idea to start up with a "Warm Restart" and assume that the Gemini 
-2 has remembered the CCW.&nbsp; You can tell the Gemini-2 to part at CCW to make 
-sure it knows where CCW is.<br />
+2 has remembered the CWD.&nbsp; You can tell the Gemini-2 to part at CWD to make 
+sure it knows where CWD is.<br />
 	<ol>
 		<li>
 		Turn off tracking by placing the mount into Terrestrial mode.&nbsp; 
@@ -196,8 +195,8 @@ sure it knows where CCW is.<br />
 		<td class="style6">
 	<ol start="4">
 	<li>
-		The Western Goto Limit determines how far pass the meridian that the
-		Gemini-2 will do a flip.&nbsp; It is calculated like this. Note
+		The Western Goto Limit determines how far past the meridian that
+		Gemini-2 will do a meridian flip.&nbsp; It is calculated like this. Note
 		that the Meridian is at 90 degrees. <br />The point of Meridian Flip = Western
 		Safety Limit - Western Goto Limit.<br /> An example is if you have the Western
 		Safety limit set to 100 degrees - The Western GOTO limit of 2.5 degrees

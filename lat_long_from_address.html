@@ -181,33 +181,26 @@ a {
 <table align="center" style="width: 900px">
 	<tr>
 		<td  align="center"style="width: 900px">
-		<h2>Compute Latitude and Longitude from your Address<br />
-		Show UTC Timezone Offset</h2>
+		<h2>Latitude, Longitude, and UTC Offset<br>
+			from Street Address
+		 </h2>
 		</td>
 	</tr>
 </table>
 
 <table align="center" class="tableborder1" style="width: 900px">
 	<tr>	
-	<td class="style6"  align="center"style="width: 450px">
+	<td class="style6"  align="center"style="width: 500px">
 		
 		<p><br /> 
 		 <br />
 		 	Enter your full address here:<input type="text" name="address" id="address" value="" style="width:90%">
-			  <span class="error">
-			  *&nbsp;&nbsp;&nbsp;&nbsp; 
-			  </span>
-			  <!--<br /><br />-->
-			 <input type="button"" name="submit_address" value="Submit" onclick="getLatLng(document.getElementById('address').value)" />
-		<br /><div class="style6s">If no result, please wait a little while and press Submit again</div>
+			 <input type="button"" name="submit_address" value="Submit" onclick="getLatLng(document.getElementById('address').value)" style="margin: 4px 0 0px 0px"/>
+		<br /><div class="style6s">*If no result, please wait a little while and press Submit again</div>
 		
 	</td>
 	<td  style="width: 500px" class="style6" >
-			
-<!--	<script>	
-			currentTimeZoneOffsetInHours = myTimezoneFunction();
-	</script>
--->
+
 Closest matching address:
 <div id="addr" class="style3"></div><br>	
 Latitude & Longitude:<br><div id="latlng" class="style3"></div><br>
