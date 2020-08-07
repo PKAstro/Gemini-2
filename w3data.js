@@ -11,6 +11,7 @@ function w3IncludeHTML(cb) {
       xhttp.onreadystatechange = function() {      
         if (this.readyState == 4) {
           elmnt.outerHTML = this.responseText;
+          addScript(this.response);
           w3IncludeHTML(cb);
         }
       }      
@@ -20,6 +21,17 @@ function w3IncludeHTML(cb) {
     }
   }
   if (cb) cb();
+}
+
+function addScript(response)
+{
+    var newdiv = document.createElement('div');
+    newdiv.innerHTML = response;
+    var scripts = newdiv.getElementsByTagName('script');
+    for (var ix = 0; ix < scripts.length; ix++) {
+      eval(scripts[ix].text);
+  }
+  newdiv.remove();
 }
 
 function localURL(url)
