@@ -1,29 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"/>
 
 
 <!-- Mirrored from gemini-2.net/warning.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Dec 2018 04:01:54 GMT -->
-<head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Gemini 2 Mount Controller</title>
-
-
 <head profile="http://www.w3.org/2005/10/profile">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta content="en-us" http-equiv="Content-Language" />
 
-<link rel="stylesheet" href="ajxmenu.css" type="text/css">
+	<title>Gemini Mount Controller</title>
 
-<head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta content="en-us" http-equiv="Content-Language" />
-<title>Gemini 2 Mount Controller</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
-<link href="gemini-2.css" rel="stylesheet" title = "light" type="text/css">
-<link href="gemini-2-dark.css" rel="stylesheet" title = "dark" type="text/css">
-<script src="style_switcher.js"></script>
-<link href="theme-selector.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="ajxmenu.css" type="text/css">
+	<link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
 
-<script src="w3data.js"></script></head>
+	<link href="gemini-2.css" rel="stylesheet" title = "light" type="text/css">
+	<link href="gemini-2-dark.css" rel="stylesheet" title = "dark" type="text/css">
+	<script src="style_switcher.js"></script>
+	<link href="theme-selector.css" rel="stylesheet" type="text/css">
+
+	<script src="w3data.js"></script>
+</head>
 <body onload="set_style_from_cookie()">
 <table align="center" style="width: 900px">
 	<tr><td align="center">
@@ -35,54 +33,44 @@
 </table>
 
 
-<table align="center" style="width: 900px">
-	<tr>
-		<td align="center">
-<form action="https://www.google.com/search" method="get"> <div style="border:1px solid black;padding:4px;width:20em;"> <table align="center" border="0" cellpadding="0"> 
-<tbody> 
-<tr><td> <input maxlength="255" name="q" size="25" type="text" value="" /> <input type="submit" value="Google Search" /></td></tr> 
-<tr><td align="center" style="font-size:75%"> <input checked="" name="sitesearch" type="checkbox" value="gemini-2.net" />
- only search Gemini-2.com<br /> </td></tr></tbody></table> </div> </form>
-		
-		</td>
-	</tr>
-</table>
-<!--
-<table align="center" style="width: 900px">
-	<tr>
-		<td class="style7" >
-		There is a new <a href="http://wiki.gemini-2.net" target="_blank">Question and Answer Wiki</a> section where you can ask searchable questions.  		
-		</td>
-	</tr>
-</table>
--->
+    <table style="min-width:500px; max-width:900px" align="center">
+      <tbody>
+        <tr>
+          <td align="center">
+            <form action="https://www.google.com/search" method="get">
+              <div style="border:1px solid black;padding:4px;width:20em;">
+                <table cellpadding="0" border="0" align="center">
+                  <tbody>
+                    <tr>
+                      <td> <input maxlength="255" name="q" size="25" value="" type="text">
+                        <input value="Google Search" type="submit"></td>
+                    </tr>
+                    <tr>
+                      <td style="font-size:75%" align="center"> <input checked="checked"
 
-<table align="center" style="width: 900px">
-	<tr>
-		<td align="center">
-		</td>
-	</tr>
-</table>
+                          name="sitesearch" value="gemini-2.net" type="checkbox">
+                        only search Gemini-2.com<br>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-<div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div><script>w3IncludeHTML();</script></body>
-
-
-
-
-
-</head>
-
-<body>
+<div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div><script>w3IncludeHTML();</script>
 
 <table  align="center" style="width:900px" class="h2">
-<tr><td><h2>Several Operational Warnings<h2/></td></tr>
+	<tr><td><h2>Several Operational Warnings</h2></td></tr>
 </table>
-
 
 <table align="center"  style="width: 900px">
 	<tr>
 		<td class="style6wborder"><b>WARNING:</b> The Battery circuit in the Gemini-2 is much different than in the Gemini-1.
-		The battery connects through a small .2v Zener diode directly into the ARM processor.
+		The battery connects through a small 0.2v Zener diode directly into the ARM processor.
 		<!-- <span class="smalltext"> --> 
 		<a href="http://www.nxp.com/documents/data_sheet/LPC2388.pdf" target="_blank">The Data sheet LPC2388.pdf</a> 
 		states Vi(VBAT), the separate input for the RTC and the SRAM, has to have 2.0V at minimum, 
@@ -122,139 +110,89 @@
 		I am open to suggestions.</p>
 	</td>
 	</tr>
-</table>
-<br />
-<table align="center"  style="width: 900px">
+
 	<tr>
 		<td class="style6wborder"><b>WARNING:</b> If you are connecting more than one Gemini-2 to your local network please see this 
-		<a href="faqG2.html#Q1" target="_blank">FAQ1</a></td>
+		<a href="faqGII.html#Q3" target="_blank">FAQ 3</a></td>
 		</tr>
-</table>
-<br />
-<table  align="center" style="width:900px" >
-	<tr>
-		<td class="style6wborder"><p><b>WARNING:</b> The Gemini-1 has several Startup modes. If is your habit of 
-		leaving the Gemini-1 powered on and parked, when not in use, then you 
-		should always make sure that you use one of the two options below. This 
-		is because if you have a power failure, and then power is restored, and 
-		the mount is in Cold Start, Warm Start, or Warm Restart, then the RA 
-		motor will start running at the tracking rate set, and can possibility run your telescope into 
-		your roof, or a limit, without you knowing it until too late:<p/>
+<tr>
+	<td class="style6wborder">
+		<p>
+			<b>WARNING:</b> The Gemini-1 has several Startup modes. If is your habit of leaving the Gemini-1 powered on and parked, when not in use, then you should always make sure that you use one of the two options below. This is because if you have a power failure, and then power is restored, and the mount is in Cold Start, Warm Start, or Warm Restart, then the RA motor will start running at the tracking rate set, and can possibility run your telescope into your roof, or a limit, without you knowing it until too late:
+		</p>
 		<ol>
-			<li>Set your startup mode to "ASK IF POSSIBLE.", or</li>
-			<li>[Safest Option] Put the telescope into 
-		terrestrial mode tracking after parking. Just remember to switch it back to Sidereal mode when starting 
-		up again</li>
+			<li>Set your startup mode to "ASK IF POSSIBLE.", or
+			</li>
+			<li>[Safest Option] Put the telescope into terrestrial mode tracking after parking. Just remember to switch it back to Sidereal mode when starting up again
+			</li>
 		</ol>
-
-		<p>Now the Gemini-2 starting with the Firmware of August 22, 2013 has 
-		special Park modes.&nbsp; If you use a park mode 0 then it is pretty 
-		much like the Gemini-1.&nbsp; If you use a park mode 1 or Park mode 2 
-		then it takes an external event such as a GOTO command in Park mode 1, 
-		and only an UN-Park command in Park mode 2 to move the mount.<p/>
-		</td>
-		</tr>
-			<tr><td class="style6wborder">
-				<p>If you are remote, you might want to consider an Ethernet controlled 
-				power switch. I can recommend the switches from
-				<a href="http://www.digital-loggers.com/" target="_blank">
-				Digital-Loggers.com</a> such as this one:
-				<a href="http://www.digital-loggers.com/lpc.html" target="_blank">Web Power Switch 7</a></p>
-		<!-- <br /> -->
-			</td></tr>
-</table>
-
-<br />
-
-<table  align="center" style="width:900px" >
-	<tr>
-		<td class="style6wborder">
-			<p><b>WARNING:</b> Do not update the firmware on on the Gemini-2 using just battery power, unless 
-		you are very very sure your battery is fully charged, and will not drop 
-		below +12V during the update. If the battery drops below +12 volts, the 
-		update can be corrupted.</p>
-		<p>If the update becomes corrupted, you have to remove the micro SD card and re-program them manually using a micro SD card reader/writer.</p> 
-		</td>
-	</tr>
-</table>
-<br />
-<table  align="center" style="width:900px">
-	<tr>
-		<td class="style6wborder"><b>WARNING:</b> The new Level 5 Version 1 firmware has a new mode, Alt/AZ. 
-		It you have a Equatorial mount, and the Gemini-2 is controlling and 
-		connected to it, Do not Select the ALT/AZ mode. This could cause the 
-		motors to slew your Equatorial mount into surrounding hardware. This is 
-		because the limits for an ALT/AZ and the parking locations are not even 
-		close to what they are for an Equatorial mount.</td>
-		</tr>
-		<tr>
-			<td class="style5s">
-			<br>Page last updated on Aug 6, 2020
-			</td>
-		</tr>
-</table>
-<!-- <table  align="center" style="width:900px">
-	<tr>
-		<td class="style5s">
-		<br>Page last updated on Jun 15, 2015
-		</td>
-	</tr>
-</table> -->
-
-
-</body>
-
-
-
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-      "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en-US">
-<head profile="http://www.w3.org/2005/10/profile">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-
-
-<head>
-<title>Bottom page</title>
-
-<link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
-
-
-</head>
-
-<body>
-<table align="center" style="width: 900px">
-	<tr>
-		
-	</tr>
-</table>
-<table align="center" style="width: 900px">
-	<tr>
-		
-	</tr>
-</table>
-
-	<table align="center" style="width: 900px">
-		<tr>
-			<td>
-<div class="AJXMenuSPDSMNA"><!-- AJXFILE:ajxmenu_bottom.css -->
- <div class="ajxmw1">
-  <div class="ajxmw2">
-<ul>
- <li class="tfirst tlast"><a href="index.html" target="_self">HOME</a></li>
-</ul>
-  </div>
- </div>
- <br >
-</div>
-</td>
+		<p>
+			The Gemini-2, starting with the Firmware of August 22, 2013, has special Park modes:
+		</p>
+		<ul>
+			<li>If you use a park mode 0 then it is pretty much like the Gemini-1.</li>
+			<li>If you use a park mode 1 or Park mode 2 then it takes an external event such as a GOTO command in Park mode 1, and only an UN-Park command in Park mode 2 to move the mount.
+			</li>
+		</ul>
+	</td>
 </tr>
+<tr>
+	<td class="style6wborder">
+		<p>
+			If you are remote, you might want to consider an Ethernet controlled power switch. I can recommend the switches from <a href="http://www.digital-loggers.com/" target="_blank">Digital-Loggers.com</a> such as this one: <a href="http://www.digital-loggers.com/lpc.html" target="_blank">Web Power Switch 7</a>
+		</p><!-- <br /> -->
+	</td>
+</tr>
+<tr>
+	<td class="style6wborder">
+		<p>
+			<b>WARNING:</b> Do not update the firmware on on the Gemini-2 using just battery power, unless you are very very sure your battery is fully charged, and will not drop below +12V during the update. If the battery drops below +12 volts, the update can be corrupted.
+		</p>
+		<p>
+			If the update becomes corrupted, you have to remove the micro SD card and re-program it manually using a micro SD card reader/writer.
+		</p>
+	</td>
+</tr>
+<tr>
+	<td class="style6wborder">
+		<p>
+			<b>WARNING:</b> The new Level 5 Version 1 firmware has a new mode, <b>Alt/AZ</b>.
+		</p>
+		<p>
+			<b>It you have a Equatorial mount, do not select the ALT/AZ Mode.</b> This could cause the motors to slew your Equatorial mount into surrounding hardware. The uncontrolled slowing is because the limits for an ALT/AZ and the parking locations are not close to what they are for an Equatorial mount.
+		</p>
+	</td>
+</tr>
+<tr>
+	<td class="style5s">
+		<br>
+		Page last updated on Aug 6, 2020
+	</td>
+</tr>
+
 </table>
+
+
+
+
+
 
 <!-- footer -->
 
-	
+<table align="center" style="width: 900px">
+	<tr><td>
+		<div class="AJXMenuSPDSMNA"><!-- AJXFILE:ajxmenu_bottom.css -->
+			<div class="ajxmw1">
+				<div class="ajxmw2">
+					<ul>
+						<li class="tfirst tlast"><a href="index.html" target="_self">HOME</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</td></tr>
+</table>
+
 <div w3-include-html="themeSelector.html"></div>
 </body>
 
