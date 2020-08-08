@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US">
+
+  <!-- Mirrored from gemini-2.net/Getting_started.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Dec 2018 03:51:36 GMT -->
+  <head profile="http://www.w3.org/2005/10/profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta content="en-us" http-equiv="Content-Language">
+	<META NAME="AUTHOR" CONTENT="René Goerlich">
+	<META NAME="date" CONTENT="2004-11-24">
+	<meta name="changedby" content="David C. Partridge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="ajxmenu.css" type="text/css">
+    <meta content="en-us" http-equiv="Content-Language">
+    <title>Gemini-1 Level 4 New Features</title>
+	<link href="gemini-2.css" rel="stylesheet" title = "light" type="text/css">
+	<link href="gemini-2-dark.css" rel="stylesheet" title = "dark" type="text/css">
+	<link href="theme-selector.css" rel="stylesheet" type="text/css">
+  <script src="style_switcher.js"></script><script src="w3data.js"></script>
+  
+
+  </head>
+
+	<body onload="set_style_from_cookie()">
+    <div w3-include-html="header.html" ></div>
+    <div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div>
+    <script>w3IncludeHTML();</script>
+    <table style="min-width:500px; max-width:900px" align="center">
+      <tbody>
+        <tr>
+          <td class="h3">Gemini-1 Level 4 New Features</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <table style="min-width:500px; max-width:80%" align="center">
+      <tbody>
+        <tr>
+          <td class="style6">
+<h3>Gemini Supports Custom Mounts</h3>
+<P>
+The user can setup the gearing parameters of his mount:
+the gear ratios and direction of spur gear and worm gear and the servo motor encoder resolution. The step resolution can reach from a tenth of an arcsec per step (servo motor encoder tick) up to 
+2.5 arcsec/step. Resolutions can be set independently for RA and DEC axes.</P>
+<P>With this new feature, Gemini can be retrofitted to many German Equatorial Mounts, f.i mounts 
+with 359:1 Byers gears, Vixen or Astrophysics mounts. Existent servo motor/encoder combinations
+can often be used, eliminating the need for mechanical adapting the Gemini motor assembly, but 
+custom cables will be necessary.</P> 
+
+<P>These data can be set under the Setup->Mount Parameters->Mount Type menu point with the 
+new mount type selection "Custom Mount". Selecting this type, the submenus "RA Spur:",
+"RA Worm:", "DEC Spur:", "DEC Worm:", "RA M.Enc:" and "DEC M.Enc:" are accessible. Only 
+integer values are accepted. Directions can be selected by setting the sign of the 
+worm gear ratio.</P>
+
+<h3>Remote Hand Controler functionality</h3>
+<P>Gemini can now be used without the hand controler being attached. All outputs and button presses can be routed over a serial channel. 
+A HC emulation is available for PDAs or for aftermarket software like the GCC.</P>
+
+<h3>A second serial channel is available</h3>
+<P>The DB15 HC port can be equipped with aftermarket adapters to work
+as a second serial line. Adapters can be made for RS232, USB devices, Bluetooth, Ethernet or WLAN. This second serial line works indepentendly form the standard RS232 port and can be used for HC emulation or PC control.</P>
+
+<h3>Supporting the Horizontal Coordinate System</h3>
+<P>The new Level 4 software supports the usage of horizontal, that means Azimuth and Elevation
+coordinates. These coordinates can be used for queries and GoTo operations over the serial line
+(see Serial Command Set below) as well as by means of the hand controler.</P>
+<P>The HC main menu item "RA/DEC Coord." is now called "Coordinates" and contains the 
+additional submenu items "Az/El Display" and "Enter Az/El".</P>
+<h3>Selectable Serial Port Transmission Rates</h3>
+<P>Gemini L4 allows to set several transmission rate values
+for the serial (RS232) port, from 4800 up to 38400 bit/s, under the
+Setup->Communication->RS232 speed menu point. The default value is 9600 bit/s.</P>
+
+<h3>Selectable GPS transmission rate</h3>
+<P>The GPS speed can be set to 4800 or 9600 bit/s using Setup->Communication->GPS Rx speed menu point.
+The default value after a reset is the standard NMEA 0183 speed of 4800 bit/s.</P>
+<P>By setting the GPS receiver transmission rate, Gemini's startup process is accelerated,
+because the other rate doesn't have to be probed. Also, the query result message display 
+can by interrupted by pushing the menu button.</P>
+<h3>Reduced Main Menu point selection available</h3>
+<P>After having set up Gemini and aligning the telescope or building a pointing model,
+some of the menu points are rarely used. The new "Reduced Menu" mode only displays the
+main menu items mainly used while observing: Object Database, Show Information, GoTo,
+ RA/DEC Coordinates and Identify
+while scrolling downwards (with the DEC- button). Scrolling upwards with DEC+, Align Telescope
+is additionally included to allow to refine the pointing model. The other main menu items, Setup,
+Object Search, Show Date/Time and GuideTo are suppressed. At any time it is possible 
+to switch back to Full Menu Mode using the Quickmenu feature.
+
+<h3>Redesigned Quick Menu selection</h3>
+<P>To accelerate the Quick Menu access and to offer more selections the Quick Menu 
+feature was redesigned:
+<ul>
+<li>The main menu level shows the available items.  As long as the Menu button 
+is pressed, these items scroll through the display:<BR>
+"-> Visual Mode" (while in Photo Mode) or "->Photo Mode".<BR>
+"Reduced Menu" while in Full Menu Mode or "Full Menu" otherwise.<BR>
+"Centering".<BR>
+"Park Mount!"<BR>
+"Exit w/o Change".</li>
+<li>Two of these menu points, "Centering" and "Park Mount" now have submenus. After releasing 
+the menu button the submenu items scroll through the display until the menu button is pressed again.</li>
+<li>The items are now context sensitive. F.i. in Photo or All Speed Mode, only Visual Mode is offered, 
+and Photo Mode if the hand controler is in Visual Mode.</li>
+<li>An "Exit without change" menu point was added to all menus.</li>
+</ul></P>
+
+
+<h3>Parking the OTA</h3>
+<P>The telescope can be parked at any &quot;Home Position&quot; 
+by either the hand controller or serial control.  The
+home position defaults to the CWD (Counterweight Down) position.</P>
+
+<P>Even after setting the Home Position, parking at the CWD position 
+is still possible since this option is offered as an additional menu point
+in the Quick Menu and available as as serial line command (:hC#).</p>
+
+<P>Further, the Quick Menu allows to stop tracking at any arbitrary position.
+For example, after pointing the OTA downwards to stop dewing.</P>
+<p><ul><li>Park @CWD Pos!</li>
+<li>Park @HOME Pos!</li>
+<li>Stop Tracking!</li>
+<li>Exit w/o Change</li></ul></p>
+
+<h3>More Alignment Stars, with Proper Motion taken into account.</h3>
+
+<P>The number of Alignment Stars has been extended to 49. Especially more southern hemisphere
+objects are now included:</p>
+<p><ul>
+<li>Achenar,</li>
+<li>Acrux,</li>
+<li>Albireo,</li>
+<li>Aldebaran,</li>
+<li>Algenib,</li>
+<li>Alpha Centauri,</li>
+<li>Alphard,</li>
+<li>Alpheratz,</li>
+<li>Altair,</li>
+<li>Antares,</li>
+<li>Arcturus,</li>
+<li>Betelgeuze,</li>
+<li>Canopus,</li>
+<li>Capella,</li>
+<li>Castor,</li>
+<li>Deneb,</li>
+<li>Denebola,</li>
+<li>Diphda,</li>
+<li>Dubhe,</li>
+<li>Eniph,</li>
+<li>Fomalhaut,</li>
+<li>Gienah,</li>
+<li>Hadar,</li>
+<li>Hamal,</li>
+<li>Kaus Australis,</li>
+<li>Kornephoros,</li>
+<li>Markab,</li>
+<li>Mekab/Menkar,</li>
+<li>Mirach,</li>
+<li>Mirfak,</li>
+<li>Mizar,</li>
+<li>Nunki,</li>
+<li>Polaris,</li>
+<li>Pollux,</li>
+<li>Procyon,</li>
+<li>Ras Alhague,</li>
+<li>Regulus,</li>
+<li>Rigel,</li>
+<li>Rigil Kentauri,</li>
+<li>Sadelmelik,</li>
+<li>Sadalsuud,</li>
+<li>Shaula,</li>
+<li>Sirius,</li>
+<li>Spica,</li>
+<li>Unukalhai,</li>
+<li>Vega,</li>
+<li>Vindemiatrix,</li>
+<li>Zaurak,</li>
+<li>Zosma,</li>
+<li>Zuben Elgenubi.</li>
+</ul></p>
+<P>The coordinates of these stars are stored with subarcsecond precision. 
+Since some bright nearby stars have a significant proper motion these motion values
+are also stored and included into the calculation to achieve highest alignment
+accurateness.</P> 
+
+<h3>Extended Serial Line Protocol</h3>
+<P>The <a href="L4V1serial.html" target="new">Level 4 serial command set</a> was extended 
+not only to reflect the additions for new and custom mounts, but also includes commands
+necessary for dome control and other operations. <B>:GA#</B> and <B>:GZ#</B> commands are 
+supported to query the azimuthal coordinates. The hour angle the mount is pointing at can be 
+obtained using the new <B>:GH#</B> command. The side of the mount the OTA is can be asked for
+with <B>:Gm</B> while <B>:GS#</B> now delivers the sidereal time.</P>
+
+<h3>Extended Identify interface</h3>
+<P>The interface to the Identify function within Gemini was extended to remember the results
+of the latest Identify run. Now the user can decide to use</P>
+<P><UL><li>"New Selection" to do another Identify run,</li>
+<li>"Previous objects" to observe one of the 10 objects found by the latest run,</li>
+<li>"Continous Ident" to have the Identify routine running continously in the background
+while the telescope is slewed manually or commanded over the serial line, always displaying 
+name and distance of the nearmost object matching the search criteria.</li></ul></p>
+
+<h3>Extended Safety Limits Handling</h3>
+<P>The physical positions of the Safety Limits are automatically derived from the mount settings. 
+They default to 114 degrees on the left (motor) side and to 123 degrees on the right side, 
+with respect to the startup (CWD) position.</P>
+<P>To avoid accidentely setting the safety limits, another submenu point "Confirm to Set" was 
+added as a submenu of "Setup->Mount Parameters->Set Safety Limits".</P>
+<P>Additionally, a second submenu point "Reset to Defaults" was introduced there to allow to reset
+only the Safety Limits to their default values (both left and right) without having to reset
+all the other Setup values.</P>
+
+<h3>Selectable PC Synchronization Behaviour</h3>
+<P>Gemini accepts two different kinds of Sync commands over the serial line. The LX200 protocol
+:CM# command shifts the internal coordinate system to reflect the latest position correctly,
+"Synchronizing" it to an object. On the other hand, the additional ":Cm# command uses the detected
+positional difference to enhance the internal pointing model. The software running on a connected
+computer can choose between both.</P>
+<P>Since there are still some software packages on the market not supporting the Additional Align
+ feature, Gemini's software now allows to set the way :CM# and :Cm# commands are interpreted.
+The Setup->Communication
+menu point now contains a "Sync or Align" submenu. "Sync Only" selects Gemini's standard behaviour
+as described above, while "Sync <-> Add. Al." swaps the functionality of both commands, allowing 
+to enhace the pointing model even with PC software not supporting this explicitely.</P>
+
+<h3>PEC</h3>
+<P>PEC data can be up- and downloaded</P>
+<P>The number of PEC guiding pulses can be limited.</P>
+<P> </P>
+
+<h3>Pulse Guiding</h3>
+<P>There is an additional guiding possibility available: moving a predefined distance or time. It is offered in 3 varieties: </P>
+<P><ul><li>move a distance of a certain amount of steps</li>
+<li>move a certain amount of arcsecs</li>
+<li>move for a certain amount of time</li></ul></P>
+<h3>Alternatively used Encoder Port</h3>
+<P>Over the years, only a small percentage of Gemini users connected axis encoders. Axis encoders are now set offline by default. The 4 digital (TTL) inputs bits can be used alternatively to connect to custom hardware. Their state can be checked and set using the extended serial line protocol.</P>
+<P>This feature adds additional possibilities for an unattended robotic telescope, f.i. by adding end switches.</P>
+<BR>
+</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
+
+    <div w3-include-html="footer.html" ></div>
+    
+  </body>
+</html>

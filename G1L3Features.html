@@ -1,0 +1,716 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US">
+  <!-- Mirrored from gemini-2.net/Getting_started.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Dec 2018 03:51:36 GMT -->
+  <head profile="http://www.w3.org/2005/10/profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta content="en-us" http-equiv="Content-Language">
+    <meta name="AUTHOR" content="Michael Rudolph">
+    <meta name="CHANGEDBY" content="Dave Sandage">
+    <meta name="CHANGEDBY" content="René Goerlich">
+    <meta name="changedby" content="David C. Partridge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="ajxmenu.css" type="text/css">
+    <link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
+    <meta content="en-us" http-equiv="Content-Language">
+    <title>Gemini-1 Level 3 Servo System Features</title>
+    <link href="gemini-2.css" rel="stylesheet" title="light" type="text/css">
+    <link href="gemini-2-dark.css" rel="stylesheet" title="dark" type="text/css">
+    <link href="theme-selector.css" rel="stylesheet" type="text/css">
+    <script src="style_switcher.js"></script>
+    <script src="w3data.js"></script>
+  </head>
+  <body onload="set_style_from_cookie()">
+    <div w3-include-html="header.html" ></div>
+    <div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div><script>w3IncludeHTML();</script>
+  
+    <table style="min-width:500px; max-width:80%" align="center">
+      <tbody>
+        <tr>
+          <td class="h3">Gemini-1 Level 3 Servo System Features</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <table style="min-width:500px; max-width:80%" align="center">
+      <tbody>
+        <tr>
+          <td class="style6">
+            <h3>DC Servo motors</h3>
+            <p>
+              Servo motors have the advantage of a huge dynamic speed range.
+              They track smoothly even at the lowest guiding speed consuming
+              very low current but can ramp up to high speeds while delivering
+              high torque.
+            </p>
+            <ul>
+              <li>Each axis is controlled by a dedicated micro-controller.</li>
+              <li>The electronic is capable of a slewing speed of more than
+                1450x sidereal
+                rate (6 degrees per second) f.i. for the G11, even more (about
+                1900x) for the Titan.
+                <br>
+                800x is recommended for the HGM-200 and Titan mounts, up to
+                1200x for the G11.</li>
+              <li>Goto and Manual Slewing speeds can be adjusted separately.</li>
+              <li>Smooth ramping up and down,</li>
+              <li>Centering Speeds from 1x up to 255x,</li>
+              <li>Sophisticated tracking modes,</li>
+              <li>Guiding Speed from 0.2x to 0.8x</li>
+              <li>Permanently stored Periodic Error Correction PEC and TVC</li>
+            </ul>
+            <p></p>
+            <h3>Hand controller (4+1 keys)</h3>
+            <p>
+            </p>
+            <ul>
+              <li>Used for both Telescope Control and Menu control</li>
+              <li>Visual mode: centering and slewing speed</li>
+              <li>Photographic mode: guiding and centering (stepping up from 1/8
+                to full
+                centering speed)</li>
+              <li>All speed mode</li>
+              <li>Speeding up by pressing the opposite key while moving.</li>
+            </ul>
+            <p></p>
+            <h3>16 Character dimmable red LED display</h3>
+            <p>
+            </p>
+            <h3>Separate Autoguider Connector</h3>
+            <ul>
+              <li>compatible to hand controller connector, but only for guiding
+                speed</li>
+              <li>control pin for camera shutter connected to alarm timer</li>
+            </ul>
+            <h3>Mount Axes Encoders are supported but not required</h3>
+            <ul>
+              <li>Use of 2 incremental encoders allows for manual movements,</li>
+              <li>Resolution and direction adjustable for DEC and RA,</li>
+              <li>As long as you move the telescope electrically, the accuracy
+                of the internal
+                step counters (in the arcsec range) is maintained</li>
+              <li>GuideTo function allows for manual movement or slewing to the
+                selected
+                database object.</li>
+              <li>RA/DEC display.</li>
+            </ul>
+            <h3>Serial Port Communication</h3>
+            <ul>
+              <li>Emulation of the many LX200 protocol commands for
+                communication with planetarium
+                software. Tested O.K. with XEphem, SkyMap, Guide, TheSky under
+                Linux, Windows, on the Mac and on PDAs.</li>
+              <li>Slewing to objects, reporting position back, setting
+                date/time/location/time
+                zone from the PC</li>
+              <li>A powerful native command set allows access to and remote
+                control of many of Gemini's features.</li>
+              <li>After power up, telescope control can be done by the
+                planetarium software.</li>
+              <li>Object Search mode.</li>
+            </ul>
+            <h3>Real Time Clock</h3>
+            <ul>
+              <li>Battery backuped Real Time Clock running UTC</li>
+              <li>Time/Date display showing Julian Date, Sidereal Time, Civil
+                Time, Local
+                Mean Sidereal Time.</li>
+              <li>Alarm timer, also controlling the camera shutter output pin.</li>
+            </ul>
+            <h3>Battery backuped SRAM data</h3>
+            <ul>
+              <li>All Setup data</li>
+              <li>Geographic Location and Timezone</li>
+              <li>PEC data</li>
+              <li>Up to about 4000 downloaded User Catalogue objects</li>
+              <li>Observing log for upload</li>
+              <li>Modelling parameters</li>
+              <li>Last switch-off time and position pointed to.</li>
+            </ul>
+            <h3>Feature Connector</h3>
+            <ul>
+              <li>Analog input and digital input/output ports</li>
+              <li>Ground and +5V connector</li>
+              <li>Different usage possibilities (supported in Level 3 software
+                for focusing
+                or custom usage)</li>
+              <li>Focusing supported by the LX200 command set focussing commands
+                (see below)</li>
+              <li>Custom usage supported by Gemini's native command set</li>
+            </ul>
+            <h3>Focusing</h3>
+            <p>Gemini supports focusing units having 9
+              to 12 volt DC motors (e.g. JMI's NGF series). In order to focus
+              using the Gemini, you must have an adapter board accessory
+              connected
+              to the feature port.</p>
+            <p>The Gemini focusing function uses the Meade
+              LX-200 serial line focusing commands. You can also change focus
+              using the hand controller by putting it into focus mode. This is
+              done by selecting "Focusing" from the Quick Menu. This
+              menu item is only available if the adapter board was connected.
+              When
+              in Focus Mode, the RA buttons move in and out, and the dec buttons
+              toggle between fast and slow focusing modes.</p>
+            <p>To disengage from the Focus Mode, press the
+              Menu button.</p>
+            <br>
+            <h3><b>Internal databases</b></h3>
+            <ul>
+              <li>Database objects are stored with coordinates, type, size,
+                magnitude.
+                <br>
+                Objects are precessed to the current date, corrected for
+                refraction.</li>
+              <li><b>All</b> objects of the Revised NGC/IC catalog are
+                contained,
+                <br>
+                by courtesy of Wolfgang Steinicke, the NGC/IC project.</li>
+              <li>Messier and Sharpless 2 catalog. SAO stars up to 7m1
+                magnitude.</li>
+              <li>Planets, Moon, Sun</li>
+              <li>Bright star list with common names</li>
+              <li>3989 Double Stars selected from the Washington Double Star
+                catalog</li>
+              <li>1143 Planetary Nebulae of the Strasbourg/ESO Galactic
+                Planetary Objects catalog, including most objects of the PK
+                (Perek, Kohoutek) catalog</li>
+              <li>1802 Dark Nebulae from Lynds' Catalog of Dark Nebulae&gt;</li>
+              <li>1125 Bright Nebulae from Lynds' Catalog of Bright Nebulae</li>
+              .
+            </ul>
+            <br>
+            <h3><b>User Defined Database</b></h3>
+            <p>A user defined database with up to about 4000 objects can be
+              uploaded using
+              serial communication and are stored in the battery backuped SRAM
+              memory. This feature can f.i. be used to store the observing
+              program for a night.</p>
+            <br>
+            <h3><b>Observing Log</b></h3>
+            <p>Many user actions, f.i. startup and shutdown, object selections,
+              GoTo operations are logged and stored into the SRAM memory
+              together with timestamps and coordinates.
+              This log can be uploaded and used to build the user's observing
+              log.</p>
+            <br>
+            <h3>Gemini Starts Up Aligned</h3>
+            <p>
+              Gemini can slew to the first alignment star if the mount is
+              polar-aligned
+              and the OTA is in a defined home position during startup. This
+              feature also requires that Gemini have the correct latitude,
+              longitude and UTC data.</p>
+            <h3>Sophisticated Telescope Pointing Model</h3>
+            <p>
+            </p>
+            <ul>
+              <li>The first alignment after startup synchronizes the telescope's
+                position with the sky.</li>
+              <li>Subsequent Additional Alignments can be used to build or
+                refine a pointing model.</li>
+              <li>Up to 255 alignments are possible at each side of the meridian
+                to refine the model.</li>
+              <li>After the first Additional Alignments model parameters A
+                (Polar misalignment in Azimuth)
+                and E (in Elevation) are calculated.</li>
+              <li>The first alignment at the opposite site of the meridian </li>
+              <li>After the third Additional Alignment the nonperpendicularities
+                of the mount/OTA combination are taken into account: NP
+                (nonperpendicularity at the pole) and NE (at the equator).</li>
+              <li>After the fifth Additional Alignment the internal telescope
+                pointing model is extended to include "Counterweight Flexure,"
+                a refinement that takes account of the play and flexure in the
+                RA
+                axis assembly.</li>
+              <li>Alignments can be done using any bright star, database or PC
+                transferred object, east or west of the meridian.</li>
+            </ul>
+            <p></p>
+            <h3>Simplified Sync Operation using TheSky</h3>
+            <p>
+              From Level 3, V1.01 up every location marked within the
+              planetarium program
+              TheSky can be used to
+              synchronize Gemini's coordinate system without having to slew to
+              the location
+              before. This simplifies Sync and Image Link operations.
+            </p>
+            <br>
+            <h3>Polar Axis Correction</h3>
+            <p>This feature assists you in accurately polar
+              aligning your mount. Because Gemini's modeling feature calculates
+              the mount's deviation from correct polar alignment, it can be used
+              to
+              guide you as you adjust the mounts altitude and elevation to
+              achieve
+              polar alignment.</p>
+            <p>After you have done several alignments on
+              different objects, select an object from the Object Database that
+              is
+              near the celestial equator and the meridian. Goto the object and
+              center it in the eyepiece using the HC buttons. Now, select "Align
+              Telescope-&gt;Polar Axis Corr."
+              from the menu. Gemini will move the mount to where the object
+              should
+              be if the mount were accurately polar aligned. You should adjust
+              the
+              polar alignment of the mount using the altitude and elevation
+              knobs
+              until the object is again centered in the eyepiece. Since the
+              mount
+              will approximate perfect polar alignment, all subsequent GoTo
+              operations should result in target objects being near the center
+              of
+              the eyepiece. If not (for instance, because the mount's initial
+              misalignment exceeded several degrees), you may repeat the
+              correction
+              process. Note that after using this function, the modeling
+              parameters will be reset and you will need to rebuild the model by
+              performing several alignments on different objects.</p>
+            <br>
+            <h3>Permanent Setup</h3>
+            <p></p>
+            <ul>
+              <li>The telescope can be parked at any "Home
+                Position" by either the hand controller or serial control. The
+                home position defaults to the CWD (Counterweight Down) position.
+                The feature is accessed on the hand
+                controller using the Quick Menu feature. Simply hold down the
+                Menu
+                button until the display shows "Park Mount!" The mount
+                will then slew to the Park position. You can set any Park
+                position
+                by moving the mount to the desired position using the hand
+                controller
+                and then selecting the "Setup-&gt;Mount Parameter-&gt;Set Home
+                Posit."
+                Menu item.</li>
+              <li>Switch off time and position are saved for warm restarting the
+                system,
+                convenient for permanently mounted telescopes or after a power
+                loss.</li>
+              <li>The pointing model will be reused after a Warm Start or a Warm
+                Restart.</li>
+            </ul>
+            <p></p>
+            <h3>GoTo</h3>
+            <p>
+            </p>
+            <ul>
+              <li>Slewing to an object from the internal databases</li>
+              <li>Slewing to manually entered RA/DEC coordinates</li>
+              <li>Slewing to one of 10 objects found by Identify.</li>
+              <li>Slewing to one of 10 bookmarked positions.</li>
+              <li>Check if object is above the horizon.</li>
+              <li>Meridian flip if necessary.</li>
+              <li>Adjustable East/West Safety Limits.</li>
+            </ul>
+            <p></p>
+            <p>To use this feature, ensure that the mount
+              is in the CWD position before applying power. After selecting
+              "Cold
+              Start", simply choose an object from the database and select
+              "GoTo". For even more convenience, Gemini offers a "GoTo
+              Bright Star" feature, listing the commonly known bright stars
+              currently above the horizon. Just select one of them, or a
+              database
+              object, and Gemini will slew reasonably close to the selected
+              object. Use the hand controller to center the object. Now all you
+              need to
+              do is select the "Align Telescope" menu item and select
+              "Synchronize". You can then add additional alignment stars
+              as before.</p>
+            <br>
+            <h3>GPS Input</h3>
+            <p>Gemini's Level 3 software allows the user to
+              set Gemini's longitude, latitude, UTC date and UTC time from a GPS
+              receiver connected to the serial port. Any GPS
+              receiver can be used if it is capable of transmitting either NMEA
+              0183 protocol or Garmin Textout protocol at 4800bps or 9600bps.</p>
+            <p>Gemini attempts to query a GPS when it is
+              powered on. You can also explicitly have it read the GPS data by
+              using the "Setup-&gt;Geogr. Location-&gt;
+              Query GPS Rec" menu item at any time.</p>
+            <br>
+            <h2>Sophisticated Tracking Modes</h2>
+            <p>
+              Sidereal tracking follows the sky at a constant rate.</p>
+            <p>Terrestrial Mode switches tracking off to allow for terrestrial
+              use
+              or observing geostationary satellites.</p>
+            <h3>Comet/User Defined Tracking</h3>
+            <p>Comets and Minor Planets follow their own
+              trajectories through the Solar System. Gemini can be commanded to
+              follow their movement in a variety of ways.</p>
+            <p>Available on the hand controller is a
+              Comet/User Defined submenu of the tracking speed selection. Once
+              selected (after centering the object), a training phase can be
+              started.
+              Unlike training PEC, you don't have to follow the motions exactly.
+              Just keep the object in the eyepiece for a sufficient amount of
+              time. Finally, center it and press the menu button to end the
+              training
+              phase. Gemini calculates the necessary tracking rates in RA as
+              well
+              as in DEC and the mount will follow the object in both axes.</p>
+            <p>The amount of time needed for training will
+              vary with the object and the type of observation. For an object
+              with
+              a relatively slow and constant motion, a few minutes of training
+              should be sufficient for visual observing. For photography, you
+              may
+              want to consider training for up to half of the intended exposure
+              time. For an object that changes speed fairly quickly (such as a
+              Near Earth Asteroid), shorter training sessions just before the
+              observation will work best. In general however, for an object with
+              relatively constant speed, the longer the training (up to 45
+              minutes)
+              and the more exactly the object is centered at the beginning and
+              end
+              of training, the better the tracking will be.</p>
+            <p>Alternatively, if you know the ephemerides
+              of the object, you can input the actual position and the position
+              in
+              1 to 255 hours together with this timespan. Gemini will set the
+              tracking
+              rates accordingly.
+            </p>
+            <p>Additionally, new serial line commands have
+              been added to allow the user to set his or her own RA/DEC tracking
+              rates. This "User Defined Tracking" (to be used instead of
+              a training phase) is useful for tracking minor planets and comets
+              by
+              setting the necessary rates using a computer program. For more
+              information on how computer software can use these commands, see
+              the Serial Line Protocol description.</p>
+            <br>
+            <h3>Closed Loop Tracking</h3>
+            <p>Gemini can be instructed to stay at, or
+              slowly move to, given RA and Dec. coordinates regardless of how
+              accurately the mount is polar aligned. The
+              difference between the desired coordinates and the actual
+              coordinates
+              is checked about 22 times a second. If there is a difference,
+              Gemini
+              moves one step in the requested direction. This lets the telescope
+              gently follow the coordinate at about 0.5x guiding speed.</p>
+            <p>There are several
+              applications for this advanced tracking feature:</p>
+            <ol>
+              <li>
+                <p><b>Visual observing</b>. There is no need to precisely polar
+                  align the telescope for visual observing. The internal
+                  pointing model is not only used for the GoTo operation, but
+                  with Closed Loop Tracking also for keeping the object
+                  centered.</p>
+              </li>
+              <li>
+                <p><b>Tracking comets or minor planets</b>. This requires a
+                  connected computer sending updated coordinates whenever the
+                  object coordinates change. The coordinates are to be
+                  transferred with the :Sr and Sd commands. No :MS# slew command
+                  is to be issued. If the use of the :MS# command cannot be
+                  suppressed inside the computers software, Gemini's "Move Lock"
+                  command :ML# can be employed to let Gemini ignore further :MS#
+                  commands.</p>
+              </li>
+            </ol>
+            <p>Gemini allows you
+              to center an object with the hand controller during closed loop
+              tracking without moving back to the calculated position. The
+              difference between the calculated and actual position is stored
+              and
+              added to the new coordinates within the correction cycles.</p>
+            <br>
+            <h3>Adaptive King Rate Tracking</h3>
+            <p>Gemini Level 2 includes the option of
+              constant King Rate tracking for objects at lower elevation. Level
+              3
+              takes this a step further by varying the tracking speed depending
+              on
+              the distance of the object above the horizon.</p>
+            <p>You can enable the adaptive King rate using
+              the "Setup-&gt;Mount Parameter-&gt;Tracking Speed-&gt;Adaptive
+              King" menu
+              item.</p>
+            <br>
+            <h3>Variable Solar/Lunar Tracking Rates</h3>
+            <p>Earth and Moon move in slightly elliptic
+              orbits. According to Kepler's Law, the velocity changes with the
+              distance from the gravitational center. Gemini calculates the
+              actual
+              tracking rate necessary to follow the object at the moment you
+              select
+              the tracking rate (considering the motion within the next hour).
+              For
+              the Moon, the parallax is taken into account, too.</p>
+            <br>
+            <h3>Western Tracking Limit Warning</h3>
+            <p>While tracking, an audible warning (a short
+              beep about every 20 seconds) sounds some minutes before the
+              western
+              safety limit is reached. This gives the user an opportunity to
+              close
+              his camera shutter or take whatever other action is necessary.</p>
+            <br>
+            <h3>Enhanced Search Mode Features</h3>
+            <p>The Search Mode can now be accessed by
+              remote control, a feature particularly useful in video astronomy.
+              In
+              addition, a new "Z" shaped search pattern, "Wobble
+              Object," was added to assist in recognizing faint objects.</p>
+            <br>
+            <h3>Permanent PEC with Advanced Functions</h3>
+            <p>Level 3 provides a greatly enhanced set of
+              PEC (Periodic Error Correction) features. Gemini L3 provides the
+              following new PEC functions:</p>
+            <p><b>PEC Delay Correction</b> - Advances the
+              playback of PEC corrections to compensate for latency between the
+              error and the correction during PEC recording.</p>
+            <p><b>PEC Drift Correction</b> - Removes any
+              systematic drift component from the recorded PEC data caused by
+              differential refraction or polar misalignment.</p>
+            <p><b>Smooth PEC Data</b> - Smoothes recorded
+              PEC data to eliminate spurious corrections caused by seeing, etc.</p>
+            <p><b>Average PEC Data</b> - Allows you to make
+              multiple PEC training runs and average the results.</p>
+            <p><b>Restore Saved Data</b> - Restores PEC
+              data that has been moved to a backup buffer by a previous PEC
+              command
+              or an additional training run.</p>
+            <br>
+            <h3>Bookmarks</h3>
+            <p>Up to 10 bookmarks can now be placed at any
+              coordinate in the sky, and Gemini's GoTo feature can slew to it.
+              To
+              set the bookmark, select the "RA/Dec Coordnt.-&gt;Set
+              Bookmark" menu item. To have Gemini slew to the bookmark,
+              select the "RA/Dec Coordnt. -&gt;GoTo Bookmark" menu item.</p>
+            <p>You can overwrite old bookmarks using the
+              Set Bookmark feature or add a new one as long as the maximum of 10
+              (0..9) is not reached. Bookmarks are stored permanently and can
+              only
+              be erased by a Reset Defaults operation.</p>
+            <br>
+            <h3>Identify function</h3>
+            <p></p>
+            <ul>
+              <li>Objects selectable for catalog, object type, magnitude.</li>
+              <li>10 objects nearest the actual position are listed.</li>
+            </ul>
+            <p></p>
+            <br>
+            <h3>QuickMenu</h3>
+            <p>A convenient and fast place to (1) change
+              Gemini's Centering Speed, (2) toggle between Visual and
+              Photographic
+              Modes, (3) Park the OTA, and (4) Focus via an auxiliary adapter
+              board. To access these functions, simply hold the menu button down
+              until the options start appearing on the display. When you see the
+              option you want to select, release the menu button.</p>
+            <br>
+            <h3>Appendix - Level 3 Menu Tree</h3>
+            <p><b>Align Telescope</b></p>
+            <p style="margin-left: 1cm">GoTo
+              Bright Star<br>
+              Reset Alignment <br>
+              Additional Align<br>
+              Synchronize<br>
+              Polar Al. Assist<br>
+              Polar Axis Corr. (available only if there was a pointing model
+              established)</p>
+            <p><b>Object Database</b></p>
+            <p style="margin-left: 1cm">Messier
+              NGC<br>
+              IC<br>
+              Sh2<br>
+              Solar System<br>
+              Bright Stars<br>
+              SAO<br>
+              WDS<br>
+              GPN<br>
+              LDN<br>
+              LBN<br>
+              User Defined (available only if the user downloaded catalog
+              objects)</p>
+            <p><b>Show
+                Information</b></p>
+            <p><b>Goto &lt;object&gt;</b></p>
+            <p><b>Guide to
+                &lt;object&gt;</b></p>
+            <p><b>RA/DEC Coordnt</b>.</p>
+            <p style="margin-left: 1cm">
+              RA/DEC Display<br>
+              Enter RA/DEC<br>
+              Set Bookmark #x (0 &lt;=x &lt;=9, number of bookmark )<br>
+              GoTo Bookmark#x</p>
+            <p><b>Identify</b></p>
+            <p style="margin-left: 1cm">M/NGC/IC/Sh2
+              Cat<br>
+              Messier Objects<br>
+              NGC Objects<br>
+              IC Objects<br>
+              Sharpless 2 Obj.<br>
+            </p>
+            <p style="margin-left: 2cm">Arbitrary
+              Obj. submenu for all kinds of objects<br>
+              Stellar Objects<br>
+              NonStellar Obj.<br>
+              Planetaries/SNR<br>
+              Galaxies<br>
+              Clusters<br>
+              Nebulae
+            </p>
+            <p style="margin-left: 3cm">
+              All Magnitudes&gt; submenu for all kinds of objects<br>
+              Magnitude &lt; 15m0<br>
+              Magnitude &lt; 14m0<br>
+              Magnitude &lt; 13m0<br>
+              Magnitude &lt; 12m0<br>
+              Magnitude &lt; 11m0<br>
+              Magnitude &lt; 10m0</p>
+            <p><b>Object Search</b></p>
+            <p style="margin-left: 1cm">FOV
+              2 degrees<br>
+              FOV 1.5 degrees<br>
+              FOV 1 degree<br>
+              FOV 50 arcmin<br>
+              FOV 40 arcmin<br>
+              FOV 30 arcmin<br>
+              FOV 20 arcmin<br>
+              FOV 10 arcmin<br>
+              FOV 5 arcmin<br>
+              Wobble object</p>
+            <p><b>Show Date/Time</b></p>
+            <p style="margin-left: 1cm">UTC
+              Date/Time<br>
+              Julian Date<br>
+              Civil Time<br>
+              Local Sidereal</p>
+            <p><b>Setup</b></p>
+            <p style="margin-left: 1cm">Hand
+              Controller</p>
+            <p style="margin-left: 2cm">
+              Visual Mode: C-S<br>
+              Photo Mode: G-C<br>
+              All Speeds:G-C-S</p>
+            <p style="margin-left: 1cm">Mount
+              Parameter</p>
+            <p style="margin-left: 2cm">Tracking
+              Speed</p>
+            <p style="margin-left: 3cm">
+              Sidereal<br>
+              Lunar<br>
+              Solar<br>
+              Adaptive King<br>
+              None/Terrestrial<br>
+              Closed Loop<br>
+              Comet/User Def.</p>
+            <p style="margin-left: 4cm">
+              Train Tracking<br>
+              Calculate Rates<br>
+              Activate
+            </p>
+            <p style="margin-left: 2cm">Moving
+              Speeds</p>
+            <p style="margin-left: 3cm">
+              Guiding:<br>
+              Centering:<br>
+              Slewing:<br>
+              GoTo:</p>
+            <p style="margin-left: 2cm">TVC
+              Value:</p>
+            <p style="margin-left: 2cm">PEC</p>
+            <p style="margin-left: 3cm">
+              Train PEC<br>
+              Clear PEC data<br>
+              PEC Off (if On) OR PEC On (if Off)<br>
+              Delay Correction<br>
+              Drift Correction<br>
+              Smooth PEC data<br>
+              Average PEC data<br>
+              Restore saved</p>
+            <p style="margin-left: 2cm">Mount
+              Type</p>
+            <p style="margin-left: 3cm">
+              Losmandy GM-8<br>
+              Losmandy G-11<br>
+              HGM 200/MI-250<br>
+              Celestron CI700<br>
+              Losmandy Titan<br>
+              Losmandy Titan50</p>
+            <p style="margin-left: 2cm">Set
+              Safety Limit</p>
+            <p style="margin-left: 2cm">Set
+              Home Posit.</p>
+            <p style="margin-left: 1cm">Encoder</p>
+            <p style="margin-left: 2cm">
+              EncRes RA<br>
+              EncRes DEC<br>
+              Test Encoder<br>
+              Ignore Encoder<br>
+              Use Encoder</p>
+            <p style="margin-left: 1cm">Set
+              Alarm Timer</p>
+            <p style="margin-left: 2cm">
+              Alarm On<br>
+              Alarm Off<br>
+              Set Alarm Time</p>
+            <p style="margin-left: 1cm">Set
+              Date/UTC</p>
+            <p style="margin-left: 1cm">Credit
+              Info</p>
+            <p style="margin-left: 1cm">Restore
+              Defaults</p>
+            <p style="margin-left: 2cm">&gt;
+              Losmandy<br>
+              &gt;Mountain Instr.</p>
+            <p style="margin-left: 1cm">Dim
+              Display</p>
+            <p style="margin-left: 2cm">100%
+              Brightness<br>
+              53% Brightness<br>
+              40% Brightness<br>
+              27% Brightness<br>
+              20% Brightness<br>
+              13% Brightness<br>
+              6.6% Brightness</p>
+            <p style="margin-left: 1cm">Geogr.
+              Location</p>
+            <p style="margin-left: 2cm">
+              Longitude<br>
+              Latitude<br>
+              Timezone<br>
+              Query GPS Rec.</p>
+            <p style="margin-left: 1cm">Coordinate
+              Epoch</p>
+            <p style="margin-left: 2cm">
+              Equinox of Date<br>
+              Epoch J2000.0</p>
+            <p><font size="4"><b>QuickMenu</b></font></p>
+            <font size="4">
+              <p> Focusing (only
+                available if focuser board connected)
+              </p>
+              <p style="margin-left: 1cm">
+                Focus In, Focus
+                Out with RA buttons, Focus Slow, Focus Fast with DEC buttons</p>
+              2x Centering<br>
+              8x Centering<br>
+              16x Centering<br>
+              32x Centering<br>
+              64x Centering<br>
+              128x Centering<br>
+              -&gt; Visual Mode<br>
+              -&gt; Photo Mode<br>
+              Park mount!<br>
+              &nbsp; </font></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div w3-include-html="footer.html" ></div>
+
+  </body>
+</html>
