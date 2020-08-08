@@ -141,12 +141,13 @@ info" target="_blank">
 		http://gemini-2.net/ConnectingtoG2.php</a><br />
 		All updated files are listed at the bottom of this page.&nbsp; Other 
 		web pages may have them listed also, but the links at the bottom of this 
-		page should be the most current.<br /><br />The four methods are:<br />
-		1. Use the new <a href="gfu.html" target="_blank">Firmware Update program for Windows</a>, <!-- or the <a href="gfu_mac.html" target="_blank">Firmware Update program for Mac</a>--> that can update everything, 
+		page should be the most current.<br /><br />
+		<p>The four methods are:
+		<ol>
+			<li>Use the new <a href="gfu.html" target="_blank">Firmware Update program for Windows</a>, <!-- or the <a href="gfu_mac.html" target="_blank">Firmware Update program for Mac</a>--> that can update everything, 
 		just the main unit, catalog files, or the new video files.&nbsp; This is now the recommended 
-		method.&nbsp; This routine updates the Gemini-2 almost twice as fast as most of the FTP methods.<br />
-		<br />
-			2. <a name="The_FTP_Methods">The FTP Methods
+		method.&nbsp; This routine updates the Gemini-2 almost twice as fast as most of the FTP methods.</li>
+			<li><a name="The_FTP_Methods">The FTP Methods
 		</a>are divided into two methods, 
 		according to which FTP method you use.&nbsp; The FTP methods are for advanced users, that understand how the 
 		firmware and directory structure of the micro-SDCards works, and how to 
@@ -164,7 +165,40 @@ info" target="_blank">
 				structure.) Again this is only for Advanced user that 
 				understand the directory and file structure of the micro-SDcards. Only firmware dated after 9 April 
 		2011 has the FTP 
-				capability build in.<br />
+				capability build in.</li>
+			<li>Use the Web interface.&nbsp; (Recommended when gemhc.bin or 
+				NewGem.bin/gemhc.bin is the only files being updated.)&nbsp; You can 
+		only update one file at a time using this method.&nbsp; This 
+		method requires you to use the SD Card tab of the web interface.&nbsp; 
+		You use the "Upload a file to the SD card's current directory"&nbsp; If 
+		uploading the NewGem.bin file you do that to the root of the SDcard.&nbsp; 
+		If uploading GemHC.bin (hand controller programing file) you first 
+		select the HCFirmware directory and then do the upload.&nbsp; If 
+		uploading a catalog file to the hand controller you also select the 
+		HCFirmware directory. If the uploaded file was NewGem.bin, then you will 
+		have to go into the web interface, Firmware/SRAM tab and flash this file 
+		into the ARM processor for it to do any update.</li>
+			<li>Remove the micro-SDcards, format &amp; program them and 
+				reinstall them. If your 
+				Hand Controller firmware is before Jan 31,2011, and your main 
+				unit firmware is before April 9 2011 then you might have to use this 
+				method. After that the Update program in Paragraph 1 
+				(recommended) or FTP method should work.
+				It is the method you might have to use if your SDcards gets corrupted.&nbsp; 
+		This is always the fall back method if something goes wrong, to try and 
+		recover either the main unit or the hand controller. see
+		<a href="Removing_SDCards.html" target="_self">
+		http://gemini-2.net/Removing_SDCards.php</a> <br />
+		
+		<br /> <span class="style2">If you have to format the SD card it is best to download the official 
+				SDcard format routine from the</span>
+		<a href="https://www.sdcard.org/" target="_blank">https://www.sdcard.org</a>
+		<span class="style2">download section.</span></li>
+		</ol>
+		</p>
+		1. <br />
+		<br />
+			2. <br />
 		
 		<ul>
 			<!--<li>Here is a
@@ -191,38 +225,12 @@ info" target="_blank">
 <table align="center" style="width: 900px">
 	<tr>
 		<td class="style6">
-		3. Use the Web interface.&nbsp; (Recommended when gemhc.bin or 
-				NewGem.bin/gemhc.bin is the only files being updated.)&nbsp; You can 
-		only update one file at a time using this method.&nbsp; This 
-		method requires you to use the SD Card tab of the web interface.&nbsp; 
-		You use the "Upload a file to the SD card's current directory"&nbsp; If 
-		uploading the NewGem.bin file you do that to the root of the SDcard.&nbsp; 
-		If uploading GemHC.bin (hand controller programing file) you first 
-		select the HCFirmware directory and then do the upload.&nbsp; If 
-		uploading a catalog file to the hand controller you also select the 
-		HCFirmware directory. If the uploaded file was NewGem.bin, then you will 
-		have to go into the web interface, Firmware/SRAM tab and flash this file 
-		into the ARM processor for it to do any update.<br />
+		3. <br />
 		<br />
 		 <hr class="auto-style1" style="width: 900px" noshade="noshade" />
 		 <br />
 		<br />
-		4. Remove the micro-SDcards, format &amp; program them and 
-				reinstall them. If your 
-				Hand Controller firmware is before Jan 31,2011, and your main 
-				unit firmware is before April 9 2011 then you might have to use this 
-				method. After that the Update program in Paragraph 1 
-				(recommended) or FTP method should work.
-				It is the method you might have to use if your SDcards gets corrupted.&nbsp; 
-		This is always the fall back method if something goes wrong, to try and 
-		recover either the main unit or the hand controller. see
-		<a href="Removing_SDCards.html" target="_self">
-		http://gemini-2.net/Removing_SDCards.php</a> <br />
-		
-		<br /> <span class="style2">If you have to format the SD card it is best to download the official 
-				SDcard format routine from the</span>
-		<a href="https://www.sdcard.org/" target="_blank">https://www.sdcard.org</a>
-		<span class="style2">download section.</span><br /><br />
+		4. <br /><br />
 		<hr class="auto-style1" noshade="noshade" style="width: 900px; height: 4px" /><br />
 			
 		NOTES:
@@ -407,6 +415,10 @@ info" target="_blank">
 </table>
 <table align="CENTER" style="width: 900px">
 	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Comment</th>
+	</tr>
 		<td class="style6">
 			<ul>
 				<li>
