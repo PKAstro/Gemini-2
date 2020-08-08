@@ -1,138 +1,146 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"/>
-
-
-<!-- Mirrored from gemini-2.net/warning.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Dec 2018 04:01:54 GMT -->
-<head profile="http://www.w3.org/2005/10/profile">
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-	<meta content="en-us" http-equiv="Content-Language" />
-
-	<title>Gemini Mount Controller</title>
-
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-
-	<link rel="stylesheet" href="ajxmenu.css" type="text/css">
-	<link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
-
-	<link href="gemini-2.css" rel="stylesheet" title = "light" type="text/css">
-	<link href="gemini-2-dark.css" rel="stylesheet" title = "dark" type="text/css">
-	<script src="style_switcher.js"></script>
-	<link href="theme-selector.css" rel="stylesheet" type="text/css">
-
-	<script src="w3data.js"></script>
-</head>
-<body onload="set_style_from_cookie()">
-
-<div w3-include-html="header.html" ></div>
-<div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div><script>w3IncludeHTML();</script>
-
-<table  align="center" style="width:900px" class="h2">
-	<tr><td><h2>Several Operational Warnings</h2></td></tr>
-</table>
-
-<table align="center"  style="width: 900px">
-	<tr>
-		<td class="style6wborder"><b>WARNING:</b> The Battery circuit in the Gemini-2 is quite different from that in the Gemini-1.
-		The battery connects through a small B130 type Schottky diode with a forward voltage (Vf) of about 0.2v directly to pin 37 of the ARM processor.
-		<!-- <span class="smalltext"> --> 
-		<a href="http://www.nxp.com/documents/data_sheet/LPC2388.pdf" target="_blank">The Data sheet LPC2388.pdf</a> 
-		states Vi(VBAT), the separate input for the RTC and the SRAM, has to have 2.0V at minimum, 
-		typical 3.3V and 3.6V at max for operation.
-	<!-- </span> --> 
-	With this diode in the line, that means that a 
-		battery voltage between 2.2V and not exceeding 3.8V would be acceptable. A note 
-		states that the RTC typically fails at 1.6V (1.8V at our battery). 
-		<!-- <p><em>This means that connecting an external battery pack in place of the internal 3.3V 
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <!-- Mirrored from gemini-2.net/warning.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Dec 2018 04:01:54 GMT -->
+  <head profile="http://www.w3.org/2005/10/profile">
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+    <meta content="en-us" http-equiv="Content-Language" />
+    <title>Gemini Mount Controller</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="ajxmenu.css" type="text/css" />
+    <link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css" />
+    <link href="gemini-2.css" rel="stylesheet" title="light" type="text/css" />
+    <link href="gemini-2-dark.css" rel="stylesheet" title="dark" type="text/css" />
+    <script src="style_switcher.js"></script>
+    <link href="theme-selector.css" rel="stylesheet" type="text/css" />
+    <script src="w3data.js"></script>
+  </head>
+  <body onload="set_style_from_cookie()">
+    <div w3-include-html="header.html"></div>
+    <div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div>
+    <script>w3IncludeHTML();</script>
+    <table style="width:900px" class="h2" align="center">
+      <tbody>
+        <tr>
+          <td>
+            <h2>Several Operational Warnings</h2>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table style="width: 900px" align="center">
+      <tbody>
+        <tr>
+          <td class="style6wborder"><b>WARNING:</b> The Battery circuit in the
+            Gemini-2 is quite different from that in the Gemini-1. The battery
+            connects through a small B130 type Schottky diode with a forward
+            voltage (V<sub>f</sub>) of about 0.2v directly to pin 37 of the ARM
+            processor.
+            <!-- <span class="smalltext"> --> <a href="http://www.nxp.com/documents/data_sheet/LPC2388.pdf"
+              target="_blank">The Data sheet LPC2388.pdf</a> states V<sub>i</sub>(VBAT),
+            the separate input for the RTC and the SRAM, has to have 2.0V at
+            minimum, typical 3.3V and 3.6V at max for operation.
+            <!-- </span> --> With this diode in the line, that means that a
+            battery voltage between 2.2V and not exceeding 3.8V would be
+            acceptable. A note states that the RTC typically fails at 1.6V (1.8V
+            at our battery).
+            <!-- <p><em>This means that connecting an external battery pack in place of the internal 3.3V 
 		battery will probably damage the ARM processor, <b>so don't DO IT.</b></em></p> -->
-		<p>After replacing the battery, power on the Gemini-2 and set the time and date. Failure to do so
-		could cause the processor to draw too much power from the battery and might result in processor damage.&nbsp; 
-		You can also save all your settings using the Web interface Firmware/SRAM 
-		page "Store SRAM" content to file before removing the battery, and then "Load SRAM" content from 
-		file (to restore all the setting back to what they were before changing 
-		the battery), after you replace the battery..&nbsp; This will not set the date and time, you still must do this!. 
-		<ul>
-			<li>Here is a
-		<a href="videos/Losmandy_Gemini_Battery_CR2354.mp4" target="_blank">
-		video</a> of changing the CR2350 battery.</li>
-			<li>Here is a
-		<a href="videos/Losmandy_Gemini_Battery_CR2450.mp4" target="_blank">
-		video</a> of changing the CR2450 battery in the Gemini-2 Mini.</li>
-		</ul>
-		  </p>
-		
-		<p>When Losmandy receives the circuit boards, the battery has a piece 
-		of paper or other material between the positive contact and the battery 
-		to keep it from powering the ARM processor. 
-		What Losmandy does first, is to power up the Gemini-2, set the time and date, then pull out the paper or 
-		material.&nbsp; This way, the ARM processor does not have a chance to 
-		pull excessive current.&nbsp; You can emulate that on the original 
-		Gemini-2 version by putting a small circle of plastic on top of the new 
-		battery before putting it in.&nbsp; Then power up the Gemini-2, set the 
-		date and time and remove the plastic.&nbsp;&nbsp; I don't have a 
-		suggestion for the Gemini-2 Mini, as I have only seen pictures of it.&nbsp; 
-		I am open to suggestions.</p>
-	</td>
-	</tr>
-
-	<tr>
-		<td class="style6wborder"><b>WARNING:</b> If you are connecting more than one Gemini-2 to your local network please see this 
-		<a href="faqGII.html#Q3" target="_blank">FAQ 3</a></td>
-		</tr>
-<tr>
-	<td class="style6wborder">
-		<p>
-			<b>WARNING:</b> The Gemini-1 has several Startup modes. If is your habit of leaving the Gemini-1 powered on and parked, when not in use, then you should always make sure that you use one of the two options below.
-			This is because if you have a power failure, and then power is restored, and the mount is in Cold Start, Warm Start, or Warm Restart, then the RA motor will start running at the tracking rate set, and can possibility run your telescope into your roof, or a limit, without you knowing it until too late:
-		</p>
-		<ol>
-			<li>Set your startup mode to "ASK IF POSSIBLE.", or
-			</li>
-			<li>[Safest Option] Put the telescope into terrestrial mode tracking after parking. Just remember to switch it back to Sidereal mode when starting up again
-			</li>
-		</ol>
-		<p>
-			The Gemini-2, starting with the Firmware of August 22, 2013, has special Park modes:
-		</p>
-		<ul>
-			<li>If you use a park mode 0 then it is pretty much like the Gemini-1.</li>
-			<li>If you use a park mode 1 or Park mode 2 then it takes an external event such as a GOTO command in Park mode 1, and only an UN-Park command in Park mode 2 to move the mount.
-			</li>
-		</ul>
-	</td>
-</tr>
-<tr>
-	<td class="style6wborder">
-		<p>
-			If you are remote, you might want to consider an Ethernet controlled power switch. I can recommend the switches from <a href="http://www.digital-loggers.com/" target="_blank">Digital-Loggers.com</a> such as this one: <a href="http://www.digital-loggers.com/lpc.html" target="_blank">Web Power Switch 7</a>
-		</p><!-- <br /> -->
-	</td>
-</tr>
-<tr>
-	<td class="style6wborder">
-		<p>
-			<b>WARNING:</b> Do not update the firmware on on the Gemini-2 using just battery power, unless you are very very sure your battery is fully charged, and will not drop below +12V during the update. If the battery drops below +12 volts, the update can be corrupted.
-		</p>
-		<p>
-			If the update becomes corrupted, you have to remove the micro SD card and re-program it manually using a micro SD card reader/writer.
-		</p>
-	</td>
-</tr>
-<tr>
-	<td class="style6wborder">
-		<p>
-			<b>WARNING:</b> The new Level 5 Version 1 firmware has a new mode, <b>Alt/AZ</b>.
-		</p>
-		<p>
-			<b>It you have a Equatorial mount, do not select the ALT/AZ Mode.</b> This could cause the motors to slew your Equatorial mount into surrounding hardware. The uncontrolled slowing is because the limits for an ALT/AZ and the parking locations are not close to what they are for an Equatorial mount.
-		</p>
-	</td>
-</tr>
-</table>
-
-<div w3-include-html="footer.html" ></div>
-</body>
-
-
-
-
+            <p>After replacing the battery, power on the Gemini-2 and set the
+              time and date. Failure to do so could cause the processor to draw
+              too much power from the battery and might result in processor
+              damage.  You can also save all your settings using the Web
+              interface Firmware/SRAM page "Store SRAM" content to file before
+              removing the battery, and then "Load SRAM" content from file (to
+              restore all the setting back to what they were before changing the
+              battery), after you replace the battery..  This will not set the
+              date and time, you still must do this!. </p>
+            <ul>
+              <li>Here is a <a href="videos/Losmandy_Gemini_Battery_CR2354.mp4"
+                  target="_blank"> video</a> of changing the CR2350 battery.</li>
+              <li>Here is a <a href="videos/Losmandy_Gemini_Battery_CR2450.mp4"
+                  target="_blank"> video</a> of changing the CR2450 battery in
+                the Gemini-2 Mini.</li>
+            </ul>
+            <p></p>
+            <p>When Losmandy receives the circuit boards, the battery has a
+              piece of paper or other material between the positive contact and
+              the battery to keep it from powering the ARM processor. What
+              Losmandy does first, is to power up the Gemini-2, set the time and
+              date, then pull out the paper or material.  This way, the ARM
+              processor does not have a chance to pull excessive current.  You
+              can emulate that on the original Gemini-2 version by putting a
+              small circle of plastic on top of the new battery before putting
+              it in.  Then power up the Gemini-2, set the date and time and
+              remove the plastic.   I don't have a suggestion for the Gemini-2
+              Mini, as I have only seen pictures of it.  I am open to
+              suggestions.</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="style6wborder"><b>WARNING:</b> If you are connecting more
+            than one Gemini-2 to your local network please see this <a href="faqGII.html#Q3"
+              target="_blank">FAQ 3</a></td>
+        </tr>
+        <tr>
+          <td class="style6wborder">
+            <p> <b>WARNING:</b> The Gemini-1 has several Startup modes. If is
+              your habit of leaving the Gemini-1 powered on and parked, when not
+              in use, then you should always make sure that you use one of the
+              two options below. This is because if you have a power failure,
+              and then power is restored, and the mount is in Cold Start, Warm
+              Start, or Warm Restart, then the RA motor will start running at
+              the tracking rate set, and can possibility run your telescope into
+              your roof, or a limit, without you knowing it until too late: </p>
+            <ol>
+              <li>Set your startup mode to "ASK IF POSSIBLE.", or </li>
+              <li>[Safest Option] Put the telescope into terrestrial mode
+                tracking after parking. Just remember to switch it back to
+                Sidereal mode when starting up again </li>
+            </ol>
+            <p> The Gemini-2, starting with the Firmware of August 22, 2013, has
+              special Park modes: </p>
+            <ul>
+              <li>If you use a park mode 0 then it is pretty much like the
+                Gemini-1.</li>
+              <li>If you use a park mode 1 or Park mode 2 then it takes an
+                external event such as a GOTO command in Park mode 1, and only
+                an UN-Park command in Park mode 2 to move the mount. </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="style6wborder">
+            <p> If you are remote, you might want to consider an Ethernet
+              controlled power switch. I can recommend the switches from <a href="http://www.digital-loggers.com/"
+                target="_blank">Digital-Loggers.com</a> such as this one: <a href="http://www.digital-loggers.com/lpc.html"
+                target="_blank">Web Power Switch 7</a> </p>
+            <!-- <br /> --> </td>
+        </tr>
+        <tr>
+          <td class="style6wborder">
+            <p> <b>WARNING:</b> Do not update the firmware on on the Gemini-2
+              using just battery power, unless you are very very sure your
+              battery is fully charged, and will not drop below +12V during the
+              update. If the battery drops below +12 volts, the update can be
+              corrupted. </p>
+            <p> If the update becomes corrupted, you have to remove the micro SD
+              card and re-program it manually using a micro SD card
+              reader/writer. </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="style6wborder">
+            <p> <b>WARNING:</b> The new Level 5 Version 1 firmware has a new
+              mode, <b>Alt/AZ</b>. </p>
+            <p> <b>It you have a Equatorial mount, do not select the ALT/AZ
+                Mode.</b> This could cause the motors to slew your Equatorial
+              mount into surrounding hardware. The uncontrolled slowing is
+              because the limits for an ALT/AZ and the parking locations are not
+              close to what they are for an Equatorial mount. </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div w3-include-html="footer.html"></div>
+  </body>
+</html>
