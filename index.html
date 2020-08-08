@@ -17,53 +17,20 @@
     <script src="style_switcher.js"></script>
   </head>
   <body onload="set_style_from_cookie()">
-    <table style="min-width:500px; max-width:900px" align="center">
-      <tbody>
-        <tr>
-          <td align="center"> <span class="h1"> Gemini-2 and Gemini-1 Telescope
-              Mount Controllers</span> <br>
-            <span class="h2">Website and Tutorials </span> </td>
-        </tr>
-      </tbody>
-    </table>
-    <table style="min-width:500px; max-width:900px" align="center">
-      <tbody>
-        <tr>
-          <td align="center">
-            <form action="https://www.google.com/search" method="get">
-              <div style="border:1px solid black;padding:4px;width:20em;">
-                <table cellpadding="0" border="0" align="center">
-                  <tbody>
-                    <tr>
-                      <td> <input maxlength="255" name="q" size="25" value="" type="text">
-                        <input value="Google Search" type="submit"></td>
-                    </tr>
-                    <tr>
-                      <td style="font-size:75%" align="center"> <input checked="checked"
-
-                          name="sitesearch" value="gemini-2.net" type="checkbox">
-                        only search Gemini-2.com<br>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </form>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div>
+ 
+    <div w3-include-html="header.html" ></div>
+    <div class="AJXMenueDFaTFD" w3-include-html="navigation.html" ></div>
     <script>
 	w3IncludeHTML();
    </script>
-    <script type="text/javascript" src="other-files/xweb-popup.js"></script>
+    <script type="text/javascript" src="other-files/xweb-popup.js" > </script>
     <base target="_self">
+    <br>
     <div>
-      <table style="min-width:500px; max-width:900px" class="border" align="center">
+      <table style="min-width:500px; max-width:900px"  align="center">
         <tbody>
           <tr>
-            <td class="style7" style="width:450"> NEW GEMINI-2 MINI<br>
+            <td class="style7"width="250" style="padding-right: 50px;">NEW GEMINI-2 MINI<br>
               <a href="gemini-V2-pics.html" target="_self">
                 <!--
 			<a href="gemini-images/MainImages/mainimagesmall/Gem_mini_cover1_small.jpg">			-->
@@ -71,7 +38,7 @@
 
                   xthumbnail-orig-image="gemini-images/MainImages/mainimagesmall/Gem_mini_cover1_small.jpg"
 
-                  width="250" height="252"></a> </td>
+                  width="250" height="252" style="padding-right: 50px;"></a> </td>
             <td class="style7" style="min-width:300; max-width:450"> This
               version is no longer made.<br>
               <a href="gemini-V1-pics.html" target="_self">
@@ -84,11 +51,12 @@
                   width="250" height="332"></a> </td>
           </tr>
           <tr>
-            <td class="style7"> Click on either of the above images to see more
-              information about them.</td>
           </tr>
         </tbody>
       </table>
+      <div class="style7">Click on either of the above images to see more
+        information about them.</div>
+
       <hr width="600px" size="3" align="center">
       <table style="min-width:500px; max-width:900px" class="auto-style5" align="center">
         <tbody>
@@ -108,14 +76,7 @@
           </tr>
         </tbody>
       </table>
-      <table style="min-width:500px; max-width:900px" align="center">
-        <tbody>
-          <tr>
-            <td class="style5s"> <br>
-              Page last updated on August 6, 2020</td>
-          </tr>
-        </tbody>
-      </table>
+     
       <table style="min-width:500px; max-width:900px" align="center">
         <tbody>
           <tr>
@@ -140,14 +101,14 @@
             <td class="style1">Your Privacy Policy
               <br>
               No Information is collected by this site.&nbsp; Cookies are set in
-              your browser, but only to aid with navigation
+              your browser, but only to aid with navigation and preferences.
             </td>
           </tr>
           <tr class="style6">
             <td class="style13"><b>Your use of any information on this site is
                 at your own risk.</b></td>
           </tr>
-        </tbody>
+        </tbody>  
       </table>
       <p class="style7" align="center"><!--webbot bot="HTMLMarkup" startspan -->
         Copyright © 2011-2017, Thomas Hilton (R.I.P.);
@@ -156,10 +117,16 @@
 	  var email = "yh"
 	  var emailHost = "emissionline.com"
 	  document.write("Copyright &copy; 2017-2020, René Goerlich, <a href=" + "mail" + "to:" + email + "@" + emailHost+ ">" + contact + "</a>, David C. Partridge and others")
-	
-	</script><!--webbot bot="HTMLMarkup" endspan -->
+  	</script><!--webbot bot="HTMLMarkup" endspan -->
       </p>
-    </div>
+    </div>  
+    <table style="width:900px" align="center">
+      <tr><td style="font-size:small">Page last updated on <span  id="lastUpdate"></span>
+        <script>
+            var d = new Date(Date.parse(document.lastModified));
+            document.getElementById("lastUpdate").innerText = d.toDateString();</script></td></tr>
+    </table>
+  
     <div w3-include-html="themeSelector.html"></div>
   </body>
 </html>
