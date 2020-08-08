@@ -3,19 +3,11 @@
 
 
 <!-- Mirrored from gemini-2.net/firmware-changes.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Dec 2018 04:02:45 GMT -->
-<head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Firmware changes for Gemini 2</title>
-
-
-
-
 <head profile="http://www.w3.org/2005/10/profile">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
 <link rel="stylesheet" href="ajxmenu.css" type="text/css">
 
-<head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta content="en-us" http-equiv="Content-Language" />
 <title>Gemini 2 Mount Controller</title>
@@ -25,24 +17,16 @@
 <script src="style_switcher.js"></script>
 <link href="theme-selector.css" rel="stylesheet" type="text/css">
 
-<script src="w3data.js"></script></head>
+<script src="w3data.js"></script>
+</head>
 <body onload="set_style_from_cookie()">
 <div w3-include-html="header.html" ></div>
 <div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div><script>w3IncludeHTML();</script></body>
 
-
-
-
-
-</head>
-
-<body>
 <table align="center" style="width: 900px">
-	<tr>
-		<td class="h2">
-			<br/>
-				Gemini 2 Firmware Changes</td>
-	</tr>
+	<tr><td>
+			<h2>Gemini 2 Firmware Changes<h2/>
+	</td></tr>
 </table>
 	<table align="center" style="width: 900px" class="tableborder1">
 		<tr><td class="style6">
@@ -57,19 +41,56 @@
 
 
 <table align="center" style="width: 900px" class="tableborder1">
-		<tr><td class="style6">
-				<ul>
-				<li>
-				March 12 2017  Firmware Version Level 1.20 Hand Controller<ul>
-					<li>&nbsp;new mainboard firmware to to support the new G11T 
-					and G811 mount combinations. , </li>
-					<li>&nbsp;This new firmware also supports all the older version mounts except the Titan 25, which has been removed from this firmware.</li>
-				</ul>
-				
-				</li>
-				</ul>
-			</td>
-			</tr>
+	<tr>
+		<th>Date</th>
+		<th>Main Unit</th>
+		<th>Hand Controller</th>
+		<th>Details</th>
+	</tr>
+	<tr>
+		<td>March 12 2017</td>
+		<td>X</td>
+		<td>X</td>
+		<td>Firmware Version Level 1.20 Hand Controller and Level 5.21 Main Unit<br/>
+			<ul>
+				<li>New mainboard firmware to to support the new G11T 
+					and G811 mount combinations.</li>
+				<li>This new firmware also supports all the older version mounts except the Titan 25, which has been removed from this firmware.</li>
+			</ul>
+		</td>
+	</tr>
+	<tr><td><hr/></td></tr>
+	<tr>
+		<td>August 23, 2016</td>
+		<td>X</td>
+		<td></td>
+		<td>Firmware Version Level 5.21<br/>
+			<ul>
+				<li>New mainboard firmware to improve the GoTos (starting the RA axis one after the DEC axis to reduce current drain.</li>
+				<li>Improve satellite tracking by getting rid of leap-frogging.</li>
+				<li>Getting rid of the worm contact problems by slightly overshooting targets to the East then stopping and moving to the west at centering speed till target is reached, then continuing at side rail speed. This will ensure gears are fully messed at start of side rail tracking.</li>
+				<li>Implemented an Network Time Protocal (NTP) to receive time/date from the many NIST Internet Time 
+					Services for time/date setting at startup and over the web interface. See
+					<ul>
+						<li><a href="hc/E023.html" target="_blank">HC time/date</a></li>
+						<li><a href="web/web-NTP.html" target="_self">web-NTP</a></li>
+						<li><a href="web/web-network.html" target="_self">web network</a></li>
+						<li><a href="web/web-site-time.html" target="_self">web site/time</a></li>
+					</ul>
+					<!-- <a href="hc/E023.html" target="_blank">HC time/date</a>,
+					<a href="web/web-NTP.html" target="_self">web-NTP</a>,
+
+					<a href="web/web-network.html" target="_self">web network</a>
+					and
+					<a href="web/web-site-time.html" target="_self">
+					web site/time</a>.<ul> -->
+				If a NIST Internet Time Server IP address has been set up in the Gemini-2 Network Web page, then at boot up, the Gemini-2 will go out to that NIST Internet Time Server IP address and get the current UTC Time and Date.</li>
+			</ul>
+		</td>
+	</tr>
+	<tr><td><hr/></td></tr>
+			<!-- <tr><td><hr class="style2" style="width: 900px" /></td></tr>
+			<tr><td><hr class="style2" style="width: 900px" /></td></tr> -->
 </table>
 <table align="center" style="width: 900px" class="tableborder1">
 		<tr><td class="style6">
