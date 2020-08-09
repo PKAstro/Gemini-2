@@ -36,6 +36,12 @@ function addScript(response)
 
 function localURL(url)
 {
+  //handle lfs redirection for large files
+  if (url.endsWith(".zip") ||
+      url.endsWith(".mp4") ||
+      url.endsWith(".exe"))
+    document.location.href = "https://github.com/PKAstro/Gemini-2/raw/master/"+url;
+  else
     if (document.location.href.includes("/hc") ||
         document.location.href.includes("/web/") ||
         document.location.href.includes("quickstart"))
