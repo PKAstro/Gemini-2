@@ -48,6 +48,13 @@
 		<th>Details</th>
 	</tr>
 	<tr>
+		<td>2099-01-01</td>
+		<td>X</td>
+		<td>X</td>
+		<td><b>Was the last update really in 2017?.</b></td>
+	</tr>
+	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
+	<tr>
 		<td>2017-03-12</td>
 		<td>X</td>
 		<td>X</td>
@@ -153,7 +160,7 @@
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>	
 	<tr>
 		<td>2016-01-14</td>
-		<td>X</td>
+		<td></td>
 		<td>X</td>
 		<td>Hand-Controller update: Some of the return paths for the back buttons were corrected for the Jan 3 update.
 		</td>
@@ -205,7 +212,26 @@
 		<td>2015-07-22</td>
 		<td>X</td>
 		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
+		<td><ul><li>Option to start PEC when when tracking starts. Only from 
+					the <a href="web/web-functions.html" target="_self">Function page</a> of the Web interface at this time. 
+					A new version of the
+					<a href="http://www.gemini-2.net/Gemini2_drivers/GeminiTelescopeInstaller.exe" target="_blank">
+					ASCOM Gemini.net driver</a> now supports this feature.&nbsp; 
+					It is under Tracking on the Advanced Menu. The
+					<a href="Gemini2_drivers/Gemini_Telescope_Net_Installation_and_Operation.pdf" target="_blank">
+					ASCOM manual</a> was also updated.</li>
+					<li>Fixed a state bug in the PEC routine that stopped PEC 
+					when least expected.</li>
+					<li>New <a href="web/L5V1serial.html" target="_self">Serial commands</a> added:<ul>
+						<li>51 - Return 0 for original Gemini-2, Return 1 for 
+						Gemini-2 Mini.</li>
+						<li>321 - Return Main Battery Voltage in Volts, This is 
+						floating Point value.</li>
+						<li>322 - Return Lithium battery Voltage in Volts. This 
+						is floating Point value.</li>
+						<li>508 - Enable (1) or disable (0) PEC Playback at boot 
+						time, if PEC data is available.</li>
+					</ul>
 		</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
@@ -1119,17 +1145,7 @@
 </table>				
 -->
 
-
-
-	
-<br />
 <link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
-
-
 
 <div w3-include-html="footer.html" ></div>
 </body>
-
-
-
-
