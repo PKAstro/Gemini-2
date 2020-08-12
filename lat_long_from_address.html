@@ -144,13 +144,21 @@ function dateToString(dt)
 		setTimeout(updateUTC, 500);
 	}
 	setTimeout(updateUTC, 500);
+
+	var body = document.getElementsByTagName('body')[0];
+    body.onkeydown = function (e) {
+        if (e.keyCode === 13) {  //enter key code
+			document.getElementById('submit').click();
+        }
+    }
+
 	</script>
 
  
 
 <table align="center" style="width: 900px">
 	<tr>
-		<td  align="center"style="width: 900px">
+		<td  align="center" style="width: 900px">
 		<h2>Latitude, Longitude, and UTC Offset<br>
 			from Street Address
 		 </h2>
@@ -165,7 +173,7 @@ function dateToString(dt)
 		<p><br /> 
 		 <br />
 		 	Enter your full address here:<input type="text" name="address" id="address" value="" style="width:90%">
-			 <input type="button" name="submit_address" value="Submit" onclick="getLatLng(document.getElementById('address').value)" style="margin: 4px 0 0px 0px"/>
+			 <input type="button" name="submit_address" id="submit" value="Submit" onclick="getLatLng(document.getElementById('address').value)" style="margin: 4px 0 0px 0px"/>
 		<br /><div class="style6s">*If no result, please wait a little while and press Submit again</div></p>
 		
 	</td>
