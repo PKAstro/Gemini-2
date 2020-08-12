@@ -112,6 +112,38 @@
 }
 
 
+
+
+function dateToString(dt)
+{
+	var current_date = dt.getUTCDate(),
+	current_month = dt.getUTCMonth() + 1,
+	current_year = dt.getUTCFullYear(),
+	current_hrs = dt.getUTCHours(),
+	current_mins = dt.getUTCMinutes(),
+	current_secs = dt.getUTCSeconds(),
+	current_datetime;
+
+	// Add 0 before date, month, hrs, mins or secs if they are less than 0
+	current_date = current_date < 10 ? '0' + current_date : current_date;
+	current_month = current_month < 10 ? '0' + current_month : current_month;
+	current_hrs = current_hrs < 10 ? '0' + current_hrs : current_hrs;
+	current_mins = current_mins < 10 ? '0' + current_mins : current_mins;
+	current_secs = current_secs < 10 ? '0' + current_secs : current_secs;
+
+	// Current datetime
+	// String such as 2016-07-16T19:20:30
+	current_datetime = current_year + '-' + current_month + '-' + current_date + " " + current_hrs + ':' + current_mins + ':' + current_secs;
+	return current_datetime;
+	}
+
+	function updateUTC()
+	{
+		var utc = new Date();
+		document.getElementById('utcTime').innerHTML = dateToString(utc);
+		setTimeout(updateUTC, 500);
+	}
+	setTimeout(updateUTC, 500);
 	</script>
 
  
@@ -128,13 +160,13 @@
 
 <table align="center" class="tableborder1" style="width: 900px">
 	<tr>	
-	<td class="style6"  align="center"style="width: 500px">
+	<td class="style6"  align="center" style="width: 500px">
 		
 		<p><br /> 
 		 <br />
 		 	Enter your full address here:<input type="text" name="address" id="address" value="" style="width:90%">
-			 <input type="button"" name="submit_address" value="Submit" onclick="getLatLng(document.getElementById('address').value)" style="margin: 4px 0 0px 0px"/>
-		<br /><div class="style6s">*If no result, please wait a little while and press Submit again</div>
+			 <input type="button" name="submit_address" value="Submit" onclick="getLatLng(document.getElementById('address').value)" style="margin: 4px 0 0px 0px"/>
+		<br /><div class="style6s">*If no result, please wait a little while and press Submit again</div></p>
 		
 	</td>
 	<td  style="width: 500px" class="style6" >
@@ -142,7 +174,8 @@
 Closest matching address:
 <div id="addr" class="style3"></div><br>	
 Latitude & Longitude:<br><div id="latlng" class="style3"></div><br>
-Current UTC TimeZone Offset:<br><div id="utcOffset" class="style3"></div>
+Current UTC TimeZone Offset:<br><div id="utcOffset" class="style3"></div><br>
+Current UTC Date and Time:<div id="utcTime" class="style3"></div><br>
 </td>
 </tr>
 </table>
