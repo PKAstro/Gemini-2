@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US">
+
+    <head profile="http://www.w3.org/2005/10/profile">
+        <meta content="en-us" http-equiv="Content-Language">
+        <title>Gemini-2 video player</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <script src="w3data.js"></script>
+    </head>
+
+    <body>
+        <script>
+            const queryString = window.location.search;
+            const u = queryString.replace("?url=", ""); 
+            document.body.innerHTML = '<video width="100%" controls autoplay><source src="' + "https://github.com/PKAstro/Gemini-2/raw/master/" + u + '">Your browser does not support HTML video.</video>';
+        </script>
+        
+    </body>
+    </html>
