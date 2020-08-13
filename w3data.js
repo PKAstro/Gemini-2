@@ -129,18 +129,16 @@ function getSearch()
 function updateSearch()
 {
   var s = getSearch();
+  document.getElementById("setG").value = s;
+
   if (s=="1") 
   {
-      document.getElementById("setG").value = s;
-      document.getElementById("setD").value = s;
-      document.getElementById("google").style="display:block";
-      document.getElementById("ddg").style = "display:none";
+      document.getElementById("q").placeholder="search Google";
+      document.getElementById("form").action="https://www.google.com/search";
   } 
   else if (s=="2")
   {
-      document.getElementById("setG").value = s;
-      document.getElementById("setD").value = s;
-      document.getElementById("google").style="display:none";
-      document.getElementById("ddg").style = "display:block";
+      document.getElementById("q").placeholder="search DuckDuckGo";
+      document.getElementById("form").action="https://duckduckgo.com/";
   }
 }
