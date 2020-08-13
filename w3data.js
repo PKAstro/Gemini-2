@@ -68,8 +68,11 @@ function localURL(url)
   } 
   else if (url.endsWith(".mp4"))
   {
+    if (window.document.documentMode) //IE special handling
+        document.location.href = "https://github.com/PKAstro/Gemini-2/raw/master/"+url;
+    else
         document.location.href = "/video.html?url="+url; // load video viewer
-        return false;
+    return false;
   }
   else
     if (document.location.href.includes("/hc") ||
