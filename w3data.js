@@ -34,7 +34,8 @@ function addScript(response)
 //  newdiv.remove(); //not supported by earlier versions of IE
 }
 
-if (!String.prototype.endsWith) { //needed for IE compatibility
+//needed for IE compatibility
+if (!String.prototype.endsWith) { 
   String.prototype.endsWith = function(search, this_len) {
       if (this_len === undefined || this_len > this.length) {
           this_len = this.length;
@@ -42,7 +43,18 @@ if (!String.prototype.endsWith) { //needed for IE compatibility
       return this.substring(this_len - search.length, this_len) === search;
   };
 }
+//needed for IE compatibility
+if (!String.prototype.includes) {
+  String.prototype.includes = function(search, start) {
+    'use strict';
 
+    if (search instanceof RegExp) {
+      throw TypeError('first argument must not be a RegExp');
+    } 
+    if (start === undefined) { start = 0; }
+    return this.indexOf(search, start) !== -1;
+  };
+}
 
 function localURL(url)
 {
