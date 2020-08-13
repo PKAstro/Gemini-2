@@ -56,11 +56,6 @@ if (!String.prototype.includes) {
   };
 }
 
-function loadVideo(url)
-{
-  // open video player directly in the same tab instead of downloading mp4
-  document.body.innerHTML = '<video width="100%" controls autoplay><source src="' +url + '">Your browser does not support HTML video.</video>';
-}
 
 function localURL(url)
 {
@@ -73,7 +68,7 @@ function localURL(url)
   } 
   else if (url.endsWith(".mp4"))
   {
-        loadVideo("https://github.com/PKAstro/Gemini-2/raw/master/"+url);
+        document.location.href = "/video.html?url="+url; // load video viewer
         return false;
   }
   else
