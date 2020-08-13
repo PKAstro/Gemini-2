@@ -31,7 +31,7 @@ function addScript(response)
     for (var ix = 0; ix < scripts.length; ix++) {
       eval(scripts[ix].text);
   }
-  newdiv.remove();
+//  newdiv.remove(); //not supported by earlier versions of IE
 }
 
 function localURL(url)
