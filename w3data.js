@@ -56,13 +56,26 @@ if (!String.prototype.includes) {
   };
 }
 
+function loadVideo(url)
+{
+  // open video player directly in the same tab instead of downloading mp4
+  document.body.innerHTML = '<video width="100%" controls autoplay><source src="' +url + '">Your browser does not support HTML video.</video>';
+}
+
 function localURL(url)
 {
   //handle lfs redirection for large files
   if (url.endsWith(".zip") ||
-      url.endsWith(".mp4") ||
-      url.endsWith(".exe"))
-    document.location.href = "https://github.com/PKAstro/Gemini-2/raw/master/"+url;
+      url.endsWith(".exe")) {
+        document.location.href = "https://github.com/PKAstro/Gemini-2/raw/master/"+url;
+        return false;
+
+  } 
+  else if (url.endsWith(".mp4"))
+  {
+        loadVideo("https://github.com/PKAstro/Gemini-2/raw/master/"+url);
+        return false;
+  }
   else
     if (document.location.href.includes("/hc") ||
         document.location.href.includes("/web/") ||
