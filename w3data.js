@@ -34,6 +34,16 @@ function addScript(response)
 //  newdiv.remove(); //not supported by earlier versions of IE
 }
 
+if (!String.prototype.endsWith) { //needed for IE compatibility
+  String.prototype.endsWith = function(search, this_len) {
+      if (this_len === undefined || this_len > this.length) {
+          this_len = this.length;
+      }
+      return this.substring(this_len - search.length, this_len) === search;
+  };
+}
+
+
 function localURL(url)
 {
   //handle lfs redirection for large files
@@ -57,7 +67,11 @@ function theme() {
   }
   // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
+
+  // needed to support IE:
+  matches = event.target.matches ? event.target.matches('.dropbtn') : event.target.msMatchesSelector('.dropbtn');
+
+  if (!matches) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
