@@ -52,93 +52,69 @@
     }
   }
 
- 
+
   updateSearch();
 
 </script>
 
-  <style type="text/css">
-      #widdget input {
-        display: block;
-        height: 25px;
-        padding: 4px;
-        outline: none;
-        border: 1px solid #8d8d8d;
-        border-right: 0;
-        box-sizing: border-box;
-        border-radius: 3px 0 0 3px;
-        width: 200px;
-        font-size: 12px;
-      }
+<style type="text/css">
+  #widdget input {
+    display: block;
+    height: 25px;
+    padding: 4px;
+    outline: none;
+    border: 1px solid #8d8d8d;
+    border-right: 0;
+    box-sizing: border-box;
+    border-radius: 3px 0 0 3px;
+    width: 200px;
+    font-size: 12px;
+  }
 
-      #widdget button {
-        float: left;
-        cursor: pointer;
-        width: 35px;
-        height: 25px;
-        color: #fff;
-        background-image: linear-gradient(#cacaca, #929292);
-        border: 0;
-        border-radius: 0 3px 3px 0;
-      }
+  #widdget button {
+    float: left;
+    cursor: pointer;
+    width: 35px;
+    height: 25px;
+    color: #fff;
+    background-image: linear-gradient(#cacaca, #929292);
+    border: 0;
+    border-radius: 0 3px 3px 0;
+  }
 
-      #widdget button:active {
-        background-image: linear-gradient(#909090, #585858);
-      }
+  #widdget button:active {
+    background-image: linear-gradient(#909090, #585858);
+  }
 
-      #widdget button:focus {
-        outline: none;
-      }
-    </style>
+  #widdget button:focus {
+    outline: none;
+  }
+</style>
 <div class="h1"> Gemini-2 and Gemini-1 Telescope Mount Controllers</div>
 <div class="h2">Website and Tutorials </div>
 
 
-<div align="center" id="google" style="display:block;" >
+<div align="center" id="google" style="display:block;">
   <div id="widdget" style="width:100%;margin:10px 0;">
-  <form action="https://www.google.com/search" method="get">
+    <form action="https://www.google.com/search" method="get" id="form">
 
-    <table cellpadding="0" id="widdget">
-      <tr>
-        <td > 
-          <input style="display:inline-flex" maxlength="255" name="q" size="25" value="" type="text" placeholder="Search Google ">
-          <button style="float:right" type="submit">&#128269;</button></td>
-          <input checked="checked" name="sitesearch" value="gemini-2.com"
-            type="hidden" />
+      <table cellpadding="0" id="widdget">
+        <tr>
+          <td>
+            <input style="display:inline-flex" maxlength="255" name="q" id="q" size="25" value="" type="text"
+              placeholder="Search Google ">
+            <button style="float:right" type="submit">&#128269;</button></td>
+          <input checked="checked" name="sitesearch" value="gemini-2.com" type="hidden" />
+          <input type="hidden" name="sites" value="gemini-2.com" />
         </tr>
-      <tr>
-        <td align="left"><select onchange="setSearch(this.value);updateSearch();" id="setG" style="background:rgba(230, 230, 230, 1);color:#929292"">          
-          <option value="1" selected>Google</option>
-          <option value="2">DuckDuckGo</option>
-        </select></td>
-      </tr>
-    </table>
-  </form>
-</div>
-
-</div>
-
-<div align="center" id="ddg" style="display:block"> 
-  <!-- DDG search widget,@author Juri Wornowitski,@version 3.0,@link https://www.plainlight.com/ddg -->
-  <div id="widdget" style="width:100%;margin:10px 0;">
-  
-    <form style="position:relative" method="get" action="https://duckduckgo.com/" target="_self">
-     <table cellpadding="0">
-          <tr>
-            <td><input style="display:inline-flex" type="text" name="q" placeholder="Search DuckDuckGo" />
-              <input type="hidden" name="sites" value="gemini-2.net" />
-              <button style="float:right" type="submit">&#128269;</button>
-            </td>
-          </tr>
-          <tr>
-            <td align="left"><select onchange="setSearch(this.value);updateSearch();" id="setD" style="background:rgba(230, 230, 230, 1);color:#929292">          
+        <tr>
+          <td align="left"><select onchange="setSearch(this.value);updateSearch();" id="setG"
+              style="background:rgba(230, 230, 230, 1);color:#929292">
               <option value="1" selected>Google</option>
               <option value="2">DuckDuckGo</option>
             </select></td>
-          </tr>
-        </table>
-       
-      </form>
-     
+        </tr>
+      </table>
+    </form>
   </div>
 </div>
