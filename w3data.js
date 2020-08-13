@@ -111,3 +111,36 @@ window.onclick = function(event) {
   }
 }
 
+
+// 1 = google
+// 2 = duckduckgo
+function setSearch(t)
+{
+  set_cookie ( "searchEngine", t, 30);
+}
+
+function getSearch()
+{
+  var c = get_cookie( "searchEngine");
+  if (c!="1" && c!="2") c = "1";
+  return c;
+}
+
+function updateSearch()
+{
+  var s = getSearch();
+  if (s=="1") 
+  {
+      document.getElementById("setG").value = s;
+      document.getElementById("setD").value = s;
+      document.getElementById("google").style="display:block";
+      document.getElementById("ddg").style = "display:none";
+  } 
+  else if (s=="2")
+  {
+      document.getElementById("setG").value = s;
+      document.getElementById("setD").value = s;
+      document.getElementById("google").style="display:none";
+      document.getElementById("ddg").style = "display:block";
+  }
+}
