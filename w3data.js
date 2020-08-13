@@ -56,6 +56,11 @@ if (!String.prototype.includes) {
   };
 }
 
+const gitLFS = "https://github.com/PKAstro/Gemini-2/raw/master/";
+
+//make LFS contents relative to the domain:
+if (window.location.includes("//gemini-2.com"))
+  gitLFS = "https://github.com/PKAstro/Gemini-2-com/raw/master/";
 
 function localURL(url)
 {
