@@ -1,61 +1,144 @@
-
 <style>
-	#toTopBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 10px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color:transparent; /* Set a background color */
-  color: black; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
-}
+  #toTopBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 10px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: transparent;
+    /* Set a background color */
+    color: black;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+  }
 
-#toTopBtn:hover {
-  background-color: rgba(85, 85, 85, 0.625); /* Add a dark-grey background on hover */
-}
+  #toTopBtn:hover {
+    background-color: rgba(85, 85, 85, 0.625);
+    /* Add a dark-grey background on hover */
+  }
 </style>
 
-<button onclick="document.body.scrollTop = 0;document.documentElement.scrollTop = 0;" id="toTopBtn" title="Go to top"><img style="opacity: 0.5" src="/totop.png" width="40px" height="40px"></button>
+<button onclick="document.body.scrollTop = 0;document.documentElement.scrollTop = 0;" id="toTopBtn"
+  title="Go to top"><img style="opacity: 0.5" src="/totop.png" width="40px" height="40px"></button>
 <script>
-	//Get the button:
-mybutton = document.getElementById("toTopBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+  //Get the button:
+  mybutton = document.getElementById("toTopBtn");
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () { scrollFunction() };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
   }
-}
+
+ 
+  updateSearch();
+
 </script>
 
+  <style type="text/css">
+      #widdget input {
+        display: block;
+        height: 25px;
+        padding: 4px;
+        outline: none;
+        border: 1px solid #8d8d8d;
+        border-right: 0;
+        box-sizing: border-box;
+        border-radius: 3px 0 0 3px;
+        width: 200px;
+        font-size: 12px;
+      }
 
-<div class="h1"> Gemini-2 and Gemini-1 Telescope Mount Controllers</div> 
-<div class="h2">Website and Tutorials </div> 
-       
-<div align="center">
-    <form action="https://www.google.com/search" method="get">
-    <div style="padding:4px;width:20em;"></div>
-        <table cellpadding="0">
-            <tr>
-            <td> <input maxlength="255" name="q" size="25" value="" type="text">
-                <input value="Google Search" type="submit"></td>
-            </tr>
-            <tr>
-            <td style="font-size:75%" align="left"> <input checked="checked"
-                name="sitesearch" value="gemini-2.com" type="checkbox">
-                only search Gemini-2.com<br>
+      #widdget button {
+        float: left;
+        cursor: pointer;
+        width: 35px;
+        height: 25px;
+        color: #fff;
+        background-image: linear-gradient(#cacaca, #929292);
+        border: 0;
+        border-radius: 0 3px 3px 0;
+      }
+
+      #widdget button:active {
+        background-image: linear-gradient(#909090, #585858);
+      }
+
+      #widdget button:focus {
+        outline: none;
+      }
+    </style>
+<div class="h1"> Gemini-2 and Gemini-1 Telescope Mount Controllers</div>
+<div class="h2">Website and Tutorials </div>
+
+
+<div align="center" id="google" style="display:block;" >
+  <div id="widdget" style="width:100%;margin:10px 0;">
+  <form action="https://www.google.com/search" method="get">
+
+    <table cellpadding="0" id="widdget">
+      <tr>
+        <td > 
+          <input style="display:inline-flex" maxlength="255" name="q" size="25" value="" type="text" placeholder="Search Google ">
+          <button style="float:right" type="submit">&#128269;</button></td>
+          <input checked="checked" name="sitesearch" value="gemini-2.com"
+            type="hidden" />
+        </tr>
+      <tr>
+        <td align="left"><select onchange="setSearch(this.value);updateSearch();" id="setG" style="background:rgba(230, 230, 230, 1)">          
+          <option value="1" selected>Google</option>
+          <option value="2">DuckDuckGo</option>
+        </select></td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+</div>
+
+<div align="center" id="ddg" style="display:block"> 
+  <!-- DDG search widget,@author Juri Wornowitski,@version 3.0,@link https://www.plainlight.com/ddg -->
+  <div id="widdget" style="width:100%;margin:10px 0;">
+  
+    <form style="position:relative" method="get" action="https://duckduckgo.com/" target="_self">
+     <table cellpadding="0">
+          <tr>
+            <td><input style="display:inline-flex" type="text" name="q" placeholder="Search DuckDuckGo" />
+              <input type="hidden" name="sites" value="gemini-2.net" />
+              <button style="float:right" type="submit">&#128269;</button>
             </td>
-            </tr>
+          </tr>
+          <tr>
+            <td align="left"><select onchange="setSearch(this.value);updateSearch();" id="setD" style="background:rgba(230, 230, 230, 1)">          
+              <option value="1" selected>Google</option>
+              <option value="2">DuckDuckGo</option>
+            </select></td>
+          </tr>
         </table>
-    </form>
+       
+      </form>
+     
+  </div>
 </div>
