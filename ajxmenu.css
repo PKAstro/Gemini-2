@@ -3,7 +3,7 @@
  Copyright (C) 2010 Ajatix. All rights reserved.
  http://www.ajatix.com
 */
-.AJXMenueDFaTFD {position:relative;margin:0 auto;z-index:100;max-width:898px;min-width:500px;min-height:28px;max-height:84px;border:1px solid #3770b5;background:#689fe0;text-align:center;z-index: 10000;}
+.AJXMenueDFaTFD {position:relative;margin:0 auto;z-index:100;max-width:898px;min-width:500px;min-height:28px;max-height:84px;border:1px solid #3770b5;background:#689fe0;text-align:center;z-index: 500;}
 .AJXMenueDFaTFD ul {position:relative;display:inline-block;margin:0;padding:0;list-style-type:none;}
 * html .AJXMenueDFaTFD ul {display:inline;}
 *+html .AJXMenueDFaTFD ul {display:inline;}
