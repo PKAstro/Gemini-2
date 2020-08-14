@@ -52,7 +52,7 @@
     }
   }
 
-
+  
   updateSearch();
 
 </script>
@@ -89,32 +89,43 @@
   #widdget button:focus {
     outline: none;
   }
+
 </style>
 <div class="h1"> Gemini-2 and Gemini-1 Telescope Mount Controllers</div>
 <div class="h2">Website and Tutorials </div>
 
 
 <div align="center" id="google" style="display:block;">
-  <div id="widdget" style="width:100%;margin:10px 0;">
-    <form action="https://www.google.com/search" method="get" id="form">
-
+  <div id="widdget" style="width:100%;margin:0px 0;">
+    
       <table cellpadding="0" id="widdget">
         <tr>
           <td>
-            <input style="display:inline" maxlength="255" name="q" id="q" size="25" value="" type="text"
-              placeholder="Search Google ">
-            <button style="float:right" type="submit">&#128269;</button></td>
-          <input checked="checked" name="sitesearch" value="gemini-2.com" type="hidden" />
-          <input type="hidden" name="sites" value="gemini-2.com" />
+              <form action="https://www.google.com/search" method="get" id="form">
+
+              <input style="display:inline; background:transparent;" maxlength="255" name="q" id="q" size="25" value="" type="text"
+                placeholder="Search Google">     
+                <button style="float:right" type="submit">&#128269;</button>
+          
+                <input checked="checked" name="sitesearch" value="gemini-2.com" type="hidden" />
+                <input type="hidden" name="sites" value="gemini-2.com" />
+              </form>
+            </td>
+            <td> 
+                <div id="searchEngine">
+                <button onclick="search()" class="dropbtn style6s" >&#9881;</button>
+                <div class="dropdown" style="display:inline;">
+                <div id="searchDropdown" class="dropdown-content"  >
+                  <a href="javascript:{setSearch('1');updateSearch();}">Search site using Google</a>
+                  <a href="javascript:{setSearch('2');updateSearch();}">Search site using DuckDuckGo</a>
+                </div>
+              </div>		
+            </div>
+          </td>
+         
         </tr>
-        <tr>
-          <td align="left"><select onchange="setSearch(this.value);updateSearch();" id="setG"
-              style="background:rgba(230, 230, 230, 1);color:#929292">
-              <option value="1" selected>Google</option>
-              <option value="2">DuckDuckGo</option>
-            </select></td>
-        </tr>
+      
       </table>
-    </form>
+
   </div>
 </div>
