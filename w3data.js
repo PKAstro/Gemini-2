@@ -95,7 +95,7 @@ function theme() {
   }
 
 
-  function search() {
+  function searchShow() {
     document.getElementById("searchDropdown").classList.toggle("show");
     }
   // Close the dropdown menu if the user clicks outside of it

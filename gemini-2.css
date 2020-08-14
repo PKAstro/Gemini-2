@@ -320,15 +320,8 @@ border-color: DarkSlateGrey;
 	cursor: pointer;
   }
  
-  #searchEngine .dropbtn {
-	align-items: center;
-	background-color: transparent;
-	color: black;
-	padding: 5px 10px;
-	font-size: 10pt;
-	border: none;
-	cursor: pointer;
-	border-radius: 3px;
-	float:left;
+  
+  #form #q {
+	  color: black;
   }
  
