@@ -93,6 +93,11 @@ function localURL(url)
 function theme() {
 	document.getElementById("themeSelector").classList.toggle("show");
   }
+
+
+  function search() {
+    document.getElementById("searchDropdown").classList.toggle("show");
+    }
   // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
 
@@ -112,6 +117,7 @@ window.onclick = function(event) {
 }
 
 
+
 // 1 = google
 // 2 = duckduckgo
 function setSearch(t)
@@ -129,7 +135,6 @@ function getSearch()
 function updateSearch()
 {
   var s = getSearch();
-  document.getElementById("setG").value = s;
 
   if (s=="1") 
   {
@@ -141,4 +146,5 @@ function updateSearch()
       document.getElementById("q").placeholder="search DuckDuckGo";
       document.getElementById("form").action="https://duckduckgo.com/";
   }
+ 
 }
