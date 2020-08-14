@@ -86,44 +86,27 @@
 <br />
 <table align="center" style="width: 900px">
 	<tr>
-		
 		<td width="900px" class="style6">
-		There are 4 ways to update the firmware in the Gemini 2 controller. 
-		All methods require an Ethernet connection between your computer and the 
-		Gemini-2. This also includes removing the micro-SDcards and programming 
-		them directly.&nbsp; 
-		If for no other reason, it is required to tell the Web interface to 
-		flash the program into the ARM processor.&nbsp; But for the other FTP methods 
-		Ethernet is also required to transfer all the files.&nbsp; If you don't have an Ethernet connection see
-		<a href="ConnectingtoG2.html" target="_self">
-		http://gemini-2.com/ConnectingtoG2.php</a><br />
-		All updated files are listed at the bottom of this page.&nbsp; Other 
-		web pages may have them listed also, but the links at the bottom of this 
-		page should be the most current.<br /><br />
-		<p>The four methods are:
+		<p>There are 4 ways to update the firmware in the Gemini 2 controller. All methods require an Ethernet connection between your computer and the 
+		Gemini-2. This also includes removing the micro-SDcards and programming them directly. If for no other reason, it is required to tell the Web interface to flash the program into the ARM processor. But for the other FTP methods Ethernet is also required to transfer all the files. If you don't have an Ethernet connection see <a href="ConnectingtoG2.html" target="_self">http://gemini-2.com/ConnectingtoG2.php</a></p>
+
+		<p>All updated files are listed at the bottom of this page. Other web pages may have them listed also, but the links at the bottom of this 
+		page should be the most current.</p>
+
+		<p>The four methods are:</p>
 		<ol>
-			<li>Use the new <a href="gfu.html" target="_self">Firmware Update program for Windows</a>, that can update everything, 
-		just the main unit, catalog files, or the new video files.&nbsp; This is now the recommended 
-		method.&nbsp; This routine updates the Gemini-2 almost twice as fast as most of the FTP methods.</li>
-			<li><a name="The_FTP_Methods">The FTP Methods
-		</a>are divided into two methods, 
-		according to which FTP method you use.&nbsp; The FTP methods are for advanced users, that understand how the 
-		firmware and directory structure of the micro-SDCards works, and how to 
-		use a computer.&nbsp; Use a FTP 
-		method to program both the Main unit and Graphics Hand controller at the 
-		same time. You either use an FTP client such as
-		<a href="http://download.filezilla-project.org/FileZilla_3.7.3_win32-setup.exe" target="_blank">
-		Filezilla Client</a>, or Windows File Explorer. (put
-		ftp://admin@Gemini or
-		ftp://admin@192.168.0.111 if using Windows File Explorer.)&nbsp; 
-		Note if your IP address for the Gemini-2 is different then use that.
-		<br />
-		Use a FTP program (Recommended when more than one file is being 
-		updated, or rebuilding the main units micro-SDcard file 
-				structure.) Again this is only for Advanced user that 
-				understand the directory and file structure of the micro-SDcards. Only firmware dated after 9 April 
-		2011 has the FTP 
-				capability build in.</li>
+			<li><p>Use the new <a href="gfu.html" target="_self">Gemini Firmware Update (GFU) program for Windows</a>, that can update everything, just the main unit, catalog files, or the new video files. This is now the recommended method. This routine updates the Gemini-2 almost twice as fast as most of the FTP methods.</p></li>
+			<li><p><a name="The_FTP_Methods">The FTP Methods</a> are divided into two methods,according to which FTP method you use. The FTP methods are for advanced users, that understand how the firmware and directory structure of the micro-SDCards works, and how to use a computer.</p>
+			<ul>
+				<li><p>Use an FTP method to update a single file for either the Main unit and Graphics Hand controller at the same time. You either use an FTP client such as <a href="http://download.filezilla-project.org/FileZilla_3.7.3_win32-setup.exe" target="_blank"> Filezilla Client</a>, or Windows File Explorer. (put ftp://admin@Gemini or ftp://admin@192.168.0.111 if using Windows File Explorer.) <strong>Note if your IP address for the Gemini-2 is different then use that.</strong></p></li>
+		
+				<li><p>Use an FTP program (Recommended when more than one file is being updated, or rebuilding the main units micro SD card file structure.) Again this is only for Advanced user that understand the directory and file structure of the micro SD cards. Only firmware dated after 9 April 2011 has the FTP capability build in.</p></li>
+			</ul>
+			<p><ul>
+				<li>Here is a <a href="updateFileExplorer.html" target="_self">link</a> explaining the use of the Windows File Explorer method.</li>
+				<li>Here is a <a href="installing_level5_Vesion1.html" target="_self">link </a> explaining the use of the FTP (Filezilla client) method.</li>
+			</ul></p></li>
+			
 			<li>Use the Web interface.&nbsp; (Recommended when gemhc.bin or 
 				NewGem.bin/gemhc.bin is the only files being updated.)&nbsp; You can 
 		only update one file at a time using this method.&nbsp; This 
@@ -154,74 +137,23 @@
 		<span class="style2">download section.</span></li>
 		</ol>
 		</p>
-		1. <br />
-		<br />
-			2. <br />
-		
-		<ul>
-			
-			<li>Here is a
-			<a href="updateFileExplorer.html" target="_self">
-			link</a> explaining the use of the Windows File Explorer method.
-			</li>
-			<li>Here is a
-			<a href="installing_level5_Vesion1.html" target="_self">
-			link </a>&nbsp;explaining the use of the FTP (Filezilla client) method.</li>
-		</ul>
-				
-		<hr class="style2" noshade="noshade" style="width: 900px" />
-		<br />	
 		</td>
 	</tr>
 </table>
 	
 <table align="center" style="width: 900px">
 	<tr>
-		<td class="style6">
-		3. <br />
-		<br />
-		 <hr class="auto-style1" style="width: 900px" noshade="noshade" />
-		 <br />
-		<br />
-		4. <br /><br />
-		<hr class="auto-style1" noshade="noshade" style="width: 900px; height: 4px" /><br />
-			
-		NOTES:
-		1. The Hand Controller is updated using a file called gemhc.bin, 
-			and can be done from the main Gemini 2 unit using either the Web 
-			interface or the FTP method. Putting the gemhc.bin file in a 
-			subdirectory called HCFirmware will upload it to the hand controller 
-			from the main Gemini 2 unit. Please note that there are now 38 (as of 
-		August 2013) button files that also have to be uploaded to update the 
-		Hand controller.&nbsp; Please note that the Gemini MUST BE THROUGH 
-			THE BOOT MENU for this to work. Also any catalog (.GUC file) can be 
-			uploaded to the hand controller the same way.<br /><br />
-		2. The Main Gemini unit's 
-		ARM processor is updated using a file called NewGem.bin. But there are 
-		many files in up to 30 sub-directories, that support it.&nbsp; Not all 
-		have to be present, but the EN directory is a must for the English 
-		language.&nbsp; The Gemini-2 creates some of these directories itself, 
-		such as LOGS, CONFIG, PEC, and MODELS.<br /><br />
-		
-		3.	Both micro-SDcards (the one in the Hand Controller, and the one 
-			in the Main Gemini 2) also contain many other files.&nbsp; These 
-			other files can be put on the 
-			
-			Main Gemini 2 unit with a 
-				FTP program, or
-				one at a time with the web interface, or
-				by removing the 
-			card and putting the files on it with a card reader/writer, and the reinstalling 
-			the card. There are 2 ways to do this with the Hand Controller files, 
-				
-					use a card reader/writer 
-			on the micro-SDcard in the Hand controller, or 
-					put the files in the HCFirmware directory of the main micro-SDcard directory.  This is normally a one time thing, 
-			as most of the files on the Hand Controller mini-SDcard are the Star 
-			Catalogs and button files which seldom change if ever. <br /><br />
-		
-			</td>
-		</tr>
+		<td class="style6">		
+			<p><strong>NOTES:</strong></p>
+			<ol>
+				<li><p>The Hand Controller is updated using a file called gemhc.bin, and can be done from the main Gemini 2 unit using either the Web interface or the FTP method. Putting the gemhc.bin file in a subdirectory called HCFirmware will upload it to the hand controller from the main Gemini 2 unit. Please note that there are now 38 (as of August 2013) button files that also have to be uploaded to update the Hand controller. Please note that the Gemini MUST BE THROUGH THE BOOT MENU for this to work. Also any catalog (.GUC) file can be uploaded to the hand controller the same way.</p></li>
+
+				<li><p>The Main Gemini unit's ARM processor is updated using a file called NewGem.bin. But there are many files in up to 30 sub-directories, that support it. Not all have to be present, but the EN directory is a must for the English language. The Gemini-2 creates some of these directories  itself, such as LOGS, CONFIG, PEC, and MODELS.</p></li>
+
+				<li><p>Both micro SD cards (the one in the Hand Controller, and the one in the Main Gemini 2) also contain many other files. These other files can be put on the Main Gemini 2 unit with an FTP program, or one at a time with the web interface, or by removing the card and putting the files on it with a card reader/writer, and the reinstalling the card. There are 2 ways to do this with the Hand Controller files, use a card reader/writer on the micro SD card in the Hand controller, or put the files in the HCFirmware directory of the main micro SD card directory. This is normally a one time thing, as most of the files on the Hand Controller micro SD card are the Star Catalogs and button files which seldom change if ever.</p><li/>
+			</ol>
+		</td>
+	</tr>
 </table>
 
 <hr class="style2" noshade="noshade" style="width: 900px; height: 4px" />
@@ -246,7 +178,7 @@
 	<tr>
 		<td><strong>Catalogs</strong></td>
 		<td>Directory</td>
-		<td>Contains all the star catalogs in *.Guc format. Currently there are 20 catalogs.</td>
+		<td>Contains all the star catalogs in *.GUC format. Currently there are 20 catalogs.</td>
 	</tr>
 	<tr>
 		<td><strong>CONFIG</strong></td>
