@@ -28,52 +28,50 @@
 			<h2>Gemini 2 Firmware Changes<h2/>
 	</td></tr>
 </table>
-	<table align="center" style="width: 900px" class="tableborder1">
-		<tr><td class="style6">
-			
-			<em>There is no guarantee that this list is complete.</em>&nbsp; 
-			Latest changes listed first.<br />
-			</td>
-			</tr>
+<table align="center" style="width: 900px" class="tableborder1">
+	<tr>
+		<td class="style6">
+			<em>There is no guarantee that this list is complete.</em> Latest changes listed first.
+		</td>
+	</tr>
 </table>				
 
-<hr class="style2" style="width: 900px" />
+<!-- <hr class="style2" style="width: 900px" /> -->
 
 
 <table align="center" style="width: 900px"> <!-- class="tableborder1"> -->
 	<tr>
-		<th>Date (Y-M-D)</th>
+		<th style="width: 100px">Date (Y-M-D)</th>
 		<th>Main Unit</th>
 		<th>Hand Controller</th>
 		<th>Details</th>
 	</tr>
-	<tr>
+	<!-- <tr>
 		<td>2099-01-01</td>
 		<td>X</td>
 		<td>X</td>
 		<td><b>Was the last update really in 2017?.</b></td>
 	</tr>
-	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
+	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>  -->
 	<tr>
 		<td>2017-03-12</td>
-		<td>X</td>
-		<td>X</td>
+		<td>MU</td>
+		<td>HC</td>
 		<td>Firmware Version Level 1.20 Hand Controller and Level 5.21 Main Unit<br/>
 			<ul>
-				<li>New mainboard firmware to to support the new G11T 
-					and G811 mount combinations.</li>
-				<li>This new firmware also supports all the older version mounts except the Titan 25, which has been removed from this firmware.</li>
+				<li>New main unit firmware to to support the new G11T and G811 mount combinations.</li>
+				<li>This new firmware supports all the older mounts except the Titan 25 (only 1 exists), which has been removed from this firmware.</li>
 			</ul>
 		</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
 	<tr>
-		<td>August 23, 2016</td>
-		<td>X</td>
+		<td>2016-08-23</td>
+		<td>MU</td>
 		<td></td>
 		<td>Firmware Version Level 5.21<br/>
 			<ul>
-				<li>New mainboard firmware to improve the GoTos (starting the RA axis one after the DEC axis to reduce current drain.</li>
+				<li>New main unit firmware to improve the GoTos (starting the RA axis one second after the DEC axis to reduce current drain.</li>
 				<li>Improve satellite tracking by getting rid of leap-frogging.</li>
 				<li>Getting rid of the worm contact problems by slightly overshooting targets to the East then stopping and moving to the west at centering speed till target is reached, then continuing at side rail speed. This will ensure gears are fully messed at start of side rail tracking.</li>
 				<li>Implemented an Network Time Protocal (NTP) to receive time/date from the many NIST Internet Time 
@@ -84,92 +82,70 @@
 						<li><a href="web/web-network.html" target="_self">web network</a></li>
 						<li><a href="web/web-site-time.html" target="_self">web site/time</a></li>
 					</ul>
-					<!-- <a href="hc/E023.html" target="_blank">HC time/date</a>,
-					<a href="web/web-NTP.html" target="_self">web-NTP</a>,
-
-					<a href="web/web-network.html" target="_self">web network</a>
-					and
-					<a href="web/web-site-time.html" target="_self">
-					web site/time</a>.<ul> -->
 				If a NIST Internet Time Server IP address has been set up in the Gemini-2 Network Web page, then at boot up, the Gemini-2 will go out to that NIST Internet Time Server IP address and get the current UTC Time and Date.</li>
 			</ul>
 		</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
 	<tr>
-		<td>August 6, 2016</td>
+		<td>2016-08-06</td>
 		<td></td>
-		<td></td>
+		<td>HC</td>
 		<td>Two new catalogs added: <ul><li>Barnard catalogs and a revised LDN_EN with additional objects added.</li> 
 			<li>Small change to hand controller to allow proper display of Barnard catalog.</li></ul></td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
 	<tr>
-		<td>March 12 2017</td>
-		<td>X</td>
-		<td>X</td>
-		<td>Firmware Version Level 1.20 Hand Controller and Level 5.21 Main Unit<br/>
-			<ul>
-				<li>New mainboard firmware to to support the new G11T 
-					and G811 mount combinations.</li>
-				<li>This new firmware also supports all the older version mounts except the Titan 25, which has been removed from this firmware.</li>
-			</ul>
-		</td>
-	</tr>
-	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
-	<tr>
-		<td>February 23, 2016</td>
-		<td>X</td>
-		<td>X</td>
+		<td>2016-02-23</td>
+		<td>MU</td>
+		<td>HC</td>
 		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
 		</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
 	<tr>
-		<td>Feb 18, 2016</td>
-		<td></td>
+		<td>2016-02-18</td>
+		<td>MU</td>
 		<td></td>
 		<td>
 			<ul>
-			<li>Main web pages updated to show new firmware dates.</li>
-			<li>The Gemini Firmware Update program removed from Web interface.</li>
+				<li>Main web pages updated to show new firmware dates.</li>
+				<li>The Gemini Firmware Update (GFU) program removed from Web interface.</li>
 			</ul> 
 		</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
 	<tr>
 		<td>2016-02-14</td>
-		<td>X</td>
-		<td>X</td>
+		<td>MU</td>
+		<td></td>
 		<td>
-			<ul><li>PAC (Polar Align Correction) has a little more fine tuning done. Please 
-						note that PAC is not going to get you as close as a 
-						drift alignment. It will probably get you within 5 
-						arc-mins. For more polar alignment methods' please 
-						see <br /> "Manuals/Tips/Misc"--&gt;"Polar Alignment Tips"</li>
+			<ul>
+				<li>Polar Align Correction (PAC) has further fine tuning done.<br/>
+				Please note that PAC is not going to get you as close as a drift alignment. It will probably get you within 5 arc-minutes. For more polar alignment methods' please see <br /> "Manuals/Tips/Misc"--&gt;"Polar Alignment Tips"</li>
 			</ul>
 		</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
 	<tr>
 		<td>2016-02-08</td>
-		<td>X</td>
-		<td>X</td>
+		<td>MU</td>
+		<td></td>
 		<td>Polar Align Correction (PAC) has been redone. René found a bug and also updated the mathematics. René said his testing even impressed him.</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>	
 	<tr>
 		<td>2016-01-14</td>
 		<td></td>
-		<td>X</td>
-		<td>Hand-Controller update: Some of the return paths for the back buttons were corrected for the Jan 3 update.
+		<td>HC</td>
+		<td>Hand-Controller update: Some of the return paths for the back buttons were corrected after the Jan 3 update.
 		</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
 	<tr>
 		<td>2016-01-03</td>
 		<td></td>
-		<td>X</td>
+		<td>HC</td>
 		<td><ul>
 					<li>Hand-Controller update: A checkbox has been added to the PEC menu 
 						which will allow PEC to start with tracking if checked.
@@ -239,7 +215,27 @@
 		<td>2015-07-05</td>
 		<td>X</td>
 		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
+		<td><ul>
+					<li>The Hand Controller info page page now tells you what 
+					processor is being used.&nbsp; This indicates which model of 
+					hand controller you have.&nbsp; If it says "Himax Graphic chip 
+					detected"&nbsp; under the build date, then you have the new 
+					version the Losmandy designed from scratch.&nbsp;This 
+					version started shipping sometime in 2012.&nbsp; If it says 
+					anything else, or does not say anything then you have one of the older versions.
+					</li>
+						<li>The HC screen for the newer version (Himax Graphic 
+						chip, Green PCB) of the hand controller can be rotated 
+						180°.&nbsp; Use the Menu--&gt;HC--&gt;Display screen, and at the 
+						bottom of the screen is a place to put a checkmark to 
+						flip the screen.&nbsp; Once this is done, for it to stay you 
+						have to hit the "Back" button then "Store Setting". <span class="style3">
+						Caution: 
+						Screen Calibration has to be done in non-flipped mode</span>.
+						<a href="hc/En-hcdisplay.html" target="_blank">
+						Example page</a>.&nbsp; <span class="style3">&nbsp;The screen calibration must never be done when the 
+						screen is in the flipped mode (cord coming out the top).</span> </li>
+				</ul>
 		</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
@@ -247,139 +243,268 @@
 		<td>2015-07-03</td>
 		<td>X</td>
 		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
+		<td><ul>
+			<li>Bug fix of the Clock Frequency fixed.&nbsp; The Time displayed on the 
+			lower right of the main screen should remain constant now.&nbsp; The main 
+			unit time is what all GOTO are calculated from, and it maintains 
+			correct time.&nbsp; Only the hand controller had this bug.</li>
+			
+			<li>
+				Bug fix: The hash, CR, LF, NL signs of object information of 
+				catalog objects are no longer displayed.
+			</li>
+
+				
+			<li>The hand controller has new battery warning screens. There are 
+			two, a yellow one for when the Battery is between 2.7V and 2.5V, and red if battery is 
+			2.5V or less. They stay on the screen for about 40 Seconds. <br />
+			You must have updated the main unit to Level 5.2, 23 June 2015 or 
+			newer firmware for these to work. If you have not then you will get a message 
+			from the hand controller to 
+			<a href="hc/En-update-main-board-firmware.html" target="_blank">update the main board firmware</a>. The hand controller version must also be V1.2 dated 5 July 2015 or newer. </li>
+		</ul>
 		</td>
 	</tr>
-	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
-	<tr><td></td><td></td><td></td><td><h2>New Level 5.2 Firmware After July 2015</h2></td></tr>
-	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
+	<tr>
+		<td>2015-06-23</td>
+		<td>X</td>
+		<td>X</td>
+		<td>Release but details are missing.
+		</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		
+		<td class="style7">
+				 Here is the below 2.7V warning image<br />
+
+				<img alt="" height="583" src="hc/En-Images/Battery-below-2_7V.jpg" width="430" />				
+				</td>
+				<td class="style7">
+				 Here is the below 2.5V 
+				 warning image<br />
+
+				<img alt="" height="583" src="hc/En-Images/Battery-below-2_5V.jpg" width="430" />			
+				</td>
+				</tr>
+				</table>
+		</td>
+	</tr>
+</table>
+	<h2>New Level 5.2 Firmware After June 2015</h2>
+	<table align="center" style="width: 900px"> <!-- class="tableborder1"> -->
+	<tr>
+		<th>Date (Y-M-D)</th>
+		<th>Main Unit</th>
+		<th>Hand Controller</th>
+		<th>Details</th>
+	</tr>
 	<tr>
 		<td>2015-02-15</td>
-		<td>X</td>
-		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
+		<td>MU</td>
+		<td></td>
+		<td>Main Unit Web interface updated to include the:
+			<ul>
+				<li> Videos Losmandy produced.</li>
+					<li>Mobile Hand Controller.</li>
+				</ul>
 		</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
 	<tr>
-		<td>February 23, 2016</td>
+		<td>2014-11-05</td>
 		<td>X</td>
 		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
+		<td><ul>
+					<li>When the Gemini-2 Mini was released, René made the 
+					necessary changes to support it's wiring changes.&nbsp; He also 
+					made it backwards compatible with the Original Gemini-2 
+					versions.&nbsp; No changes was made to add and features or fix 
+					anything except the wiring changes for the Gemini-2 Mini.</li>
+				</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>Sometime in 2014</td>
+		<td>X</td>
+		<td>X</td>
+		<td><ul>
+					<li>The Gemini-2 Mini was released</li>
+				</ul>
 		</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
 	<tr>
-		<td>February 23, 2016</td>
+		<td>2014-05-01</td>
 		<td>X</td>
 		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
+		<td><ul>
+					<li><p>Gemini Firmware Updater is now also stored on the micro SD card, 
+				and can be installed from the Gemini-2 onto you computer 
+				(Windows only for this version).</p>
+				<p>It is selected from Tab 
+				GFU, of the Web interface and makes no change in version 
+				dates.</p></li>
+				</ul>
 		</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
 	<tr>
-		<td>February 23, 2016</td>
+		<td>2014-02-23</td>
 		<td>X</td>
 		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
+		<td>
+			<ul>
+					<li>Fix the Start tracking in the web interface for all three stop modes</li>
+					<li>A new script that sets all three passwords from the given input. The telnet password can be changed by using telnet, no separate change is possible for ftp yet.</li>
+					<li>A German page updated to show motor cgi page published.</li>
+			</ul>
 		</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
 	<tr>
-		<td>February 23, 2016</td>
-		<td>X</td>
-		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
+		<td>2014-02-20</td>
+		<td></td>
+		<td>HC</td>
+		<td><ul>
+					<li>The Modeling Functions has been updated to fix a bug in the hand controller.</li>
 		</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
 	<tr>
-		<td>February 23, 2016</td>
-		<td>X</td>
-		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
+		<td>2013-10-25</td>
+		<td></td>
+		<td>HC</td>
+		<td>
+			<ul>
+					<li>The buttons on the <a href="ClassicHandController.html" target="_self">classic hand controller</a> have been made to react the same as they did with the Gemini-1 system.</li>
+			</ul>
+	</tr>
+	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
+	<tr>
+		<td>2013-09-30</td>
+		<td></td>
+		<td>HC</td>
+		<td><ul>
+					<li>Corrections to HC Bookmark screen and HC cosmetics </li>
+					<li>The delete model buttons now only delete the selected model, 
+				either east or west. This is implemented in both the hand 
+				controller and the web interface.</li>
+				</ul>
 		</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
 	<tr>
-		<td>February 23, 2016</td>
-		<td>X</td>
-		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
+		<td>2013-08-22</td>
+		<td>MU</td>
+		<td>HC</td>
+		<td><ul>
+					<li>Adaptive tracking on the HC.
+			If you GOTO Sun, tracking is changed to Solar, for Moon to Lunar, 
+			all other objects to Sidereal.&nbsp; </li>
+					<li>Limited Comet Tracking is implemented.<br />Comet Tracking - On hand controller 
+				Menu--&gt;Track--&gt;Comet/User Defined</li>
+					<li>The tactual buttons on the back of the hand controller is now 
+				active in the Balance menu and also the RA tactual buttons are 
+				now active on the Hand controller Limits menu.<span class="smalltext">
+					</span></li>
+					<li>There have been many internal improvements.
+				</li>
+					<li>Micro-SDcards up to 32Gbytes now work in both the hand 
+				controller and main unit. Please make sure you use a premium 
+				brand, such as Panasonic, SanDisk, Toshiba or Kingston if you 
+				do.&nbsp; </li>
+				</ul>
+	</tr>
+	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
+	<tr>
+		<td>2013-08-13</td>
+		<td>MU</td>
+		<td>HC</td>
+		<td><ul>
+					<li>New parking levels 0,1, 2.<br />While the mount resumed tracking in the former (now level 0) parking 
+			mode at every button touch, there are two additional parking levels.<br />Level 1 allows that GOTO commands are executed and resume tracking.<br />Level 2 insist on an Unpark 
+					command. This function is available at the HC, 
+			the GoTo button changes to Unpark as long as the mount is parked. It 
+			is also available at the Park screen, and in the ASCOM Gemini.net 
+			driver (1.0.51.0 and later).</li>
+					<li>Serial status command &lt;97 was extended (it returns 8 instead of 6 
+			characters now, there's no change in the ENQ macro).</li>
+					<li>Serial command 92 was added for managing the parking level. There's 
+			no selection for parking levels on the HC yet, it must be done using 
+			the serial command over a communication path, ASCOM or the Functions 
+			web page.</li>
+					<li>Ruggedized TCP socket support.&nbsp;<br />The transparent socket access, using the serial commands, over the 
+			default TCP port 4030 has been extended in several ways. First, Keil 
+			reacted to the error reports René sent while trying to connect to 
+			Southern Stars' Sky Safari. In fact, SkySafari is programmed in a 
+			really cruel way that René now uses to shock his students: For each command 
+			(like :GR# or :GD#) a TCP socket is opened, then these few bytes are 
+			put into the output buffer and the socket is closed. Keil was not 
+			prepared for this behavior (although it complies to RF793), but now 
+			they are.<br />It's evident (and you can watch the socket port numbers climb up 
+			quickly on the Network Statistics web page) that opening and closing 
+			several sockets a second doesn't improve SkySafari's performance, 
+			but this is the problem of Southern Stars. The iPhone 4 Rene tested 
+			with reacts pretty lame.</li>
+					<li>There are good news about using 
+					<a href="http://www.stellarium.org/" target="_blank">Stellarium</a>. This is a really 
+			nice free planetarium program that works on Linux, Mac and Windows. 
+			For Windows, there is a 
+			<a href="http://www.welshdragoncomputing.ca/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=31&amp;Itemid=39" target="_blank">StellariumScope</a> software available that 
+			connects over ASCOM. In René's tests it worked flawlessly over ASCOM and 
+			Ethernet. René started to work on a Linux driver, once available it 
+			should be possible to port it to MacOS.</li>
+					<li>Since the transparent sockets are not password protected, René has added 
+			some features to switch them off (by setting the TCP port to zero) 
+			and to specify a peer IP address to reject all other hosts. In the 
+			future this will be possibly to specify a range of IP 
+			addresses (similar to a firewall rule).</li>
+					<li>Protection for UDP:
+			The same security measures (switching off by setting the port to 
+			zero and selecting a peer IP) apply here. <br />The settings (both UDP and TCP) can be done over the Network web 
+			page. </li>
+					<li>Sebastian Mrozek contributed professionally designed buttons for the 
+			HC. They replace the built-in buttons. <span class="smalltext">(Aug 22, 2013)</span></li>
+				</ul>
 		</td>
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
 	<tr>
-		<td>February 23, 2016</td>
+		<td>2013-06-22</td>
 		<td>X</td>
 		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
+		<td><ul>
+					<li>The HC has a new 
+					<a href="hc/En-balance.html" target="_blank">Balance Menu.</a>&nbsp; See Menu--Mount--&gt;Balance 
+					<span class="x-smalltext">(See note 1 )</span></li>
+					<li>The HC now starts up in the Centering speed.</li>
+					<li>The <strong>default mount type is now G11</strong></li>
+					<li>The Model building menus have been reworked.</li>
+					<li>The Dec calibration and Dec guiding has been reworked.
+					</li>
+			</ul></ul>
+			</td>
+			</tr>
+		<tr><td></td><td></td><td></td>
+			<td class="smalltext">
+			
+				<p class="auto-style1">NOTE 1: This menu will not function if the Servo processors, (Separate 
+				from the ARM processor) has not been programmed with the 
+				firmware for them that was released around Sept 2012. This 
+				firmware requires a separate hardware PIC programmer and special 
+				cables to install this 
+				firmware and is not part of any firmware download for either the 
+				main unit or hand controller.&nbsp; All newer Gemini-2 units are shipped with 
+				this firmware installed. If your balance menu functions, 
+				then you have it.</p>
+			</td></tr>
 		</td>
 	</tr>
-	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
-	<tr>
-		<td>February 23, 2016</td>
-		<td>X</td>
-		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
-		</td>
-	</tr>
-	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
-	<tr>
-		<td>February 23, 2016</td>
-		<td>X</td>
-		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
-		</td>
-	</tr>
-	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
-	<tr>
-		<td>February 23, 2016</td>
-		<td>X</td>
-		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
-		</td>
-	</tr>
-	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
-	<tr>
-		<td>February 23, 2016</td>
-		<td>X</td>
-		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
-		</td>
-	</tr>
-	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
-	<tr>
-		<td>February 23, 2016</td>
-		<td>X</td>
-		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
-		</td>
-	</tr>
-	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
-	<tr>
-		<td>February 23, 2016</td>
-		<td>X</td>
-		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
-		</td>
-	</tr>
-	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
-	<tr>
-		<td>February 23, 2016</td>
-		<td>X</td>
-		<td>X</td>
-		<td>Main unit Version Level 5.2 dated July 2015 and hand controller Version 1.2 dated 14 Feb 2016 was released to everyone.
-		</td>
-	</tr>
-	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
-	
-	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>
-
-			<!-- <tr><td><hr class="style2" style="width: 900px" /></td></tr>
-			<tr><td><hr class="style2" style="width: 900px" /></td></tr> -->
 </table>
-<!-- <table align="center" style="width: 900px" class="tableborder1">
+<h1>Everything after this heading is redundant</h1>
+<table align="center" style="width: 900px" class="tableborder1">
 		<tr><td class="style6">
 				<ul>
 				<li>
@@ -393,9 +518,9 @@
 				</ul>
 			</td>
 			</tr>
-</table> -->
+</table> 
 
-<!-- <table align="center" style="width: 900px" class="tableborder1">
+<table align="center" style="width: 900px" class="tableborder1">
 		<tr><td class="style6">
 				<ul>
 				<li>
@@ -433,8 +558,8 @@
 				</ul>
 			</td>
 			</tr>
-</table> -->
-<!-- <table align="center" style="width: 900px" class="tableborder1">
+</table>
+<table align="center" style="width: 900px" class="tableborder1">
 		<tr><td class="style6">
 				<ul>
 				<li>
@@ -448,18 +573,18 @@
 				</ul>
 			</td>
 			</tr>
-</table> -->
+</table>
 
-<!-- <table align="center" style="width: 900px" class="tableborder1">
+<table align="center" style="width: 900px" class="tableborder1">
 		<tr><td class="style6">
 				<ul><li></li>
 					</ul>
 				</ul>
 			</td>
 			</tr>
-</table> -->
+</table>
 
-<!--<table align="center" style="width: 900px" class="tableborder1">
+<table align="center" style="width: 900px" class="tableborder1">
 		<tr><td class="style6">
 				<ul><li>date</li>
 					<ul><li>Fix</li>
@@ -467,7 +592,7 @@
 			</td>
 			</tr>
 </table>
--->
+
 
 <table align="center" style="width: 900px" class="tableborder1">
 		<tr><td class="style6">
