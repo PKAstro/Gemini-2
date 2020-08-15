@@ -85,68 +85,29 @@
 <table  align="center" style="width:900px">
   <tr>
     <td class="style7">
-    <map id="ImgMap0" name="ImgMap0">
-                    <area coords="105, 201, 425, 291" href="limits-safety_Eastern.html" shape="rect" />
-                    <area coords="99, 335, 415, 419" href="limits-safety_Western.html" shape="rect" />
-                    <area coords="101, 469, 414, 548" href="limits-safety_goto.html" shape="rect" />
-                </map>
-    <img alt="" height="720" src="gemini-images/handcontoller_menu_images/safetylimit.jpg" width="530" usemap="#ImgMap0" /><br />Fig 8<br /><p class="style6">
-    The Eastern Position, Western Position, and Western Goto Limit buttons do take you to the  hand-controller menu pages.</p>
-    <p class="style6">
-     </p>
-    <p class="style6">
-    <b><em>Please Note: changing the mount type from the hand controller or web 
-    interface does not change 
-    the safety limits that are set.  Also Please see
-    <a href="web/web-firmware-sram.html" target="_self">Reset SRam</a></em></b></p>
+      <map id="ImgMap0" name="ImgMap0">
+        <area coords="105, 201, 425, 291" href="limits-safety_Eastern.html" shape="rect" />
+        <area coords="99, 335, 415, 419" href="limits-safety_Western.html" shape="rect" />
+        <area coords="101, 469, 414, 548" href="limits-safety_goto.html" shape="rect" />
+      </map>
+      <img alt="" height="720" src="gemini-images/handcontoller_menu_images/safetylimit.jpg" width="530" usemap="#ImgMap0" /><br />Fig 8<br />
+      <p class="style6">The Eastern Position, Western Position, and Western Goto Limit buttons do take you to the hand-controller menu pages.</p>
+      <p class="style6"></p>
+      <p class="style6"><b><em>Please Note: changing the mount type from the hand controller or web interface does not change the safety limits that are set. Also please see <a href="web/web-firmware-sram.html" target="_self">Reset SRAM</a></em></b></p>
     </td>
     <td class="style6">
-    <br />The limits can be set either using the Web interface, on the 
-    <a href="web/web-mount.html">Mount 
-            Selection Page</a>, See Fig 7.  or on the hand controller see figure 8 
-    left. (it is under Menu--&gt;Mount--&gt;Limits<br />
-        Note that the Web limits are set for left and right side, while the hand 
-        controller uses East and West.  If 
-            using the hand controller, follow these steps. (The hand controller 
-        method only works correctly on August 16 or later firmware.)<br />
-        <ol>
-            <li>
-            Start with the mount at Counter Weight Down (CWD), using either Cold Start or Warm Start.
-            </li>
-            <li>
-            Turn off tracking by placing the mount into Terrestrial mode.  
-            Menu-&gt;Track-&gt;Terrestrial</li>
-            <li>
-            Move the RA using the Left-Right buttons to the Eastern Limit.  
-            Loosen the clutch in Dec. Make sure you can spin the telescope  
-            back and forth as far as your cables will allow, or if no cables are 
-            connected 360 
-            degrees in Dec without it hitting the mount, if possible. There are no 
-            DEC limits to set, so you have to make sure your Dec is clear from 
-            hitting also.   Use the 
-            Menu-&gt;Mount-&gt;Limits-&gt;"Set Limits Here" button, to set the Eastern Limit. 
-            </li>
-            <li>
-            Move the RA using the Left-Right buttons to the Western Limit.  
-            Loosen the clutch in Dec. Do the Dec just as you did in step 2 above.  Use the 
-            Menu-&gt;Mount-&gt;Limits-&gt;"Set Limits Here" button, to set the Western Limit. 
-            You now have set the Limits</li>
-            <li>
-            The Western Goto Limit determines how far pass the meridian that the 
-            Gemini-2 will do a flip.  It is calculated like this.  Note 
-            that the Meridian is at 90 degrees. The point of Meridian Flip = Western 
-            Safety Limit - Goto Limit.  An example is if you have the Western 
-            Safety limit set to 100 degrees - The Western goto limit of 2.5 degrees 
-            (default) you end up with a point of flip of 97.5 degrees, or 7.5 
-            degrees past the meridian.  Any target selected that is past this 
-            will do a meridian flip.  Any target on the East side (Northern 
-            Hemisphere) will not do a meridian flip. <br />
-            
-            </li>
-        </ol>
-        </td></td></tr>
-
-    </table>
+      <p>The limits can be set either using the Web interface, on the <a href="web/web-mount.html">Mount Selection Page</a>, See Fig 7.  or on the hand controller see figure 8. (it is under: Menu--&gt;Mount--&gt;Limits</p>
+      <p>Note that the Web limits are set for left and right side, while the hand controller uses East and West.  If using the hand controller, follow these steps.</p>
+      <ol>
+        <li><p>Start with the mount at Counter Weight Down (CWD), using either Cold Start or Warm Start.</p></li>
+        <li><p>Turn off tracking by placing the mount into Terrestrial mode. Menu-&gt;Track-&gt;Terrestrial</p></li>
+        <li><p>Move the RA using the Left-Right buttons to the Eastern Limit. Loosen the clutch in Dec. Make sure you can spin the telescope back and forth as far as your cables will allow, or if no cables are connected 360 degrees in Dec without it hitting the mount, if possible. There are no DEC limits to set, so you have to make sure your Dec is clear from hitting also.   Use the Menu-&gt;Mount-&gt;Limits-&gt;"Set Limits Here" button, to set the Eastern Limit.</p></li>
+        <li><p>Move the RA using the Left-Right buttons to the Western Limit. Loosen the clutch in Dec. Do the Dec just as you did in step 3 above.  Use the Menu-&gt;Mount-&gt;Limits-&gt;"Set Limits Here" button, to set the Western Limit. You now have set the Limits</p></li>
+        <li><p>The Western Goto Limit determines how far past the meridian that the Gemini-2 will do a flip.  It is calculated like this.  Note that the Meridian is at 90 degrees. The point of Meridian Flip = Western Safety Limit - Goto Limit.  An example is if you have the Western Safety limit set to 100 degrees - The Western goto limit of 2.5 degrees (default) you end up with a point of flip of 97.5 degrees, or 7.5 degrees past the meridian.  Any target selected that is past this will do a meridian flip.  Any target on the East side (Northern Hemisphere) will not do a meridian flip.</p></li>
+      </ol>
+    </td>
+  </tr>
+</table>
     
 
 <link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
