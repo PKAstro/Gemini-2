@@ -147,4 +147,10 @@ function updateSearch()
       document.getElementById("form").action="https://duckduckgo.com/";
   }
  
+  // set search box domain 
+  var search = document.getElementById("site1");
+  if (search) search.value=location.hostname;
+  search = document.getElementById("site2");
+  if (search) search.value=location.hostname;
+
 }
