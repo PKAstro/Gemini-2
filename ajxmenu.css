@@ -29,8 +29,18 @@
 .AJXMenueDFaTFD ul ul a.ajxsub,.AJXMenueDFaTFD ul :hover ul a.ajxsub,.AJXMenueDFaTFD ul :hover ul :hover ul a.ajxsub,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul a.ajxsub {width:138px;padding:6px 12px 6px 8px;background:url(ajxmenu_files/sub-sub.gif) no-repeat center right;}
 .AJXMenueDFaTFD ul ul :hover a.ajxsub,.AJXMenueDFaTFD ul ul :hover ul :hover a.ajxsub,.AJXMenueDFaTFD ul ul :hover ul :hover ul :hover a.ajxsub,.AJXMenueDFaTFD ul ul a.ajxsub:hover ,.AJXMenueDFaTFD ul ul a.ajxsub:hover a.ajxsub:hover ,.AJXMenueDFaTFD ul ul a.ajxsub:hover a.ajxsub:hover a.ajxsub:hover  {background:#7cabe4 url(ajxmenu_files/sub-sub.gif) no-repeat center right;}
 .AJXMenueDFaTFD ul :hover ul ul,.AJXMenueDFaTFD ul :hover ul :hover ul ul,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul ul,* html .AJXMenueDFaTFD ul :hover ul :hover ul ul,* html .AJXMenueDFaTFD ul :hover ul :hover ul :hover ul ul {position:absolute;left:-9999px;top:-9999px;}
-.AJXMenueDFaTFD ul :hover ul :hover ul,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul :hover ul {left:159px;top:-3px;}
+
+.AJXMenueDFaTFD ul :hover .right ul,.AJXMenueDFaTFD ul :hover .right :hover ul ul,.AJXMenueDFaTFD ul :hover .right :hover ul :hover ul ul,* html .AJXMenueDFaTFD ul :hover .right :hover ul ul,* html .AJXMenueDFaTFD ul :hover .right :hover ul :hover ul ul {position:absolute;left:-9999px;top:-9999px;}
+.AJXMenueDFaTFD ul :hover .left ul,.AJXMenueDFaTFD ul :hover .left :hover ul ul,.AJXMenueDFaTFD ul :hover .left :hover ul :hover ul ul,* html .AJXMenueDFaTFD ul :hover .left :hover ul ul,* html .AJXMenueDFaTFD ul :hover .left :hover ul :hover ul ul {position:absolute;left:-9999px;top:-9999px;}
+
+
+.AJXMenueDFaTFD ul :hover .right :hover ul,.AJXMenueDFaTFD ul :hover .right :hover ul :hover ul,.AJXMenueDFaTFD ul :hover .right :hover ul :hover ul :hover ul {left:-159px;top:-3px;} 
+.AJXMenueDFaTFD ul :hover .left :hover ul,.AJXMenueDFaTFD ul :hover .left :hover ul :hover ul,.AJXMenueDFaTFD ul :hover .left :hover ul :hover ul :hover ul {left:159px;top:-3px;} 
+
+/*.AJXMenueDFaTFD ul :hover ul :hover ul,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul :hover ul {left:159px;top:-3px;} */
 * html .AJXMenueDFaTFD ul :hover ul :hover ul,* html .AJXMenueDFaTFD ul :hover ul :hover ul :hover ul,* html .AJXMenueDFaTFD ul :hover ul :hover ul :hover ul :hover ul {left:156px;top:-4px;}
 .AJXMenueDFaTFD ul :hover ul .sfirst:hover ul,.AJXMenueDFaTFD ul :hover ul :hover ul .sfirst:hover ul,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul .sfirst:hover ul {top:-1px;}
 .AJXMenueDFaTFD br {clear:both;height:0;font-size: 1px;line-height: 0px;}
+
+
 
