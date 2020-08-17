@@ -26,21 +26,15 @@
 .AJXMenueDFaTFD ul ul a,.AJXMenueDFaTFD ul :hover ul a,.AJXMenueDFaTFD ul :hover ul :hover ul a,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul a,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul :hover ul a {float:none;margin:0;width:142px;height:auto;white-space:normal;padding:6px 8px 6px 8px;font:10px/20px Verdana,Arial,Helvetica,sans-serif;text-decoration:none;border:1px solid #689fe0;color:#000000;background:none;}
 .AJXMenueDFaTFD ul :hover ul .sfirst a,.AJXMenueDFaTFD ul :hover ul :hover ul .sfirst a,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul .sfirst a,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul :hover ul .sfirst a {margin-top:2px;}
 .AJXMenueDFaTFD ul ul :hover a,.AJXMenueDFaTFD ul ul a:hover,.AJXMenueDFaTFD ul ul :hover ul :hover a,.AJXMenueDFaTFD ul ul :hover ul :hover ul :hover a,.AJXMenueDFaTFD ul ul :hover ul :hover ul :hover ul :hover a,.AJXMenueDFaTFD ul ul :hover ul a:hover,.AJXMenueDFaTFD ul ul :hover ul :hover ul a:hover,.AJXMenueDFaTFD ul ul :hover ul :hover ul :hover ul a:hover {font-weight:bold;border-color:#c2d5e2;background:#7cabe4;}
-.AJXMenueDFaTFD ul ul a.ajxsub,.AJXMenueDFaTFD ul :hover ul a.ajxsub,.AJXMenueDFaTFD ul :hover ul :hover ul a.ajxsub,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul a.ajxsub {width:138px;padding:6px 12px 6px 8px;background:url(ajxmenu_files/sub-sub.gif) no-repeat center right;}
-.AJXMenueDFaTFD ul ul :hover a.ajxsub,.AJXMenueDFaTFD ul ul :hover ul :hover a.ajxsub,.AJXMenueDFaTFD ul ul :hover ul :hover ul :hover a.ajxsub,.AJXMenueDFaTFD ul ul a.ajxsub:hover ,.AJXMenueDFaTFD ul ul a.ajxsub:hover a.ajxsub:hover ,.AJXMenueDFaTFD ul ul a.ajxsub:hover a.ajxsub:hover a.ajxsub:hover  {background:#7cabe4 url(ajxmenu_files/sub-sub.gif) no-repeat center right;}
+.AJXMenueDFaTFD ul .left a.ajxsub,.AJXMenueDFaTFD ul :hover .left a.ajxsub,.AJXMenueDFaTFD ul :hover .left :hover ul a.ajxsub,.AJXMenueDFaTFD ul :hover .left :hover ul :hover ul a.ajxsub {width:138px;padding:6px 12px 6px 8px;background:url(ajxmenu_files/sub-sub.gif) no-repeat center right;}
+.AJXMenueDFaTFD ul .left :hover a.ajxsub,.AJXMenueDFaTFD ul .left :hover ul :hover a.ajxsub,.AJXMenueDFaTFD ul .left :hover ul :hover ul :hover a.ajxsub,.AJXMenueDFaTFD ul .left a.ajxsub:hover ,.AJXMenueDFaTFD ul .left a.ajxsub:hover a.ajxsub:hover ,.AJXMenueDFaTFD ul .left a.ajxsub:hover a.ajxsub:hover a.ajxsub:hover  {background:#7cabe4 url(ajxmenu_files/sub-sub.gif) no-repeat center right;}
+.AJXMenueDFaTFD ul .right a.ajxsub,.AJXMenueDFaTFD ul :hover .right a.ajxsub,.AJXMenueDFaTFD ul :hover .right :hover ul a.ajxsub,.AJXMenueDFaTFD ul :hover .right :hover ul :hover ul a.ajxsub {width:138px;padding:6px 12px 6px 8px;background:url(ajxmenu_files/left-sub-sub.gif) no-repeat center right;}
+.AJXMenueDFaTFD ul .right :hover a.ajxsub,.AJXMenueDFaTFD ul .right :hover ul :hover a.ajxsub,.AJXMenueDFaTFD ul .right :hover ul :hover ul :hover a.ajxsub,.AJXMenueDFaTFD ul .right a.ajxsub:hover ,.AJXMenueDFaTFD ul .right a.ajxsub:hover a.ajxsub:hover ,.AJXMenueDFaTFD ul .right a.ajxsub:hover a.ajxsub:hover a.ajxsub:hover  {background:#7cabe4 url(ajxmenu_files/left-sub-sub.gif) no-repeat center right;}
 .AJXMenueDFaTFD ul :hover ul ul,.AJXMenueDFaTFD ul :hover ul :hover ul ul,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul ul,* html .AJXMenueDFaTFD ul :hover ul :hover ul ul,* html .AJXMenueDFaTFD ul :hover ul :hover ul :hover ul ul {position:absolute;left:-9999px;top:-9999px;}
-
 .AJXMenueDFaTFD ul :hover .right ul,.AJXMenueDFaTFD ul :hover .right :hover ul ul,.AJXMenueDFaTFD ul :hover .right :hover ul :hover ul ul,* html .AJXMenueDFaTFD ul :hover .right :hover ul ul,* html .AJXMenueDFaTFD ul :hover .right :hover ul :hover ul ul {position:absolute;left:-9999px;top:-9999px;}
 .AJXMenueDFaTFD ul :hover .left ul,.AJXMenueDFaTFD ul :hover .left :hover ul ul,.AJXMenueDFaTFD ul :hover .left :hover ul :hover ul ul,* html .AJXMenueDFaTFD ul :hover .left :hover ul ul,* html .AJXMenueDFaTFD ul :hover .left :hover ul :hover ul ul {position:absolute;left:-9999px;top:-9999px;}
-
-
 .AJXMenueDFaTFD ul :hover .right :hover ul,.AJXMenueDFaTFD ul :hover .right :hover ul :hover ul,.AJXMenueDFaTFD ul :hover .right :hover ul :hover ul :hover ul {left:-159px;top:-3px;} 
 .AJXMenueDFaTFD ul :hover .left :hover ul,.AJXMenueDFaTFD ul :hover .left :hover ul :hover ul,.AJXMenueDFaTFD ul :hover .left :hover ul :hover ul :hover ul {left:159px;top:-3px;} 
-
-/*.AJXMenueDFaTFD ul :hover ul :hover ul,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul :hover ul {left:159px;top:-3px;} */
 * html .AJXMenueDFaTFD ul :hover ul :hover ul,* html .AJXMenueDFaTFD ul :hover ul :hover ul :hover ul,* html .AJXMenueDFaTFD ul :hover ul :hover ul :hover ul :hover ul {left:156px;top:-4px;}
 .AJXMenueDFaTFD ul :hover ul .sfirst:hover ul,.AJXMenueDFaTFD ul :hover ul :hover ul .sfirst:hover ul,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul .sfirst:hover ul {top:-1px;}
 .AJXMenueDFaTFD br {clear:both;height:0;font-size: 1px;line-height: 0px;}
-
-
-
