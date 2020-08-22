@@ -9,9 +9,14 @@
 
 <body>
     <script>
+         alert("Referer: " + r + "\r\nDocument: " + document.location.href);
       var r = document.referrer;
+      if (r.indexOf(".php")>=0 || r==null)
+      {
         r = r.replace(".php",".html");
+       
         document.location.href = r;
+      }
     </script>
     <h1>404 - Page not found!</h1>
 </body>
