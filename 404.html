@@ -4,16 +4,15 @@
 <head profile="http://www.w3.org/2005/10/profile">
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
 	
-<title>404 page not found</title>
+<title>404 page redirect</title>
 </head>
 
 <body>
     <script>
-        var r = document.referrer;
-        if (r!=null && r!="") {
-            r = r.replace(".php",".html");
-            document.location.href = r;
-        }
+      var r = document.referrer;
+        r = r.replace(".php",".html");
+        document.location.href = r;
     </script>
+    <h1>404 - Page not found!</h1>
 </body>
 </html>
