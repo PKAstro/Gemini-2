@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https:/gemini-2.com/sitemap.xml
