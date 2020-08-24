@@ -85,15 +85,16 @@
 	.menu-link[aria-haspopup="true"] {
 		padding-right: 40px;
 		background: #4c97f3;
+		font-size: 1em;
 		color: white;
 	}
 	.menu-link[aria-haspopup="true"]:after {
 		content: "";
 		background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1397521/arrowRight.svg#accent');
-		background-size: 14px;
-		width: 14px;
-		height: 14px;
-		font-size: 2em;
+		background-size: 1em;
+		width: 1em;
+		height: 1em;
+		font-size: 1em;
 		position: absolute;
 		right: 10px;
 		top: 50%;
@@ -162,7 +163,7 @@
 		 transition: left .3s;
 	}
 	 .menu-bar > li > [aria-haspopup="true"] ~ ul > li > [aria-haspopup="true"] {
-		 font-size: 2.0em;
+		 font-size: 1.0em;
 	}
 	 .menu-bar > li > [aria-haspopup="true"] ~ ul > li > [aria-haspopup="true"] ~ ul a {
 		 padding-left: 40px;
@@ -172,13 +173,14 @@
 	}
 	 .menu-bar > li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"] {
 		 color: whitesmoke;
+		 font-size: 1em;
 	}
 	 .menu-bar > li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"]:after {
 		 content: "+";
 		 background: none;
-		 font-size: 2em;
+		 font-size: 1em;
 		 font-weight: normal;
-		 height: 20px;
+		 height: 1em;
 		 line-height: 1;
 	}
 	 .menu-bar > li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"] ~ ul {
@@ -202,11 +204,11 @@
 	}
 	 .mobile-menu-back-item a:before {
 		 content: "";
-		 width: 14px;
-		 height: 12px;
+		 width: 1em;
+		 height: 1em;
 		 background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1397521/arrowLeft.svg#default');
-		 background-size: 14px;
-		 margin-right: 10px;
+		 background-size: 1em;
+		 margin-right: 1em;
 		 display: inline-block;
 	}
 	 .mobile-menu-trigger:focus ~ ul {
