@@ -3,6 +3,8 @@
  Copyright (C) 2010 Ajatix. All rights reserved.
  http://www.ajatix.com
 */
+
+@media all and (min-width: 950px) {
 .AJXMenueDFaTFD {position:relative;margin:0 auto;z-index:100;max-width:898px;min-width:500px;min-height:28px;max-height:84px;border:1px solid #3770b5;background:#689fe0;text-align:center;z-index: 500;}
 .AJXMenueDFaTFD ul {position:relative;display:inline-block;margin:0;padding:0;list-style-type:none;}
 * html .AJXMenueDFaTFD ul {display:inline;}
@@ -38,3 +40,244 @@
 * html .AJXMenueDFaTFD ul :hover ul :hover ul,* html .AJXMenueDFaTFD ul :hover ul :hover ul :hover ul,* html .AJXMenueDFaTFD ul :hover ul :hover ul :hover ul :hover ul {left:156px;top:-4px;}
 .AJXMenueDFaTFD ul :hover ul .sfirst:hover ul,.AJXMenueDFaTFD ul :hover ul :hover ul .sfirst:hover ul,.AJXMenueDFaTFD ul :hover ul :hover ul :hover ul .sfirst:hover ul {top:-1px;}
 .AJXMenueDFaTFD br {clear:both;height:0;font-size: 1px;line-height: 0px;}
+
+.AJXMenueDFaTFD .mobile-menu-trigger, .mobile-menu-header, .mobile-menu-back-item {display: none;}
+}
+
+@media all and (max-width: 950px) {
+	body {
+		font-family: 'Noto Sans', sans-serif;
+		background: #fafafa;
+		font-size: 10px;
+		padding: 0;
+		margin: 0;
+	}
+	*, *:before, *:after {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	nav ul, nav li {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	nav a {
+		display: block;
+		text-decoration: none;
+	}
+	nav a:hover, nav a:visited {
+		text-decoration: none;
+	}
+	.menu-bar {
+		background: #accaee;
+		display: flex;
+	}
+	.menu-link {
+		padding: 10px 15px;
+		background: #88beff;
+		color: #0f0f0f;
+		transition: background .2s, color .2s;
+		position: relative;
+		z-index: 1;
+	}
+
+	.menu-link[aria-haspopup="true"] {
+		padding-right: 40px;
+		background: #4c97f3;
+		color: white;
+	}
+	.menu-link[aria-haspopup="true"]:after {
+		content: "";
+		background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1397521/arrowRight.svg#accent');
+		background-size: 14px;
+		width: 14px;
+		height: 14px;
+		font-size: 12px;
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.mega-menu-header {
+		font-size: 1.0em;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #020202;
+	}
+	.mega-menu {
+		background: #7cabe4;
+		z-index: 10;
+	}
+	.mega-menu--multiLevel {
+		flex-direction: column;
+	}
+}
+ @media all and (max-width: 950px) {
+	 .nav {
+		 padding: 20px;
+	}
+	 .mobile-menu-trigger, .mobile-menu-header, .mobile-menu-back-item {
+		 display: block;
+	}
+	 .mobile-menu-trigger {
+		 background: #7cabe4;
+		 color: #0f0f0f;
+		 border: 0;
+		 padding: 10px;
+		 font-size: 1.0em;
+		 border-radius: 4px;
+	}
+	 .mobile-menu-header {
+		 order: -1;
+		 background: grey;
+	}
+	 .mobile-menu-header a {
+		 padding: 10px 15px;
+		 color: #7cabe4;
+		 visibility: visible;
+	}
+	 .menu-bar {
+		 flex-direction: column;
+		 position: fixed;
+		 top: 0;
+		 left: -100%;
+		 height: 100vh;
+		 width: 350px;
+		 max-width: 350px;
+		 max-width: 90%;
+		 overflow-x: hidden;
+		 transition: left .3s;
+		 box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.25);
+	}
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul {
+		 display: flex;
+		 flex-direction: column;
+		 background: #7cabe4;
+		 position: absolute;
+		 left: 100%;
+		 top: 0;
+		 max-height: 100vh;
+		 width: 100%;
+		 transition: left .3s;
+	}
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul > li > [aria-haspopup="true"] {
+		 font-size: 1.0em;
+	}
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul > li > [aria-haspopup="true"] ~ ul a {
+		 padding-left: 40px;
+	}
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul > li > [aria-haspopup="true"] ~ ul > li > [aria-haspopup="true"] ~ ul a {
+		 padding-left: 80px;
+	}
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"] {
+		 color: whitesmoke;
+	}
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"]:after {
+		 content: "+";
+		 background: none;
+		 font-size: 0.8em;
+		 font-weight: normal;
+		 height: 20px;
+		 line-height: 1;
+	}
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"] ~ ul {
+		 max-height: 0px;
+		 transform-origin: top;
+		 transform: scaleY(0);
+		 transition: max-height .1s;
+	}
+	 .mega-menu-content {
+		 padding: 10px 15px;
+	}
+	 .mobile-menu-back-item {
+		 order: -1;
+	}
+	 .mobile-menu-back-item a {
+		 background: tint(grey,70%);
+		 color: #0f0f0f;
+		 max-height: calc(1.4em + 30px);
+		 margin-top: calc(0px - (1.4em + 30px));
+		 pointer-events: none;
+	}
+	 .mobile-menu-back-item a:before {
+		 content: "";
+		 width: 14px;
+		 height: 12px;
+		 background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1397521/arrowLeft.svg#default');
+		 background-size: 14px;
+		 margin-right: 10px;
+		 display: inline-block;
+	}
+	 .mobile-menu-trigger:focus ~ ul {
+		 left: 0;
+	}
+	 .menu-bar:hover, .menu-bar:focus-within {
+		 left: 0;
+	}
+	 .menu-bar > li > [aria-haspopup="true"]:focus ~ ul {
+		 left: 0;
+	}
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul {
+		 margin-top: calc(1.4em + 30px);
+	}
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul:hover, .menu-bar > li > [aria-haspopup="true"] ~ ul:focus-within {
+		 left: 0;
+	}
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"]:focus ~ ul {
+		 max-height: 500px;
+		 animation: dropdown .3s forwards;
+	}
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul li:focus-within > [aria-haspopup="true"] ~ ul {
+		 max-height: 500px;
+		 transform: scaleY(1);
+	}
+	 .menu-bar > li:focus-within ~ .mobile-menu-header a {
+		 visibility: hidden;
+	}
+}
+ @media all and (max-width: 950px) and (hover: none) {
+	 .mobile-menu-trigger:hover ~ ul {
+		 left: 0;
+	}
+	 .menu-bar > li > [aria-haspopup="true"]:hover ~ ul {
+		 left: 0;
+	}
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul:hover {
+		 left: 0;
+	}
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"]:hover ~ ul {
+		 max-height: 500px;
+		 animation: dropdown .3s forwards;
+	}
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"] ~ ul:hover {
+		 max-height: 500px;
+		 transform: scaleY(1);
+	}
+	 .menu-bar > li:hover ~ .mobile-menu-header a {
+		 visibility: hidden;
+	}
+}
+ @keyframes dropdown {
+	 0% {
+		 opacity: 0;
+		 transform: scaleY(0);
+	}
+	 50% {
+		 opacity: 1;
+	}
+	 100% {
+		 transform: scaleY(1);
+	}
+}
+ @keyframes flyout {
+	 0% {
+		 opacity: 0;
+		 transform: scaleX(0);
+	}
+	 100% {
+		 opacity: 1;
+		 transform: scaleX(1);
+	}
+}
+ 
