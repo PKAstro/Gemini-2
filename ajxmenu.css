@@ -93,14 +93,14 @@
 		background-size: 14px;
 		width: 14px;
 		height: 14px;
-		font-size: 12px;
+		font-size: 2em;
 		position: absolute;
 		right: 10px;
 		top: 50%;
 		transform: translateY(-50%);
 	}
 	.mega-menu-header {
-		font-size: 1.0em;
+		font-size: 2.0em;
 		text-transform: uppercase;
 		font-weight: bold;
 		color: #020202;
@@ -125,7 +125,7 @@
 		 color: #0f0f0f;
 		 border: 0;
 		 padding: 10px;
-		 font-size: 1.0em;
+		 font-size: 2.0em;
 		 border-radius: 4px;
 	}
 	 .mobile-menu-header {
@@ -162,7 +162,7 @@
 		 transition: left .3s;
 	}
 	 .menu-bar > li > [aria-haspopup="true"] ~ ul > li > [aria-haspopup="true"] {
-		 font-size: 1.0em;
+		 font-size: 2.0em;
 	}
 	 .menu-bar > li > [aria-haspopup="true"] ~ ul > li > [aria-haspopup="true"] ~ ul a {
 		 padding-left: 40px;
@@ -176,7 +176,7 @@
 	 .menu-bar > li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"]:after {
 		 content: "+";
 		 background: none;
-		 font-size: 0.8em;
+		 font-size: 2em;
 		 font-weight: normal;
 		 height: 20px;
 		 line-height: 1;
