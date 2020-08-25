@@ -9,7 +9,10 @@ var iOS5 = /iPad|iPod|iPhone/.test(navigator.platform) && "matchMedia" in window
 //if (hasTouch && document.querySelectorAll && !iOS5)
  {
     var i, len, element,
-        dropdowns = document.querySelectorAll("#menu li > a");
+        dropdowns = document.querySelectorAll("#menu a");
+
+    alert(dropdowns.length);
+
     function menuTouch(event) {
         // toggle flag for preventing click for this link
         var i, len, noclick = !(this.dataNoclick);
