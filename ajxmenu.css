@@ -215,7 +215,7 @@
 	 .mobile-menu-trigger:focus ~ ul {
 		 left: 0;
 	}
-	 .menu-bar:active, .menu-bar:focus-within {
+	 .menu-bar:hover, .menu-bar:focus-within {
 		 left: 0;
 	}
 	 .menu-bar > li > [aria-haspopup="true"]:focus ~ ul {
@@ -224,15 +224,15 @@
 	 .menu-bar > li > [aria-haspopup="true"] ~ ul {
 		 margin-top: calc(1.4em + 30px);
 	}
-	 .menu-bar > li > [aria-haspopup="true"] ~ ul:active, .menu-bar > li > [aria-haspopup="true"] ~ ul:focus-within {
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul:hover, .menu-bar > li > [aria-haspopup="true"] ~ ul:focus-within {
 		 left: 0;
 	}
 	 .menu-bar > li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"]:focus ~ ul {
-		 max-height: 100vh;
+		 max-height: 500px;
 		 animation: dropdown .3s forwards;
 	}
 	 .menu-bar > li > [aria-haspopup="true"] ~ ul li:focus-within > [aria-haspopup="true"] ~ ul {
-		 max-height: 100vh;
+		 max-height: 500px;
 		 transform: scaleY(1);
 	}
 	 .menu-bar > li:focus-within ~ .mobile-menu-header a {
@@ -240,24 +240,24 @@
 	}
 }
  @media all and (max-width: 1080px) and (hover: none) {
-	 .mobile-menu-trigger:active ~ ul {
+	 .mobile-menu-trigger:hover ~ ul {
 		 left: 0;
 	}
-	 .menu-bar > li > [aria-haspopup="true"]:active ~ ul {
+	 .menu-bar > li > [aria-haspopup="true"]:hover ~ ul {
 		 left: 0;
 	}
-	 .menu-bar > li > [aria-haspopup="true"] ~ ul:active {
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul:hover {
 		 left: 0;
 	}
-	 .menu-bar > li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"]:active ~ ul {
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"]:hover ~ ul {
 		 max-height: 100vh;
 		 animation: dropdown .3s forwards;
 	}
-	 .menu-bar > li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"] ~ ul:active {
+	 .menu-bar > li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"] ~ ul:hover {
 		 max-height: 100vh;
 		 transform: scaleY(1);
 	}
-	 .menu-bar > li:active ~ .mobile-menu-header a {
+	 .menu-bar > li:hover ~ .mobile-menu-header a {
 		 visibility: hidden;
 	}
 }
