@@ -53,10 +53,10 @@
 			<a href="javascript:localURL('Gemini2_drivers/GeminiTelescopeInstaller(1.0.75.0).exe')">Gemini ASCOM driver</a> and install it.&nbsp; 
 			It should be version (1.0.75.0). DO NOT INSTALL USING RUN AS 
 			ADMINISTRATOR.&nbsp; This will also be the 
-			latest version released. Please note that this driver requires .Net 
+			latest version released. Please note that this driver requires .NET 
 			4.0 Framework. You can
 			<a href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=30653">
-			download Net 4.5 here</a>.&nbsp; Windows 10 has Net Framework 4.6 
+			downloa .NET 4.5 here</a>.&nbsp; Windows 10 has .NET Framework 4.6 
 			built in.&nbsp; (it might need to be turned on.)</li>
 			<li>If you have never installed or setup the Gemini.net ASCOM driver then 
 			here is instructions for
@@ -86,34 +86,34 @@
 		<td class="style6">
 		Why use the Gemini.net ASCOM Driver with the Gemini-2: (or Gemini-1)<br>
 			<ol>
-			<li>The Gemini.net ASCOM Driver implements a standard interface used by the many software packages that communicate to telescope mounts via ASCOM. 
+			<li>The Gemini.net ASCOM Driver implements a standard ASCOM interface to contol telescope mounts. Many software packages support this ASCOM interface allowig you to try and use many of them.
 			The ASCOM Driver is a convenience and, in many cases, a requirement.</li>
 				<li>  If you need to share the connection to Gemini across two or more software packages, ASCOM is the only game in town today.
 				</li>
-				<li>  Furthermore, nearly all programs from small companies or independent developers require ASCOM because those programs will work 
-				on a large variety of equipment that implement an ASCOM interface. This avoids the need of developing, testing, and supporting
-				custom interfaces to sometimes proprietary equipment interfaces. </li>
-				<li>  The mount can be controlled via a Serial Cable, a USB connection 
+				<li>  Moreover, nearly all astronomical software from small companies or independent developers only use ASCOM to 
+				control astronomical equipment. This enables them to concentrate on one implementation that works across various
+	 			equipment brands, and avoids the cost of developing, testing, and supporting separate custom interfaces. </li>
+				<li>  You can control the mount via a Serial Cable, a USB connection 
 				or Ethernet (Preferred). (Gemini-1 Serial Only.)</li>
 				<li>  You can guide and control the mount using the same Ethernet cable.</li>
 			<li>When a UDP Ethernet connection is used, the speed is extremely fast (faster that a USB connection) while minimizing the load on the computer.</li>
 			<li>The Gemini.net ASCOM Driver allows multiple clients 
 			connected to the telescope at the same time.&nbsp;&nbsp; The Gemini.net 
 			ASCOM driver is a HUB.</li>
-				<li>You can use other ASCOM drivers to control focusers, cameras, the observatory, etc., at the same time you are using the Gemini.net ASCOM Driver to control the mount.</li>
+				<li>You can use other ASCOM drivers to control focusers, cameras, observatory, etc., and the Gemini.net ASCOM Driver to control the mount at the same time.</li>
 			<li>Guiding through the ASCOM Gemini-2 Driver provides many 
 			advantages:<ul>
-				<li>The guiding is synchronous, i.e., two-way communication. 
-				Gemini-2 will acknowledge the guiding commands.&nbsp; This is not possible when using the "Guider" input port.</li>
-				<li>The guide program can tell the mount how much to guide, 
-				instead of sending fixed guide pulses.&nbsp; The Guider input relies on an 
-				interrupt for the RA signal, but a timer for the DEC, which 
-				means DEC guiding pulses could be missed if they are too 
+				<li>The guiding is synchronous (two-way):
+				Gemini-2 will acknowledge the guiding commands,&nbsp; something that is not possible when using the Guider ST-4 port.</li>
+				<li>The Autoguider program can tell the mount how much to move, 
+				instead of sending fixed guide pulses via the ST-4 port.&nbsp; The Guider ST-4 port relies on an 
+				interrupt for the RA signal, but a timer for the DEC signal. This 
+				means that DEC guiding pulses could be missed if they are too 
 				short.&nbsp; This problem does not exist when using the Ethernet port 
-				to guide, using Pulse guiding.</li>
+				to guide.</li>
 				<li>No guider cable is necessary, therefore almost any camera 
 				can be used to guide as long as you have a driver for the 
-				camera.&nbsp; The camera does not need guider output plug.</li>
+				camera.&nbsp; The camera does not need a guider output plug.</li>
 				<li>Less cables means less chances of a ground loop, which can 
 				cause possible damage to electronics.&nbsp; the Ethernet connector has a built 
 				in transformer that isolates its input and prevents
