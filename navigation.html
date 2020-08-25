@@ -6,10 +6,11 @@ var iOS5 = /iPad|iPod|iPhone/.test(navigator.platform) && "matchMedia" in window
 // hook touch events for drop-down menus
 // NB: if has touch events, then has standards event handling too
 // but we don't want to run this code on iOS5+
-if (hasTouch && document.querySelectorAll && !iOS5) {
+//if (hasTouch && document.querySelectorAll && !iOS5)
+ {
     var i, len, element,
-        dropdowns = document.querySelectorAll("#menu li.children > a");
- 
+        dropdowns = document.querySelectorAll("#menu li > a");
+        alert(dropdowns.length);
     function menuTouch(event) {
         // toggle flag for preventing click for this link
         var i, len, noclick = !(this.dataNoclick);
@@ -45,7 +46,7 @@ if (hasTouch && document.querySelectorAll && !iOS5) {
   <!-- AJXFILE:ajxmenu.css -->
   <nav>
       <a href="javascript:void(0);" class="mobile-menu-trigger" style="font-size: 2em;">&#9776;</a>
-      <ul class="menu menu-bar">
+      <ul class="menu menu-bar" id="menu">
 
           <li class="tfirst"><a class="ajxsub menu-link menu-bar-link" aria-haspopup="true" href="#"
                   target="_self">Home/Start&nbsp;Here
