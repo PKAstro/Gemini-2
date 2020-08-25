@@ -10,7 +10,6 @@ var iOS5 = /iPad|iPod|iPhone/.test(navigator.platform) && "matchMedia" in window
  {
     var i, len, element,
         dropdowns = document.querySelectorAll("#menu li > a");
-        alert(dropdowns.length);
     function menuTouch(event) {
         // toggle flag for preventing click for this link
         var i, len, noclick = !(this.dataNoclick);
@@ -42,11 +41,11 @@ var iOS5 = /iPad|iPod|iPhone/.test(navigator.platform) && "matchMedia" in window
 
 </script>
 
-<div class="AJXMenueDFaTFD nav">
+<div class="AJXMenueDFaTFD nav" id="menu">
   <!-- AJXFILE:ajxmenu.css -->
   <nav>
       <a href="javascript:void(0);" class="mobile-menu-trigger" style="font-size: 2em;">&#9776;</a>
-      <ul class="menu menu-bar" id="menu">
+      <ul class="menu menu-bar" >
 
           <li class="tfirst"><a class="ajxsub menu-link menu-bar-link" aria-haspopup="true" href="#"
                   target="_self">Home/Start&nbsp;Here
