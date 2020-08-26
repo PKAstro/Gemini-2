@@ -2,11 +2,14 @@
 
 	body {
 		font-family: 'Noto Sans', sans-serif;
-		font-size: 1.8em;
 		padding: 0;
 		margin: 0;
 	}
 	
+
+	nav {
+		font-size: 1.8em;
+	}
 	
 	nav a:hover, nav a:visited, nav a:link {
 		text-decoration: none;
@@ -103,7 +106,7 @@
 	  #menu li label.drop-icon {
 		position: absolute;
 		right: 0.4em;
-		top: 0.2em;
+		top: 0.1em;
 	  }
 	  
 	  #menu label.drop-icon, #toggle-menu span.drop-icon {
@@ -117,7 +120,7 @@
 	  }
 	  
 	  #menu .drop-icon {
-		line-height: 1.8;
+		line-height: 1.9;
 	  }
 	  
 	  
