@@ -1,4 +1,4 @@
-@media only screen and (max-width: 52em)  {
+@media only screen and (max-width: 1080px)  {
 
 	body {
 		font-family: 'Noto Sans', sans-serif;
@@ -128,7 +128,7 @@
 		}
 	  }
 	  
-	  @media only screen and (min-width: 52em) {
+	  @media only screen and (min-width: 1080px) {
 		body {
 			font-family: 'Noto Sans', sans-serif;
 			padding: 0;
