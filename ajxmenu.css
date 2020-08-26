@@ -102,21 +102,22 @@
 	  #toggle-menu .drop-icon, 
 	  #menu li label.drop-icon {
 		position: absolute;
-		right: 1.5em;
-		top: 1.25em;
+		right: 0.4em;
+		top: 0.2em;
 	  }
 	  
 	  #menu label.drop-icon, #toggle-menu span.drop-icon {
 		border-radius: 50%;
-		width: 1em;
-		height: 1em;
+		width: 2em;
+		height: 2em;
 		text-align: center;
+		font-size: 1.5em;
 		background-color: rgba(0, 0, 0, .125);
 		color: rgba(255, 255, 255, .75);
 	  }
 	  
 	  #menu .drop-icon {
-		line-height: 1;
+		line-height: 1.8;
 	  }
 	  
 	  
