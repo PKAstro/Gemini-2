@@ -19,6 +19,30 @@
     
 <body onload="set_style_from_cookie()">
 
+    <style>
+        body {
+			font-family: 'Noto Sans', sans-serif;
+			padding: 0;
+			margin: 0;
+		}
+	  
+		#toggle-menu, 
+		#menu label.drop-icon {
+		  display: none;
+		}
+	  
+		#menu ul span.drop-icon {
+		  display: none;
+		}
+	
+		#menu input[type="checkbox"]:checked + .sub-menu {
+		  display: none;
+		}
+		#menu input[type="checkbox"], 
+		#menu ul span.drop-icon {
+		  display: none;
+		}
+    </style>
     <div w3-include-html="header.html" ></div>
     <hr style="height:2px;border-width:0;color:gray;background-color:gray">
     <script>w3IncludeHTML();</script>
