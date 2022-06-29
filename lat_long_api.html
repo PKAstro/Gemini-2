@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US">
+
+
+<head profile="http://www.w3.org/2005/10/profile">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Latitude and Longitude from Street Address</title>
+    <link rel="stylesheet" href="ajxmenu.css" type="text/css">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="en-us" http-equiv="Content-Language" />
+    <script src="w3data.js"></script>
+</head>
+
+<body>
+
+    <base target="_self" />
+
+    <script>
+        var k = "QXJxRTZHUG1pZW1DMzhkMktLQUl1UVdGWmt1NFl5MVZac1daU2l2R2pGZWNVWmY3a21yWExjSWkwUk9CRWphYQ==";
+
+        function CallRestService(request) {
+            var script = document.createElement("script");
+            script.setAttribute("type", "text/javascript");
+            script.setAttribute("src", request);
+            document.body.appendChild(script);
+        }
+
+
+        function getLatLng(address) {
+            var geocodeRequest = "https://dev.virtualearth.net/REST/v1/Locations?query=" + encodeURIComponent(address) + "&jsonp=GeocodeCallback&key=" + atob(k);
+            CallRestService(geocodeRequest);
+        }
+
+        function getTimeZone(point) {
+            var geocodeRequest = "https://dev.virtualearth.net/REST/v1/TimeZone/" + point + "?jsonp=GeocodeCallback&key=" + atob(k);
+            CallRestService(geocodeRequest);
+        }
+
+        function GeocodeCallback(result) {
+            if (result.statusCode == 200) {
+                var r = result.resourceSets[0].resources[0];
+                if (r != null) {
+
+                    if (r.timeZone) {
+                        document.innerHTML += "TimeZone=" + r.timeZone.convertedTime.utcOffsetWithDst + "\r\n";
+                    } else // address/location 
+                    {
+                        document.body.innerText += "LocationName=" + r.name + "\r\n";
+                        document.body.innerText += convertDMS(r.point.coordinates[0], r.point.coordinates[1]) + "\r\n";
+                        getTimeZone(r.point.coordinates[0] + "," + r.point.coordinates[1]);
+                    }
+                    return;
+                }
+            }
+            document.body.innerText = "not found!";
+
+        }
+
+        Number.prototype.pad = function(size) {
+            var s = String(this);
+            while (s.length < (size || 2)) {
+                s = "0" + s;
+            }
+            return s;
+        }
+
+        function convertDMS(lat, lng) {
+
+            var convertLat = Math.abs(lat);
+            var LatDeg = Math.floor(convertLat);
+            var LatMin = (Math.floor((convertLat - LatDeg) * 60));
+            var LatSec = (Math.floor(((convertLat - LatDeg) * 60 - LatMin) * 60));
+            //var LatCardinal = ((lat > 0) ? "N" : "S");
+
+            var LatSign = ((lat > 0) ? "" : "-");
+
+            var convertLng = Math.abs(lng);
+            var LngDeg = Math.floor(convertLng);
+            var LngMin = (Math.floor((convertLng - LngDeg) * 60));
+            var LngSec = (Math.floor(((convertLng - LngDeg) * 60 - LngMin) * 60));
+            //var LngCardinal = ((lng > 0) ? "E" : "W");
+            var LngSign = ((lng > 0) ? "" : "-");
+            return LatSign + LatDeg + ":" + LatMin.pad(2) + ":" + LatSec.pad(2) + "," +
+                LngSign + LngDeg + ":" + LngMin.pad(2) + ":" + LngSec.pad(2);
+        }
+
+
+
+
+        function dateToString(dt) {
+            var current_date = dt.getUTCDate(),
+                current_month = dt.getUTCMonth() + 1,
+                current_year = dt.getUTCFullYear(),
+                current_hrs = dt.getUTCHours(),
+                current_mins = dt.getUTCMinutes(),
+                current_secs = dt.getUTCSeconds(),
+                current_datetime;
+
+            // Add 0 before date, month, hrs, mins or secs if they are less than 0
+            current_date = current_date < 10 ? '0' + current_date : current_date;
+            current_month = current_month < 10 ? '0' + current_month : current_month;
+            current_hrs = current_hrs < 10 ? '0' + current_hrs : current_hrs;
+            current_mins = current_mins < 10 ? '0' + current_mins : current_mins;
+            current_secs = current_secs < 10 ? '0' + current_secs : current_secs;
+
+            // Current datetime
+            // String such as 2016-07-16T19:20:30
+            current_datetime = current_year + '-' + current_month + '-' + current_date + " " + current_hrs + ':' + current_mins + ':' + current_secs;
+            return current_datetime;
+        }
+
+        function updateUTC() {
+            var utc = new Date();
+            document.body.innerText += "UTCTime=" + dateToString(utc) + "\r\n";
+        }
+
+        getLatLng('3 redwood court, west windsor, nj 08550');
+        updateUTC();
+    </script>
+</body>
+
+</html>
