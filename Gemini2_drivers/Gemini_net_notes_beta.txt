@@ -1,0 +1,23 @@
+Gemini.NET ASCOM Driver
+
+Version 1.1.10 (beta)
+---------------------
+0. Switch to require Microsoft .NET 4.8 runtime
+1. Support added for new L6 functions:
+   * Set Gemini time using UTC time
+   * Use Gemini J2000 precession conversion to replace one used in the driver
+   * Add Servo 4x precision selections for RA and DEC to Advanced dialog
+   * Add buzzer on/off option to Advanced dialog
+   * Add support for flip points/flip corridor in meridian flip settings   
+2. Add troubleshooting reporter function
+3. Add Terminal command window
+4. Add HA option to RA-DEC coordinate goto form 
+5. Add support for second instance of Gemini.NET controlling a separate physical Gemini unit
+6. Adjust main HC form and Advanced settings dialog to display properly with high DPI settings
+7. Clean up of exceptions and exception messages to those expected by ASCOM Conform tool
+8. Disable SyncToAltAz method as it's not supported by Gemini
+9. Add variable MoveAxis option to Telescope Settings dialog
+10. Increase polling frequency while slewing using variable MoveAxis (for improved satellite tracking)
+
+
+

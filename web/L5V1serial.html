@@ -422,8 +422,11 @@ are corrected according to the pointing model.&nbsp;
 <br>&lt;ddd&gt;�&lt;mm&gt;#</td>
 <td>Get Azimuth. From North over East. (From L4, V1.0 up)</td>
 </tr>
-
 <tr><td bgcolor="#f8f8f8"><b>Park</b></td> </tr>
+<tr><td>:hH#</td>
+<td>&nbsp;</td>
+<td>Set Home position at current position.<font color="RED">New in L5</font></td>
+</tr>
 <tr><td>:hP#</td>
 <td>&nbsp;</td>
 <td>Park at Home Position. The Home Position defaults to the celestial pole visible
@@ -1084,7 +1087,7 @@ Attention: The CI-700 entry was replaced by the MI-250. CI-700 can be supported 
 <td>{+-}80..720</td> 
 <td>{+-}80..720</td> 
 <td>RA worm gear ratio. The sign indicates the direction.
-<br><b>Note: </b>The 1,296,00 arcsec of a circle divided by the product of worm gear ratio,
+<br><b>Note: </b>The 1,296,000 arcsec of a circle divided by the product of worm gear ratio,
  spur gear ratio and motor encoder resolution define the step size per encoder tick. 
 Gemini L4 supports step sizes from 0.2 arcsec/tick to 2.5 arcsec/tick. Combinations exceeding
 this range are not allowed.
@@ -1153,6 +1156,15 @@ reading out the maximum step count, not for setting it).</td> </tr>
 <td>10..150</td> 
 <td>10..150</td> 
 <td>DEC spur gear ratio in "double" format. See note for command 21.</td> </tr>
+
+
+<tr><td>41..44</td> 
+  <td><br></td>
+  <td><br></td>
+  <td>41: Cold Start<br>42: Warm Start<br>43: Warm Restart<br>44: Ask<br>
+  <td>Default Parking mode. 41 can be used for requesting.<font color="RED">NEW in L5.2</font></td> </tr>
+  
+
 
 <tr><td>51</td> 
 <td><br></td>

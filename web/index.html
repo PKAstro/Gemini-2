@@ -18,7 +18,7 @@
 <body onload="set_style_from_cookie()">
 <div w3-include-html="../header.html" ></div>
 <div class="AJXMenueDFaTFD" w3-include-html="../navigation.html"></div><script>w3IncludeHTML();</script>
-<table align="center" style="width: 900px">
+<table align="center" style="max-width: 900px; min-width: 200px;">
 	<tr>
 		<td class="style7">Here is what the main Web interface page looks like.<br />
 		Please note that yours might be different. It depends of the 
@@ -54,7 +54,7 @@
 			<area coords="437, 333, 515, 356" href="web-mount.html" shape="rect" "_blank" />
 			<area coords="525, 334, 637, 354" href="web-site-time.html" shape="rect"   target="_blank"/>
 			<area coords="648, 334, 750, 356" href="web-modeling.html" shape="rect"  target="_blank" />
-			<area coords="478, 425, 706, 447" href="L5V1serial.html" shape="rect" target="_blank" />
+			<area coords="478, 425, 706, 447" href="L5V2_1serial.html" shape="rect" target="_blank" />
 			<area coords="514, 356, 607, 379" href="web-sdcard.html" shape="rect" target="_blank"  />
 			<area coords="617, 357, 679, 380" href="web-flash.html" shape="rect"  target="_blank" />
 			<area coords="545, 402, 722, 425" href="web-firmware-sram.html" shape="rect"  target="_blank" />
@@ -107,7 +107,7 @@
 		<li>
 			<span class="style3">Mount</span>
 			 - This is where the mount Parameter setup, including mount design, mount type, Gearing, Slew, 
-			Move, and Centering Speeds are entered. Also the Safty Limits canbe set on this page.
+			Move, and Centering Speeds are entered. Also the Safety Limits canbe set on this page.
 		</li>
 		
 		<li>
@@ -132,7 +132,7 @@
 				are doing if you use this function. 
 				If you do that only FTP functions are left to be able to then update the card, or the
 				Gemini Firmware updated can also still update the card.  The other alternative is to 
-				remove the card and use a mico-SDCard reader writer to access it's contents.
+				remove the card and use a micro-SDCard reader writer to access it's contents.
 		</li>
 		
 		<li>
@@ -169,7 +169,7 @@
 			<span class="style3">Battery, Ports</span>
 			 - This page shows the Power Supply voltage and the Internal Lithium Battery voltage (a CR2354 
 		replaceable battery) Also show is the pin status of all the ports.
-		To see the pin status Periodiclly you will have to select Periodic 
+		To see the pin status Periodically you will have to select Periodic 
 		Port E usage can also be defined on this page. To use 
 		any of the Port F pins, they have to be checked. But it seems that 
 		this state is not retained after leaving the page.
@@ -192,8 +192,8 @@
 			 - This page allows you to see the Motor State and setting, and 
 			 allow you to set the Thresholds for the 
 			warning messages shown on the hand controller. Please be very 
-			careful when you set these setting as you can damage the motor's or 
-			motor drive circuits, is set wrong.
+			careful when you set these setting as you can damage the motors or 
+			motor drive circuits, if set wrong.
 		</li>
 			
 		<li>
@@ -205,7 +205,7 @@
 		<li>
 			<span class="style3">Videos By Scott Losmandy</span>
 			 - The 15 videos that Scott Losmandy produced to show how to use the Gemini-2, Position the mount to CWD, and use the 
-			Polar Scope Illuminator are stored on the mico SDcard, and with an 
+			Polar Scope Illuminator are stored on the micro SDcard, and with an 
 			external web browser connected through the ethernet port, they can be 
 			view directly from the Gemini-2 micro SDcard.
 		</li>

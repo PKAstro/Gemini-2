@@ -24,14 +24,14 @@
 
 
 <p class="style6">
-<table align="center" style="width: 900px">
+<table align="center" style="max-width: 900px; min-width: 200px;">
 	<tr>
 		<td class="h2">Definitions</td>
 	</tr>
 </table>
 
 
-<table align="center" style="width: 900px">
+<table align="center" style="max-width: 900px; min-width: 200px;">
 	<tr>
 		<td width="300Px"><a href="#Adaptive_King_Tracking_Speed">Adaptive_King_Tracking_Speed</a></td>
 		<td width="300Px"><a href="#Alignment">Alignment</a></td>
@@ -128,7 +128,7 @@
 
 
 
-<table align="center" style="width: 900px">
+<table align="center" style="max-width: 900px; min-width: 200px;">
 	<tr>
 		<td class="style6">
 		Definition of terms:<br />
@@ -408,7 +408,7 @@
 		west side and want to goto the east side with a meridian flip.&nbsp; 
 		Just hitting the other side button and picking a star, will not insure a 
 		flip to the other model.&nbsp; It is this way so that you can add stars 
-		that is close to the meridian's other side to the existing model.&nbsp; 
+		that is close to the meridian other side to the existing model.&nbsp; 
 		This helps in transitioning from east to west and back.&nbsp; Also to 
 		ensure good meridian flips, while building a model use an alignment star 
 		that is close to zenith that can be added to the model on both sides of 
@@ -454,10 +454,10 @@
 		each object, so you can select it manually. These models are stored in 
 		the battery backed up SDam inside the main Processor.&nbsp; You do have 
 		the option to store them into the micro-SDcard in the main unit, and 
-		also retreave them from this memory. They are never worked on from the 
+		also retrieve them from this memory. They are never worked on from the 
 		micro-SDcard, only the battery backed up SDram in the processor.&nbsp; 
 		Please note that the stars that are used to build a model is not 
-		retained.&nbsp; Only the last star used in mormally known, so it can be 
+		retained.&nbsp; Only the last star used is normally remembered, so it can be 
 		removed from the model if necessary.&nbsp; <br />
 		<br />
 		</li>
@@ -562,7 +562,7 @@
 			Guiding Speed is the principal speed, so pressing a Hand Controller
 			directional button moves the telescope at the selected Guiding Speed; Slewing Speed is
 			not available.  The following changes in speed are only available on 
-			the buttons on the back of the Gemini hand controller, or a <a href="http://www.losmandy.com/hi-rez-images/HC.jpg" target="_blank">
+			the buttons on the back of the Gemini hand controller, or a <a href="/images/hi-rez-images/HC.jpg" target="_blank">
 			Standard Hand controller</a> if plugged in. <br />Acceleration to Centering Speed is available in four stages (to allow easy
 			centering of an object in the field of view or on a CCD chip) by pressing the opposite
 			button while Gemini is guiding:   
@@ -610,7 +610,7 @@
 		the UPD command sequence to send these commands through the ASCOM 
 		Gemini.net driver are&nbsp;covered in these two documents.
 		<ol type="a">
-			<li><a href="web/L5V1serial.html" target="_self">Serial Command Set</a></li>
+			<li><a href="web/L5V2_1serial.html" target="_self">Serial Command Set</a></li>
 			<li><a href="Gemini2_drivers/UPD_Protocol/Gemini_UDP_Protocol_Specification_1.0.pdf" target="_blank">UDP Protocol</a></li>
 		</ol>
 		<br />
@@ -721,7 +721,7 @@
 	</tr>		
 </table>
 
-<table align="center" style="width: 900px">
+<table align="center" style="max-width: 900px; min-width: 200px;">
 	<tr>
 		<td class="style6">
 		<ol start="30"> -->
@@ -729,7 +729,7 @@
 		Synchronizes the telescopes current pointing position to the built model 
 		stored in the Gemini-2. This is normally used after a Warm Start.&nbsp; 
 		It may also be used to synch the model for more accuracy if looking for 
-		dim objects, by synching on a close bright object.&nbsp; Synchronize 
+		dim objects, by sync'ing on a close bright object.&nbsp; Synchronize 
 		does not modify the models math terms at all.&nbsp;&nbsp; Now if a model 
 		has not been built, Synchronize can be used after a Cold Start to give the Gemini-2 a 
 		really precision position for it calculations of where it is pointing 
@@ -864,7 +864,7 @@
 			speed up.  Ramping up and down in speed occurs independently for both axes.  
 			This mode is intended for visual observing and for looking up objects. The auto-guider
 			port is not active in this mode.&nbsp; Again, The Gemini-2 will not 
-		guide using the Guider inputs or theough The Ascom driver if the 
+		guide using the Guider inputs or through The Ascom driver if the 
 		Gemini-2 is in "Visual Mode"<br /><br />
 		</li>	
 		

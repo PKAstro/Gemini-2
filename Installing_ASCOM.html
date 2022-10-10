@@ -4,172 +4,139 @@
 
 
 <head profile="http://www.w3.org/2005/10/profile">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-<title>Installing ASCOM</title>
-<link rel="stylesheet" href="ajxmenu.css" type="text/css">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta content="en-us" http-equiv="Content-Language" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Installing ASCOM</title>
+    <link rel="stylesheet" href="ajxmenu.css" type="text/css">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="en-us" http-equiv="Content-Language" />
 
 
-<link href="gemini-2.css" rel="stylesheet" title = "light" type="text/css">
-<link href="gemini-2-dark.css" rel="stylesheet" title = "dark" type="text/css">
-<script src="style_switcher.js"></script>
-<link href="theme-selector.css" rel="stylesheet" type="text/css">
+    <link href="gemini-2.css" rel="stylesheet" title="light" type="text/css">
+    <link href="gemini-2-dark.css" rel="stylesheet" title="dark" type="text/css">
+    <script src="style_switcher.js"></script>
+    <link href="theme-selector.css" rel="stylesheet" type="text/css">
 
-<script src="w3data.js"></script></head>
+    <script src="w3data.js"></script>
+</head>
+
 <body onload="set_style_from_cookie()">
-<div w3-include-html="header.html" ></div>
-<div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div><script>w3IncludeHTML();</script>
+    <div w3-include-html="header.html"></div>
+    <div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div>
+    <script>
+        w3IncludeHTML();
+    </script>
 
 
-<table align="center" style="width: 900px">
+    <table align="center" style="max-width: 900px; min-width: 200px;">
 
-	<tr>
-		<td class="h3">Installing ASCOM</td>
-	</tr>
-</table>
-<br />
-<table align="center" style="width: 900px">
-	<tr>
-		<td class="style6">
-		If you want to use Astronomy programs that support ASCOM drivers on your Windows machine,
-		then you need to first install the 
-		ASCOM Platform 6.5 and then install the Gemini ASCOM Driver.</td>
-	</tr>
-</table>
-<table align="center" style="width: 900px">
-	<tr>
-		<td class="style6">
-		<ol>
-			<li>Go to the <a href="http://www.ascom-standards.org/index.htm">
-			ASCOM Standards Site</a> and find the "Download" button (usually inside a box on right).
-			This should be the latest version of the ASCOM 
-			Platform.&nbsp; Download and install the platform on your computer.&nbsp; DO NOT INSTALL 
-			USING RUN AS ADMINISTRATOR.&nbsp; 
-			You can read about ASCOM Release 6.5 here: 
-			<a href="https://github.com/ASCOMInitiative/ASCOMPlatform/releases/tag/v6.5Release">
-			ASCOM Platform 6.5 Release</a><span style="word-spacing:normal;">.</span></li>
-			<li>Next you will need the
-			<a href="javascript:localURL('Gemini2_drivers/GeminiTelescopeInstaller(1.0.75.0).exe')">Gemini ASCOM driver</a> and install it.&nbsp; 
-			It should be version (1.0.75.0). DO NOT INSTALL USING RUN AS 
-			ADMINISTRATOR.&nbsp; This will also be the 
-			latest version released. Please note that this driver requires .NET 
-			4.0 Framework. You can
-			<a href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=30653">
-			download .NET 4.5 here</a>.&nbsp; Windows 10 has .NET Framework 4.6 
-			built in.&nbsp; (it might need to be turned on.)</li>
-			<li>If you have never installed or setup the Gemini.net ASCOM driver then 
-			here is instructions for
-			<a href="configuringASCOMfirsttime.html" target="_self">
-			first time Setup</a>.</li>
-			<li>If you are going to use Ethernet to connect your Gemini-2 to 
-			your computer here are
-			<a href="configuringEthernetASCOMdriver.html" target="_self">
-			instructions</a> to do that.</li>
-			<li>** If you install the ASCOM programs as ADMINISTRATOR you will 
-			have to run any program you want to connect to them as 
-			ADMINISTRATOR.</li>
-		</ol>
-		</td>
-	</tr>
-</table>
-<table align="center" style="width: 900px">
-	<tr>
-		<td class="style6">
-		Please see the "ASCOM/USB/GPS--&gt;ASCOM Related" menu in the top menu bar 
-		for more selections.</td>
-	</tr>
-</table>
-<p></p>
-<table align="center" style="width: 900px">
-	<tr>
-		<td class="style6">
-		Why use the Gemini.net ASCOM Driver with the Gemini-2: (or Gemini-1)<br>
-			<ol>
-			<li>The Gemini.net ASCOM Driver implements a standard ASCOM interface to contol telescope mounts. Many software packages support this ASCOM interface allowig you to try and use many of them.
-			The ASCOM Driver is a convenience and, in many cases, a requirement.</li>
-				<li>  If you need to share the connection to Gemini across two or more software packages, ASCOM is the only game in town today.
-				</li>
-				<li>  Moreover, nearly all astronomical software from small companies or independent developers only use ASCOM to 
-				control astronomical equipment. This enables them to concentrate on one implementation that works across various
-	 			equipment brands, and avoids the cost of developing, testing, and supporting separate custom interfaces. </li>
-				<li>  You can control the mount via a Serial Cable, a USB connection 
-				or Ethernet (Preferred). (Gemini-1 Serial Only.)</li>
-				<li>  You can guide and control the mount using the same Ethernet cable.</li>
-			<li>When a UDP Ethernet connection is used, the speed is extremely fast (faster that a USB connection) while minimizing the load on the computer.</li>
-			<li>The Gemini.net ASCOM Driver allows multiple clients 
-			connected to the telescope at the same time.&nbsp;&nbsp; The Gemini.net 
-			ASCOM driver is a HUB.</li>
-				<li>You can use other ASCOM drivers to control focusers, cameras, observatory, etc., and the Gemini.net ASCOM Driver to control the mount at the same time.</li>
-			<li>Guiding through the ASCOM Gemini-2 Driver provides many 
-			advantages:<ul>
-				<li>The guiding is synchronous (two-way):
-				Gemini-2 will acknowledge the guiding commands,&nbsp; something that is not possible when using the Guider ST-4 port.</li>
-				<li>The Autoguider program can tell the mount how much to move, 
-				instead of sending fixed guide pulses via the ST-4 port.&nbsp; The Guider ST-4 port relies on an 
-				interrupt for the RA signal, but a timer for the DEC signal. This 
-				means that DEC guiding pulses could be missed if they are too 
-				short.&nbsp; This problem does not exist when using the Ethernet port 
-				to guide.</li>
-				<li>No guider cable is necessary, therefore almost any camera 
-				can be used to guide as long as you have a driver for the 
-				camera.&nbsp; The camera does not need a guider output plug.</li>
-				<li>Less cables means less chances of a ground loop, which can 
-				cause possible damage to electronics.&nbsp; the Ethernet connector has a built 
-				in transformer that isolates its input and prevents
-				ground loops.</li>
-			
-		</ol>
-		
-		</td>
-	</tr>
-</table>
+        <tr>
+            <td class="h3">Installing ASCOM</td>
+        </tr>
+    </table>
+    <br />
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style6">
+                If you want to use Astronomy programs that support ASCOM drivers on your Windows machine, then you need to first install the latest ASCOM Platform and then install the Gemini ASCOM Driver.</td>
+        </tr>
+    </table>
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style6">
+                <ol>
+                    <li>Go to the <a href="http://www.ascom-standards.org/index.htm">
+			ASCOM Standards Site</a> and find the "Download" button (usually inside a box on right). This should be the latest version of the ASCOM Platform.&nbsp; Download and install the platform on your computer.&nbsp; DO NOT INSTALL USING RUN AS ADMINISTRATOR.&nbsp;
+                    </li><br>
+                    <li>Next you will need the
+                        <a href="javascript:localURL('ASCOM.html')">Gemini ASCOM driver</a> and install it.&nbsp; DO NOT INSTALL USING RUN AS ADMINISTRATOR.&nbsp; This will also be the latest version released. Please note that this driver requires .NET
+                        4.8 Framework.</li><br>
+                    <li>If you have never installed or setup the Gemini.net ASCOM driver then here is instructions for
+                        <a href="configuringASCOMfirsttime.html" target="_self">
+			first time Setup</a>.</li><br>
+                    <li>If you are going to use Ethernet to connect your Gemini-2 to your computer here are
+                        <a href="configuringEthernetASCOMdriver.html" target="_self">
+			instructions</a> to do that.</li><br>
+                    <li>** If you install the ASCOM programs as ADMINISTRATOR you will have to run any program you want to connect to them as ADMINISTRATOR.
+                    </li>
+                </ol>
+            </td>
+        </tr>
+    </table>
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style6">
+                Please see the "ASCOM/USB/GPS--&gt;ASCOM Related" menu in the top menu bar for more selections.</td>
+        </tr>
+    </table>
+    <p></p>
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style6">
+                <b>Why use Gemini.net ASCOM Driver with the Gemini-2 (or Gemini-1)?</b><br>
+                <ol>
+                    <li>Gemini.net ASCOM Driver implements a standard ASCOM interface to contol telescope mounts. Many software packages support this ASCOM interface allowig you to try and use many of them. The ASCOM Driver is a convenience and, in many cases,
+                        a requirement.</li><br>
+                    <li> If you need to share the connection to Gemini across two or more software packages, ASCOM is the only game in town today.<br>
+                    </li><br>
+                    <li> Moreover, most astronomical software from small companies or independent developers use ASCOM to control astronomical equipment. This enables them to concentrate on one implementation that works across various equipment brands, and
+                        avoids the cost of developing, testing, and supporting separate custom interfaces. </li><br>
+                    <li> You can control the mount via a Serial Cable, a USB connection or Ethernet (Preferred). (Gemini-1 supports serial only.)</li><br>
+                    <li> You can guide and control the mount using the same Ethernet cable.</li><br>
+                    <li>When a UDP Ethernet connection is used, the speed is extremely fast (faster that a USB connection) while minimizing the load on the computer.</li><br>
+                    <li>The Gemini.net ASCOM Driver allows multiple clients connected to the telescope at the same time.&nbsp;&nbsp; The Gemini.net ASCOM driver is a HUB.</li><br>
+                    <li>You can use other ASCOM drivers to control focusers, cameras, observatory, etc., and the Gemini.net ASCOM Driver to control the mount at the same time.</li><br>
+                    <li>Guiding through the ASCOM Gemini-2 Driver provides many advantages:
+                        <ul>
+                            <li>The guiding is synchronous (two-way): Gemini-2 will acknowledge the guiding commands,&nbsp; something that is not possible when using the Guider ST-4 port.</li>
+                            <li>The Autoguider program can tell the mount how much to move, instead of sending fixed guide pulses via the ST-4 port.&nbsp; The Guider ST-4 port relies on an interrupt for the RA signal, but a timer for the DEC signal. This
+                                means that DEC guiding pulses could be missed if they are too short.&nbsp; This problem does not exist when using the Ethernet port to guide.</li>
+                            <li>No guider cable is necessary, therefore almost any camera can be used to guide as long as you have a driver for the camera.&nbsp; The camera does not need a guider output plug.</li>
+                            <li>Less cables means less chances of a ground loop, which can cause possible damage to electronics.&nbsp; the Ethernet connector has a built in transformer that isolates its input and prevents ground loops.</li>
 
-<table align="center" style="width: 900px">
-	<tr>
-		<td class="style6">
-		
-		As a small example you can have TheSkyX, MaximDL, PHD guiding using pulse 
-			guiding, all connected at the same time, plus many more of ASCOM 
-			compatible programs. A few of the programs that use the ASCOM Driver to connect to the Gemini 
-		1 and 2 are:
-		<ol>
-			<li>The SkyX</li>
-			<li>MaximDL</li>
-			<li>PHD2</li>
-			<li>Sky Tools 3</li>
-			<li>Stellarium</li>
-			<li>Carte du Ciel</li>
-			<li>PemPro</li>
-			<li>Sequence Generator Pro</li>
-			<li>Many others.&nbsp; See if the program you want to use supports ASCOM.</li>
-		</ol>
-		
-		
-		</td>
-	</tr>
-</table>
-<table align="center" style="width: 900px">
-	<tr>
-		<td class="style6">
-		
-		&nbsp;&nbsp;
-		
-		</td>
-	</tr>
-</table>
+                </ol>
+
+            </td>
+        </tr>
+    </table>
+
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style6">
+
+                As a small example you can have TheSkyX, MaximDL, PHD guiding using pulse guiding, all connected at the same time, plus many more of ASCOM compatible programs. A few of the programs that use the ASCOM Driver to connect to the Gemini 1 and 2 are:
+                <ol>
+                    <li>The SkyX</li>
+                    <li>MaximDL</li>
+                    <li>PHD2</li>
+                    <li>Sky Tools 3</li>
+                    <li>Stellarium</li>
+                    <li>Carte du Ciel</li>
+                    <li>PemPro</li>
+                    <li>Sequence Generator Pro</li>
+                    <li>Many others.&nbsp; See if the program you want to use supports ASCOM.</li>
+                </ol>
 
 
- 
+            </td>
+        </tr>
+    </table>
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style6">
 
+                &nbsp;&nbsp;
 
-<link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
+            </td>
+        </tr>
+    </table>
 
 
 
-<div w3-include-html="footer.html" ></div>
+
+
+    <link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
+
+
+
+    <div w3-include-html="footer.html"></div>
 </body>
-
-
-
-

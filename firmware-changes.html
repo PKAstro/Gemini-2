@@ -23,7 +23,7 @@
 <div w3-include-html="header.html" ></div>
 <div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div><script>w3IncludeHTML();</script>
 
-<table align="center" style="width: 900px">
+<table align="center" style="max-width: 900px; min-width: 200px;">
 	<tr><td>
 			<h2>Gemini 2 Firmware Changes<h2/>
 	</td></tr>
@@ -39,7 +39,7 @@
 <!-- <hr class="style2" style="width: 900px" /> -->
 
 
-<table align="center" style="width: 900px"> <!-- class="tableborder1"> -->
+<table align="center" style="max-width: 900px; min-width: 200px;"> <!-- class="tableborder1"> -->
 	<tr>
 		<th style="width: 100px">Date (Y-M-D)</th>
 		<th>Main Unit</th>
@@ -74,7 +74,7 @@
 				<li>New main unit firmware to improve the GoTos (starting the RA axis one second after the DEC axis to reduce current drain.</li>
 				<li>Improve satellite tracking by getting rid of leap-frogging.</li>
 				<li>Getting rid of the worm contact problems by slightly overshooting targets to the East then stopping and moving to the west at centering speed till target is reached, then continuing at sidereal speed. This will ensure gears are fully messed at start of sidereal tracking.</li>
-				<li>Implemented an Network Time Protocal (NTP) to receive time/date from the many NIST Internet Time 
+				<li>Implemented an Network Time Protocol (NTP) to receive time/date from the many NIST Internet Time 
 					Services for time/date setting at startup and over the web interface. See
 					<ul>
 						<li><a href="hc/E023.html" target="_blank">HC time/date</a></li>
@@ -192,7 +192,7 @@
 					<a href="Gemini2_drivers/Gemini_Telescope_Net_Installation_and_Operation.pdf" target="_blank">
 					ASCOM manual</a> was also updated.</li>
 				<li>Fixed a state bug in the PEC routine that stopped PEC when least expected.</li>
-				<li>New <a href="web/L5V1serial.html" target="_self">Serial commands</a> added:
+				<li>New <a href="web/L5V2_1serial.html" target="_self">Serial commands</a> added:
 					<ul>
 						<li>51 - Return 0 for original Gemini-2, Return 1 for Gemini-2 Mini.</li>
 						<li>321 - Return Main Battery Voltage in Volts, This is floating Point value.</li>
@@ -263,7 +263,7 @@
 	</tr>
 </table>
 <h2>New Level 5.2 Firmware After June 2015</h2>
-<table align="center" style="width: 900px"> <!-- class="tableborder1"> -->
+<table align="center" style="max-width: 900px; min-width: 200px;"> <!-- class="tableborder1"> -->
 	<tr>
 		<th style="width: 100px">Date (Y-M-D)</th>
 		<th>Main Unit</th>
