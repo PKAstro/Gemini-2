@@ -1,5 +1,13 @@
 Gemini.NET ASCOM Driver
 
+Version 1.1.13 (beta)
+---------------------
+1. Improve variable axis rate tracking for satellite tracking
+2. Add JPL/Horizons automatic ephemeris retrieval and dynamic DEC and RA axes adjustment tool (test only)
+3. Fix support for HTTP protocol and improve performance
+
+
+
 Version 1.1.10 (beta)
 ---------------------
 0. Switch to require Microsoft .NET 4.8 runtime
