@@ -1,5 +1,12 @@
 Gemini.NET ASCOM Driver
 
+
+Version 1.1.14 (beta)
+---------------------
+1. Add automatic caching of all viewed JPL/Horizons ephemeris for 24 hours
+2. Add ability to load cached ephemeris to use off-line within 24 hours after caching
+
+
 Version 1.1.13 (beta)
 ---------------------
 1. Improve variable axis rate tracking for satellite tracking
