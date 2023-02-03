@@ -1,5 +1,11 @@
 Gemini.NET ASCOM Driver
 
+Version 1.1.16 (beta)
+---------------------
+1. Add support for Gemini L5 using comet rates for JPL/Horizons comet tracking
+2. Fix issue with DEC reversal on East side of the mount
+3. Change behavior to report tracking when tracking in JPL/Horizons, even if moving rate is Center or Slew to allow guiding (PHD2)
+
 
 Version 1.1.14 (beta)
 ---------------------
