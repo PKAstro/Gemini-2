@@ -1,5 +1,11 @@
 Gemini.NET ASCOM Driver
 
+
+Version 1.1.17 (beta)
+---------------------
+1. Fix exception when tracking at high rates (e.g., ISS) in JPL/Horizons
+2. Fix driver not reporting correct status for IsPulseGuiding when tracking with JPL/Horizons set rates
+
 Version 1.1.16 (beta)
 ---------------------
 1. Add support for Gemini L5 using comet rates for JPL/Horizons comet tracking
