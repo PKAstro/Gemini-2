@@ -1,5 +1,9 @@
 Gemini.NET ASCOM Driver
 
+Version 1.1.18 (beta)
+---------------------
+1. Change command throttling and queueing behavior to accommodate frequent requests from software, such as SGP, that could result in occasional timeout messages
+2. Add Meridian Flip using Goto option as a work-around to :Mf# command not working in Gemini L5
 
 Version 1.1.17 (beta)
 ---------------------
