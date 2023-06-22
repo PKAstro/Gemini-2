@@ -1,3 +1,14 @@
+Version 1.0.84 (Sept 3, 2021)
+-----------------------------
+1. Added Set Home Position menu to Park setup window
+2. Made :hZ (park at Zenith) command asynchronous
+3. Fixed About box not closing issue
+4. Changed the label on Goto Limit setting to indicate degrees from limit
+5. Added: convert JNow to J2000 returned coordinates when Gemini Expects J2000 is selected
+6. Changed meridian flip logic to avoid occasional timeouts
+7. Fixed localization issue with setting Gemini time if local date format doesn't include '/'
+8. Change to ignore pulse-guiding commands while the mount is slewing
+
 Version 1.0.75
 ----------------
 1. Fix to allow ASCOM Alpaca to work with the driver
