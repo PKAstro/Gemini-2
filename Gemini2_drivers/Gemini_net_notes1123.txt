@@ -1,16 +1,7 @@
 Gemini.NET ASCOM Driver
 
-Version 1.1.25 - release
-------------------------
-2024-04-07 Enable solar system objects selection from Objects + Coordinates screen
-2024-04-07 Add a window to select one of multiple observations from Small and Solar System Objects
-2024-04-04 Fix for PEMPro + PEC programming for Gemini-1 L4 timeout errors
-2024-04-04 Increased timeouts for serial comms for L4 and later
-2024-04-04 Fix worm cycle display in PEC window for Gemini-1
-2024-04-04 Additional statistics and frequency display in PEC Chart window
-
 Version 1.1.23 - release + Gemini L6 updates
---------------------------------------------
+-----------------------------------------------
 2023-04-23 Fix for errors in advanced settings when mount is parked
 2023-04-20 Fix for time scale in PEC chart when RA 4x encoders are enabled
 2023-04-12 Fix for SCOUT API crash in Small Objects/Minor Planets
