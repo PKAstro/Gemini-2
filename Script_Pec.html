@@ -4,68 +4,62 @@
 
 
 <head profile="http://www.w3.org/2005/10/profile">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-<link rel="stylesheet" href="ajxmenu.css" type="text/css">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta content="en-us" http-equiv="Content-Language" />
-<title>A sample script to start PEC running</title>
+    <link rel="stylesheet" href="ajxmenu.css" type="text/css">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="en-us" http-equiv="Content-Language" />
+    <title>A sample script to start PEC running</title>
 
-<link href="gemini-2.css" rel="stylesheet" title = "light" type="text/css">
-<link href="gemini-2-dark.css" rel="stylesheet" title = "dark" type="text/css">
-<script src="style_switcher.js"></script>
-<link href="theme-selector.css" rel="stylesheet" type="text/css">
+    <link href="gemini-2.css" rel="stylesheet" title="light" type="text/css">
+    <link href="gemini-2-dark.css" rel="stylesheet" title="dark" type="text/css">
+    <script src="style_switcher.js"></script>
+    <link href="theme-selector.css" rel="stylesheet" type="text/css">
 
-<script src="w3data.js"></script></head>
+    <script src="w3data.js"></script>
+</head>
+
 <body onload="set_style_from_cookie()">
-<div w3-include-html="header.html" ></div>
-<div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div><script>w3IncludeHTML();</script>
+    <div w3-include-html="header.html"></div>
+    <div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div>
+    <script>
+        w3IncludeHTML();
+    </script>
 
 
-<table align="center" style="max-width: 900px; min-width: 200px;">
+    <table align="center" style="max-width: 900px; min-width: 200px;">
 
-	<tr>
-		<td class="h3">A sample script to start PEC running</td>
-	</tr>
-</table>
-<table align="center" style="max-width: 900px; min-width: 200px;">
-	<tr>
-		<td class="style6">Here is a simple script Paul Kanevsky provided that 
-		will start the PEC running.</td>
-	</tr>
-</table>
-<table align="center" style="max-width: 900px; min-width: 200px;">
-	<tr>
-		<td class="style6">
-		This script is based on Microsofts Visual basic, but you do not have to 
-		have Microsoft Visual basic to run or compile it, as Microsoft will 
-		directly execute it from the desktop.&nbsp; You will have to have the 
-		ASCOM Gemini.net driver up and connected to the mount for it to work.&nbsp; Just use Notepad to write 
-		the script and save it as a .vbs file.&nbsp; It uses one of the Gemini-2 
-		serial commands (in this case 531) that are listed
-		<a href="web/L5V2_1serial.html" target="_self">
-		here</a>. Note that the Web interface on your Gemini-2 has a page that 
-		shows all the serial commands.</td>
-	</tr>
-</table>
-<table align="center" style="max-width: 900px; min-width: 200px;">
-	<tr>
-		<td class="style6">
-		Please note that this particular script will only work with Gemini-II.&nbsp; 
-		This is because 530-532 is only supported in the Gemini-2.&nbsp; See a 
-		list of commands
-		<a href="web/L5V2_1serial.html" target="_self">
-		here</a><br />
-		A zipped script file is linked below
+        <tr>
+            <td class="h3">A sample script to start PEC running</td>
+        </tr>
+    </table>
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style6">Here is a simple script Paul Kanevsky provided that will start the PEC running.</td>
+        </tr>
+    </table>
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style6">
+                This script is based on Microsofts Visual basic, but you do not have to have Microsoft Visual basic to run or compile it, as Microsoft will directly execute it from the desktop.&nbsp; You will have to have the ASCOM Gemini.net driver up and connected
+                to the mount for it to work.&nbsp; Just use Notepad to write the script and save it as a .vbs file.&nbsp; It uses one of the Gemini-2 serial commands (in this case 531) that are listed
+                <a href="web/L6V02serial.html" target="_self">
+		here</a>. Note that the Web interface on your Gemini-2 has a page that shows all the serial commands.</td>
+        </tr>
+    </table>
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style6">
+                Please note that this particular script will only work with Gemini-II.&nbsp; This is because 530-532 is only supported in the Gemini-2.&nbsp; See a list of commands
+                <a href="web/L6V02serial.html" target="_self">
+		here</a><br /> A zipped script file is linked below
 
-		<br />
+                <br />
 
-		<br />
+                <br /> ------- script below this line -------
 
-------- script below this line -------
-
-<br />
-<span class="style3">				&nbsp;<br />
+                <br />
+                <span class="style3">				&nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				dim scope<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -84,49 +78,39 @@
 				scope.connected = False<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				wscript.quit<br /></span>
-		<br />
-------- script above this line -------
-		<br />
-		</td>
-	</tr>
-	<tr>
-		<td class="style6">
-		If you replace the 531 with a 532, then the script would turn PEC OFF<br />
-		Replacing 531 with 530 would start PEC recording.<br />
-		If a Pec file is loaded on the micro SDcard, then using 550 would load 
-		that file to use. It uses the default file name "CurrPEC.pec" in the PEC 
-		directory, if there is one.&nbsp; If no file is in the micro SDcard and a 
-		PEC curve has been generate, then it will store a PEC curve to a file 
-		named "CurrPEC.pec".
-		
-		</td>
-	</tr>
-</table>
+                <br /> ------- script above this line -------
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td class="style6">
+                If you replace the 531 with a 532, then the script would turn PEC OFF<br /> Replacing 531 with 530 would start PEC recording.<br /> If a Pec file is loaded on the micro SDcard, then using 550 would load that file to use. It uses the default
+                file name "CurrPEC.pec" in the PEC directory, if there is one.&nbsp; If no file is in the micro SDcard and a PEC curve has been generate, then it will store a PEC curve to a file named "CurrPEC.pec".
 
-<table align="center" style="max-width: 900px; min-width: 200px;">
-	<tr>
-		<td class="style6">
-		&nbsp;Here is a link to 
-		<a href="#" onclick="localURL('downloads/VBscripts/PEC_on.zip');return false;" target="_blank">download a zipped version</a>. PEC_on.vbs</td>
-	</tr>
-</table>
+            </td>
+        </tr>
+    </table>
+
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style6">
+                &nbsp;Here is a link to
+                <a href="#" onclick="localURL('downloads/VBscripts/PEC_on.zip');return false;" target="_blank">download a zipped version</a>. PEC_on.vbs</td>
+        </tr>
+    </table>
 
 
-<table align="center" style="max-width: 900px; min-width: 200px;">
-	<tr>
-		<td class="style7">
-		<a href="scripting_examples.html" target="_self">Return to Scripting Commands</a></td>
-	</tr>
-</table>
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style7">
+                <a href="scripting_examples.html" target="_self">Return to Scripting Commands</a></td>
+        </tr>
+    </table>
 
 
-<link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
+    <link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
 
 
 
-<div w3-include-html="footer.html" ></div>
+    <div w3-include-html="footer.html"></div>
 </body>
-
-
-
-

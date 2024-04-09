@@ -4,141 +4,121 @@
 
 
 <head profile="http://www.w3.org/2005/10/profile">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-<title>Connecting Gemini 2 to Computers and other devices</title>
-<link rel="stylesheet" href="ajxmenu.css" type="text/css">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta content="en-us" http-equiv="Content-Language" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Connecting Gemini 2 to Computers and other devices</title>
+    <link rel="stylesheet" href="ajxmenu.css" type="text/css">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="en-us" http-equiv="Content-Language" />
 
 
-<link href="gemini-2.css" rel="stylesheet" title = "light" type="text/css">
-<link href="gemini-2-dark.css" rel="stylesheet" title = "dark" type="text/css">
-<script src="style_switcher.js"></script>
-<link href="theme-selector.css" rel="stylesheet" type="text/css">
+    <link href="gemini-2.css" rel="stylesheet" title="light" type="text/css">
+    <link href="gemini-2-dark.css" rel="stylesheet" title="dark" type="text/css">
+    <script src="style_switcher.js"></script>
+    <link href="theme-selector.css" rel="stylesheet" type="text/css">
 
-<script src="w3data.js"></script></head>
+    <script src="w3data.js"></script>
+</head>
+
 <body onload="set_style_from_cookie()">
-<div w3-include-html="header.html" ></div>
-<div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div><script>w3IncludeHTML();</script>
+    <div w3-include-html="header.html"></div>
+    <div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div>
+    <script>
+        w3IncludeHTML();
+    </script>
 
 
-<table align="center" style="max-width: 900px; min-width: 200px;">
+    <table align="center" style="max-width: 900px; min-width: 200px;">
 
-	<tr>
-		<td class="h3">Connecting Gemini 2 to Computers and other devices</td>
-	</tr>
-</table>
-<br />
-<table align="center" style="max-width: 900px; min-width: 200px;">
-	<tr>
-		<td class="style6">
-		<ol>
-			<li><u>Stand-alone</u>: Note that the Gemini-2 can be used completely stand alone, without the need of an external computer..&nbsp; Here is a
-			<a href="hc/index.html">tutorial of the hand controller</a>.</li>
-			<li><u>Serial Port connector</u>: You can use the Gemini-2 Serial port to connect to a PC that has a 
-			Serial port or a USB to serial adapter. For the cable wiring see
-			<a href="cable_wiring.html" target="_self">Serial Port Wiring</a>.&nbsp; 
-			The Gemini-2 port is labeled "Serial Port 1" on the Original Gemini-2 and "Serial/GPS"
-			on the Gemini-2 Mini.
-			<ol type="a">
-				<li>Please note that you cannot access the web interface using 
-				the Serial Port.</li>
-				<li>The serial port only accepts the Gemini commands listed
-				<a href="web/L5V2_1serial.html" target="_self">here</a>.</li>
-				<li>The serial port can be used with the ASCOM driver.&nbsp; See 4c 
-				below.</li>
-			</ol>
-			</li>
-			<li>
-			<u>USB connector</u>:&nbsp;
-			This requires a
-			<a href="javascript:localURL('Gemini2_drivers/L5-USB/USB_Drivers_for_Level_5_Firmware_after_June-4-2013.zip')" target="_self" title="Only for Level 5 firmware and after">
-			USB driver for Windows</a>.&nbsp; There is no driver for MAC. Linux 
-			computers have a driver built in.
-			<ol type="a">
-				<li>The USB-A connector can only supply +5V, and is not 
-				supported otherwise.</li>
-				<li>Please note that you cannot access the web interface using 
-				the USB Port.</li>
-				<li>The USB port only accepts the Gemini commands listed
-				<a href="web/L5V2_1serial.html" target="_self">here</a>.</li>
-				<li>The USB port can be used with the ASCOM driver.&nbsp; See 4c 
-				below.</li>
+        <tr>
+            <td class="h3">Connecting Gemini 2 to Computers and other devices</td>
+        </tr>
+    </table>
+    <br />
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style6">
+                <ol>
+                    <li><u>Stand-alone</u>: Note that the Gemini-2 can be used completely stand alone, without the need of an external computer..&nbsp; Here is a
+                        <a href="hc/index.html">tutorial of the hand controller</a>.</li>
+                    <li><u>Serial Port connector</u>: You can use the Gemini-2 Serial port to connect to a PC that has a Serial port or a USB to serial adapter. For the cable wiring see
+                        <a href="cable_wiring.html" target="_self">Serial Port Wiring</a>.&nbsp; The Gemini-2 port is labeled "Serial Port 1" on the Original Gemini-2 and "Serial/GPS" on the Gemini-2 Mini.
+                        <ol type="a">
+                            <li>Please note that you cannot access the web interface using the Serial Port.</li>
+                            <li>The serial port only accepts the Gemini commands listed
+                                <a href="web/L6V02serial.html" target="_self">here</a>.</li>
+                            <li>The serial port can be used with the ASCOM driver.&nbsp; See 4c below.
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <u>USB connector</u>:&nbsp; This requires a
+                        <a href="javascript:localURL('Gemini2_drivers/L5-USB/USB_Drivers_for_Level_5_Firmware_after_June-4-2013.zip')" target="_self" title="Only for Level 5 firmware and after">
+			USB driver for Windows</a>.&nbsp; There is no driver for MAC. Linux computers have a driver built in.
+                        <ol type="a">
+                            <li>The USB-A connector can only supply +5V, and is not supported otherwise.</li>
+                            <li>Please note that you cannot access the web interface using the USB Port.</li>
+                            <li>The USB port only accepts the Gemini commands listed
+                                <a href="web/L6V02serial.html" target="_self">here</a>.</li>
+                            <li>The USB port can be used with the ASCOM driver.&nbsp; See 4c below.
+                            </li>
 
-			</ol>
-			</li>
-			<li><u>Ethernet connector</u>:&nbsp; The Ethernet connector supports a
-			Web interface that can 
-			control just about every function of the Gemini-2.&nbsp; When the Gemini-2 is connected to your local network using the Ethernet connector,
-			any device with access to your local network should be able to 
-			connect to the Gemini-2.&nbsp; This includes Windows computers, 
-			MAC computers, Linux computers, iPhones and iPads, Android phones 
-			and Android tablets.&nbsp; 
-			<!-- Removed. This is confusing b/c it is possible to put a wifi adapter on the Ethernet connector.
+                        </ol>
+                    </li>
+                    <li><u>Ethernet connector</u>:&nbsp; The Ethernet connector supports a Web interface that can control just about every function of the Gemini-2.&nbsp; When the Gemini-2 is connected to your local network using the Ethernet connector, any
+                        device with access to your local network should be able to connect to the Gemini-2.&nbsp; This includes Windows computers, MAC computers, Linux computers, iPhones and iPads, Android phones and Android tablets.&nbsp;
+                        <!-- Removed. This is confusing b/c it is possible to put a wifi adapter on the Ethernet connector.
 			Note this connection is only hardware, 
 			not Wifi.&nbsp;&nbsp;
 			-->
-			<ol type="a">
-				<li>
-				Instructions to connect the Ethernet interface to your Windows computer are 
-				<a href="ConnectingtoG2.html" target="_self">here</a>.
-				</li>
-				<li>
-				To access the Web Interface see
-				<a href="web/index.html" target="_self">Web Interface 
+                        <ol type="a">
+                            <li>
+                                Instructions to connect the Ethernet interface to your Windows computer are
+                                <a href="ConnectingtoG2.html" target="_self">here</a>.
+                            </li>
+                            <li>
+                                To access the Web Interface see
+                                <a href="web/index.html" target="_self">Web Interface 
 				instructions</a>.</li>
-				<li>
-				To use any program that supports the ASCOM Standard, you 
-				need to load the ASCOM Standard and the ASCOM Gemini Driver.&nbsp; 
-				See
-				<a href="Installing_ASCOM.html" target="_self">
+                            <li>
+                                To use any program that supports the ASCOM Standard, you need to load the ASCOM Standard and the ASCOM Gemini Driver.&nbsp; See
+                                <a href="Installing_ASCOM.html" target="_self">
 				instructions here</a>. </li>
-				<li>
-				To configure the ASCOM driver to use the Ethernet port see
-				<a href="configuringEthernetASCOMdriver.html" target="_self">
-				Configuring the Ethernet connection</a> in the ASCOM Driver.&nbsp;&nbsp; 
-				Note: The Ethernet connection must be working.&nbsp; If you 
-				cannot connect to the Web Interface, you will not be able to 
-				connect to the ASCOM driver using the Ethernet port.</li>
-				<li>
-				There are no instructions to connect the Ethernet interface 
-				to a MAC or Unit computer. You can access it by going to the IP 
-				address shown under Menu&rarr;Mount&rarr;Network in the hand 
-				controller.</li>
-				<li>
-				It is possible to use an Travel Router or Bridge to add WiFi to 
-				the Gemini-2 Ethernet port.
-				<a href="connecting_Gemini_to_computers.html" target="_self">See 
+                            <li>
+                                To configure the ASCOM driver to use the Ethernet port see
+                                <a href="configuringEthernetASCOMdriver.html" target="_self">
+				Configuring the Ethernet connection</a> in the ASCOM Driver.&nbsp;&nbsp; Note: The Ethernet connection must be working.&nbsp; If you cannot connect to the Web Interface, you will not be able to connect to the ASCOM
+                                driver using the Ethernet port.</li>
+                            <li>
+                                There are no instructions to connect the Ethernet interface to a MAC or Unit computer. You can access it by going to the IP address shown under Menu&rarr;Mount&rarr;Network in the hand controller.
+                            </li>
+                            <li>
+                                It is possible to use an Travel Router or Bridge to add WiFi to the Gemini-2 Ethernet port.
+                                <a href="connecting_Gemini_to_computers.html" target="_self">See 
 				info</a>.</li>
-			</ol>
-			</li>
-		</ol>
-			
-		<p>&nbsp;</p>
-			
-		</td>
-	</tr>
-</table>
-<table align="center" style="max-width: 900px; min-width: 200px;">
-	<tr>
-		<td class="style6">
-		 
-		&nbsp;
-			
-		</td>
-	</tr>
-</table>
- 
+                        </ol>
+                    </li>
+                </ol>
+
+                <p>&nbsp;</p>
+
+            </td>
+        </tr>
+    </table>
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style6">
+                &nbsp;
+
+            </td>
+        </tr>
+    </table>
 
 
 
-<link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
+
+    <link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
 
 
 
-<div w3-include-html="footer.html" ></div>
+    <div w3-include-html="footer.html"></div>
 </body>
-
-
-
-

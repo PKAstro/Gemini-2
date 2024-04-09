@@ -1,0 +1,2571 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Gemini Level 6, Version 1.02 Serial Interface Command Description</title></head>
+<body bgcolor="#f8f8f8">
+<h2>Gemini Level 6, Version 1.02 Serial Interface Command Description</h2>
+<h3>Gemini's LX200-like Commands</h3>
+<p>The Gemini system supports a subset of the Meade® LX200 Command
+Set making it compatible to many planetarium programs using this command set.
+Programs featuring special Gemini drivers can make use of the additional LX200-style extensions.
+Gemini also supports a Native Command Set as described below.
+
+Many of these features and a hub functionality allowing several programs to access the
+Gemini controller simultaneously can be accessed by using an 
+<a href="http://www.gemini-2.net/ASCOM.html" target="new"> ASCOM driver </a>.
+
+</p><p>Syntax: values in &lt;&gt; are (to be) replaced by actual values. Curled
+brackets {} show alternative characters.
+<br>Upon completion, ASCII&nbsp;characters or strings are returned, if indicated.
+<br>&nbsp;
+<table nosave="" width="100%" border="1" bgcolor="#d0d0d0">
+<tbody><tr>
+<td>
+<center><b>Command</b></center>
+</td>
+
+<td>
+<center><b>Returns</b></center>
+</td>
+
+<td>
+<center><b>Remarks</b></center>
+</td>
+</tr>
+
+<tr>
+<td>0x06 (ACK char)</td>
+
+<td>B# while the initial startup message is being displayed ,<br>
+b# while waiting for the selection of the Startup Mode,<br>
+S# during a Cold Start or<br>
+G# if startup was completed with an equatorial mount selected,<br>
+A# if startup was completed with an Alt/Az mount selected. <font color="YELLOW">NEW in L5.1</font>
+</td>
+
+<td>Usable for testing the serial link and determining the type
+of mount (German Equatorial or Alt/Az).
+<br>During Startup, with a "b#" being returned, the connected device can select the startup
+mode by sending either a 
+<ul><li> bC# for selecting the Cold Start,
+</li><li> bW# for selecting the Warm Start and
+</li><li> bR# for selecting the Warm Restart.</li></ul>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#f8f8f8"><b>Synchronize</b></td>
+</tr>
+
+<tr>
+<td>:CE&lt;character&gt;#</td>
+
+<td>&lt;character&gt;#</td>
+
+<td>This commands echoes the given character, followed by a hash mark. 
+It can be used to synchronize the serial data exchange.
+<font color="YELLOW">NEW in L5</font></td>
+</tr>
+
+<tr>
+<td>:Cm#</td>
+
+<td>No object!#&nbsp; or
+<br>&lt;object name&gt;#</td>
+
+<td>The string "No object!#" is returned if the mount is not aligned or
+no object was selected, otherwise the name of the selected object used is returned.
+<br>This command does an "Additional Alignment", (re)calculating the current pointing
+model parameters and synchronizing to the position of the selected object.</td>
+</tr>
+
+<tr>
+<td>:CM#</td>
+
+<td>No object!#&nbsp; or
+<br>&lt;object name&gt;#</td>
+
+<td>The string "No object!#" is returned if the mount is not aligned or
+no object was selected, otherwise the name of the selected object used is returned.
+<br>The position (RA and DEC) is synchronized to the position of the object
+by setting the Index or Flip parameters of the current model.</td>
+</tr>
+
+<tr>
+<td>:C&lt;n&gt;#</td>
+<td>
+<br>&lt;n&gt;#</td>
+<td>Select a pointing model. Currently two models (n=0, n=1) are supported. <font color="YELLOW">NEW in L5</font></td>
+</tr>
+
+<tr>
+<td>:Cc#</td>
+<td>
+<br>&lt;n&gt;#</td>
+<td>Selects the currently active pointing model for I/O access. Currently two models (n=0, n=1) are supported. <font color="YELLOW">NEW in L5</font></td>
+</tr>
+
+<tr>
+<td>:C?#</td>
+
+<td>&lt;n&gt;#</td>
+
+<td>Returns the number of the currently active pointing model. Currently two models (n=0, n=1) are supported. <font color="YELLOW">NEW in L5</font></td>
+</tr>
+
+<tr>
+<td>:CI#</td>
+
+<td>No object!#&nbsp; or
+<br>&lt;object name&gt;#</td>
+
+<td>The string "No object!#" is returned if the mount is not aligned or
+no object was selected, otherwise the name of the selected object used is returned.
+<br>An Initial Align is done. The currently selected model is reset and the mount is
+synchronized to the selected object. <font color="YELLOW">NEW in L5</font></td>
+</tr>
+
+<tr>
+<td>:CR#</td>
+
+<td>&lt;n&gt;#</td>
+
+<td>The currently selected model &lt;n&gt; is reset. <font color="YELLOW">NEW in L5</font></td>
+</tr>
+
+<tr>
+<td>:CU#</td>
+
+<td>&lt;n&gt;#</td>
+<td>The last alignment of the currently selected model is reset. <font color="YELLOW">NEW in L5</font></td>
+</tr>
+
+<tr>
+<td bgcolor="#f8f8f8"><b>Focus Control</b></td>
+</tr>
+
+<tr>
+<td>:F+#</td>
+<td>&nbsp;</td>
+<td>Focus In</td>
+</tr>
+
+<tr>
+<td>:F-#</td>
+<td>&nbsp;</td>
+<td>Focus Out</td>
+</tr>
+
+<tr>
+<td>:FQ#</td>
+<td>&nbsp;</td>
+<td>Stop focusing</td>
+</tr>
+
+<tr>
+<td>:FF#</td>
+<td>&nbsp;</td>
+<td>Focus Fast</td>
+</tr>
+
+<tr>
+<td>:FM#</td>
+<td>&nbsp;</td>
+<td>Focus Medium</td>
+</tr>
+
+<tr>
+<td>:FS#</td>
+<td>&nbsp;</td>
+<td>Focus Slow</td>
+</tr>
+
+<tr>
+<td bgcolor="#f8f8f8"><b>Get Information</b></td>
+</tr>
+
+<tr>
+<td>:GA#</td>
+<td>In Double Precision mode:
+<br>{+-}&lt;dd&gt;.&lt;dddddd&gt;#
+<br>In High Precision mode:
+<br>{+-}&lt;dd&gt;:&lt;mm&gt;:&lt;ss&gt;#
+<br>In Low Precision mode:
+<br>{+-}&lt;dd&gt;°&lt;mm&gt;#</td>
+<td>Get Altitude (from L1, V2.0 up)</td>
+</tr>
+
+
+<tr><td>:GB#</td>
+<td>&lt;n&gt;#</td>
+<td>Get LED Display Brightness Value(from L1, V2.0 up)<br>
+n=0: 100% n=6: 6.6% n=7: blank display n=8: test mode (all pixels lit).</td>
+</tr>
+
+<tr><td>:GC#</td>
+<td>&lt;mm&gt;/&lt;dd&gt;/&lt;yy&gt;#</td>
+<td>Local Calendar Date, month mm, days dd and years yy separated by slashes.</td>
+</tr>
+
+<tr>
+<td>:Gc#</td>
+<td>(24)#</td>
+<td>Clock Format</td>
+</tr>
+
+<tr><td>:GD#</td>
+<td>In Double Precision mode:
+<br>{+-}&lt;dd&gt;.&lt;dddddd&gt;#
+<br>In High Precision mode:
+<br>{+-}&lt;dd&gt;:&lt;mm&gt;:&lt;ss&gt;#
+<br>In Low Precision mode:
+<br>{+-}&lt;dd&gt;°&lt;mm&gt;#</td>
+<td>Apparent (refraction included) Declination the telescope is pointing
+to, to the equinox of the date. Except during GoTo operations, the coordinates
+are corrected according to the pointing model.&nbsp;
+<br>Signed degrees (-90 to +90), minutes, seconds. The degree sign in Low
+Precision mode is the character 0xDF.</td>
+</tr>
+
+<tr><td>:Gd#</td>
+<td>In Double Precision mode:
+<br>{+-}&lt;dd&gt;.&lt;dddddd&gt;#
+<br>In High Precision mode:
+<br>{+-}&lt;dd&gt;:&lt;mm&gt;:&lt;ss&gt;#
+<br>In Low Precision mode:
+<br>{+-}&lt;dd&gt;°&lt;mm&gt;#</td>
+<td>Selected object's declination.
+<font color="YELLOW">New in L5.1</font></td>
+</tr>
+
+<tr><td>:GE#</td>
+<td>&lt;hh&gt;:&lt;mm&gt;:&lt;ss&gt;#</td>
+<td>Get Alarm time (from L1, V2.0 up)</td>
+</tr>
+
+<tr><td>:GG#</td>
+<td>{+-}&lt;hh&gt;# or<br>{+-}&lt;hh&gt;:&lt;mm&gt;:&lt;ss&gt;# </td>
+<td>Get the difference between local time and UTC (from L1,
+V2.0 up). If your local time is earlier than UTC this command will return a
+positive value, if later than UTC the value is negative.
+<font color="YELLOW">The extended format with minutes and seconds is new in L5.
+Minutes and seconds will be omitted if both are zero.</font></td>
+</tr>
+
+<tr>
+<td>:Gg#</td>
+<td> {+-}&lt;ddd&gt;°&lt;mm&gt;#
+<br>In Double Precision mode:
+<br>{+-}&lt;dd&gt;.&lt;dddddd&gt;#
+</td>
+<td>Get Site Longitude (from L1, V2.0 up)</td>
+</tr>
+
+<tr>
+<td>:GH#</td>
+<td>[-]&lt;hh&gt;:&lt;mm&gt;:&lt;ss&gt;#
+<br>In Double Precision mode:
+<br>{+-}&lt;hh&gt;.&lt;hhhhhh&gt;#
+</td>
+<td>Hour Angle the telescope is pointing to. From L4, V1.0 up.</td>
+</tr>
+
+<tr> <td>:Gh#</td>
+<td>&lt;dd&gt;*#</td>
+</td>
+<td>Minimum elevation limit.<font color="YELLOW">NEW in L5</font></td>
+</tr>
+
+<tr>
+<td>:GI#</td>
+<td>&lt;Information Buffer Content&gt;#</td>
+<td>Get the content of the information buffer. Up to 256 characters, followed by a hash mark. 
+<font color="YELLOW">NEW in L5</font>
+</td></tr>
+
+<tr>
+<td>:GL#</td>
+<td>&lt;hh&gt;:&lt;mm&gt;:&lt;ss&gt;#
+<br>In Double Precision mode:
+<br>{+-}&lt;hh&gt;.&lt;hhhhhh&gt;#
+</td>
+<td>Civil Time (UTC time from the internal Real Time Clock + UTC offset),
+hours, minutes, seconds in 24-hour format.</td>
+</tr>
+
+<tr>
+<td>:Gl#</td>
+<td>&lt;hh&gt;:&lt;mm&gt;:&lt;ss&gt;#
+<br>In Double Precision mode:
+<br>{+-}&lt;hh&gt;.&lt;hhhhhh&gt;#
+</td>
+<td>UTC time from the internal Real Time Clock,
+hours, minutes, seconds in 24-hour format.
+<font color="RED">NEW in L6</font>
+</td></tr>
+
+<tr>
+<td>:Gm#</td>
+<td>{EW}#</td>
+<td>Get Telescope RA Axis' Mount's Side. E# for East or W# for West side is replied. From L4, V1.0 up.</td>
+</tr>
+
+<tr>
+<td>:GM#</td>
+<td>&lt;name string&gt;#</td>
+<td>Name (up to 15 characters) of the first site stored.
+</td></tr>
+
+<tr>
+<td>:GN#</td>
+<td>&lt;name string&gt;#</td>
+<td>Name (up to 15 characters) of the second site stored.
+</td></tr>
+
+<tr>
+<td>:GO#</td>
+<td>&lt;name string&gt;#</td>
+<td>Name (up to 15 characters) of the third site stored.
+</td></tr>
+
+<tr>
+<td>:GP#</td>
+<td>&lt;name string&gt;#</td>
+<td>Name (up to 15 characters) of the fourth site stored.
+</td></tr>
+
+<tr>
+<td>:Gp#</td>
+<td>{LU}#</td>
+<td>Get Telescope DEC Axis side. L# for Lower or U# for Upper half circle of physical step addresses.
+Note: Changing half circles at one of the poles (+-90 degrees declination) is a "meridian flip".
+<font color="RED">NEW in L6.</font>
+</td>
+</tr>
+
+<tr>
+<td>:GR#</td>
+<td>In Double Precision mode:
+<br>{+-}&lt;hh&gt;.&lt;hhhhhh&gt;#
+<br>High Precision mode:
+<br>&lt;hh&gt;:&lt;mm&gt;:&lt;ss&gt;#
+<br>Low Precision mode:
+<br>&lt;hh&gt;:&lt;mm&gt;.&lt;m&gt;#</td>
+
+<td>Apparent (refraction included) Right Ascension the telescope is pointing
+to, to the equinox of the date. Despite during GoTo operations, the coordinates
+are corrected according to the pointing model.&nbsp;
+<br>Hours (0 to 24), minutes, seconds or tenth of minutes.</td>
+</tr>
+
+<tr><td>:Gr#</td>
+<td>In Double Precision mode:
+<br>{+-}&lt;dd&gt;.&lt;dddddd&gt;#
+<br>In High Precision mode:
+<br>{+-}&lt;dd&gt;:&lt;mm&gt;:&lt;ss&gt;#
+<br>In Low Precision mode:
+<br>{+-}&lt;dd&gt;°&lt;mm&gt;#</td>
+<td>Selected object's right ascension.
+<font color="YELLOW">New in L5.1</font></td>
+</tr>
+
+<tr>
+<td>:GS#</td>
+<td>&lt;hh&gt;:&lt;mm&gt;:&lt;ss&gt;#
+<br>In Double Precision mode:
+<br>{+-}&lt;hh&gt;.&lt;hhhhhh&gt;#</td>
+<td>Sidereal Time. From L4, V1.0 up.</td>
+</tr>
+
+<tr>
+<td>:Gt#</td>
+<td>{+-}&lt;dd&gt;°&lt;mm&gt;#
+<br>In Double Precision mode:
+<br>{+-}&lt;hh&gt;.&lt;hhhhhh&gt;#</td>
+<td>Get Site Latitude (from L1, V2.0 up).</td>
+</tr>
+
+<tr>
+<td>:GV#</td>
+<td>&lt;l&gt;&lt;vv&gt;#</td>
+<td>Get Software Level l(one digit) and Version vv(two digits)</td>
+</tr>
+
+<tr>
+<td>:GVD#</td>
+<td>&lt;mm&gt; &lt;dd&gt; &lt;yyyy&gt;#</td>
+<td>Get Software Built Date (from L4, V1.0 up)</td>
+</tr>
+
+<tr>
+<td>:GVN#</td>
+<td>&lt;l&gt;.&lt;vv&gt;#</td>
+<td>Get Software Level l(one digit) and Version vv(two digits) (from L4, V1.0 up)</td>
+</tr>
+
+<tr>
+<td>:GVP#</td>
+<td>Losmandy Gemini#</td>
+<td>Product String (from L4, V1.0 up)</td>
+</tr>
+
+<tr>
+<td>:GVT#</td>
+<td>&lt;hh&gt;:&lt;mm&gt;:&lt;ss&gt;#</td>
+<td>Get Software Built Time (from L4, V1.0 up)</td>
+</tr>
+
+<tr>
+<td>:Gv#</td>
+<td>N (for "no movement")<br>T (for Tracking)<br>G (for Guiding) <br>C (for Centering) <br>S (for Slewing)<br>! for Stall</td>
+<td>Get Maximum Velocity of both axes.</td>
+</tr>
+<tr>
+<td>:GW#</td>
+<td>N (for "no movement")<br>T (for Tracking)<br>G (for Guiding) <br>C (for Centering) <br>S (for Slewing)<br>! for Stall</td>
+
+<td>Get Velocity RA <font color="YELLOW">New in L5.</font></td>
+</tr>
+<tr>
+<td>:Gw#</td>
+<td>N (for "no movement")<br>T (for Tracking)<br>G (for Guiding) <br>C (for Centering) <br>S (for Slewing)<br>! for Stall</td>
+<td>Get Velocity DEC <font color="YELLOW">New in L5.</font></td>
+</tr>
+<tr>
+<td>:Gu#</td>
+<td>N (for "no tracking")<br>T (for Tracking)<br>G (for Guiding) <br>C (for Centering) <br>S (for Slewing)<br>! for Stall</td>
+
+<td>Get Velocity RA, DEC (2 characters) <font color="YELLOW">New in L5.</font></td>
+</tr>
+
+<tr>
+<td>:GZ#</td>
+<td> In Double Precision mode:
+<br>{+-}&lt;hh&gt;.&lt;hhhhhh&gt;#
+<br>In High Precision mode:
+<br>&lt;ddd&gt;:&lt;mm&gt;:&lt;ss&gt;#
+<br>In Low Precision mode:
+<br>&lt;ddd&gt;°&lt;mm&gt;#</td>
+<td>Get Azimuth. From North over East. (From L4, V1.0 up)</td>
+</tr>
+
+<tr><td bgcolor="#f8f8f8"><b>Park</b></td> </tr>
+<tr><td>:hP#</td>
+<td>&nbsp;</td>
+<td>Park at Home Position. The Home Position defaults to the celestial pole visible
+at the given hemisphere (north or south) but can be set by the user at the Gemini.</td>
+</tr>
+
+<tr><td>:hH#</td>
+<td>&nbsp;</td>
+<td>Set Home Position for Park to current position.<font color="YELLOW">New in L5.</font></td></tr>
+
+<tr><td>:hC#</td>
+<td>&nbsp;</td>
+<td>Park at the Startup Position. This position is the position required for a Cold or Warm Start,
+pointing to the celestial pole of the given hemisphere (north or south), with the counterweight
+pointing downwards (CWD position). From L4, V1.0 up.</td>
+</tr>
+
+<tr><td>:hZ#</td>
+<td>&nbsp;</td>
+<td>Park at Zenith.<font color="YELLOW">New in L5.</font></td></tr>
+
+<tr><td>:hN#</td>
+<td>&nbsp;</td>
+<td>Sleep Telescope: stop tracking, blank displays.</td></tr>
+
+<tr><td>:hW#</td>
+<td>&nbsp;</td>
+<td>Wake Up Telescope, resume tracking.</td></tr>
+
+<tr><td>:h?#</td>
+<td>2: Park operation in progress<br>
+1: Park operation completed. The mount is parked.<br>
+0: No Park command received or Park operation failed.</td>
+<td>Parking Status Inquiry</td></tr>
+
+<tr>
+<td bgcolor="#f8f8f8"><b>Move Telescope</b></td>
+
+<td>&nbsp;</td>
+
+<td>Note: the directions mentioned depend upon the hemisphere of the
+observing site and the side of the mount the telescope actually is. Directions
+do not change when crossing one of the poles.</td>
+</tr>
+
+<tr>
+<td>:MA#</td>
+
+<td>
+0<br>
+1Object below horizon.#<br>
+2No object selected.#<br>
+3Manual Control.#</td>
+
+<td>Slew to an object. The object selection had to be done by sending
+the Sz and Sa commands with the horizontal (Azimuth and Altitude) object coordinates. This command
+ will be rejected while the system is in Manual Mode, f.i. identifying or selecting an object from the internal
+databases. From L4, V1.0 up.</td>
+</tr>
+
+
+<tr><td>:MF&lt;n&gt;</td>
+<td>#</td>
+<td>Move Find: for 0 &lt; n &lt;256 move n arcmin in a Meander Search pattern at centering speed.
+  Can be interrupted by :Q#. 
+If not interrupted, Move Find will return to the start position after 6 cycles.<br>
+For n=0 the position is changed ("wobbled") shaping an X with 5 arcmin legs moving at a quarter 
+of the centering speed to detect faint objects.
+</n></td></tr>
+
+<tr><td>:ML#</td>
+<td>#</td>
+<td>Move Lock: Slew commands :MS# and :MA# will be suppressed, error code 3 (Manual Control)
+will be returned if these commands are sent.</td></tr>
+
+<tr><td>:Ml#</td>
+<td>#</td>
+<td>Move Unlock: Slew commands :MS# or :MA# will be allowed to be executed again.
+</td></tr>
+
+<tr>
+<td>:Mf#</td>
+
+<td>
+0<br>
+1Object below horizon.#<br>
+3Manual Control.#<br>
+4Position unreachable.#<br></td>
+
+<td>Do a meridian flip and slew to the current coordinates.
+</td>
+</tr>
+
+<tr>
+<td>:MM#</td>
+
+<td>
+0<br>
+1Object below horizon.#<br>
+2No object selected.#<br>
+3Manual Control.#<br>
+4Position unreachable.#<br>
+5Not aligned.#<br>
+6Outside Limits.#
+7Rejected - Mount is parked!#
+</td>
+
+<td>Slew to an object, doing a meridian flip if possible. Selection has had to be done locally
+(from Gemini's databases) or by sending
+the Sr and Sd commands with the equatorial object coordinates. This command will be rejected while
+the system is in Manual Mode, f.i. identifying or selecting an object from the internal
+databases.</td>
+</tr>
+
+<tr>
+<td>:MS#</td>
+
+<td>
+0<br>
+1Object below horizon.#<br>
+2No object selected.#<br>
+3Manual Control.#<br>
+4Position unreachable.#<br>
+5Not aligned.#<br>
+6Outside Limits.#<br>
+7Rejected - Mount is parked!#
+</td>
+
+<td>Slew to an object. Selection has had to be done locally (from Gemini's databases) or by sending
+the Sr and Sd commands with the equatorial object coordinates. This command will be rejected while
+the system is in Manual Mode, f.i. identifying or selecting an object from the internal
+databases.</td>
+</tr>
+
+<tr><td>:M&lt;0..9&gt;#</td> 
+<td>See return code of :MS#</td>
+<td><font color="RED">NEW in L6.</font>
+Move to a Solar System object.  
+0: Sun, 1: Mercury, 2: Venus, 3: Earth Moon, 4: Mars, 5: Jupiter.
+6: Saturn, 7: Uranus, 8: Neptune, 9: Pluto.
+</td> </tr>
+
+<tr>
+<td>:Me#</td>
+
+<td>&nbsp;</td>
+
+<td>Move eastwards at the selected speed rate.</td>
+</tr>
+
+<tr>
+<td>:Mw#</td>
+
+<td>&nbsp;</td>
+
+<td>Move westwards at the selected speed rate.</td>
+</tr>
+
+<tr>
+<td>:Mn#</td>
+
+<td>&nbsp;</td>
+
+<td>Move northwards at the selected speed rate.</td>
+</tr>
+
+<tr>
+<td>:Ms#</td>
+
+<td>&nbsp;</td>
+
+<td>Move southwards at the selected speed rate.</td>
+</tr>
+
+<tr><td>:MP[+-]&lt;RA steps&gt;;[+-]&lt;DEC steps&gt;#</td> 
+<td>See return code of :MS#</td>
+<td><font color="RED">NEW in L6.</font>
+Move axes by a certain amount of motor encoder ticks (steps).  
+If a sign is specified, move to a position relative to the current position.
+Without a sign, the position is an absolute value.
+The RA position has to be within the safety limits. 
+</td> </tr>
+
+<tr><td>:Mp[+-]&lt;RA steps&gt;;[+-]&lt;DEC steps&gt;#</td> 
+<td>See return code of :MS#</td>
+<td><font color="RED">NEW in L6.</font>
+Move axes by a certain amount of motor encoder ticks (steps) by absolute servo moves.
+If a sign is specified, move to a position relative to the current position.
+Without a sign, the position is an absolute value.
+The RA position has to be within the safety limits. The step addresses have to be in the allowed range.
+<BR>For testing purposes logging can be enabled, see commands 930ff.
+</td> </tr>
+
+<tr><td>:mi&lt;RA steps&gt;;&lt;DEC steps&gt;#</td> 
+<td>&nbsp;</td>
+<td><font color="RED"><b>Changed in L6!</b></font>
+Move axes by the signed amount of motor encoder ticks using relative servo moves. 
+The resulting target addresses have to fit into the allowed step range.
+<BR>For testing purposes logging can be enabled, see commands 930ff.
+</td> </tr>
+
+<tr><td>:mm&lt;step multiplier&gt;#</td> 
+<td>&nbsp;</td>
+<td><font color="RED"><b>Obsoleted!</b></font>
+Step multiplier for the :mi command up to L4. The step count parameter of the :mi command 
+was multiplied by this factor.
+</td> </tr>
+
+<tr>
+<td bgcolor="#f8f8f8"><b>Precision Guiding</b></td>
+</tr>
+
+<tr>
+<td>:Ma&lt;direction&gt;&lt;arcsecs&gt;#</td>
+<td>&nbsp;</td>
+<td>Moves into &lt;direction&gt; "e", "w", "n", "s" for &lt;arcsecs&gt;
+arc seconds. &lt;arcsecs&gt; are converted into motor encoder ticks,
+in L4 the result must not exceed 255 or will be cut off modulo 256.</td>
+</tr>
+
+<tr>
+<td>:Mi&lt;direction&gt;&lt;steps&gt;#</td>
+<td>&nbsp;</td>
+<td>Moves into &lt;direction&gt; "e", "w", "n", "s" for &lt;steps&gt; (1 &lt;= steps &lt;= 255) motor encoder ticks.</td>
+</tr>
+
+<tr>
+<td>:Mg&lt;direction&gt;&lt;time&gt;#</td>
+<td>&nbsp;</td>
+<td>Moves into &lt;direction&gt; "e", "w", "n", "s" for &lt;time&gt;
+milliseconds. &lt;time&gt; is converted into motor encoder ticks, in L4 the
+result must not exceed 255 or will be cut off modulo 256.</td>
+</tr>
+
+
+
+
+<tr>
+<td bgcolor="#f8f8f8"><b>Object/Observing/Output</b></td>
+</tr>
+
+<tr>
+<td>:OC#</td>
+<td>&nbsp;</td>
+<td>Clears the Observing Log.</td>
+</tr>
+
+<tr>
+<td>:OI&lt;catalog-id&gt;&lt;object-id&gt;#</td>
+<td>&nbsp;</td>
+<td>Select an object object-id from Gemini's internal databases catalog-id. 
+Catalog-id is a character selecting one of the contiguous catalogues:
+'1': Messier, '2': NGC, '3': IC, '4': Sh2, '7': SAO, ':': LDN, ';': LBN.
+Object-id is a numeric designation of the object in the catalogue; it can be followed 
+by an extension character for NGC and IC catalogues.
+</td>
+</tr>
+
+<tr>
+<td>:OO#</td>
+<td>&lt;current display content&gt;#</td>
+<td>Ask for the current content of the output display line (up to 32 characters
+followed by a hash mark). <font color="YELLOW">New in L5.</font></td>
+</tr>
+
+<tr>
+<td>:Oo#</td>
+<td>&lt;previous display content&gt;#</td>
+<td>Ask for the current content of the output display line (up to 32 characters
+followed by a hash mark). <font color="YELLOW">New in L5.</font></td>
+</tr>
+
+<tr>
+<td>:ON&lt;name&gt;#</td>
+<td>&nbsp;</td>
+<td>Tells the Gemini system the name or identification of the selected
+object. If this command is not used, the name defaults to "PC Object".
+Using this command is recommended between the :Sr and :Sd commands for 
+equatorial coordinates or the :Sz and :Sa commands for horizontal 
+coordinates respectively. From L4, V1.0 up.</td>
+</tr>
+
+<tr>
+<td>:OR#</td>
+<td>&lt;log entry&gt;#</td>
+<td>Reads the next line from the Observing Log.</td>
+</tr>
+
+<tr>
+<td>:OS#</td>
+<td>&nbsp;</td>
+<td>Points to the beginning of the Observing Log.</td>
+</tr>
+
+<tr>
+<td>:Oc#</td>
+<td>&nbsp;</td>
+<td>Delete all User Catalogue entries.</td>
+</tr>
+
+<tr>
+<td>:Od&lt;object line&gt;#</td>
+<td>&nbsp;</td>
+<td>Download a User Catalogue entry to the Gemini. The object line consist of
+  <ul><li>the object name (up to 10 ASCII characters),
+</li><li>a comma ',' as delimiter,
+</li><li>Right Ascension &lt;hh&gt;:&lt;mm&gt;:&lt;ss&gt;,
+</li><li>Declination {+-}&lt;dd&gt;:&lt;mm&gt;:&lt;ss&gt;.
+</li></ul>
+The coordinates have to be given for the epoch 2000.0.
+</td>
+</tr>
+
+<tr>
+<td>:On#</td>
+<td>&lt;n&gt;#</td>
+<td>0 &lt;= n &lt;= 4096: Read current number of Gemini's User Catalogue entries.</td>
+</tr>
+
+<tr>
+<td>:Or#</td>
+<td>&lt;object line&gt;#</td>
+<td>Upload a User Catalogue entry from Gemini.</td>
+</tr>
+
+<tr>
+<td>:Os#</td>
+<td>&nbsp;</td>
+<td>Points to the beginning of the User Catalogue (for downloading).</td>
+</tr>
+<tr><td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> </tr>
+
+<tr>
+<td bgcolor="#f8f8f8"><b>Precession and Refraction</b></td>
+</tr>
+
+<tr><td>:p&lt;0..7&gt;#</td><td>&nbsp;</td>
+<td>Combination of three bits:<br>
+xx1 Precess received coordinates from JD2000 to JNOW<br>
+x1x Refract received coordinates<br>
+1xx Precess to be transmitted coordinates backwards JNOW to JD2000<br>
+<font color="RED">1xx new in L6</font></td>
+</tr>
+
+<tr><td>:p?#</td>
+<td>0..7</td>
+<td>Combination of three bits:<br>
+xx1 Precess received coordinates from JD2000 to JNOW<br>
+x1x Refract received coordinates<br>
+1xx Precess to be transmitted coordinates backwards JNOW to JD2000<br>
+<font color="RED">New in L6</font></td>
+</tr>
+
+<tr>
+<td bgcolor="#f8f8f8"><b>Precision</b></td>
+</tr>
+
+<tr>
+<td>:P#</td>
+
+<td>DBL&nbsp; PRECISION&nbsp;
+<br>or
+<br>HIGH PRECISION&nbsp;
+<br>or
+<br>LOW&nbsp; PRECISION</td>
+
+<td>All strings are 14 characters long (there are 2 blanks between LOW or DBL
+and PRECISION).</td>
+</tr>
+
+<tr>
+<td>:U#</td>
+<td>&nbsp;</td>
+<td>Toggle between Low Precision (short) and High Precision (long) mode.
+Gemini is in High Precision mode after starting up.</td>
+</tr>
+
+<tr>
+<td>:u#</td>
+<td>&nbsp;</td>
+<td><font color="YELLOW">NEW in L5</font>
+Select the Double Precision mode. Values will be displayed in signed floating point format
+with 6 digits after the decimal point. "Set" parameters can be send the same way.</td>
+</tr>
+
+<tr>
+<td bgcolor="#f8f8f8"><b>Quit Moving</b></td>
+</tr>
+
+<tr>
+<td>:Q#</td>
+<td>&nbsp;</td>
+<td>Quit all movements mentioned below.</td>
+</tr>
+
+<tr>
+<td>:Qe#</td>
+<td>&nbsp;</td>
+<td>Quit movement eastwards.</td>
+</tr>
+
+<tr>
+<td>:Qw#</td>
+<td>&nbsp;</td>
+<td>Quit movement westwards.</td>
+</tr>
+
+<tr>
+<td>:Qn#</td>
+<td>&nbsp;</td>
+<td>Quit movement northwards.</td>
+</tr>
+
+<tr>
+<td>:Qs#</td>
+<td>&nbsp;</td>
+<td>Quit movement southwards.</td>
+</tr>
+
+<tr> </tr>
+<tr> <td bgcolor="#f8f8f8"><b>Rate</b></td> </tr>
+<tr></tr>
+
+<tr>
+<td>:RC#</td>
+<td>&nbsp;</td>
+<td>Rate Centre. Subsequent Move commands will move at Centering Speed.</td>
+</tr>
+
+<tr>
+<td>:RG#</td>
+<td>&nbsp;</td>
+<td>Rate Guide. Subsequent Move commands will move at Guiding Speed.</td>
+</tr>
+
+<tr>
+<td>:RM#</td>
+<td>&nbsp;</td>
+<td>Rate Move. Subsequent Move commands will move at Move/Find Speed.</td>
+</tr>
+
+<tr><td>:Rm[&lt;sign&gt;][&lt;value&gt;]#</td>
+<td>&nbsp;</td>
+<td>Set Move Rate, either to an absolute value (if no sign was 
+specified) given or (if a sign was given) as increment/decrement to the 
+current rate. If no value is specified, Move Rate is set to the default 
+value 50.</td>
+</tr>
+
+<tr>
+<td>:RS#</td>
+<td>&nbsp;</td>
+<td>Rate Slew. Subsequent Move commands will move at Slewing Speed.</td>
+</tr>
+
+<tr>
+<td>:R?#</td>
+<td>G#, C#, M# or S#</td>
+<td>Currently selected speed for Move commands is returned as one of the characters G, C, M or S followed by a hash mark. <font color="YELLOW">New in L5.</font></td>
+</tr>
+
+<tr> </tr>
+<tr> <td bgcolor="#f8f8f8"><b>Set</b></td> </tr>
+<tr></tr>
+
+<tr>
+<td>:Sa{+-}&lt;dd&gt;{*°}&lt;mm&gt;#
+<br>or
+<br>:Sa{+-}&lt;dd&gt;{*°:}&lt;mm&gt;:&lt;ss&gt;#</td>
+
+<td>0 if invalid or&nbsp;
+<br>1 if valid</td>
+
+<td>Sets the object's altitude. A negative sign is ignored. Values greater
+than 90 degrees are set to 90 degrees.
+It is important that the :Sz# command has been send prior.
+If the coordinate selection is valid the object status is set to "Selected". From L4, V1.0 up.</td>
+</tr>
+
+<tr><td>:SB&lt;n&gt;#</td>
+<td>&nbsp;</td>
+<td>Set LED Display Brightness Value(from L1, V2.0 up)<br>
+n=0: 100% n=6: 6.6% n=7: blank display n=8: test mode (all pixels lit).</td>
+</tr>
+
+<tr><td>:SC&lt;mm&gt;/&lt;dd&gt;/&lt;yy&gt;#</td>
+<td>0 if invalid or
+<br>1Updating planetary data#
+<br>&lt;24 blanks&gt;#</td>
+
+<td>Set Calendar Date: months mm, days dd, year yy of the civil time according
+to the timezone set. The internal calender/clock uses GMT.</td>
+</tr>
+
+<tr><td>:Sc&lt;mm&gt;/&lt;dd&gt;/&lt;yy&gt;#</td>
+<td>0 if invalid or
+<br>1
+<br>&lt;24 blanks&gt;#</td>
+
+<td>Set UTC Calendar Date: months mm, days dd, year yy of UTC time
+The internal calender/clock uses GMT. Usi:ng :Sc and :Su avoids problems with time zone settings. <font color="RED">NEW in L5.3</font></td>
+</tr>
+
+<tr>
+<td>:Sd{+-}&lt;dd&gt;{*°}&lt;mm&gt;#
+<br>or
+<br>:Sd{+-}&lt;dd&gt;{*°:}&lt;mm&gt;:&lt;ss&gt;#</td>
+
+<td>0 if invalid or&nbsp;
+<br>1 if valid</td>
+
+<td>Sets the object's declination. It is important that the :Sr# command has been send prior.
+Internal calculations are done that may take up to 0.5 seconds. 
+If the coordinate selection is valid the object status is set to "Selected".</td>
+</tr>
+
+<tr>
+<td>:SE&lt;hh&gt;:&lt;mm&gt;:&lt;ss&gt;#</td>
+<td>1</td>
+<td>Set Alarm Time from the civil time hours hh, minutes mm and seconds ss.
+The timezone has to be set before using this command.</td>
+</tr>
+
+<tr><td>:SG{+-}hh#</td>
+<td>1</td>
+<td>
+Set the number of hours by which your local time differs from UTC. If
+your local time is earlier than UTC set a positive value, if later than
+UTC set a negative value. The time difference has to be set before
+setting the calendar date (SC) and local time (SL), since the Real Time
+Clock is running at UTC.
+</td>
+</tr>
+
+<tr><td>:S0&lt;name string&gt;#</td>
+<td>1</td>
+<td>Set name of site #0. The minimum length of site name strings is 1 byte, the maximum length 15 bytes. <font color="YELLOW">New in L5.</font></td><td>
+</td></tr>
+
+<tr><td>:SM&lt;name string&gt;#</td>
+<td>1</td>
+<td>Set name of the first site stored. The minimum length of site name strings is 1 byte, the maximum length 15 bytes.</td><td>
+</td></tr>
+
+<tr><td>:SN&lt;name string&gt;#</td>
+<td>1</td>
+<td>Set name of the second site stored.</td><td>
+</td></tr>
+
+<tr><td>:SO&lt;name string&gt;#</td>
+<td>1</td>
+<td>Set name of the third site stored.</td><td>
+</td></tr>
+
+<tr><td>:SP&lt;name string&gt;#</td>
+<td>1</td>
+<td>Set name of the forth site stored.</td><td>
+</td></tr>
+
+<tr>
+<td>:SL&lt;hh&gt;:&lt;mm&gt;:&lt;ss&gt;#</td>
+<td>1</td>
+<td>Set RTC Time from the civil time hours hh, minutes mm and seconds ss.
+The timezone has to be set before using this command.</td>
+</tr>
+
+<tr>
+<td>:Sl&lt;hh&gt;:&lt;mm&gt;:&lt;ss&gt;#</td>
+<td>1</td>
+<td>Set RTC Time from UTC time hours hh, minutes mm and seconds ss.<br>
+<font color="RED">NEW in L6</font>
+</td></tr>
+
+<tr>
+<td>:Sg{+-}&lt;ddd&gt;*&lt;mm&gt;#</td>
+<td>1 if valid</td>
+<td>Sets the longitude of the observing site to ddd degrees and mm minutes.
+The longitude has to be specified positively for western latitudes (west
+of Greenwich, the plus sign may be omitted) and negatively for eastern
+longitudes. Alternatively, 360 degrees may be added to eastern longitudes.</td>
+</tr>
+
+<tr>
+<td>:Sh&lt;dd&gt;#</td>
+<td>1 if valid, 0 if invalid</td>
+<td>Set Minimum Elevation for GoTo operations in degrees.</td>
+</tr>
+
+<tr>
+<td>:Sp#</td>
+<td>No object!# or<br>
+1 if object coordinates were set.</td>
+<td>Precess coordinate transmitted by means of :Sr and :Sd to the equinox of the date.</td>
+</tr>
+
+<tr>
+<td>:Sr&lt;hh&gt;:&lt;mm&gt;.&lt;m&gt;#
+<br>or
+<br>:Sr&lt;hh&gt;:&lt;mm&gt;:&lt;ss&gt;#</td>
+
+<td>0 if invalid or&nbsp;
+<br>1 if valid</td>
+
+<td>Sets the object's Right Ascension and the object status to "Not Selected".
+The :Sd# command has to follow to complete the selection. The subsequent
+use of the :ON...# command is recommended.</td>
+</tr>
+
+<tr>
+<td>:St{+-}&lt;dd&gt;*&lt;mm&gt;#</td>
+<td>1 if valid</td>
+<td>Sets the latitude of the observing site to dd degrees, mm minutes.
+The minus sign indicates southern latitudes, the positive sign may be omitted.</td>
+</tr>
+
+<tr>
+<td>:Sw&lt;n&gt;#</td>
+<td>1 if valid</td>
+<td>Sets the Slewing rate for the Move commands</td>
+</tr>
+
+<tr>
+<td>:SU&lt;hh&gt;:&lt;mm&gt;:&lt;ss&gt;#</td>
+<td>1</td>
+<td>Set RTC Time from UTC time hours hh, minutes mm and seconds ss.
+The timezone has to be set before using this command.<font color="YELLOW">New in L5.</font></td>
+</tr>
+
+<tr>
+<td>:Sz&lt;ddd&gt;{*°}&lt;mm&gt;#
+<br>or
+<br>:Sz&lt;ddd&gt;{*°:}&lt;mm&gt;:&lt;ss&gt;#</td>
+
+<td>0 if invalid or&nbsp;
+<br>1 if valid</td>
+<td>Sets the object's azimuth. From L4, V1.0 up.</td> 
+</tr>
+
+<tr> </tr>
+<tr> <td bgcolor="#f8f8f8"><b>Site Select</b></td> </tr>
+<tr></tr>
+
+<tr>
+<td>:W&lt;n&gt;#
+</td><td>&nbsp;</td>
+<td>Select Site n with 0&lt;=n&lt;=4.</td>
+</tr>
+
+<tr>
+<td>:W?#
+</td><td>0&lt;=n&lt;=4.</td>
+<td>Query currecntly selected site n </td>
+</tr>
+
+<tr>
+<td>:WQ#
+</td><td>&nbsp;</td>
+<td>Query a connected GPS receiver.</td>
+</tr>
+
+</tbody></table>
+</p>
+
+<h3>Gemini Native Commands</h3>
+<p>
+Many of Gemini's system settings that cannot be accessed using the LX200-like command set
+can be read or modified using the native command set implemented in Gemini. The native commands follow a simple syntax:
+</p>
+<table nosave="" border="1" bgcolor="#d0d0d0">
+
+<tbody><tr><td>&lt;&lt;id&gt;:&lt;checksum&gt;#</td>
+<td>&lt;parameter value&gt;&lt;checksum&gt;#</td>
+<td>Get Value(from L2 up)</td>
+</tr>
+
+<tr><td>&gt;&lt;id&gt;:&lt;parameter value&gt;&lt;checksum&gt;#</td>
+<td>&nbsp;</td>
+<td>Set Value(from L2 up)</td>
+</tr>
+</tbody></table>
+
+<p></p><p><b>Id's and possible values from Level 5 up:</b>
+<br>&nbsp;
+
+<table nosave="" width="100%" border="1" bgcolor="#d0d0d0">
+<tbody><tr>
+<td>
+<center><b>Id</b></center>
+</td>
+
+<td>
+<center><b>Get Parameters</b></center>
+</td>
+
+<td>
+<center><b>Set Parameters</b></center>
+</td>
+
+<td>
+<center><b>Get Return Values</b></center>
+</td>
+
+<td>
+<center><b>Description and Remarks</b></center>
+</td>
+</tr>
+
+<tr><td>0..8</td> 
+<td><br></td>
+<td><br></td>
+<td>0: Custom Mount<br>1: GM-8<br>2: G-11<br>3: HGM-200<br>4: MI-250<br>5: Titan<br>6: Titan50<br>7: G-10<br>8: G-12</td> 
+<td>Mount Type. Custom mount support (Id 0 and also commands 21..28) was introduced in L4. 
+Attention: The CI-700 entry was replaced by the MI-250. CI-700 can be supported as a custom mount.</td> </tr>
+
+<tr><td>10, 11..15</td> 
+<td><br></td>
+<td><br></td>
+<td>10: Neither use encoder nor end switches<br>
+11: Use Encoder<br>12: Test Encoder<br>13: Ignore Encoder<br>
+14: Use end switches<br>15: Don't use end switches</td> 
+<td>Axis Encoder port status. 10 can be used for requesting.</td> </tr>
+
+<tr><td>21</td> 
+<td><br></td>
+<td>{+-}80..720</td> 
+<td>{+-}80..720</td> 
+<td>RA worm gear ratio. The sign indicates the direction.
+<br><b>Note: </b>The 1,296,00 arcsec of a circle divided by the product of worm gear ratio,
+ spur gear ratio and motor encoder resolution define the step size per encoder tick. 
+Gemini L4 supports step sizes from 0.2 arcsec/tick to 2.5 arcsec/tick. Combinations exceeding
+this range are not allowed.
+</td> </tr>
+
+<tr><td>22</td> 
+<td><br></td>
+<td>{+-}80..720</td> 
+<td>{+-}80..720</td> 
+<td>DEC worm gear ratio. The sign indicates the direction. See note for command 21.</td> </tr>
+
+<tr><td>23</td> 
+<td><br></td>
+<td>10..150</td> 
+<td>10..150</td> 
+<td>RA spur gear ratio. See notes for commands 21 and 27.
+</td> </tr>
+
+<tr><td>24</td> 
+<td><br></td>
+<td>10..150</td> 
+<td>10..150</td> 
+<td>DEC spur gear ratio. See note for command 21.</td> </tr>
+
+<tr><td>25</td> 
+<td><br></td>
+<td>100..2048</td> 
+<td>100..2048</td> 
+<td>RA motor encoder resolution. See notes for commands 21 and 27.</td> </tr>
+
+<tr><td>26</td> 
+<td><br></td>
+<td>100..2048</td> 
+<td>100..2048</td> 
+<td>DEC motor encoder resolution. See note for command 21.</td> </tr>
+
+<tr><td>27</td> 
+<td><br></td>
+<td><br></td>
+<td>2000..25600</td> 
+<td>Number of RA steps for one worm revolution (since is a product of
+spur ratio and motor encoder ratio,this command can only be used for
+reading out the maximum step count, not for setting it).
+</td> </tr>
+
+<tr><td>28</td> 
+<td><br></td>
+<td><br></td>
+<td>2000..25600</td> 
+<td>Amount of DEC steps for one worm revolution (since is a product of
+spur ratio and motor encoder ratio,this command can only be used for
+reading out the maximum step count, not for setting it).</td> </tr>
+
+<tr><td>33</td> 
+<td><br></td>
+<td>10..150</td> 
+<td>10..150</td> 
+<td>RA spur gear ratio in "double" format. See notes for commands 21 and 27.
+</td> </tr>
+
+<tr><td>34</td> 
+<td><br></td>
+<td>10..150</td> 
+<td>10..150</td> 
+<td>DEC spur gear ratio in "double" format. See note for command 21.</td> </tr>
+
+<tr><td>51</td> 
+<td><br></td>
+<td><br></td>
+<td>0 .. 1</td> 
+<td>Gemini mainboard version. Returns '0' for the original rectangular unit, '1' for the square "mini" controler. <font color="YELLOW">NEW in L5.2</font></td></tr>
+
+<tr><td>60</td> 
+<td><br></td>
+<td><br></td>
+<td>0 .. 1</td> 
+<td>Supress Alarm Beeps. '0': Alarm Beep is active, '1': Alarm Beep is off. <font color="RED">NEW in L6</font></td></tr>
+
+<tr><td>70</td> 
+<td><br></td>
+<td>12.000.000 +- 0..11.717</td> 
+<td>12.000.000 +- 0..11.717</td> 
+<td>Fine tune the 12 Mhz CPU frequency with about one promille maximum deviation. The tracking divisores are recalculated.<font color="RED">NEW in L6.02</font></td></tr>
+
+<tr><td>81</td> 
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>Enquiry to get a coordinates and states string. See separate ENQ macro description.
+<font color="YELLOW">NEW in L5.1</font></td></tr>
+
+<tr><td>91</td> 
+<td><br></td>
+<td>0 or 1</td> 
+<td>0 or 1</td> 
+<td>Native Command checksum behavior. 0: MSB bit is cleared (modulo 128), 1: MSB bit is not cleared.
+<font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>92</td> 
+<td><br></td>
+<td>0 .. 2</td> 
+<td>0 .. 2</td> 
+<td>Park behavior. 0: Startup and every Move command (including pushing a hand controller button) wakes up the mount (default), 
+1: Only GoTo and Unpark commands wake up, 2: Only a WakeUp command wakes
+ up the mount.
+<font color="YELLOW">NEW in L5.1</font></td></tr>
+
+<tr><td>96</td> 
+<td><br></td>
+<td><br></td>
+<td>1: Configuration data reloaded from SD card,<br>
+2: SRAM variables structure was changed by the new firmware version,<br>
+4: Wrong SRAM checksum, f.i. after changing battery,<br>
+8: reserved,<br> 
+16: RTC and location updated by GPS,<br> 
+32: RTC had to be initialized,<br> 
+64: reserved,<br> 
+128: reserved.</td> 
+<td>Startup circumstances, a bitwise combination of several indications 
+regarding the static ram (SRAM) containing the setup and the real-time 
+clock RTC (both running on battery while Gemini is powered off)<br>
+<font color="YELLOW">NEW in L5.1</font></td> </tr>
+
+<tr><td>97</td> 
+<td><br></td>
+<td><br></td>
+<td>Eight revision characters<br>
+1: Site,<br>
+2: Date/Time,<br>
+3: Mount Parameter,<br>
+4: Display content,<br> 
+5: Modelling parameters,<br> 
+6: Speeds,<br> 
+7: Park,<br> 
+8: reserved.</td> 
+<td>State Check. This string of characters can be requested periodically to be compared with a former state. 
+Whenever one of these characters was changed, the corresponding serial commands can be used to get the latest information.<br>The
+ characters are initialized to a '0' (0x30), will be incremented up to 
+'~' (0x7E) and will then start at '0' again. There can be multiple 
+changes between requests.<br>
+<font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>98</td> 
+<td><br></td>
+<td><br></td>
+<td>Decimal sum of<br>
+1: Telescope is tracking in Alt/Az mode,<br>
+2: A GoTo operation is yet to be started,<br>
+4: GoTo to physical step address,<br>
+8: Servo Position GoTo is ongoing,<br> 
+</td>
+<td>Extended Status Inquiry. <font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>99</td> 
+<td><br></td>
+<td><br></td>
+<td>Decimal sum of<br>
+1: Telescope is Aligned,<br>
+2: Modelling in use,<br>
+4: Object is selected,<br>
+8: GoTo operation is ongoing,<br> 
+16: RA limit reached,<br> 
+32: Gemini assumes object coordinates to refer to J2000.0 and precesses them to the equinox of the date.</td> 
+<td>Status Inquiry.</td> </tr>
+
+<tr><td>100</td> 
+<td><br></td>
+<td>{+-}2048..32768</td> 
+<td>{+-}2048..32768</td> 
+<td>Nominal Encoder Resolution in RA.</td> </tr>
+
+<tr><td>101</td> 
+<td><br></td>
+<td>&nbsp;</td> 
+<td>0..Encoder Resolution RA-1</td> 
+<td>Get Encoder Value RA. 
+</td> </tr>
+
+<tr><td>110</td> 
+<td><br></td>
+<td>{+-}2048..32768</td> 
+<td>{+-}2048..32768</td> 
+<td>Nominal Encoder Resolution in DEC.</td> </tr>
+
+<tr><td>111</td> 
+<td><br></td>
+<td>&nbsp;</td> 
+<td>0..Encoder Resolution DEC-1</td> 
+<td>Get Encoder Value DEC.</td> </tr>
+
+<tr><td>120</td> 
+<td><br></td>
+<td>20..2000</td> 
+<td>20..2000</td> 
+<td>Manual Slewing Speed.</td> </tr>
+
+<tr><td>121</td> 
+<td><br></td>
+<td>20..2000</td> 
+<td>20..2000</td> 
+<td>Manual Slewing Speed in RA. <font color="YELLOW">New in L5.</font></td> </tr>
+
+<tr><td>122</td> 
+<td><br></td>
+<td>20..2000</td> 
+<td>20..2000</td> 
+<td>Manual Slewing Speed in DEC. <font color="YELLOW">New in L5.</font></td> </tr>
+
+<tr><td>130, 131..137</td> 
+<td><br></td>
+<td><br></td>
+<td>131: Sidereal<br>132: King Rate<br>133: Lunar<br>
+134: Solar<br>135: Terrestrial Mode<br>136: Closed Loop<br>137: Comet/User Defined</td> 
+<td>Tracking Rate. 130 can be used for requesting.</td> </tr>
+
+<tr><td>140</td> 
+<td><br></td>
+<td>20..2000</td> 
+<td>20..2000</td> 
+<td>GoTo Slewing Speed (for both axes).</td> </tr>
+
+<tr><td>141</td> 
+<td><br></td>
+<td>20..2000</td> 
+<td>20..2000</td> 
+<td>GoTo Slewing Speed in RA. <font color="YELLOW">New in L5.</font></td> </tr>
+
+<tr><td>142</td> 
+<td><br></td>
+<td>20..2000</td> 
+<td>20..2000</td> 
+<td>GoTo Slewing Speed in DEC. <font color="YELLOW">New in L5.</font></td> </tr>
+
+<tr><td>145</td> 
+<td><br></td>
+<td>20..2000</td> 
+<td>20..2000</td> 
+<td>Move Speed (for both axes). <font color="YELLOW">New in L5.</font></td> </tr>
+
+<tr><td>146</td> 
+<td><br></td>
+<td>20..2000</td> 
+<td>20..2000</td> 
+<td>Move Speed in RA. <font color="YELLOW">New in L5.</font></td> </tr>
+
+<tr><td>147</td> 
+<td><br></td>
+<td>20..2000</td> 
+<td>20..2000</td> 
+<td>Move Speed in DEC. <font color="YELLOW">New in L5.</font></td> </tr>
+
+<tr><td>150</td> 
+<td><br></td>
+<td>0.2..0.8</td> 
+<td>0.2..0.8</td> 
+<td>Guiding Speed (for both axes).</td> </tr>
+
+<tr><td>151</td> 
+<td><br></td>
+<td>0.2..0.8</td> 
+<td>0.2..0.8</td> 
+<td>Guiding Speed in RA. <font color="YELLOW">New in L5.</font></td> </tr>
+
+<tr><td>152</td> 
+<td><br></td>
+<td>0.2..0.8</td> 
+<td>0.2..0.8</td> 
+<td>Guiding Speed in DEC. <font color="YELLOW">New in L5.</font></td> </tr>
+
+<tr><td>160, 161..163</td> 
+<td><br></td>
+<td><br></td>
+<td>161: Visual Mode<br>162: Photo Mode<br>163: All Speeds</td> 
+<td>Classical Hand Controller Mode. 160 can be used for requesting.</td> </tr>
+
+<tr><td>170</td> 
+<td><br></td>
+<td>1..255</td> 
+<td>1..255</td> 
+<td>Centering Speed (for both axes).</td> </tr>
+
+<tr><td>171</td> 
+<td><br></td>
+<td>1..255</td> 
+<td>1..255</td> 
+<td>Centering Speed in RA. <font color="YELLOW">New in L5.</font>.</td> </tr>
+
+<tr><td>172</td> 
+<td><br></td>
+<td>1..255</td> 
+<td>1..255</td> 
+<td>Centering Speed in DEC. <font color="YELLOW">New in L5.</font></td> </tr>
+
+<tr><td>180, 181..182</td> 
+<td><br></td>
+<td><br></td>
+<td>181: Alarm Off<br>182: Alarm On<br></td> 
+<td>Alarm Mode. 180 can be used for requesting.</td> </tr>
+
+<tr><td>190, 191..192</td> 
+<td><br></td>
+<td><br></td>
+<td>191: RA Motor stopped.<br>192: RA Motor moving.<br></td> 
+<td>RA Motor Movement. Command 190 can be used to obtain the current status,
+191 for stopping and 192 for restarting the tracking.</td> </tr>
+
+<tr><td>200</td> 
+<td><br></td>
+<td>0..255</td> 
+<td>0..255</td> 
+<td>TVC Step Count. L6: Please be aware that the distance moved by TVC differs between 1x and 4x mode because of the different step sizes.</td> </tr>
+
+<tr><td>201</td> 
+<td><br></td>
+<td>{+-}0..65535</td> 
+<td>{+-}0..65535</td> 
+<td>Modelling Parameter A (Polar Axis Misalignment in Azimuth),
+in seconds of arc.</td> </tr>
+
+<tr><td>202</td> 
+<td><br></td>
+<td>{+-}0..65535</td> 
+<td>{+-}0..65535</td> 
+<td>Modelling Parameter E (Polar Axis Misalignment in Elevation),
+in seconds of arc.</td> </tr>
+
+<tr><td>203</td> 
+<td><br></td>
+<td>{+-}0..65535</td> 
+<td>{+-}0..65535</td> 
+<td>Modelling Parameter NP (Axes Non-Perpendicularity at the Pole),
+in seconds of arc.</td> </tr>
+
+<tr><td>204</td> 
+<td><br></td>
+<td>{+-}0..65535</td> 
+<td>{+-}0..65535</td> 
+<td>Modelling Parameter NE (Axes Non-Perpendicularity at the Equator),
+in seconds of arc.</td> </tr>
+
+<tr><td>205</td> 
+<td><br></td>
+<td>{+-}0..65535</td> 
+<td>{+-}0..65535</td> 
+<td>Modelling Parameter IH (Index Error in Hour Angle),
+in seconds of arc.</td> </tr>
+
+<tr><td>206</td> 
+<td><br></td>
+<td>{+-}0..65535</td> 
+<td>{+-}0..65535</td> 
+<td>Modelling Parameter ID (Index Error in Declination),
+in seconds of arc.</td> </tr>
+
+<tr><td>207</td> 
+<td><br></td>
+<td>{+-}0..65535</td> 
+<td>{+-}0..65535</td> 
+<td>Modelling Parameter FR (Mirror Flop/Gear Play in RA),
+in seconds of arc.</td> </tr>
+
+<tr><td>208</td> 
+<td><br></td>
+<td>{+-}0..65535</td> 
+<td>{+-}0..65535</td> 
+<td>Modelling Parameter FD (Mirror Flop/Gear Play in Declination),
+in seconds of arc.</td> </tr>
+
+<tr><td>209</td> 
+<td><br></td>
+<td>{+-}0..65535</td> 
+<td>{+-}0..65535</td> 
+<td>Modelling Parameter CF (Counterweight &amp; RA axis Flexure),
+in seconds of arc.</td> </tr>
+
+<tr><td>211</td> 
+<td><br></td>
+<td>{+-}0..65535</td> 
+<td>{+-}0..65535</td> 
+<td>Modelling Parameter TF (Tube Flexure),
+in seconds of arc.</td> </tr>
+
+<tr><td>220</td> 
+<td><br></td>
+<td><br></td> 
+<td>&lt;ddd&gt;d&lt;mm&gt;;
+&lt;ddd&gt;d&lt;mm&gt;</td>
+<td>Set the respective Safety Limit to the current position. The Get
+function returns the eastern and western safety limits currently set.
+
+<b>Note: </b>Gemini will automatically compensate if you change hemispheres
+by swapping the eastern and western limits. This is because the mount
+is oriented northwards in the northern hemisphere and southwards in
+the southern hemisphere and so the side of the mount that faces east
+in the northern hemisphere will face west in the southern hemisphere
+and vice versa.
+</td> </tr>
+
+<tr><td>221</td> 
+<td><br></td>
+<td>&lt;ddd&gt;d&lt;mm&gt;
+</td><td>&lt;ddd&gt;d&lt;mm&gt;
+</td><td>Get/Set eastern Safety Limit with respect to the meridian in degrees ddd and minutes mm.
+See note at command 220.
+</td> </tr>
+
+<tr><td>222</td> 
+<td><br></td>
+<td>&lt;ddd&gt;d&lt;mm&gt;</td>
+<td>&lt;ddd&gt;d&lt;mm&gt;</td>
+<td>Get/Set western Safety Limit with respect to the meridian in degrees ddd and minutes mm.
+See note at command 220.
+</td></tr>
+
+<tr><td>223</td> 
+<td><br></td>
+<td>&lt;ddd&gt;d&lt;mm&gt;
+</td><td>&lt;ddd&gt;d&lt;mm&gt;
+</td><td>Get/Set Western GoTo limit (with respect to the meridian) in degrees ddd and minutes mm.
+GoTo operations will include a meridian flip if necessary to stay outside this limit.
+<br>Note: If the RA angles usable for GoTo operations (East Safety Limit to Western GoTo limit
+are not sufficient to point to any location, GoTo operations to unreachable locations will be refused
+and the hand controller will display "Interrupted". A zero value (000d00) indicates that the GoTo
+Limit wasn't set yet and the default (002d30, allowing for at least 10 minutes tracking the object)
+is to be used.
+</td></tr>
+
+<tr><td>225</td> 
+<td><br></td>
+<td><br></td>
+<td>&lt;seconds&gt;
+</td><td>Get Amount of steps (motor encoder ticks) to Western Safety Limit.
+<font color="YELLOW">NEW in L5</font>
+</td> </tr>
+
+<tr><td>226</td> 
+<td><br></td>
+<td><br></td>
+<td>&lt;seconds&gt;
+</td><td>Get Tracking Time to Western Safety Limit in seconds.
+<font color="YELLOW">NEW in L5</font>
+</td> </tr>
+
+<tr><td>227</td> 
+<td><br></td>
+<td>&lt;ddd&gt;d&lt;mm&gt;
+</td><td>&lt;ddd&gt;d&lt;mm&gt;
+</td><td>Get/Set the Eastern Flip Point position with respect to the meridian in degrees ddd and minutes mm.
+<BR><font color="RED">NEW in L6</font>
+</td> </tr>
+
+<tr><td>228</td> 
+<td><br></td>
+<td>&lt;ddd&gt;d&lt;mm&gt;</td>
+<td>&lt;ddd&gt;d&lt;mm&gt;</td>
+<td>Get/Set the Western Flip Point Position with respect to the meridian in degrees ddd and minutes mm.
+<BR><font color="RED">NEW in L6</font>
+</td></tr>
+
+<tr><td>229</td> 
+<td><br></td>
+<td>Sum 0..3 of bits 0, 1:<br>
+1: Use Flip Point East,<br>
+2: Use Flip Point West,<br>
+</td>
+<td>Sum of bits 0, 1:<br>
+1: Use Flip Point East,<br>
+2: Use Flip Point West,<br>
+</td>
+<td>Activate or Deactivate the Meridian Flip Points.
+<BR><font color="RED">NEW in L6</font>
+</td></tr>
+
+<tr><td>230</td> 
+<td><br></td>
+<td><br></td>
+<td>&lt;east&gt;;&lt;west&gt;
+</td><td>Get physical Safety Limits in clusters of 256 motor encoder ticks.
+See note at command 221.
+</td> </tr>
+
+<tr><td>231</td> 
+<td><br></td>
+<td><br></td>
+<td>&lt;east&gt;;&lt;west&gt;
+</td><td>Get Amount of steps (motor encoder ticks) to the Safety Limits.
+<font color="YELLOW">NEW in L5</font>
+</td> </tr>
+
+<tr><td>235</td> 
+<td><br></td>
+<td><br></td>
+<td>&lt;ra_clusters&gt;;&lt;dec_clusters&gt;
+</td><td>Get current physical RA and DEC axes position in clusters of 256 motor encoder ticks.
+</td> </tr>
+
+<tr><td>236</td> 
+<td><br></td>
+<td><br></td>
+<td>0..255;0..255</td>
+<td>Get the remainders of the current physical RA and DEC axes position clusters.</td> </tr>
+
+<tr><td>237</td> 
+<td><br></td>
+<td><br></td>
+<td>&lt;ra_clusters&gt;;&lt;dec_clusters&gt;
+</td><td>Get the size of a half physical circle in clusters of 256 motor encoder ticks.
+</td> </tr>
+
+<tr><td>238</td> 
+<td><br></td>
+<td><br></td>
+<td>&lt;ra ticks&gt;;&lt;dec ticks&gt;
+</td><td>Get the size of a half physical circle in motor encoder ticks.
+<font color="YELLOW">NEW in L5</font></td> </tr>
+
+<tr><td>239</td> 
+<td><br></td>
+<td><br></td>
+<td>&lt;ra ticks&gt;;&lt;dec ticks&gt;
+</td><td>Get current physical RA and DEC axes position in motor encoder ticks.
+<font color="YELLOW">NEW in L5</font></td> </tr>
+
+<tr><td>245</td> 
+<td><br></td>
+<td><br></td>
+<td>&lt;ra lag&gt;
+</td><td>Get current physical RA servo motor offset,
+<br>If the result is always zero, this command may require a new servo motor firmware.
+In L5, the lag was limited to +-390 steps, in L6 with new servo motor firmware it can exceed these values.
+<font color="YELLOW">NEW in L5.1</font>
+<font color="RED">Extended in L6</font></td> </tr>
+
+<tr><td>246</td> 
+<td><br></td>
+<td><br></td>
+<td>&lt;dec lag&gt;
+</td><td>Get current physical DEC servo motor offset,
+<br>If the result is always zero, this command may require a new servo motor firmware.
+In L5, the lag was limited to +-390 steps, in L6 with new servo motor firmware it can exceed these values.
+<font color="YELLOW">NEW in L5.1</font>
+<font color="RED">Extended in L6</font></td> </tr>
+
+<tr><td>247</td> 
+<td><br></td>
+<td><br></td>
+<td>&lt;ra duty&gt;
+</td><td>Get current RA servo motor PWM duty, -100..100. 
+<br>If the result is always zero, this command may require a new servo motor firmware.
+<font color="YELLOW">NEW in L5.1</font></td> </tr>
+
+<tr><td>248</td> 
+<td><br></td>
+<td><br></td>
+<td>&lt;dec duty&gt;
+</td><td>Get current DEC servo motor PWM duty, -100..100. 
+<br>If the result is always zero, this command may require a new servo motor firmware.
+<font color="YELLOW">NEW in L5.1</font></td> </tr>
+
+<tr><td>250</td> 
+<td><br></td>
+<td><br></td>
+<td>&lt;Home_HA&gt;;&lt;Home DEC&gt;
+</td><td>Get/Set HA and DEC home position physical coordinates in arcsecs, 0..1,296,000-1.
+<br>If the home position was not set, the result is zero.
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>251</td> 
+<td><br></td>
+<td></td> 
+<td>&lt;Home_HA&gt;
+<td>Get/Set HA home position in degrees and minutes.
+<br>If the home position was not set, the Get result is 000d00.
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>252</td> 
+<td><br></td>
+<td></td> 
+<td>&lt;Home_DEC&gt;
+<td>Get/Set home position in degrees and minutes .
+<br>If the home position was not set, the Get result is 000d00.
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>311</td> 
+<td><br></td>
+<td>0..15</td> 
+<td>0..63</td> 
+<td>Feature Port Status. 4 bits (0..15) can be used for setting input/output
+bits, 6 bits (including two additional input only bits 16 and 32, extending the range to 0..63) are available for input.
+</td></tr>
+
+<tr><td>312</td> 
+<td><br></td>
+<td><br></td>
+<td>0..15</td> 
+<td>Encoder Port Status. 4 bits (0..15) can be used for reading or setting input/output
+bits if it is not intended to connect mount axis encoders but to use these channels alternatively.
+</td></tr>
+
+<tr><td>321</td> 
+<td><br></td>
+<td><br></td>
+<td>Floating point value</td> 
+<td>Main battery voltage in volts.<font color="YELLOW">NEW in L5.2</font></td></tr>
+
+<tr><td>322</td> 
+<td><br></td>
+<td><br></td>
+<td>Floating point value</td> 
+<td>Lithium battery voltage in volts.<font color="YELLOW">NEW in L5.2</font></td></tr>
+
+<tr><td>400</td> 
+<td><br></td>
+<td><br></td>
+<td>&lt;ra version&gt;;&lt;dec version&gt;
+</td><td>Get current RA and DEC servo firmware version.
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>401</td> 
+<td><br></td>
+<td>0..3</td> 
+<td>0..3</td> 
+<td>Servo motor pointing precision. This command defines the step resolution
+per motor encoder tick for the RA and/or DEC axis. 
+It can only be used with current servo controller software, version 2 or higher.
+Bit 0 refers to RA, bit 1 to DEC. A high bit sets the motor encoder resolution to quadrupled mode.
+This function can only be used with current servo controller software, version 3 or higher.
+<BR><font color="RED">NEW in L6</font>
+</td></tr>
+
+<tr><td>402</td> 
+<td><br></td>
+<td>0..3</td> 
+<td>0..3</td> 
+<td>Download motor control parameters at startup. This function 
+can only be used with current servo controller software, version 2 or higher.
+Bit 0 refers to RA, bit 1 to DEC. A high bit enables the download.
+This function can only be used with current servo controller software, version 3 or higher.
+<BR><font color="RED">NEW in L6</font>
+</td></tr>
+
+<tr><td>403</td> 
+<td><br></td>
+<td>0..3</td> 
+<td>0..3</td> 
+<td>Get/Set servo motor control "Proportional on Error" parameter. 
+Bit 0 refers to RA, bit 1 to DEC.
+This function can only be used with current servo controller software, version 3 or higher.
+<BR><font color="RED">NEW in L6</font>
+</td></tr>
+
+<tr><td>411</td> 
+<td><br></td>
+<td>Up to L4: 256..65535<br>  L5: 0..4294967295</td> 
+<td>Up to L4: 256..65535<br>  L5: 0..4294967295</td> 
+<td>RA (comet) tracking rate divisor. Up to L4, the RA timer runs at 1.5 MHz,
+using this divisor
+the tracking rate can be adapted to the (mount dependent) speed of an
+object to be tracked. Attention: up to L4, several internal prescalers may be
+used for further dividing down the frequency.
+<BR><font color="YELLOW">NEW in L5</font> The divisor corresponds to a 12.0 MHz timer.
+</td> </tr>
+
+<tr><td>412</td> 
+<td><br></td>
+<td>Up to L4: {+-}0..65535<br>  L5: {+-}0..2147483647</td> 
+<td>Up to L4: {+-}0..65535<br>
+L5: {+-}0..2147483647</td> 
+<td>DEC comet tracking rate divisor. <b>Attention: Changed Meaning!</b>
+In L3, there was no timer for DEC comet tracking available,
+the DEC divisor referred to the number of RA steps to be done for one step in DEC.<br>
+In L4, the divisor value counts the number of internal timer ticks (at 22.888 18359 Hz)
+per one step in DEC, independently from RA. This corresponds to 0.657154312 arcsec/tick<br>
+<font color="YELLOW">NEW in L5</font> The divisor corresponds to a 12.0 MHz timer. The sign indicates the direction.  A zero value disables DEC tracking.</td>
+</tr>
+
+<tr><td>413</td> 
+<td><br></td>
+<td>Up to L4: 256..65535<br>  L5: 0..4294967295</td> 
+<td>Up to L4: 256..65535<br>
+L5: 0..4294967295</td> 
+<td>RA- (slow, eastwards) guiding rate divisor. <br>L4: While guiding
+	eastwards, an additional 4x prescaler is active.<br>L4:  A value of zero
+	returned means a timer set to the maximum of 65536.<br>
+<font color="YELLOW">NEW in L5</font> The divisor corresponds to a 12.0 MHz timer.	
+</td> </tr>
+
+<tr><td>414</td> 
+<td><br></td>
+<td>Up to L4: 256..65535<br>  L5:  0..4294967295</td> 
+<td>Up to L4: 256..65535<br>  L5:  0..4294967295</td> 
+<td>RA+ (fast, westwards) guiding rate divisor. See description to command 413.<br>
+<font color="YELLOW">NEW in L5:</font> The divisor corresponds to a 12.0 MHz timer.
+</td> </tr>
+
+<tr><td>415</td> 
+<td><br></td>
+<td>Up to L4: 0..65535<br>
+L5:  0..4294967295</td> 
+<td><p>Up to L4: 0..65535<br>
+L5:  0..4294967295
+</p></td> 
+<td>DEC guiding rate divisor.<br>
+<font color="YELLOW">NEW in L5:</font> The divisor corresponds to a 12.0 MHz timer.</td> </tr>
+
+<tr><td>416</td> 
+<td><br></td>
+<td> 0..4G (4294967295)</td> 
+<td> 0..4G</td> 
+<td>DEC guiding rate Prescaler.<br>
+<font color="YELLOW">NEW in L5.1</font> The prescaler multiplies the value of the DEC comet tracking rate divisor to achieve very slow movements in DEC.</td> </tr>
+
+<tr><td>421</td> 
+<td><br></td>
+<td><br></td> 
+<td> 0..4G</td> 
+<td>RA sidereal tracking rate divisor.<br>
+<font color="YELLOW">NEW in L5.1</font></td> </tr>
+
+<tr><td>422</td> 
+<td><br></td>
+<td><br></td> 
+<td> 0..4G</td> 
+<td>Equivalent 1x DEC sidereal tracking rate divisor.<br>
+<font color="YELLOW">NEW in L5.1</font></td> </tr>
+
+<tr><td>451</td> 
+<td><br></td>
+<td><br></td> 
+<td> 0..4G</td> 
+<td>Current RA East/West rate divisors.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>452</td> 
+<td><br></td>
+<td><br></td> 
+<td> 0..4G</td> 
+<td>Current DEC rate divisor.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>453</td> 
+<td><br></td>
+<td>0 or 1</td> 
+<td>0 or 1</td> 
+<td>Stop (value 0) or Start the RA motor by switching the PWM unit off/on.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>454</td> 
+<td><br></td>
+<td>0 or 1</td> 
+<td>0 or 1</td> 
+<td>Stop (value 0) or Start the DEC motor by switching the timer unit off/on.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>460</td> 
+<td><br></td>
+<td>0..2</td> 
+<td>0..2</td> 
+<td>RA Servo control parameter set. 0: Custom settings, 1: Standard motor, 2: Maxon motor.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>461</td> 
+<td><br></td>
+<td>-1024..1024</td> 
+<td>-1024..1024</td> 
+<td>RA Servo High Speed Proportional Parameter.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>462</td> 
+<td><br></td>
+<td>-1024..1024</td> 
+<td>-1024..1024</td> 
+<td>RA Servo High Speed Integral Parameter.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>463</td> 
+<td><br></td>
+<td>-1024..1024</td> 
+<td>-1024..1024</td> 
+<td>RA Servo High Speed Differential Parameter.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>464</td> 
+<td><br></td>
+<td>-1024..1024</td> 
+<td>-1024..1024</td> 
+<td>RA Servo Low Speed Proportional Parameter.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>465</td> 
+<td><br></td>
+<td>-1024..1024</td> 
+<td>-1024..1024</td> 
+<td>RA Servo Low Speed Integral Parameter.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>466</td> 
+<td><br></td>
+<td>-1024..1024</td> 
+<td>-1024..1024</td> 
+<td>RA Servo Low Speed Differential Parameter.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>470</td> 
+<td><br></td>
+<td>0..2</td> 
+<td>0..2</td> 
+<td>DEC Servo control parameter set. 0: Custom settings, 1: Standard motor, 2: Maxon motor.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>471</td> 
+<td><br></td>
+<td>-1024..1024</td> 
+<td>-1024..1024</td> 
+<td>DEC Servo High Speed Proportional Parameter.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>472</td> 
+<td><br></td>
+<td>-1024..1024</td> 
+<td>-1024..1024</td> 
+<td>DEC Servo High Speed Integral Parameter.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>473</td> 
+<td><br></td>
+<td>-1024..1024</td> 
+<td>-1024..1024</td> 
+<td>DEC Servo High Speed Differential Parameter.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>474</td> 
+<td><br></td>
+<td>-1024..1024</td> 
+<td>-1024..1024</td> 
+<td>DEC Servo Low Speed Proportional Parameter.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>475</td> 
+<td><br></td>
+<td>-1024..1024</td> 
+<td>-1024..1024</td> 
+<td>DEC Servo Low Speed Integral Parameter.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>476</td> 
+<td><br></td>
+<td>-1024..1024</td> 
+<td>-1024..1024</td> 
+<td>DEC Servo Low Speed Differential Parameter.<br>
+<font color="RED">NEW in L6</font></td> </tr>
+
+<tr><td>501</td> 
+<td><br></td>
+<td><br></td>
+<td>0..PECmax</td> 
+<td>Current RA PEC counter in steps, from 0 to the maximum step count per worm revolution PECmax.
+This maximum is the product of RA motor encoder resolution and spur gear ratio. 
+It can be calculated multiplying the return values of the &lt;23 and &lt;25 commands or can
+be obtained directly by &lt;27.
+</td> </tr>
+
+<tr><td>502</td> 
+<td><br></td>
+<td><br></td>
+<td>0.2 .. 0.8</td> 
+<td>Guiding Speed used for training PEC. Only valid if PEC was trained or PEC data were downloaded, see command 509.
+ The set command can be used without parameters and sets the guiding speed back to the value used for training.
+</td> </tr>
+
+<tr><td>503</td> 
+<td><br></td>
+<td>0..PECMax</td> 
+<td>0..PECMax</td> 
+<td>Maximum RA PEC counter in steps, from 0 to the maximum step count PECmax.
+As default, this maximum is calculated as the product of RA motor encoder resolution and spur gear ratio
+at startup and whenever mount type or mount parameter are changed.<br>
+Using this command, PECmax can be set to user defined values, f.i. to allow multiple worm
+cycles to be recorded.
+</td> </tr>
+
+<tr><td>504</td> 
+<td><br></td>
+<td>0..255</td> 
+<td>0..255</td> 
+<td>Maximum consecutive RA PEC steps. 0 disables step supervision. Higher values define
+the maximum count of PEC steps in a row to enforce tiny corrections. After this maximum count
+is reached, normal tracking speed is reestablished.
+</td> </tr>
+
+<tr><td>505</td> 
+<td><br></td>
+<td>0..PECMax</td> 
+<td>0..PECMax</td> 
+<td>PEC Worm Offset.
+</td> </tr>
+
+<tr><td>506</td> 
+<td><br></td>
+<td>See Note</td> 
+<td>See Note</td> 
+<td>Worm Cycle Count Offset. This is an offset value added to the dynamic value derived from the RA step count integer divided by the step count per worm revolution.
+<font color="RED">NEW in L6</font></td> </tr>
+</td> </tr>
+
+<tr><td>507</td> 
+<td><br></td>
+<td></td> 
+<td>See Note</td> 
+<td>Worm Cycle Count. 
+ This is a readonly value dynamically value derived from the RA step count integer divided by the step count per worm revolution with an offset added.
+<font color="RED">NEW in L6</font></td> </tr>
+</td> </tr>
+
+<tr><td>508</td> 
+<td><br></td>
+<td>0..1</td> 
+<td>0..1</td> 
+<td>Enable (1) or disable (0) PEC playback at boot time, if PEC data are available.
+<font color="YELLOW">NEW in L5.2</font></td> </tr>
+
+
+<tr><td>509</td> 
+<td><br></td>
+<td>0..63</td> 
+<td>0..63</td> 
+<td>PEC status. Decimal sum of:<br>
+1: PEC active,<br>
+2: freshly trained (not yet altered) PEC data are available as current PEC data,<br>
+4: PEC training in progress,<br>
+8: PEC training was just completed,<br>
+16: PEC training will start soon,<br>
+32: PEC data are available.
+</td> </tr>
+
+<tr><td>511</td> 
+<td>offset[;0 or 1]<br></td>
+<td>value;offset;repeat count</td> 
+<td>value;repeat count</td> 
+<td>Currently used PEC data. [value] can be 0 (=normal tracking),1 (RA-, guiding eastwards) or
+8 (RA+, guiding westwards), or the divisor if requested.<br>
+[offset] ranges from 0 to PECmax-1.<br>[repeat count] indicates the number of equal values
+starting at the given offset.<BR>
+<font color="RED">Extended in L6:</font> The Level 6 PEC scheme is extended compared to L5. If the parameter values 0, 1 and 8 are used, L6 PEC is compatible to L5. In L6, step divisor values for the 12MHz oscillator can be specified directly. The minimal allowed value is 1/10th of the sidereal tracking divisor. A very smooth adaptation to the PEC curve can  be reached.To get the 12MHz base tracking divisors use the optional ";1" extension after the offset value.</td> </tr>
+</td></tr>
+
+<tr><td>512</td> 
+<td>offset[;0 or 1]<br></td>
+<td>value;offset;repeat count</td> 
+<td>value;repeat count</td> 
+<td>Saved PEC data. [value] can be 0 (=normal tracking),1 (RA-, guiding eastwards) or
+8 (RA+, guiding westwards), or the divisor if requested.<br>
+[offset] ranges from 0 to PECmax-1;<br> [repeat count] indicates the number of equal values
+starting at the given offset. See notes for command 511.<br>Obsoleted in L5 by SD card PEC files.
+</td></tr>
+
+<tr><td>513</td> 
+<td><br></td> 
+<td>value<br></td> 
+<td>value<br></td>
+<td>PEC tracking divisor for unguided steps, based on the 12Mhz clock. 
+<font color="RED">NEW in L5.3</font></td></tr>
+
+
+<tr><td>515</td> 
+<td><br></td> 
+<td><br></td> 
+<td><br></td>
+<td>Maximum amount of PEC correction intervals.
+<font color="RED">NEW in L6.0</font></td></tr>
+
+<tr><td>516</td> 
+<td><br></td> 
+<td><br></td> 
+<td><br></td>
+<td>Current amount of PEC correction intervals used.
+<font color="RED">NEW in L6.0</font></td></tr>
+
+<tr><td>521</td> 
+<td><br></td> 
+<td><br></td> 
+<td>RA-/slow step count;<br>normal step count;<br>RA+/fast step count</td>
+<td>PEC statistics. Three decimal values, summing up the steps at the three speeds. 
+</td></tr>
+
+<tr><td>522</td> 
+<td><br></td> 
+<td><br></td> 
+<td>value<br></td>
+<td>Get the PEC tracking divisor average calculated for all guiding steps of a PECmax worm period, based on the 12Mhz clock.
+A difference between this average and the tracking divisor indicate a possible drift.
+<font color="RED">NEW in L5.3</font></td></tr>
+
+<tr><td>523</td> 
+<td><br></td> 
+<td><br></td> 
+<td>value<br></td>
+<td>Get/Set the PEC tracking divisor average calculated for all steps of a PECmax worm period, based on the 12Mhz clock. 
+The value should be equal or near to the tracking divisor.
+<font color="RED">NEW in L5.3</font></td></tr>
+
+<tr><td>530</td> 
+<td><br></td> 
+<td><br></td> 
+<td><br></td>
+<td>Start PEC training. The training phase will start about ten seconds after this command was issued. 
+<font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>531</td> 
+<td><br></td> 
+<td><br></td> 
+<td><br></td>
+<td>Switch PEC replay on, if there are valid PEC data available. <font color="YELLOW">NEW in L5</font>
+</td></tr>
+
+<tr><td>532</td> 
+<td><br></td> 
+<td><br></td> 
+<td><br></td>
+<td>Switch PEC replay off. <font color="Yellow">NEW in L5</font>
+</td></tr>
+
+<tr><td>535</td> 
+<td><br></td> 
+<td><br></td> 
+<td>'0': No PEC training was ongoing.<br>'1': PEC training was aborted before it started<br>
+'2': PEC training was aborted</td>
+<td>Abort PEC training . <font color="Yellow">NEW in L5</font></td></tr>
+
+<tr><td>541</td> 
+<td><br></td> 
+<td><br></td> 
+<td>value<br></td>
+<td>Calculate a PEC tracking divisor for unguided steps (based on the 12Mhz clock) to compensate any drift guiding corrections may have introduced. 
+<font color="RED">NEW in L5.3</font></td></tr>
+
+<tr><td>550</td> 
+<td><br></td> 
+<td><br></td> 
+<td><br></td>
+<td>Load/Store PEC data from/to SD card file \PEC\CurrPEC.pec. <font color="Yellow">NEW in L5</font></td></tr>
+
+<tr><td>551</td> 
+<td>&lt;filename&gt;<br></td> 
+<td>&lt;filename&gt;<br></td> 
+<td><br></td>
+<td>Load/Store PEC data from/to SD card file &lt;filename&gt;. <font color="Yellow">NEW in L5</font></td></tr>
+
+<tr><td>601</td> 
+<td><br></td> 
+<td><br></td> 
+<td><br></td>
+<td>Select English as language for the following display outputs.
+<font color="Yellow">NEW in L5</font></td></tr>
+
+<tr><td>602</td> 
+<td><br></td> 
+<td><br></td> 
+<td><br></td>
+<td>Select German as language for the following display outputs.
+<font color="Yellow">NEW in L5</font></td></tr>
+
+<tr><td>603</td> 
+<td><br></td> 
+<td><br></td> 
+<td><br></td>
+<td>Select French as language for the following display outputs.
+<font color="Yellow">NEW in L5</font></td></tr>
+
+<tr><td>604</td> 
+<td><br></td> 
+<td><br></td> 
+<td><br></td>
+<td>Select Spanish as language for the following display outputs.
+<font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>700</td> 
+<td><br></td>
+<td>Mount Design</td> 
+<td>Mount Design</td> 
+<td>Basic mount design: 0: Equatorial, 1: Alt/Az. <font color="YELLOW">NEW in L5.1</font></td></tr>
+
+<tr><td>801</td> 
+<td><br></td>
+<td>IPv4 address</td> 
+<td>IPv4 address</td> 
+<td>IP version 4 address in decimal dotted notation.
+Activates new network settings immediately. <font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>802</td> 
+<td><br></td>
+<td>IPv4 netmask</td> 
+<td>IPv4 netmask</td> 
+<td>IP version 4 netmask in decimal dotted notation.
+Activates new network settings immediately. <font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>803</td> 
+<td><br></td>
+<td>IPv4 default gateway</td> 
+<td>IPv4 default gateway</td> 
+<td>IP version 4 gateway address in decimal dotted notation.
+Activates new network settings immediately. <font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>804</td> 
+<td><br></td>
+<td>IPv4 primary name server address</td> 
+<td>IPv4 primary name server address</td> 
+<td>IP version 4 name server address in decimal dotted notation.
+Activates new network settings immediately. <font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>805</td> 
+<td><br></td>
+<td>IPv4 secondary name server address</td> 
+<td>IPv4 secondary name server address</td> 
+<td>IP version 4 name server address in decimal dotted notation.
+Activates new network settings immediately. <font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>809</td> 
+<td><br></td>
+<td>0..999</td> 
+<td>0..999</td> 
+<td>Timespan (in seconds) for requesting and waiting for a DHCP address assignment at startup.
+<font color="RED">NEW in L6</font></td></tr>
+
+<tr><td>810</td> 
+<td><br></td>
+<td>0: don't use DHCP<br>1: use DHCP</td> 
+<td>0: don't use DHCP<br>1: use DHCP</td> 
+<td>Decides whether DHCP is activated at startup or not.
+<font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>811</td> 
+<td><br></td>
+<td>IPv4 address</td> 
+<td>IPv4 address</td> 
+<td>IP version 4 address in decimal dotted notation.
+<font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>812</td> 
+<td><br></td>
+<td>IPv4 netmask</td> 
+<td>IPv4 netmask</td> 
+<td>IP version 4 netmask in decimal dotted notation.
+<font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>813</td> 
+<td><br></td>
+<td>IPv4 default gateway</td> 
+<td>IPv4 default gateway</td> 
+<td>IP version 4 gateway address in decimal dotted notation.
+<font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>814</td> 
+<td><br></td>
+<td>IPv4 primary name server address</td> 
+<td>IPv4 primary name server address</td> 
+<td>IP version 4 name server address in decimal dotted notation.
+<font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>815</td> 
+<td><br></td>
+<td>IPv4 secondary name server address</td> 
+<td>IPv4 secondary name server address</td> 
+<td>IP version 4 name server address in decimal dotted notation.
+<font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>816</td> 
+<td><br></td>
+<td>Network Time Protocol server address</td> 
+<td>IPv4 NTP server address</td> 
+<td>IP version 4 NTP server address in decimal dotted notation.
+<font color="YELLOW">NEW in L5.2</font></td></tr>
+
+<tr><td>818</td> 
+<td><br></td>
+<td>Ethernet port MAC address</td> 
+<td>Ethernet port MAC address</td> 
+<td>Ethernet port MAC address in hexadecimal notation.
+<font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>826</td> 
+<td><br></td>
+<td></td> 
+<td>'0' or '1' to indicate if a asynchronous NTP server query was started.</td> 
+<td>Query the predefined Network Time Protocol Server.
+<font color="YELLOW">NEW in L5.2</font></td></tr>
+
+<tr><td>900</td> 
+<td></td> 
+<td><br></td>
+<td>"0#" file not available<br>"1#"file opened.</td> 
+<td>Check for and open a HC fimware file \HCfirmware\gemhc.bin.</td></tr>
+
+<tr><td>902</td> 
+<td></td> 
+<td><br></td>
+<td>'0' file not deleted<br>'1'file deleted</td> 
+<td>Delete a HC fimware file \HCfirmware\gemhc.bin.</td></tr>
+
+<tr><td>910</td> 
+<td>filename</td> 
+<td><br></td>
+<td>'0' if file not found<br>'1' if file was opened</td> 
+<td>Open a file for downloading it</td></tr>
+
+<tr><td>911</td> 
+<td><br></td> 
+<td><br></td>
+<td>'0' if error<br>'2' followed by data</td> 
+<td>Read file data</td></tr>
+
+<tr><td>912</td> 
+<td>filename</td> 
+<td><br></td>
+<td>'0' file not deleted<br>'1'file deleted</td> 
+<td>Delete a file.</td></tr>
+
+<tr><td>915</td> 
+<td>filename</td> 
+<td><br></td>
+<td>First file name matching the given pattern.</td> 
+<td>Lookup a file. Directory and wildcards can be specified.</td></tr>
+
+<tr><td>930</td> 
+<td></td> 
+<td>n</td> 
+<td></td> 
+<td>Create and prepare a servo controller log file for the DEC axis for n lines of logging.
+This function can only be used with current servo controller software, version 3 or higher.
+<BR><font color="RED">NEW in L6</font></td></tr>
+</td></tr>
+
+<tr><td>931</td> 
+<td></td> 
+<td></td> 
+<td></td> 
+<td>Close servo controller log files.
+This function can only be used with current servo controller software, version 3 or higher.
+<BR><font color="RED">NEW in L6</font></td></tr>
+</td></tr>
+
+<tr><td>933</td> 
+<td></td> 
+<td></td> 
+<td></td> 
+<td>Remove all servo controller log files.
+This function can only be used with current servo controller software, version 3 or higher.
+<BR><font color="RED">NEW in L6</font></td></tr>
+</td></tr>
+
+<tr><td>935</td> 
+<td></td> 
+<td>n</td> 
+<td></td> 
+<td>Create/Activate a servo controller log file for the hour angle axis for n lines of logging.
+This function can only be used with current servo controller software, version 3 or higher.
+<BR><font color="RED">NEW in L6</font></td></tr>
+</td></tr>
+
+<tr><td>936</td> 
+<td></td> 
+<td></td> 
+<td></td> 
+<td>Start servo logging as prepared. 
+This function can only be used with current servo controller software, version 3 or higher.
+<BR><font color="RED">NEW in L6</font></td></tr>
+</td></tr>
+
+<tr><td>937</td> 
+<td></td> 
+<td>low limit;high limit.</td> 
+<td>low limit;high limit.</td> 
+<td>Get/Set the servo motors allowed movement range of the Hour Angle axis in quadrupled (4x mode) motor encoder steps.
+This function can only be used with current servo controller software, version 3 or higher.
+<BR><font color="RED">NEW in L6</font></td></tr>
+</td></tr>
+
+<tr><td>938</td> 
+<td></td> 
+<td>low limit;high limit.</td> 
+<td>low limit;high limit.</td> 
+<td>Get/Set the servo motors allowed movement range of the Declination axis in quadrupled (4x mode) motor encoder steps.
+This function can only be used with current servo controller software, version 3 or higher.
+<BR><font color="RED">NEW in L6</font></td></tr>
+</td></tr>
+
+<tr><td>939</td> 
+<td></td> 
+<td>0..3</td> 
+<td>0..3</td> 
+<td>Use servo moves instead of ARM stepping. Bit 0: RA axis, bit 1: DEC axis.
+This function can only be used with current servo controller software, version 3 or higher.
+<BR><font color="RED">NEW in L6</font></td></tr>
+</td></tr>
+
+<tr><td>1001</td> 
+<td></td> 
+<td>n</td> 
+<td>n</td> 
+<td>Get the step position or trigger a servo move of the HA axis to the step address n. n has to be within the step limits.
+This function can only be used with current servo controller software, version 3 or higher.
+<BR><font color="RED">NEW in L6</font></td></tr>
+</td></tr>
+
+<tr><td>1002</td> 
+<td></td> 
+<td>n</td> 
+<td>n</td> 
+<td>Get the step position or trigger a servo move of the DEC axis to the step address n. n has to be within the step limits.
+This function can only be used with current servo controller software, version 3 or higher.
+<BR><font color="RED">NEW in L6</font></td></tr>
+</td></tr>
+
+<tr><td>43610</td> 
+<td><br></td> 
+<td><br></td>
+<td>'1' file loaded/stored<br>'0'file not loaded/stored</td> 
+<td>Load/Store the SRAM configuration data from/into the file \config\Gemini.cfg.
+<font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>43611</td> 
+<td>filename</td> 
+<td>filename</td>
+<td>'1' file loaded/stored<br>'0'file not loaded/stored</td> 
+<td>Load/Store the SRAM configuration data from/into the file filename.
+<font color="YELLOW">NEW in L5</font></td></tr>
+
+<tr><td>43690</td> 
+<td><br></td>
+<td><br></td> 
+<td><br></td> 
+<td>Reset to Losmandy HGM default values.</td> </tr>
+
+<tr><td>43691</td> 
+<td><br></td>
+<td><br></td> 
+<td><br></td> 
+<td>Reset to Mountain Instruments default values.</td> </tr>
+
+<tr><td>65533</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>Reboot the Gemini controller software, enforcing a Cold Start.</td> </tr>
+
+<tr><td>65534</td> 
+<td><br></td> 
+<td><br></td>
+<td><br></td> 
+<td>Reboot the Gemini controller software.</td> </tr>
+
+<tr><td>65535</td> 
+<td><br></td> 
+<td><br></td>
+<td><br></td> 
+<td>Reboot the Gemini controller software.</td> </tr>
+
+</tbody></table>
+
+</p><p><b>Using the native commands:</b>
+</p><ul>
+<li>The Identification tag is interpreted as an integer value, leading
+zeros are ignored.</li>
+
+<li>Parameters are separated from the Id and from each other by hyphens.</li>
+
+<li>The checksum for the native commands is calculated by a bytewise XOR
+operation of the transmitted characters, including the Get/Set command
+sign ('&lt;', '&gt;') and colon ':'. The highest significant bit
+of the result is cleared (modulo 128 operation) and 64 is added.</li>
+
+<li>Undefined Ids are ignored in Set operations. For Get operations, only a
+hash mark will be returned.</li>
+
+<li>In Debug Mode, the expected and the received checksum are displayed on the hand controller display 
+in hexadecimal format whenever a discrepancy is detected. A command sent with a wrong checksum will not
+ be executed.</li></ul>
+
+
+<p><b>Examples</b>
+</p><ul>
+<li>Get the Mount Type: "&lt;0:v" and "&lt;00:F#" are equivalent.
+</li><li>"&lt;1:w#" and "&lt;2:t#" and "&lt;3:u#" will deliver the same result,
+f.i. the string "1q#" if the mount type is set to GM-8 or "2r#"
+if G-11 is selected. </li></ul>
+<br>
+<p>Meade® is a trademark registered by Meade Instruments Corporation,
+California, USA.
+</p>
+
+</body></html>
