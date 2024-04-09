@@ -4,44 +4,51 @@
 
 
 <head profile="http://www.w3.org/2005/10/profile">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-<link rel="stylesheet" href="ajxmenu.css" type="text/css">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta content="en-us" http-equiv="Content-Language" />
-<title>Using FileZilla to install OCT 25, 2013 (main unit) and Feb 20, 2014 (in HC) Firmware</title>
+    <link rel="stylesheet" href="ajxmenu.css" type="text/css">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="en-us" http-equiv="Content-Language" />
+    <title>Using FileZilla to install OCT 25, 2013 (main unit) and Feb 20, 2014 (in HC) Firmware</title>
 
-<link href="gemini-2.css" rel="stylesheet" title = "light" type="text/css">
-<link href="gemini-2-dark.css" rel="stylesheet" title = "dark" type="text/css">
-<script src="style_switcher.js"></script>
-<link href="theme-selector.css" rel="stylesheet" type="text/css">
+    <link href="gemini-2.css" rel="stylesheet" title="light" type="text/css">
+    <link href="gemini-2-dark.css" rel="stylesheet" title="dark" type="text/css">
+    <script src="style_switcher.js"></script>
+    <link href="theme-selector.css" rel="stylesheet" type="text/css">
 
-<script src="w3data.js"></script></head>
+    <script src="w3data.js"></script>
+</head>
+
 <body onload="set_style_from_cookie()">
-<div w3-include-html="header.html" ></div>
-<div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div><script>w3IncludeHTML();</script>
+    <div w3-include-html="header.html"></div>
+    <div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div>
+    <script>
+        w3IncludeHTML();
+    </script>
 
 
 
 
-	<table align="center" style="width: 900px" class="auto-style3">
-		<tr>
-			<td class="h2">
-			<br/>
-				Using FileZilla to install OCT 25, 2013 (main unit) and Feb 20, 2014 (in HC) Firmware<br/>
-			</td>
-		</tr>
+    <table align="center" style="width: 900px" class="auto-style3">
+        <tr>
+            <td class="h2">
+                <br/> Using FileZilla to install OCT 25, 2013 (main unit) and Feb 20, 2014 (in HC) Firmware<br/>
+            </td>
+        </tr>
 
-	</table>
-	<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style6"><br />
-			<span class="style3">If you would 
+    </table>
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style6"><br />
+                <span class="style3">If you would 
 			prefer to use Windows File Manager instead of FileZilla to do the install 
-			go</span><a href="updateFileExplorer.html" target="_self"> here</a>.</td></tr></table>
+			go</span><a href="updateFileExplorer.html" target="_self"> here</a>.</td>
+        </tr>
+    </table>
 
-<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr><td Class="style6"><span class="style2"><br />
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td Class="style6"><span class="style2"><br />
 					Now updating this firmware yourself will be at your 
 		own risk, and Hollywood General Machining, Inc. (Losmandy) or any one 
 		associated with them, or anyone associated with 
@@ -57,235 +64,193 @@
 			provided the best instructions that I can, but there is absolutely 
 			no guarantee, that everything will work as expected.&nbsp;&nbsp;If you do intend to do this upgrade, please read 
 			all the instructions first, and make sure you completely understand 
-			them.&nbsp; </span><br />
-			I can sometimes provide help using Teamviewer (if you are in the USA 
-			or Canada), but even 
-			If I do that, you understand and acknowledge that doing so is 
-			completely AT YOUR OWN RISK. The only way for this to be not at your 
-			own risk is get permission from Losmandy to do the update. So please get 
-			the permission first, preferably via Email, so you have it in 
-			writing.&nbsp; I would also like to see that email before I attempt 
-			helping you.&nbsp; Or an email from your dissolving me of any 
-			liability if anything goes wrong. I do this using my time, and do 
-			not charge for it, so I don't think that is too much to ask.
+			them.&nbsp; </span><br /> I can sometimes provide help using Teamviewer (if you are in the USA or Canada), but even If I do that, you understand and acknowledge that doing so is completely AT YOUR OWN RISK. The only way for this to be not at your own
+                risk is get permission from Losmandy to do the update. So please get the permission first, preferably via Email, so you have it in writing.&nbsp; I would also like to see that email before I attempt helping you.&nbsp; Or an email from
+                your dissolving me of any liability if anything goes wrong. I do this using my time, and do not charge for it, so I don't think that is too much to ask.
 
-		</td></tr></table>
-<table align="center" style="max-width: 900px; min-width: 200px;">
-			<tr><td class="style6">
-		</td></tr>
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-			<tr><td class="style6">
-			</td>
-			</tr>
-		</table>
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-			<tr><td class="style6">
-				If your network Default Gateway is http://192.168.1.1  then it would be best if you configured your laptop
-				and the Gemini-2 to a default gateway of http://192.168.0.1 before doing this update. Here are instructions on configuring
-				<a href="crossovernetwork.html" target="_self">Windows and XP</a> 
-				.&nbsp; The reason for this is it is about a 99% chance that the 
-				Gemini-2 is going to default back to <a href="http://192.168.0.111/">
-				http://192.168.0.111</a> after this update.&nbsp; If your 
-				network does not match then	you will not be able to reconnect to it.&nbsp;&nbsp;&nbsp;
-			</td>
-			</tr>
-		</table>
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-			<tr><td class="style6">
-			</td>
-			</tr>
-		</table>
-				
-		<table align="center" style="width: 900px" class="tableborder1">
-			<tr><td class="style6">
+            </td>
+        </tr>
+    </table>
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style6">
+            </td>
+        </tr>
+        <table align="center" style="max-width: 900px; min-width: 200px;">
+            <tr>
+                <td class="style6">
+                </td>
+            </tr>
+        </table>
+        <table align="center" style="max-width: 900px; min-width: 200px;">
+            <tr>
+                <td class="style6">
+                    If your network Default Gateway is http://192.168.1.1 then it would be best if you configured your laptop and the Gemini-2 to a default gateway of http://192.168.0.1 before doing this update. Here are instructions on configuring
+                    <a href="crossovernetwork.html" target="_self">Windows and XP</a> .&nbsp; The reason for this is it is about a 99% chance that the Gemini-2 is going to default back to <a href="http://192.168.0.111/">
+				http://192.168.0.111</a> after this update.&nbsp; If your network does not match then you will not be able to reconnect to it.&nbsp;&nbsp;&nbsp;
+                </td>
+            </tr>
+        </table>
+        <table align="center" style="max-width: 900px; min-width: 200px;">
+            <tr>
+                <td class="style6">
+                </td>
+            </tr>
+        </table>
 
-			<a name="nr">NEW-RELEASE</a>: Please note that a new release of the 
-				hand controller and main firmware has has been released. If you 
-				already installed the Aug 27, 2013 firmware with the&nbsp; Aug 27 
-				Hand controller firmware, there is no reason to reinstall most 
-				of the firmware. You just need to install the Oct 25 NewGem.bin and Sept 
-				30 gemhc.bin files to be up-to-date.&nbsp;&nbsp; This fixes the PAA, Identify 
-			and Bookmark functions.&nbsp; 
-			Also, the tactical buttons have been activated for the balance 
-			screen and also the set limits screen in the hand controller.&nbsp; To install it,
-			<a href="firmware1/NewGem-gem-hd-3-Oct-2013.html" target="_self">download the file.</a>&nbsp; Then unzip it to a clean directory,&nbsp; 
-			It contains both files listed above. &nbsp; Upload the gemhc.bin file into the Gemini-2 into the HCFirmware directory.&nbsp; You can do 
-			the with FileZilla, Windows File Manager (use
-			<a href="ftp://admin@gemini/">ftp://admin@gemini</a>) or the web 
-			interface&nbsp; using the SDcard Tab <a href="http://gemini/sd.cgi">
-			http://gemini/sd.cgi</a> upload feature. If using the web interface, 
-			after clicking on the SDcard tab, single click on HCFirmware 
-			directory the use the browse and send buttons to upload the file.&nbsp; 
-			After it is uploaded, unplug the hand controller and plug it back 
-			in.&nbsp; This will cause it to upload into the hand controller, and 
-			be flashed into the processor. After the hand controller is updated, 
-			use the same process but put the NewGem.bin file at the root of the 
-			SCcard, not in any directory. Then go to the Firmware/SRAM tab and 
-			select the Newgem.bin file and then Flash it.&nbsp;&nbsp;&nbsp; 
-			After this is done, turn off the Gemini-2 and back on to synchronize 
-			the hand controller and main unit.&nbsp; These updates is already included in the combine file 
-			after Oct 25, 2013, so if you do the full upgrade, you will get the 
-			latest firmware.&nbsp; If you did the firmware updates on the 
-			page prior to Oct 25, 2013, then you only need to follow the 
-			instructions in the paragraph. Here is a small
-			<a href="Newgem-gemhx-only/Newgem-gemhc-only.html" target="_self">
+        <table align="center" style="width: 900px" class="tableborder1">
+            <tr>
+                <td class="style6">
+
+                    <a name="nr">NEW-RELEASE</a>: Please note that a new release of the hand controller and main firmware has has been released. If you already installed the Aug 27, 2013 firmware with the&nbsp; Aug 27 Hand controller firmware, there is
+                    no reason to reinstall most of the firmware. You just need to install the Oct 25 NewGem.bin and Sept 30 gemhc.bin files to be up-to-date.&nbsp;&nbsp; This fixes the PAA, Identify and Bookmark functions.&nbsp; Also, the tactical buttons
+                    have been activated for the balance screen and also the set limits screen in the hand controller.&nbsp; To install it,
+                    <a href="firmware1/NewGem-gem-hd-3-Oct-2013.html" target="_self">download the file.</a>&nbsp; Then unzip it to a clean directory,&nbsp; It contains both files listed above. &nbsp; Upload the gemhc.bin file into the Gemini-2 into the
+                    HCFirmware directory.&nbsp; You can do the with FileZilla, Windows File Manager (use
+                    <a href="ftp://admin@gemini/">ftp://admin@gemini</a>) or the web interface&nbsp; using the SDcard Tab <a href="http://gemini/sd.cgi">
+			http://gemini/sd.cgi</a> upload feature. If using the web interface, after clicking on the SDcard tab, single click on HCFirmware directory the use the browse and send buttons to upload the file.&nbsp; After it is uploaded, unplug the hand controller
+                    and plug it back in.&nbsp; This will cause it to upload into the hand controller, and be flashed into the processor. After the hand controller is updated, use the same process but put the NewGem.bin file at the root of the SCcard,
+                    not in any directory. Then go to the Firmware/SRAM tab and select the Newgem.bin file and then Flash it.&nbsp;&nbsp;&nbsp; After this is done, turn off the Gemini-2 and back on to synchronize the hand controller and main unit.&nbsp;
+                    These updates is already included in the combine file after Oct 25, 2013, so if you do the full upgrade, you will get the latest firmware.&nbsp; If you did the firmware updates on the page prior to Oct 25, 2013, then you only need
+                    to follow the instructions in the paragraph. Here is a small
+                    <a href="Newgem-gemhx-only/Newgem-gemhc-only.html" target="_self">
 			movie </a>of the process.</p>
-		</td>
-			</tr>
-		</table>
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-			<tr><td class="style6">
-			</td>
-			</tr>
-		</table>
-		
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-			<tr><td class="style6">
-			</td></tr>
-		<tr>
-			<td class="style6">
-			In a nutshell here is what we are going to do. <br />
-			1. Unplug the hand controller<br />
-			2. Create an empty directory<br />
-			3. Download the combined.zip file into the empty directory.<br />
-			4. Unzip the combined .zip file in the empty directory.<br />
-			5. Upload the extracted files to the micro SDcard in the Gemini-2<br />
-			6. Use the web interface to tell the Gemini-2 to program itself with the new NEWGWM.bin file<br />
-			7. Reset the SRAM<br />
-			8. Plug the hand controller back in and let it update, 
-			it's firmware and button files.<br />
-			9. Then install the catalog files into the HCFirmware directory of 
-			the main unit<br />
-			and let the hand controller upload them as a separate function.&nbsp; <br />
-			<br />
-			</td></tr>
-		<tr>
-			<td class="style6">
+                </td>
+            </tr>
+        </table>
+        <table align="center" style="max-width: 900px; min-width: 200px;">
+            <tr>
+                <td class="style6">
+                </td>
+            </tr>
+        </table>
+
+        <table align="center" style="max-width: 900px; min-width: 200px;">
+            <tr>
+                <td class="style6">
+                </td>
+            </tr>
+            <tr>
+                <td class="style6">
+                    In a nutshell here is what we are going to do. <br /> 1. Unplug the hand controller<br /> 2. Create an empty directory<br /> 3. Download the combined.zip file into the empty directory.<br /> 4. Unzip the combined .zip file in the empty
+                    directory.
+                    <br /> 5. Upload the extracted files to the micro SDcard in the Gemini-2<br /> 6. Use the web interface to tell the Gemini-2 to program itself with the new NEWGWM.bin file<br /> 7. Reset the SRAM<br /> 8. Plug the hand controller back
+                    in and let it update, it's firmware and button files.<br /> 9. Then install the catalog files into the HCFirmware directory of the main unit<br /> and let the hand controller upload them as a separate function.&nbsp; <br />
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td class="style6">
 
 
-			This update takes a long time to install.&nbsp;&nbsp; If you wish, you may 
-			put the Gemini-2 into the terrestrial tracking mode and unplug the 
-			motors. The Gemini-2 will not be damaged by being turned on without 
-			the motors connected. The terrestrial mode is to keep the Gemini-2 
-			from beeping continually, with the motors disconnected.&nbsp;&nbsp; 
-			Also take a note of the catalogs that are already in your Hand 
-			Controller. If you already have them, you may not need to upload 
-			them again.&nbsp; See Step 20 below for more on this.</td></tr>
-		<tr>
-			<td class="style6"><br />This set of instructions assumes that you have 
-			already downloaded and installed FileZilla FTP.&nbsp; If you have 
-			not, then see <a href="installing-filezillaftp.html" target="_self">
+                    This update takes a long time to install.&nbsp;&nbsp; If you wish, you may put the Gemini-2 into the terrestrial tracking mode and unplug the motors. The Gemini-2 will not be damaged by being turned on without the motors connected. The terrestrial mode
+                    is to keep the Gemini-2 from beeping continually, with the motors disconnected.&nbsp;&nbsp; Also take a note of the catalogs that are already in your Hand Controller. If you already have them, you may not need to upload them again.&nbsp;
+                    See Step 20 below for more on this.</td>
+            </tr>
+            <tr>
+                <td class="style6"><br />This set of instructions assumes that you have already downloaded and installed FileZilla FTP.&nbsp; If you have not, then see <a href="installing-filezillaftp.html" target="_self">
 			Installing-FileZilla</a> and then come back here.
-			<span class="auto-style1">Please use the Client version of FileZilla.</span>&nbsp; You are also going to need some kind of file 
-			unzipping program.&nbsp; I recommend
-			<a href="http://www.7-zip.org/download.html" target="_blank">7Zip</a> 
-			as it is free for Windows or
-			<a href="http://www.kekaosx.com/en/" target="_blank">Kela for Mac</a> 
-			(which uses the 7zip engine) and is free.&nbsp; Just download and follow 
-			the prompts the installation prompts. It also assumes that you know 
-			how to connect the Gemini-2 to your computer or network.&nbsp; If 
-			you don't see <a href="ConnectingtoG2.html">connecting to Ethernet 
+                    <span class="auto-style1">Please use the Client version of FileZilla.</span>&nbsp; You are also going to need some kind of file unzipping program.&nbsp; I recommend
+                    <a href="http://www.7-zip.org/download.html" target="_blank">7Zip</a> as it is free for Windows or
+                    <a href="http://www.kekaosx.com/en/" target="_blank">Kela for Mac</a> (which uses the 7zip engine) and is free.&nbsp; Just download and follow the prompts the installation prompts. It also assumes that you know how to connect the Gemini-2
+                    to your computer or network.&nbsp; If you don't see <a href="ConnectingtoG2.html">connecting to Ethernet 
 			port</a>.</td>
-		</tr>
-		<tr>
-			<td class="style6"><br />Please do not forget to install the latest ASCOM driver for use with this Firmware 
-			upgrade.&nbsp; See Gemini-2 --&gt;USB and ASCOM drivers on menu bar 
-			above.</td>
-		</tr>
-			
-		<tr><td class="style6"><br />I created a movie that demonstrates the 
-			installation process.&nbsp; A 
-			<a href="GeminiFirmware_movie/gemini-firmware-upgrade.html" target="_self">Flash version</a>&nbsp; or a
-			<a href="javascript:localURL('GeminiFirmware_movie/gemini-firmware-upgrade.exe')" target="_self">
-			Windows.exe</a> 
-			version is available&nbsp;<br />
-			</td></tr>
-		<tr>
-			<td class="style6"><br /><br /><font size="+1"><strong>1. Please un-plug the hand controller.</strong></font> </td>
-		</tr>
-		<tr>
-			<td class="style6"><br />
-			2. Before you start, you need to make an empty 
-			directory to download the updated firmware into. I suggest creating 
-			one at <a href="file:///C:/Gemini-2">C:\Gemini-2</a>.&nbsp; </td>
-		</tr>
-		<tr>
-			<td class="style6"><br /><a name="3">3</a>. You will need to 
-			download the program.&nbsp;
-			Now 1 of the three below windows should pop up 
-			depending which Web browser you are using. Click this link to start downloading 
-			<a href="http://losmandy.com/files/gemini/firmware/combined.zip" target="_blank">http://losmandy.com/files/gemini/firmware/combined.zip</a>  
+            </tr>
+            <tr>
+                <td class="style6"><br />Please do not forget to install the latest ASCOM driver for use with this Firmware upgrade.&nbsp; See Gemini-2 --&gt;USB and ASCOM drivers on menu bar above.
+                </td>
+            </tr>
 
-			<ul><li>If using Windows IE:
-				<a _self"="" href="using_filezilla-IE-file-save.html" target="_self">click here</a> to see window. 
+            <tr>
+                <td class="style6"><br />I created a movie that demonstrates the installation process.&nbsp; A
+                    <a href="GeminiFirmware_movie/gemini-firmware-upgrade.html" target="_self">Flash version</a>&nbsp; or a
+                    <a href="javascript:localURL('GeminiFirmware_movie/gemini-firmware-upgrade.exe')" target="_self">
+			Windows.exe</a> version is available&nbsp;<br />
+                </td>
+            </tr>
+            <tr>
+                <td class="style6"><br /><br />
+                    <font size="+1"><strong>1. Please un-plug the hand controller.</strong></font>
+                </td>
+            </tr>
+            <tr>
+                <td class="style6"><br /> 2. Before you start, you need to make an empty directory to download the updated firmware into. I suggest creating one at <a href="file:///C:/Gemini-2">C:\Gemini-2</a>.&nbsp; </td>
+            </tr>
+            <tr>
+                <td class="style6"><br /><a name="3">3</a>. You will need to download the program.&nbsp; Now 1 of the three below windows should pop up depending which Web browser you are using. Click this link to start downloading
+                    <a href="javascript:localURL('firmware1/combined.zip')" target="_blank">https://gemini-2.com/firmware1/combined.zip</a>
+
+                    <ul>
+                        <li>If using Windows IE:
+                            <a _self "=" " href="using_filezilla-IE-file-save.html " target="_self ">click here</a> to see window. 
 				Please use the Save as option and browse to C:\Gemini-2 for the 
 				save location.</li>
 				<li>If using Firefox: 
-				<a href="using_filezilla-firefox-file-save.html" target="_self">Click here</a> to see window.</li>
+				<a href="using_filezilla-firefox-file-save.html " target="_self ">Click here</a> to see window.</li>
 				<li>If using Chrome: 
-				<a href="gemini-images/FTP/filezilla/chome-File-save.jpg" target="_blank">Click here</a> to see window. 
+				<a href="gemini-images/FTP/filezilla/chome-File-save.jpg " target="_blank ">Click here</a> to see window. 
 				You will need to browse to the C:\Gemini-2 folder.</li>
 			</td>
 		</tr>
 		<tr>
-			<td class="style6">4. After doing one of the above save 
+			<td class="style6 ">4. After doing one of the above save 
 			options, you should have a window that looks like Fig 1 below. For 
 			you MAC users, you will have to use what ever MAC provides in place 
 			of File Explorer that windows uses,&nbsp; I think it is called the 
-			"Finder."</td>
+			"Finder. "</td>
 		</tr>
 		<tr>
-			<td class="style7"><br />
+			<td class="style7 "><br />
 			
-				<a href="gemini-images/FTP/filezilla/Filezilla15.jpg" target="_blank">
-				<img alt="" src="gemini-images/FTP/filezilla/thumbnails/Filezilla15_small1.jpg"  height="404" width="900" /></a>
+				<a href="gemini-images/FTP/filezilla/Filezilla15.jpg " target="_blank ">
+				<img alt=" " src="gemini-images/FTP/filezilla/thumbnails/Filezilla15_small1.jpg "  height="404 " width="900 " /></a>
 				<br />Fig 1 - click on image to see larger image
 			</td>
 		</tr>
 		<tr>
-			<td class="style6"><br />5. In the next figure (Fig 2), you will be using 7-Zip to 
+			<td class="style6 "><br />5. In the next figure (Fig 2), you will be using 7-Zip to 
 			extract all the files into the same directory as the combined.zip 
 			file.<ul><li>Right mouse click on the combined.zip file.</li>
 				<li>Right mouse click on the the 7-Zip selection</li>
-				<li>select the "Extract here" option.&nbsp; See figure 2 below.</li></ul></td>
+				<li>select the "Extract here " option.&nbsp; See figure 2 below.</li></ul></td>
 		</tr>
 		<tr>
-			<td class="style7"><br />
-			<img alt="" height="521" src="gemini-images/FTP/filezilla/extract-combined-to-here.jpg" width="900" /><br />Fig 2</td>
+			<td class="style7 "><br />
+			<img alt=" " height="521 " src="gemini-images/FTP/filezilla/extract-combined-to-here.jpg " width="900 " /><br />Fig 2</td>
 		</tr>
 		<tr>
-			<td class="style6"><br />4. The directory should look like below, if you 
-			used the "Extract here option"<br />  <img alt="" height="52" src="gemini-images/FTP/filezilla/more-options.jpg" style="float: right" width="93" />(I 
+			<td class="style6 "><br />4. The directory should look like below, if you 
+			used the "Extract here option "<br />  <img alt=" " height="52 " src="gemini-images/FTP/filezilla/more-options.jpg " style="float: right " width="93 " />(I 
 			have &nbsp;Large Icons selected under more options<br />on the right 
 			top menu bar.) 			</td>
 		</tr>
 		<tr>
-			<td class="style7"><br />
-							<a href="gemini-images/FTP/filezilla/Filezilla18.jpg" target="_blank">
-				<img alt="" height="404" src="gemini-images/FTP/filezilla/thumbnails/Filezilla18_small1.jpg" width="900" /></a>
+			<td class="style7 "><br />
+							<a href="gemini-images/FTP/filezilla/Filezilla18.jpg " target="_blank ">
+				<img alt=" " height="404 " src="gemini-images/FTP/filezilla/thumbnails/Filezilla18_small1.jpg " width="900 " /></a>
 				<br />Fig 3 - Click on image to open full page image
 
 			</td>
 		</tr>
 		<tr>
-			<td class="style6"><br />5. Now right click on the combined.zip 
+			<td class="style6 "><br />5. Now right click on the combined.zip 
 			folder/file, and either use Cut and paste it in another directory on 
 			the hard drive or delete it.&nbsp; Your choice as we will not need 
 			it anymore.&nbsp; You can always download it again.</td>
 		</tr>
 		<tr>
-			<td class="style6"><br />6. Now you need to open up Filezilla. </td>
+			<td class="style6 "><br />6. Now you need to open up Filezilla. </td>
 		</tr>
 		<tr>
-			<td class="style6"><br />7. Click on the File and select Site manager. A 
+			<td class="style6 "><br />7. Click on the File and select Site manager. A 
 			window similar to Fig 4 should open. </td>
 		</tr>
 	</table>
-	<table align="center" style="max-width: 900px; min-width: 200px;">
+	<table align="center " style="max-width: 900px; min-width: 200px; ">
 		<tr>
-			<td class="style7" Width="550px" ><br /><img alt="" height="438" src="gemini-images/FTP/filezilla/Filezilla13.jpg" width="519" />
+			<td class="style7 " Width="550px " ><br /><img alt=" " height="438 " src="gemini-images/FTP/filezilla/Filezilla13.jpg " width="519 " />
 			<br />Fig 4</td>
-			<td class="style6"><br />
+			<td class="style6 "><br />
 				8. Fill out the form with these values:<br />
 			<ul>
 				<li>
@@ -297,7 +262,7 @@
 				<li>
 				&nbsp;Login Type - Select Normal</li>
 				<li>
-				User: Put in "admin" without the quotes.</li>
+				User: Put in "admin " without the quotes.</li>
 				<li>
 				Password - leave blank</li>
 				<li>
@@ -308,430 +273,347 @@
 			</td>
 		</tr>
 	</table>
-	<table align="center" style="max-width: 900px; min-width: 200px;">
+	<table align="center " style="max-width: 900px; min-width: 200px; ">
 		<tr>
-			<td class="style6"><br />9. A window similar&nbsp; to figure 5 should 
+			<td class="style6 "><br />9. A window similar&nbsp; to figure 5 should 
 			open.&nbsp; You will need to change the Local Site to 
-			<a href="file:///C:/Gemini-2">C:\Gemini-2</a>.<br />
+			<a href="file:///C:/Gemini-2 ">C:\Gemini-2</a>.<br />
 			Also under View, make sure that "Transfer Queue is selected.</td>
-		</tr>
-		<tr>
-			<td class="style7"><br />
-			
-
-			<a href="gemini-images/FTP/filezilla/set-filezilla-to-c-gemini-2.jpg" target="blank">
-			<img alt="" class="auto-style2" height="557" src="gemini-images/FTP/filezilla/set-filezilla-to-c-gemini-2_small.jpg" width="900" /></a>
-			<br />Fig. 5
-		</td>
-		</tr>
-
-		<tr>
-			<td class="style6"><br />10. Now in the Right panel and check to see 
-			if a NewGem.bin or a HGM_Gem.bin or a Cur_Gem.bin file exist.&nbsp; 
-			It it does, Right mouse click on it and select delete.&nbsp; This 
-			will keep you from loading older firmware. See Fig 6 below.</td>
-		</tr>
+            </tr>
+            <tr>
+                <td class="style7"><br />
 
 
-		<tr>
-			<td class="style7"><br />
-			<img alt="" height="557" src="gemini-images/FTP/filezilla/delete-old-NewGem.jpg" width="900" />
-			<br />Fig 6</td>
-		</tr>
+                    <a href="gemini-images/FTP/filezilla/set-filezilla-to-c-gemini-2.jpg" target="blank">
+                        <img alt="" class="auto-style2" height="557" src="gemini-images/FTP/filezilla/set-filezilla-to-c-gemini-2_small.jpg" width="900" /></a>
+                    <br />Fig. 5
+                </td>
+            </tr>
+
+            <tr>
+                <td class="style6"><br />10. Now in the Right panel and check to see if a NewGem.bin or a HGM_Gem.bin or a Cur_Gem.bin file exist.&nbsp; It it does, Right mouse click on it and select delete.&nbsp; This will keep you from loading older firmware. See Fig
+                    6 below.</td>
+            </tr>
 
 
-		<tr>
-			<td class="style6"><br />11. Now in the Left window (Local Site) highlight 
-			all the directories and files as shown below To do this:<br />
-			Click on the top file or directory, Then press the shift key down, 
-			and while holding it down, click the last file in the left pane. See 
-			Fig 7</td>
-		</tr>
+            <tr>
+                <td class="style7"><br />
+                    <img alt="" height="557" src="gemini-images/FTP/filezilla/delete-old-NewGem.jpg" width="900" />
+                    <br />Fig 6</td>
+            </tr>
+
+
+            <tr>
+                <td class="style6"><br />11. Now in the Left window (Local Site) highlight all the directories and files as shown below To do this:<br /> Click on the top file or directory, Then press the shift key down, and while holding it down, click the last file in
+                    the left pane. See Fig 7</td>
+            </tr>
 
 
 
 
 
 
-		<tr>
-			<td class="style7"><br />
-			
-			<img alt="" height="515" src="gemini-images/FTP/filezilla/filezilla-selected-files.jpg" width="899" /><br />Fig. 7</td>
-		</tr>
+            <tr>
+                <td class="style7"><br />
 
-		<tr>
-			<td class="style6">
-			<br />12. After they are highlighted, right mouse click 
-			and select upload.  The next window (Fig 8) will pop up. Make 
-			sure Overwrite is selected, the select the check box "Always use his 
-			action" and then click OK.&nbsp; <strong><u>Important!, Please check 
+                    <img alt="" height="515" src="gemini-images/FTP/filezilla/filezilla-selected-files.jpg" width="899" /><br />Fig. 7</td>
+            </tr>
+
+            <tr>
+                <td class="style6">
+                    <br />12. After they are highlighted, right mouse click and select upload. The next window (Fig 8) will pop up. Make sure Overwrite is selected, the select the check box "Always use his action" and then click OK.&nbsp; <strong><u>Important!, Please check 
 			the date of the NewGem.bin file on the right side and make sure it 
 			is the same date as the NewGem.bin file on the left side</u></strong>.</td>
-		</tr>
+            </tr>
 
-		<tr>
-		<td class="style7"><br />
-			<img alt="" height="342" src="gemini-images/FTP/filezilla/Filezilla-over-write.jpg" width="537" /><br />
-		Fig 8</td>
-		</tr>
+            <tr>
+                <td class="style7"><br />
+                    <img alt="" height="342" src="gemini-images/FTP/filezilla/Filezilla-over-write.jpg" width="537" /><br /> Fig 8</td>
+            </tr>
 
-		<tr>
-		<td class="style7" >
-		
-		<img alt="" height="621" src="gemini-images/FTP/filezilla/transfer-failed.jpg" width="900" /><br />Fig 9<br />
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style6">
-		Please take note of the transfer Failed block at the bottom of the screen. If you had any failures,
-		you need to go into the right side and delete these files and then try the update again.  You can 
-		update each file individually, or do the whole thing.
-		</td>
-		</tr>
-	</table>
-	<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style6">
-		<br />13. Filezilla just uploaded 
-			all the new files overwriting the previous versions of the files. We 
-			are now going to tell the Gemini-2 to program the new firmware into 
-			the main unit.&nbsp; This will be done with a Web browser.&nbsp; You 
-			can now shrink down Filezilla for now.&nbsp; We will use it again in 
-		step 26.</td>
-		</tr>
-		<tr>
-			<td class="style6"><br />14. Open up your favorite Web browser.&nbsp; In 
-			the address bar put in <a href="http://192.168.0.111/">
-			http://192.168.0.111</a> or the IP address of your Gemini-2.&nbsp; 
-			You can find this on the hand controller under 
-			Menu--&gt;Mount--&gt;Network.
-		</td>
-		</tr>
-	</table>
-	<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style7" width="550px">
-			<br />
-			<img alt="" height="388" src="gemini-images/FTP/filezilla/gemini-login.jpg" width="547" /><br/>
-			Fig 10</td>
-			<td width="20px"></td>
-			<td class="style6">15.&nbsp; Enter admin in the user block<br />
-				16.&nbsp;
-				Leave password box empty<br />
-				17.&nbsp;
-				Hit OK<br />
-			<br />
-			Please note that Google Chrome has a pop-up blocker that can stop 
-			the popups from the Gemini-2 from showing up.</td>
-		</tr>
-	</table>
-	<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style7">
-			</td>
-		</tr>
-	</table>
-	<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style7">
-			<br />
-			<img alt="" height="663" src="gemini-images/5_1/image13.jpg" width="900" /><br />
-			Fig 11</td>
-		</tr>
-		<tr>
-			<td class="style6"><br />18. Select the Firmware/SRAM Tab.&nbsp; </td>
-		</tr>
-		<tr>
-			<td class="style6"><br /></td>
-		</tr>
-		<tr>
-			<td class="style7"><br />
-			
-			
-			
-			<img alt="" height="1007" src="gemini-images/FTP/filezilla/gemini-firmware.jpg" width="900" />
-			<Br />Fig. 12</td>
-		</tr>
-		<tr>
-			<td class="style6"><br />19.&nbsp; a. Press the Store SRAM - to 
-			store the SRAM contents into the Micro-SDcard for later retrieval.<br />
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			b.&nbsp; Make sure that the box to the right of the "Select Firmware Image" and 
-			has NewGem.bin in it.<br />
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			c.&nbsp; Then Push on the Flash Firmware tab in the 
-			on your Gemini-2 as illustrated above in Fig 11. This will flash the 
-			current program into the ARM processor inside the Gemini-2. The 
-			screen will change to Fig 12 below.&nbsp; Please note that Google 
-			Chrome has a pop-up blocker that can stop the popups from the 
-			Gemini-2 from showing up.&nbsp; Popups are required for the Flash 
-			Firmware function to function.</td>
-		</tr>
-		<tr>
-			<td class="style6"><br /></td>
-		</tr>
-		<tr>
-			<td class="style7">
-			
-			<a href="gemini-images/FTP/filezilla/Please-wait.jpg">
-			<img alt=""  height="503" src="gemini-images/FTP/filezilla/Please-wait_small.jpg" width="900" /></a>
-			<br />Fig 13.</td>
-		</tr>
-		<tr>
-			<td class="style6"><br />20.  The screen should stay like this for about 30 seconds or so. and then come back to Fig 12. 
-			If it does not, that means that you are probably using an IPaddress other than 
-			<a href="http://192.168.0.111/">HTTP://192.168.0.111</a>.&nbsp; If it 
-			does not come back try putting in <a href="http://gemini/">Http://Gemini</a> and see if it comes back. 
-			If it does not then you will have to goto troubleshooting connection problems.  If you have to do that 
-			please look at Menu-->Mount-->network, and write down the setting. 
-			Then un-plug the hand controller, and proceed to troubling 
-			Connections.</td>
-		</tr>
-		<tr>
-			<td class="style7"><br />
-			<img alt="" height="999" src="gemini-images/FTP/filezilla/flashed-main.jpg" width="900" /><br />
-			Fig 14&nbsp; 
-			Note: The build date for Gemini Firmware should be Aug 27,2013</td>
-		</tr>
-		<tr><td class="style6"><br />As shown in fig 13 above, be sure to hit the 
-			Reset SRAM button for the type of mount you have.&nbsp; Then use the 
-			Load&nbsp; SRAM button after you have reset the mount to the proper&nbsp; 
-			mount type.&nbsp; <br />
-			This should set your mount type, site, and or limits back to what 
-			you had them at before the upgrade. But always check them to make 
-			sure.&nbsp;&nbsp;&nbsp; </td></tr>
-		<tr>
-			<td class="style6"><br />21. The Hand controller takes a long time 
-			to upload all the catalogs.&nbsp; If you examine the HCFirmware 
-			directory of the micro SDcard, you will see the following files: (See 
-			fig 6 above and click into the right side on HCFirmware to expand 
-			it.)<br />
-			Gemhc.bin&nbsp; - This is the actual firmware-It must be there.<br />
-			GemLogo.b16 - This is the splash screen you see when the HC powers 
-			up.<br />
-			</td>
-		</tr>
-	</table>
-	<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr class="style6">
-			<td width="300px">
-			These are the Red Graphic buttons<br />
-			R_220x40.c16 <br />
-			RP220x40.c16<br />
-			R_140x40.c16<br />
-			RP140x40.c16<br />
-			R_78x78.c16<br />
-			RP78x78.c16<br />
-			R_70x40.c16<br />
-			RP70x40.c16<br />
-			R_24x24.c16<br />
-			RP24x24.c16<br />
-			R_21x21.c16<br />
-			RP21x21.c16
-			</td><td width="300px">
-			These 
-			are the Blue Graphic buttons<br />
-			B_220x40.c16<br />
-			BP220x40.c16<br />
-			B_140x40.c16<br />
-			BP140x40.c16<br />
-			B_78x78.c16<br />
-			BP78x78.c16<br />
-			B_70x40.c16<br />
-			BP70x40.c16<br />
-			B_24x24.c16<br />
-			BP24x24.c16<br />
-			B_21x21.c16<br />
-			BP21x21.c16<br />
-			</td><td width="300px">
-			These are the green Graphic buttons<br />
-			G_220x40.c16<br />
-			GP220x40.c16<br />
-			G_140x40.c16<br />
-			GP140x40.c16<br />
-			G_78x78.c16<br />
-			GP78x78.c16<br />
-			G_70x40.c16<br />
-			GP70x40.c16<br />
-			G_24x24.c16<br />
-			GP24x24.c16<br />
-			G_21x21.c16<br />
-			GP21x21.c16<br />
-			</td>
-		</tr>
-	</table>
-	<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style6"><font size="+2"><br />
-			None of the above files are optional, and must be uploaded to the 
-			hand controller.</font>&nbsp; However the the star catalogs are optional. 
-			After the Hand controller is up and running, you will then install 
-			the catalog files.&nbsp; This is easy to do.&nbsp; <br />
-			<br /></td></tr>
-			</table>
-			<table align="center" style="max-width: 900px; min-width: 200px;">
-				<tr>
-					<td width="450">Arp_EN.guc<br />
-					
-					LBN_EN.guc<br />
-					PN.guc<br />
-					BSL.guc<br />
-					G2V_EN.guc<br />
-					LDN_EN.guc<br />
-					Caldwell_EN.guc<br />
-					Sh2.guc<br />
-					Sharpless_EN.guc<br />
-					Herschel400_EN.guc
-					</td>
-					<td width="450">Combined_Constellation_Stars.guc<br />
-					Cederblad_EN.guc<br />
-					IC,guc (large catalog)<br />
-					NGC.guc (large catalog)<br />
-					NGC_constellation.guc (medium size catalog)<br />
-					SAO.guc (large catalog)<br />
-					Struve_EN.guc (large catalog)<br />
-					WDS.guc (medium size&nbsp; catalog)<br />
-					
-			Messier.guc<br />
-					</td>
-				</tr>
-			</table>
-			<table align="center" style="max-width: 900px; min-width: 200px;">
-				<tr>
-			<td class="style6">&nbsp;</td>
-		</tr>
-		<tr>
-			<td class="style6">22. Now plug the hand controller back into the
-			<span class="style14">SERIAL PORT 2, GRAPHICS HC</span> jack</td>
-		</tr>
+            <tr>
+                <td class="style7">
 
-	</table>
+                    <img alt="" height="621" src="gemini-images/FTP/filezilla/transfer-failed.jpg" width="900" /><br />Fig 9<br />
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style6">
+                                Please take note of the transfer Failed block at the bottom of the screen. If you had any failures, you need to go into the right side and delete these files and then try the update again. You can update each file individually, or do the whole thing.
+                            </td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style6">
+                                <br />13. Filezilla just uploaded all the new files overwriting the previous versions of the files. We are now going to tell the Gemini-2 to program the new firmware into the main unit.&nbsp; This will be done with a Web
+                                browser.&nbsp; You can now shrink down Filezilla for now.&nbsp; We will use it again in step 26.</td>
+                        </tr>
+                        <tr>
+                            <td class="style6"><br />14. Open up your favorite Web browser.&nbsp; In the address bar put in <a href="http://192.168.0.111/">
+			http://192.168.0.111</a> or the IP address of your Gemini-2.&nbsp; You can find this on the hand controller under Menu--&gt;Mount--&gt;Network.
+                            </td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style7" width="550px">
+                                <br />
+                                <img alt="" height="388" src="gemini-images/FTP/filezilla/gemini-login.jpg" width="547" /><br/> Fig 10</td>
+                            <td width="20px"></td>
+                            <td class="style6">15.&nbsp; Enter admin in the user block<br /> 16.&nbsp; Leave password box empty<br /> 17.&nbsp; Hit OK<br />
+                                <br /> Please note that Google Chrome has a pop-up blocker that can stop the popups from the Gemini-2 from showing up.</td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style7">
+                            </td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style7">
+                                <br />
+                                <img alt="" height="663" src="gemini-images/5_1/image13.jpg" width="900" /><br /> Fig 11</td>
+                        </tr>
+                        <tr>
+                            <td class="style6"><br />18. Select the Firmware/SRAM Tab.&nbsp; </td>
+                        </tr>
+                        <tr>
+                            <td class="style6"><br /></td>
+                        </tr>
+                        <tr>
+                            <td class="style7"><br />
 
-	<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr class="style6">			
-			<td>
-			
-				<br />23.&nbsp; You should see a screen like the one on the 
-						below. It shows 
-						that the hand controller firmware is being uploaded to the hand 
-						controller micro SDcard. <br />
-						<br />
-						If this does not happen try powering Gemini off and
-						on again.
-						<img alt="" height="571" src="gemini-images/HandcontrollerImages/uploadingnewfirmware.jpg" 
-						style="float: left" width="425" />
-			</td>
-			<td>
-				<br />24.&nbsp; When this screen 
-				on the left is done, it usually takes about 5 minutes are so,
-			then the flashing screen will appear.
-			<img alt="" height="565" src="gemini-images/HandcontrollerImages/HC_Flashing.jpg" style="float: right" width="425" /></td></tr>
-		</table>
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-			<tr>
-			<td>
-			
-			<br />
-			Fig 15A and 15B<br />
-		</td></tr>
-		</table>	
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-			<tr>
-			<td class="style6">
-			<br />25.	After the Gemini hand controller has flashed its new firmware the HCFirmware 
-			directory in the main unit should be empty and the hand controller 
-			should have the new firmware loaded.&nbsp; Note that the button 
-			files will automatically also load.&nbsp; These are files ending in 
-			.c16<br /><br />
-			<br />26.
-			Now if you open the HCFirmware directory of the right side of 
-			FileZilla, it should look like the figure below. <br />
-			Notice that the HCFirmware directory is empty.&nbsp; This is because 
-			all the files was uploaded to the Hand controller. After a file is 
-			uploaded to the HC it is deleted from this directory<br />
-			<br />
-			</td>
-		</tr>
-	</table>
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style7">
-			<img alt="" height="728" src="gemini-images/FTP/filezilla/hcuploaded-withoutcatalogs.jpg" width="900" /><br />
-			Fig 16
-			</td>
-		</tr>
-	</table>
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style6">
-			27. Now doubleclick in the Left menu on the catalogs menu. It should look like below.</td>
-		</tr>
-	</table>
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style7">
-			<img alt="" height="927" src="gemini-images/FTP/filezilla/open-catalogs-directory.jpg" width="900" /><br />
-			Fig 17</td>
-		</tr>
-	</table>
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style6">
-			28. We are now going to select the catalogs that you want in your hand controller.
-			You do this by doubling clicking on each catalog you want, or you can select the catalogs
-			and then right click and select upload.  The choice is yours.  Now notice, you may not
-			see them in the right side unless your select F5 which refreshes the view. Now if you want all
-			the catalogs, I would do them several at a time, not all at once, as the hand controller has
-			know to lock up with such massive uploads.  Just repeat steps 28 and 29 for each set of catalogs
-			you want.  You can tell when they have uploaded, because they will 
-			disappear from the right side
-			menu.  Again you might have to hit F5 to refresh the screen to dee this.</td>
-		</tr>
-	</table>
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style6">
-			29.  Now once you have the catalogs you want in the right menu, you can either turn off the Gemini-2 and
-			turn it back on, or just unplug the hand controller and plug it back in.  Either method should cause the
-			hand controller to upload the catalogs.  </td>
-		</tr>
-	</table>
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style6">
-			</td>
-		</tr>
-	</table>
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style6-red-text">
-			After you have uploaded everything to the hand controller, make sure 
-			you calibrate the screen.&nbsp; This is very important after a 
-			firmware update.</td>
-		</tr>
-	</table>
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style6">
-			</td>
-		</tr>
-	</table>
-		<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="style6"> Please make sure that the updates take by going to the menus on the hand controller or the Web interface
-			that tells you the firmware installed. <br />
-			On the hand controller go to MENU-->HC-->INFO<br />
-			On the Web interface go to Firmware/SRAM.  You will have to do a cold start, warm start, or warm restart for this page to show
-			the Hand controller firmware version.
-			</td>
-		</tr>
-	</table>
-	
 
-<link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css" />
-<!--
+
+                                <img alt="" height="1007" src="gemini-images/FTP/filezilla/gemini-firmware.jpg" width="900" />
+                                <Br />Fig. 12</td>
+                        </tr>
+                        <tr>
+                            <td class="style6"><br />19.&nbsp; a. Press the Store SRAM - to store the SRAM contents into the Micro-SDcard for later retrieval.<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b.&nbsp; Make sure that the box to the right of the "Select Firmware
+                                Image" and has NewGem.bin in it.<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.&nbsp; Then Push on the Flash Firmware tab in the on your Gemini-2 as illustrated above in Fig 11. This will flash the current program into the ARM
+                                processor inside the Gemini-2. The screen will change to Fig 12 below.&nbsp; Please note that Google Chrome has a pop-up blocker that can stop the popups from the Gemini-2 from showing up.&nbsp; Popups are required for
+                                the Flash Firmware function to function.</td>
+                        </tr>
+                        <tr>
+                            <td class="style6"><br /></td>
+                        </tr>
+                        <tr>
+                            <td class="style7">
+
+                                <a href="gemini-images/FTP/filezilla/Please-wait.jpg">
+                                    <img alt="" height="503" src="gemini-images/FTP/filezilla/Please-wait_small.jpg" width="900" /></a>
+                                <br />Fig 13.</td>
+                        </tr>
+                        <tr>
+                            <td class="style6"><br />20. The screen should stay like this for about 30 seconds or so. and then come back to Fig 12. If it does not, that means that you are probably using an IPaddress other than
+                                <a href="http://192.168.0.111/">HTTP://192.168.0.111</a>.&nbsp; If it does not come back try putting in <a href="http://gemini/">Http://Gemini</a> and see if it comes back. If it does not then you will have to goto troubleshooting
+                                connection problems. If you have to do that please look at Menu-->Mount-->network, and write down the setting. Then un-plug the hand controller, and proceed to troubling Connections.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style7"><br />
+                                <img alt="" height="999" src="gemini-images/FTP/filezilla/flashed-main.jpg" width="900" /><br /> Fig 14&nbsp; Note: The build date for Gemini Firmware should be Aug 27,2013</td>
+                        </tr>
+                        <tr>
+                            <td class="style6"><br />As shown in fig 13 above, be sure to hit the Reset SRAM button for the type of mount you have.&nbsp; Then use the Load&nbsp; SRAM button after you have reset the mount to the proper&nbsp; mount type.&nbsp; <br /> This
+                                should set your mount type, site, and or limits back to what you had them at before the upgrade. But always check them to make sure.&nbsp;&nbsp;&nbsp; </td>
+                        </tr>
+                        <tr>
+                            <td class="style6"><br />21. The Hand controller takes a long time to upload all the catalogs.&nbsp; If you examine the HCFirmware directory of the micro SDcard, you will see the following files: (See fig 6 above and click into the right side
+                                on HCFirmware to expand it.)
+                                <br /> Gemhc.bin&nbsp; - This is the actual firmware-It must be there.<br /> GemLogo.b16 - This is the splash screen you see when the HC powers up.
+                                <br />
+                            </td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr class="style6">
+                            <td width="300px">
+                                These are the Red Graphic buttons<br /> R_220x40.c16 <br /> RP220x40.c16
+                                <br /> R_140x40.c16
+                                <br /> RP140x40.c16
+                                <br /> R_78x78.c16
+                                <br /> RP78x78.c16
+                                <br /> R_70x40.c16
+                                <br /> RP70x40.c16
+                                <br /> R_24x24.c16
+                                <br /> RP24x24.c16
+                                <br /> R_21x21.c16
+                                <br /> RP21x21.c16
+                            </td>
+                            <td width="300px">
+                                These are the Blue Graphic buttons<br /> B_220x40.c16
+                                <br /> BP220x40.c16
+                                <br /> B_140x40.c16
+                                <br /> BP140x40.c16
+                                <br /> B_78x78.c16
+                                <br /> BP78x78.c16
+                                <br /> B_70x40.c16
+                                <br /> BP70x40.c16
+                                <br /> B_24x24.c16
+                                <br /> BP24x24.c16
+                                <br /> B_21x21.c16
+                                <br /> BP21x21.c16
+                                <br />
+                            </td>
+                            <td width="300px">
+                                These are the green Graphic buttons<br /> G_220x40.c16
+                                <br /> GP220x40.c16
+                                <br /> G_140x40.c16
+                                <br /> GP140x40.c16
+                                <br /> G_78x78.c16
+                                <br /> GP78x78.c16
+                                <br /> G_70x40.c16
+                                <br /> GP70x40.c16
+                                <br /> G_24x24.c16
+                                <br /> GP24x24.c16
+                                <br /> G_21x21.c16
+                                <br /> GP21x21.c16
+                                <br />
+                            </td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style6">
+                                <font size="+2"><br /> None of the above files are optional, and must be uploaded to the hand controller.</font>&nbsp; However the the star catalogs are optional. After the Hand controller is up and running, you will then install the catalog
+                                files.&nbsp; This is easy to do.&nbsp; <br />
+                                <br /></td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td width="450">Arp_EN.guc<br /> LBN_EN.guc
+
+                                <br /> PN.guc
+                                <br /> BSL.guc
+                                <br /> G2V_EN.guc
+                                <br /> LDN_EN.guc
+                                <br /> Caldwell_EN.guc
+                                <br /> Sh2.guc
+                                <br /> Sharpless_EN.guc
+                                <br /> Herschel400_EN.guc
+                            </td>
+                            <td width="450">Combined_Constellation_Stars.guc<br /> Cederblad_EN.guc
+                                <br /> IC,guc (large catalog)<br /> NGC.guc (large catalog)<br /> NGC_constellation.guc (medium size catalog)<br /> SAO.guc (large catalog)<br /> Struve_EN.guc (large catalog)<br /> WDS.guc (medium size&nbsp; catalog)<br
+                                /> Messier.guc
+
+                                <br />
+                            </td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style6">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="style6">22. Now plug the hand controller back into the
+                                <span class="style14">SERIAL PORT 2, GRAPHICS HC</span> jack</td>
+                        </tr>
+
+                    </table>
+
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr class="style6">
+                            <td>
+
+                                <br />23.&nbsp; You should see a screen like the one on the below. It shows that the hand controller firmware is being uploaded to the hand controller micro SDcard. <br />
+                                <br /> If this does not happen try powering Gemini off and on again.
+                                <img alt="" height="571" src="gemini-images/HandcontrollerImages/uploadingnewfirmware.jpg" style="float: left" width="425" />
+                            </td>
+                            <td>
+                                <br />24.&nbsp; When this screen on the left is done, it usually takes about 5 minutes are so, then the flashing screen will appear.
+                                <img alt="" height="565" src="gemini-images/HandcontrollerImages/HC_Flashing.jpg" style="float: right" width="425" /></td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td>
+
+                                <br /> Fig 15A and 15B<br />
+                            </td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style6">
+                                <br />25. After the Gemini hand controller has flashed its new firmware the HCFirmware directory in the main unit should be empty and the hand controller should have the new firmware loaded.&nbsp; Note that the button files
+                                will automatically also load.&nbsp; These are files ending in .c16
+                                <br /><br />
+                                <br />26. Now if you open the HCFirmware directory of the right side of FileZilla, it should look like the figure below. <br /> Notice that the HCFirmware directory is empty.&nbsp; This is because all the files was uploaded
+                                to the Hand controller. After a file is uploaded to the HC it is deleted from this directory<br />
+                                <br />
+                            </td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style7">
+                                <img alt="" height="728" src="gemini-images/FTP/filezilla/hcuploaded-withoutcatalogs.jpg" width="900" /><br /> Fig 16
+                            </td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style6">
+                                27. Now doubleclick in the Left menu on the catalogs menu. It should look like below.</td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style7">
+                                <img alt="" height="927" src="gemini-images/FTP/filezilla/open-catalogs-directory.jpg" width="900" /><br /> Fig 17</td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style6">
+                                28. We are now going to select the catalogs that you want in your hand controller. You do this by doubling clicking on each catalog you want, or you can select the catalogs and then right click and select upload. The choice is yours. Now notice, you may
+                                not see them in the right side unless your select F5 which refreshes the view. Now if you want all the catalogs, I would do them several at a time, not all at once, as the hand controller has know to lock up with such massive
+                                uploads. Just repeat steps 28 and 29 for each set of catalogs you want. You can tell when they have uploaded, because they will disappear from the right side menu. Again you might have to hit F5 to refresh the screen to
+                                dee this.</td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style6">
+                                29. Now once you have the catalogs you want in the right menu, you can either turn off the Gemini-2 and turn it back on, or just unplug the hand controller and plug it back in. Either method should cause the hand controller to upload the catalogs. </td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style6">
+                            </td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style6-red-text">
+                                After you have uploaded everything to the hand controller, make sure you calibrate the screen.&nbsp; This is very important after a firmware update.</td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style6">
+                            </td>
+                        </tr>
+                    </table>
+                    <table align="center" style="max-width: 900px; min-width: 200px;">
+                        <tr>
+                            <td class="style6"> Please make sure that the updates take by going to the menus on the hand controller or the Web interface that tells you the firmware installed. <br /> On the hand controller go to MENU-->HC-->INFO<br /> On the Web interface
+                                go to Firmware/SRAM. You will have to do a cold start, warm start, or warm restart for this page to show the Hand controller firmware version.
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css" />
+                    <!--
 <hr class="style2" style="height: 3px" />
 -->
-<div w3-include-html="footer.html" ></div>
+                    <div w3-include-html="footer.html"></div>
 </body>
-</html>
 
+</html>

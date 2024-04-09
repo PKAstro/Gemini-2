@@ -4,112 +4,95 @@
 
 
 <head profile="http://www.w3.org/2005/10/profile">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-<title>G2 Rebuild main SDcard Firmware</title>
-<link rel="stylesheet" href="ajxmenu.css" type="text/css">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta content="en-us" http-equiv="Content-Language" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>G2 Rebuild main SDcard Firmware</title>
+    <link rel="stylesheet" href="ajxmenu.css" type="text/css">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="en-us" http-equiv="Content-Language" />
 
 
-<link href="gemini-2.css" rel="stylesheet" title = "light" type="text/css">
-<link href="gemini-2-dark.css" rel="stylesheet" title = "dark" type="text/css">
-<script src="style_switcher.js"></script>
-<link href="theme-selector.css" rel="stylesheet" type="text/css">
+    <link href="gemini-2.css" rel="stylesheet" title="light" type="text/css">
+    <link href="gemini-2-dark.css" rel="stylesheet" title="dark" type="text/css">
+    <script src="style_switcher.js"></script>
+    <link href="theme-selector.css" rel="stylesheet" type="text/css">
 
-<script src="w3data.js"></script></head>
+    <script src="w3data.js"></script>
+</head>
+
 <body onload="set_style_from_cookie()">
-<div w3-include-html="header.html" ></div>
-<div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div><script>w3IncludeHTML();</script>
+    <div w3-include-html="header.html"></div>
+    <div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div>
+    <script>
+        w3IncludeHTML();
+    </script>
 
 
-	<table align="center" style="max-width: 900px; min-width: 200px;">
-		<tr>
-			<td class="h2">
-				Rebuilding Gemini 2 Main Unit SDCard Firmware
-			</td>
-		</tr>
-		<tr>
-			<td class="style6"><br />
-			This guide will help you update the firmware in your Gemini 2 
-			main control unit using a Mini SDCare Reader. You should only have to
-			do this if something is wrong, or the version of firmware you have does
-			not support the FTP method of updating the SDCard directory; or your&nbsp; Firmware 
-			version is dated
-			Dec 13 2011 or older.&nbsp; This will also update the firmware in 
-			the handcontroller at the same time.&nbsp; <span class="auto-style2">
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="h2">
+                Rebuilding Gemini 2 Main Unit SDCard Firmware
+            </td>
+        </tr>
+        <tr>
+            <td class="style6"><br /> This guide will help you update the firmware in your Gemini 2 main control unit using a Mini SDCare Reader. You should only have to do this if something is wrong, or the version of firmware you have does not support the FTP method of
+                updating the SDCard directory; or your&nbsp; Firmware version is dated Dec 13 2011 or older.&nbsp; This will also update the firmware in the handcontroller at the same time.&nbsp; <span class="auto-style2">
 			If you intend to update the hand controllers micro-SDcard using a 
 			micro-Card Reader/Writer then some of the steps below will change.&nbsp; 
 			They will be indicated with a ## sign after the paragraph number and 
 			will have a paragraph number such a 4-#a.</span></td>
-		</tr>
+        </tr>
 
-		<tr class="style6">
-			<td class="style2">
-			<br/>
-			Note: You do this at your own risk. No-one associated with this web site can be 
-			held responsible if something goes wrong. If you have to send you unit back 
-			for repair, you will bear all associated cost.
-			</td>
-		</tr>
-		<tr>
-			<td class="style6">
-			<br/>
-			Please<a href="Removing_SDCards.html#R&RmainSDcard" target="_blank"> Remove the&nbsp; micro SDcard 
+        <tr class="style6">
+            <td class="style2">
+                <br/> Note: You do this at your own risk. No-one associated with this web site can be held responsible if something goes wrong. If you have to send you unit back for repair, you will bear all associated cost.
+            </td>
+        </tr>
+        <tr>
+            <td class="style6">
+                <br/> Please
+                <a href="Removing_SDCards.html#R&RmainSDcard" target="_blank"> Remove the&nbsp; micro SDcard 
 			from the main unit using these instruction.</a> Then come back here.
-			</td>
-		</tr>
+            </td>
+        </tr>
 
-		<tr>
-			<td class="style6">
-			<br/>
-				Since you are rebuilding the SDCard, I am going to suggest that you format the card. 
-				This will remove any file corruption on the SDCard.  If the card is 2GB card you can
-				use the default Windows format size.  If the Card is 4GB you need to select FAT32 from
-				the format size window.  I suggest that you download and install
-			<a href="https://www.sdcard.org/downloads/formatter_4/" target="_blank">
-			SDFormatter.</a>&nbsp; When you open this program after installing 
-			it, it should automatically show your micro-SDcard. <br />
-			</td>
-			</tr>
-			<tr>
-			<td class="style7">
-			
+        <tr>
+            <td class="style6">
+                <br/> Since you are rebuilding the SDCard, I am going to suggest that you format the card. This will remove any file corruption on the SDCard. If the card is 2GB card you can use the default Windows format size. If the Card is 4GB you
+                need to select FAT32 from the format size window. I suggest that you download and install
+                <a href="https://www.sdcard.org/downloads/formatter_4/" target="_blank">
+			SDFormatter.</a>&nbsp; When you open this program after installing it, it should automatically show your micro-SDcard. <br />
+            </td>
+        </tr>
+        <tr>
+            <td class="style7">
 
-			<img alt="" height="395" src="gemini-images/firmware_update/SDFormatter.jpg" width="486" />
-			</td>
-			</tr>
-			<tr>
-			<td class="style6">
-			&nbsp;Just 
-			hit the Format Push button, to format the micro SDcard. <br />Also at this time 
-			Remove the hand controller and do not reconnect it until you are 
-			told to do so.&nbsp;<br />
-&nbsp;I also suggest you slide a business card under 
-			the battery clip of the battery.</td>
-		</tr>
 
-		<tr>
-			<td class="style6">
-			<br />
-			Updating to the Latest  Main Unit Firmware
-			<br />
-			<br />
-			There are 
-			only one file that you are going to have to be downloaded, extracted 
-			(unzipped) and written to the Mini SDCard.&nbsp;
-			</td>
-		</tr>
+                <img alt="" height="395" src="gemini-images/firmware_update/SDFormatter.jpg" width="486" />
+            </td>
+        </tr>
+        <tr>
+            <td class="style6">
+                &nbsp;Just hit the Format Push button, to format the micro SDcard. <br />Also at this time Remove the hand controller and do not reconnect it until you are told to do so.&nbsp;<br /> &nbsp;I also suggest you slide a business card under
+                the battery clip of the battery.</td>
+        </tr>
 
-		<tr>
-			<td class="style6">
-			<br />
-			1.&nbsp;&nbsp;Download the latest SD_card_date.zip Gemini Main Board Firmware image from
-			<a href="http://losmandy.com/files/gemini/firmware/combined.zip" target="_blank">
-				http://losmandy.com/files/gemini/firmware/combined.zip</a>&nbsp;
-			</td>
-		</tr>
+        <tr>
+            <td class="style6">
+                <br /> Updating to the Latest Main Unit Firmware
+                <br />
+                <br /> There are only one file that you are going to have to be downloaded, extracted (unzipped) and written to the Mini SDCard.&nbsp;
+            </td>
+        </tr>
 
-	<!--	<tr>
+        <tr>
+            <td class="style6">
+                <br /> 1.&nbsp;&nbsp;Download the latest SD_card_date.zip Gemini Main Board Firmware image from
+                <a href="javascript:localURL('firmware1/combined.zip')" target="_blank">
+				https://gemini-2.com/firmware1/combined.zip</a>&nbsp;
+            </td>
+        </tr>
+
+        <!--	<tr>
 			<td class="style7">
 			<br />
 			<a href="gemini-images/firmware_update/Getfilemain.JPG" target="_blank">
@@ -118,55 +101,37 @@
 			</td>
 		</tr>
 -->
-		<tr>
-			<td class="style6">
-			<br />
-			2.&nbsp;&nbsp;Save it on your computer. Remember the folder 
-			where you save it since you will need it later. I put mine on drive 
-			C: and named it Gemini2.&nbsp; I created a folders called Gemini&nbsp; 
-			on my desktop 
-			I am using Windows 10.&nbsp; &nbsp; I 
-			provide the latest files at Gemini-2 with a consistent file name of 
-			combined.zip&nbsp;&nbsp; This file contains all the files in the 
-			Gemini, that is normally needed to update the complete Gemini 
-			system.</td>
-		</tr>
+        <tr>
+            <td class="style6">
+                <br /> 2.&nbsp;&nbsp;Save it on your computer. Remember the folder where you save it since you will need it later. I put mine on drive C: and named it Gemini2.&nbsp; I created a folders called Gemini&nbsp; on my desktop I am using Windows
+                10.&nbsp; &nbsp; I provide the latest files at Gemini-2 with a consistent file name of combined.zip&nbsp;&nbsp; This file contains all the files in the Gemini, that is normally needed to update the complete Gemini system.
+            </td>
+        </tr>
 
-		<tr>
-			<td class="style7">
-			<br />
-			
-			<img alt="" height="216" src="gemini-images/firmware_update/beforeunzip.jpg" width="900" /><br />Fig 
-			1 Before it is unzipped
-			</td>
-			</tr>
-					<tr>
-			<td class="style6">
-			<br />
-			3.&nbsp;&nbsp; Please use a program such as
-			<a href="http://www.7-zip.org/" target="_blank">7-Zip</a>. Please 
-			use the<span class="auto-style3"><em> extract to here</em></span> option, so other subdirectories are not 
-			created.<br />
-			The final subdirectory should look like this,&nbsp; More: there are 
-			now many more subdirectories than what Fig 2 shows, Including DOC, 
-			PEC, MODELING and LOGS.&nbsp; This is normal.</td>
-		</tr>
-		<tr>
-			<td class="style7"><br />
+        <tr>
+            <td class="style7">
+                <br />
 
-			<img alt="" height="389" src="gemini-images/firmware_update/after_unzip.jpg" width="900" /><br /> 
-			
-			Fig 2. and after it is unzipped.</td>
-		</tr>
+                <img alt="" height="216" src="gemini-images/firmware_update/beforeunzip.jpg" width="900" /><br />Fig 1 Before it is unzipped
+            </td>
+        </tr>
+        <tr>
+            <td class="style6">
+                <br /> 3.&nbsp;&nbsp; Please use a program such as
+                <a href="http://www.7-zip.org/" target="_blank">7-Zip</a>. Please use the<span class="auto-style3"><em> extract to here</em></span> option, so other subdirectories are not created.
+                <br /> The final subdirectory should look like this,&nbsp; More: there are now many more subdirectories than what Fig 2 shows, Including DOC, PEC, MODELING and LOGS.&nbsp; This is normal.</td>
+        </tr>
+        <tr>
+            <td class="style7"><br />
 
-		<tr>
-			<td class="style6">
-			<br />
-			4.&nbsp;&nbsp; In figure 2 above please delete or move the file 
-			Combined.zip. You can 
-			also move if to another directory if you wish.&nbsp; <br />
-			<br />
-			<span class="auto-style2">4#a. If you intend to update the hand 
+                <img alt="" height="389" src="gemini-images/firmware_update/after_unzip.jpg" width="900" /><br /> Fig 2. and after it is unzipped.</td>
+        </tr>
+
+        <tr>
+            <td class="style6">
+                <br /> 4.&nbsp;&nbsp; In figure 2 above please delete or move the file Combined.zip. You can also move if to another directory if you wish.&nbsp; <br />
+                <br />
+                <span class="auto-style2">4#a. If you intend to update the hand 
 			controller micro-SDcard using a micro-card reader/writer, then in 
 			the HCFirmware directory in Fig 2 above, you will find many files.&nbsp; 
 			You will need to delete all these files, or move them to another 
@@ -175,91 +140,62 @@
 			<br />ALSO IF your hand controller is already updated, then please delete all the 
 			files in the HCFirmware directory.<br />
 			</span>
-			<br />
-			5. Now rename the NewGem.bin File to HGM_Gem2.bin   The Gemini-2 will perform an automatic flash when Powered on.  This is necessary because
-			the really old firmware cannot Flash NewGem.bin from the web interface.
-			<br /><br />
-			6. Now copy the complete file structure from the Gemini directory (if that is what you used) onto the micro_SDcard.  You should have a 
-			similar directory to Fig 4 below.</td>
-		</tr>
+                <br /> 5. Now rename the NewGem.bin File to HGM_Gem2.bin The Gemini-2 will perform an automatic flash when Powered on. This is necessary because the really old firmware cannot Flash NewGem.bin from the web interface.
+                <br /><br /> 6. Now copy the complete file structure from the Gemini directory (if that is what you used) onto the micro_SDcard. You should have a similar directory to Fig 4 below.</td>
+        </tr>
 
-		<tr>
-			<td class="style7">
-			<br />
-		
-			<img alt="" height="434" src="gemini-images/firmware_update/extracted_firmware.jpg" width="900" />
-			<br />
-			Fig 4</td>
-		</tr>
-		<tr>
-			<td class="style6">
-			<br />
-			7.&nbsp;&nbsp; Put the Micro_SDcard back into the Gemini-2. Please 
-			disconnect the Hand controller before powering the Gemini-2 back on 
-			if you already have not done so.&nbsp; Also remove the business card 
-			from under the battery clip.<br />
-			<br />
-			8.&nbsp; Now you need to Power up the Gemini-2 without the Hand controller 
-			connected, but use the web interface to access the "mount" page of 
-			the Gemini-2&nbsp; to check if you have the new firmware date.&nbsp; (<a href="ConnectingtoG2.html" target="_self">see 
+        <tr>
+            <td class="style7">
+                <br />
+
+                <img alt="" height="434" src="gemini-images/firmware_update/extracted_firmware.jpg" width="900" />
+                <br /> Fig 4</td>
+        </tr>
+        <tr>
+            <td class="style6">
+                <br /> 7.&nbsp;&nbsp; Put the Micro_SDcard back into the Gemini-2. Please disconnect the Hand controller before powering the Gemini-2 back on if you already have not done so.&nbsp; Also remove the business card from under the battery clip.<br
+                />
+                <br /> 8.&nbsp; Now you need to Power up the Gemini-2 without the Hand controller connected, but use the web interface to access the "mount" page of the Gemini-2&nbsp; to check if you have the new firmware date.&nbsp; (<a href="ConnectingtoG2.html"
+                    target="_self">see 
 			connecting to Ethernet port if you need instructions</a> ) <br />
-			<br />
-			</td>
-		</tr>
-	<!--	<tr>
+                <br />
+            </td>
+        </tr>
+        <!--	<tr>
 			<td class="style7">
 			<br />
 			<img alt="" height="982" src="gemini-images/firmware_update/bootmodeselect.jpg" width="1140" /><br />
 			Fig 4</td>
 		</tr>
 	-->
-		<tr>
-			<td class="style6">
-			
-			<br />
-			9.&nbsp; When you powered on the Gemini-2, the HGM_Gem.bin file should 
-			have automatically flashed the firmware.&nbsp; You should have the 
-			latest in the Gemini-2 now.&nbsp; When this is done, the HGM_Gem.bin 
-			file will be renamed to Cur_Gem2.bin. <br />
-			<br />
-			<span class="auto-style2">NOTE: If you deleted the the files in the 
-			HCFIRMWARE Directory in step 4#a above, skip step 10&nbsp; but go to</span> updating the 
-			handcontroller using a micro SDcard reader if you are going to 
-			update it.<br /> <br />
-			10. Now plug in the Hand controller.&nbsp; Power the Gemini-2 back 
-			on. After the initial screen, 
-			the Hand controller should tell you that it is updating firmware, 
-			then go into the Flashing&nbsp; firmware message.&nbsp; This takes 
-			about 5&nbsp; to over 30 minutes if you are doing a complete update 
-			of the hand controller.&nbsp; If everything is good, you will see a new 
-			screen offering 3 selections. They are "Polar Align Assist", 
-			"Assistance in building a model", and "Tour a catalog".&nbsp; You can 
-			use any of these, or use the back button to get to the 
-			observation/setup screen.&nbsp; On the Setup --&gt;Mount, you can 
-			change the default boot method if you desire, from "cold start" to 
-			"ask if possible" (just a suggestion)<br />
-			<br />
-			11.
-			You should be done.&nbsp; Note: the pictures above shows a Jul 22, 
-			2015 main unit firmware date.&nbsp; It is totally possible that&nbsp; a newer version has just been posted 
-			since I wrote these instructions.<br />
-			&nbsp;
-			<br />
-			</td>
-		</tr>
-	</table>
+        <tr>
+            <td class="style6">
+
+                <br /> 9.&nbsp; When you powered on the Gemini-2, the HGM_Gem.bin file should have automatically flashed the firmware.&nbsp; You should have the latest in the Gemini-2 now.&nbsp; When this is done, the HGM_Gem.bin file will be renamed
+                to Cur_Gem2.bin. <br />
+                <br />
+                <span class="auto-style2">NOTE: If you deleted the the files in the 
+			HCFIRMWARE Directory in step 4#a above, skip step 10&nbsp; but go to</span> updating the handcontroller using a micro SDcard reader if you are going to update it.<br /> <br /> 10. Now plug in the Hand controller.&nbsp; Power the Gemini-2
+                back on. After the initial screen, the Hand controller should tell you that it is updating firmware, then go into the Flashing&nbsp; firmware message.&nbsp; This takes about 5&nbsp; to over 30 minutes if you are doing a complete update
+                of the hand controller.&nbsp; If everything is good, you will see a new screen offering 3 selections. They are "Polar Align Assist", "Assistance in building a model", and "Tour a catalog".&nbsp; You can use any of these, or use the back
+                button to get to the observation/setup screen.&nbsp; On the Setup --&gt;Mount, you can change the default boot method if you desire, from "cold start" to "ask if possible" (just a suggestion)<br />
+                <br /> 11. You should be done.&nbsp; Note: the pictures above shows a Jul 22, 2015 main unit firmware date.&nbsp; It is totally possible that&nbsp; a newer version has just been posted since I wrote these instructions.<br /> &nbsp;
+                <br />
+            </td>
+        </tr>
+    </table>
 
 
 
 
-<link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
+    <link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
 
 
 
 
 
 
-<div w3-include-html="footer.html" ></div>
+    <div w3-include-html="footer.html"></div>
 </body>
 
 
