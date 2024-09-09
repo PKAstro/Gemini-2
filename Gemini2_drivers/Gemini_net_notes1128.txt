@@ -1,0 +1,292 @@
+Gemini.NET ASCOM Driver
+
+Version 1.1.28 - release
+------------------------
+2024-09-09 Fix for AtHome not updating when the mount is unparked
+2024-07-21 fix for NINA time not matching with PC time warning message on start-up
+
+
+Version 1.1.25 - release
+------------------------
+2024-04-07 Enable solar system objects selection from Objects + Coordinates screen
+2024-04-07 Add a window to select one of multiple observations from Small and Solar System Objects
+2024-04-04 Fix for PEMPro + PEC programming for Gemini-1 L4 timeout errors
+2024-04-04 Increased timeouts for serial comms for L4 and later
+2024-04-04 Fix worm cycle display in PEC window for Gemini-1
+2024-04-04 Additional statistics and frequency display in PEC Chart window
+
+Version 1.1.23 - release + Gemini L6 updates
+--------------------------------------------
+2023-04-23 Fix for errors in advanced settings when mount is parked
+2023-04-20 Fix for time scale in PEC chart when RA 4x encoders are enabled
+2023-04-12 Fix for SCOUT API crash in Small Objects/Minor Planets
+2023-04-08 Fix timezone offset not auto-updating if changed while disconnected from the mount
+2023-04-06 Add support for JPL/Scout NEO objects in Small Object/Minor Planets
+2023-03-10 Fix to make "Flip using Goto" work with L4
+2023-03-08 Adding Meridian Flip using Goto setting, better throttling of frequent requests causing occasional timeout issues (SGP).
+2023-02-08 Fix JPL/Horizons regional issues (French) causing window sizing issues
+2023-02-07 Update to fix Windows 7 issue with 'connection closed' in JPL/Horizons
+2023-02-06 Change to return TrackingRate of Sidereal when Comet rate is selected (for NINA+Orbitals plugin)
+2023-02-06 Fix exception with FAST tracking (ISS) using JPL/Horizons.
+2023-02-06 Fix IsPulseGuiding returning true while centering speed is in effect with JPL/Horizons.
+
+
+Version 1.1.18 (beta)
+---------------------
+1. Change command throttling and queueing behavior to accommodate frequent requests from software, such as SGP, that could result in occasional timeout messages
+2. Add Meridian Flip using Goto option as a work-around to :Mf# command not working in Gemini L5
+
+Version 1.1.17 (beta)
+---------------------
+1. Fix exception when tracking at high rates (e.g., ISS) in JPL/Horizons
+2. Fix driver not reporting correct status for IsPulseGuiding when tracking with JPL/Horizons set rates
+
+Version 1.1.16 (beta)
+---------------------
+1. Add support for Gemini L5 using comet rates for JPL/Horizons comet tracking
+2. Fix issue with DEC reversal on East side of the mount
+3. Change behavior to report tracking when tracking in JPL/Horizons, even if moving rate is Center or Slew to allow guiding (PHD2)
+
+
+Version 1.1.14 (beta)
+---------------------
+1. Add automatic caching of all viewed JPL/Horizons ephemeris for 24 hours
+2. Add ability to load cached ephemeris to use off-line within 24 hours after caching
+
+
+Version 1.1.13 (beta)
+---------------------
+1. Improve variable axis rate tracking for satellite tracking
+2. Add JPL/Horizons automatic ephemeris retrieval and dynamic DEC and RA axes adjustment tool (test only)
+3. Fix support for HTTP protocol and improve performance
+
+
+Version 1.1.10 (beta)
+---------------------
+0. Switch to require Microsoft .NET 4.8 runtime
+1. Support added for new L6 functions:
+   * Set Gemini time using UTC time
+   * Use Gemini J2000 precession conversion to replace one used in the driver
+   * Add Servo 4x precision selections for RA and DEC to Advanced dialog
+   * Add buzzer on/off option to Advanced dialog
+   * Add support for flip points/flip corridor in meridian flip settings   
+2. Add troubleshooting reporter function
+3. Add Terminal command window
+4. Add HA option to RA-DEC coordinate goto form 
+5. Add support for second instance of Gemini.NET controlling a separate physical Gemini unit
+6. Adjust main HC form and Advanced settings dialog to display properly with high DPI settings
+7. Clean up of exceptions and exception messages to those expected by ASCOM Conform tool
+8. Disable SyncToAltAz method as it's not supported by Gemini
+9. Add variable MoveAxis option to Telescope Settings dialog
+10. Increase polling frequency while slewing using variable MoveAxis (for improved satellite tracking)
+
+
+
+Version 1.0.84 (Sept 3, 2021)
+-----------------------------
+1. Added Set Home Position menu to Park setup window
+2. Made :hZ (park at Zenith) command asynchronous
+3. Fixed About box not closing issue
+4. Changed the label on Goto Limit setting to indicate degrees from limit
+5. Added: convert JNow to J2000 returned coordinates when Gemini Expects J2000 is selected
+6. Changed meridian flip logic to avoid occasional timeouts
+7. Fixed localization issue with setting Gemini time if local date format doesn't include '/'
+8. Change to ignore pulse-guiding commands while the mount is slewing
+
+
+Version 1.0.75 (March 22, 2020)
+----------------
+1. Fix to allow ASCOM Alpaca to work with the driver
+2. Updated manual (thank you, Mark Crossley!)
+3. ASCOM driver boot mode preference automatically selects the same option on Gemini
+4. Fix for handling IP address as all decimal, even when leading zero is present
+
+Version 1.0.74 (not released)
+----------------
+1. Fix to allow ASCOM Alpaca to work with the driver
+
+Version 1.0.72 
+----------------
+1. Fixes the internationalization problem in GPS screen for locales where decimal separator is not a period ('.')
+
+Version 1.0.70 (March 30, 2017)
+----------------
+1. Added support for G11T and GM811 mounts
+
+Version 1.0.69
+----------------
+1. Fix for TheSkyX not connecting over ethernet
+
+Version 1.0.68
+----------------
+1. Fix for proper shutdown when disconnecting due to errors over Ethernet/UDP
+2. Change to Arial font in Log Viewer
+3. ACP short slew fix.
+4. Change to .NET 4.0 runtime (resolves Bluetooth COM port naming issue)
+5. Add 'turn on PEC on connect' option
+
+Version 1.0.62
+----------------
+1. Fixed J2000 setting only sticking on a second attempt and not sticking on the first.
+
+Version 1.0.61
+----------------
+1. Fixed crash in GPS form when GPS is configured to a non-existent COM port
+
+Version 1.0.60
+----------------
+1. Fixed 'Another instance of the driver is already running' error message reported by some users
+2. Added support for automatic PEC-On property for Gemini 5.2 beta
+
+Version 1.0.57
+----------------
+1. Fix for custom RA Divisor reset when using Apply button on Advanced Settings dialog
+
+Version 1.0.56
+----------------
+1. Fixed a logic problem with SideOfPier processing in Gemini-1
+
+Version 1.0.54
+------------------
+1. Fixed Telescope.Slewing property to return 'false' when guiding
+
+Version 1.0.53
+------------------
+1. Fixed localization problem with AxisRates
+2. Changed label in Network settings to NetBIOS Name Resolution
+3. Changed label in Park settings to Prevent accidental unparking by software
+
+Version 1.0.52
+------------------
+1. Added Park Mode setting to support new Gemini-II park modes
+
+Version 1.0.51
+-------------
+1. Fixed a reported issue with ACP that would result in the mount continuing to track when commanded to track and to then stop tracking in quick succession.
+
+
+Version 1.0.50
+-------------
+1. Added checks for firmware version 5.1 before executing Alt/Az commands to eliminate errors with previous firmware revisions.
+
+Version 1.0.49
+-------------
+1. Fix for SideOfPier and DestinationSideOfPier logic
+2. Throw an exception in case of CanSideOfPier is set to false
+3. Add support for Conform interfaces
+4. Add persistence for message-tray options to preserve them across sessions
+5. Resolve UTCDate format issue introduced with new time format in Gemini-2
+
+Version 1.0.47
+------------
+1. Added macro polling command when using serial protocol in Gemini-2
+2. Added support for Alt/Az mode in Gemini-2
+
+Version 1.0.46
+------------
+1. Fixed Focuser interface to bring it up to date with the rest of the driver
+
+Version 1.0.44
+------------
+1. Added support for HC brightness levels for Gemini-2
+
+
+Version 1.0.43
+------------
+1. Added Clear PEC button to PEC settings dialog
+
+Version 1.0.42
+------------
+1. Added setting to allow PEC training to use more than one worm period 
+2. Display of a PEC chart from the currently active PEC data. 
+3. Fixed a few minor cosmetic issues related to PEC
+
+Version 1.0.41
+------------
+1. Fixed some compatibility issues with Gemini-1 that were introduced in the previous build
+
+Version 1.0.40
+------------
+1. Added PEC configuration window 
+2. Added Park At Zenith option
+
+
+Version 1.0.38
+------------
+1. Uses the new, extended checksum for Gemini native commands. 
+
+2. Uses new site management commands to retrieve and set site information. 
+
+3. The driver now uses the new UDP macro command for polling. 
+
+Version 1.0.22
+--------------
+1. Changes to handle new return values from Gemini-2 serial commands (timeout errors during normal operation)
+2. AtHome and AtPark now correctly remember previous mount state. Issue reported by ASCOM 6 Conform.
+
+Version 1.0.18
+--------------
+1. Added DHCP/NetBIOS option to the Ethernet configuration dialog
+2. Changed default static IP address to 192.168.0.111
+3. Changed IP parsing logic to ignore leading zeroes
+
+Version 1.0.17
+--------------
+1. Added support for Gemini II and Ethernet interface
+2. Added non-precision pulse-guiding option
+3. Added telescope optics configuration dialog
+
+Version 1.0.8
+-------------
+1. Added RA/DEC coordinate object input dialog under Func menu
+2. Added French translation of major UI elements, courtesy of Benoit Robert
+
+Version 1.0.7
+-------------
+1. GPS screen enhancements: status display, bad data/lost signal indicator, more baud rates, some GPS-related bug fixes
+2. Updates to the manual to catch up with enhancements in the previous few releases.
+
+Version 1.0.6
+-------------
+1. Resolved issues with the T-shaped calibration and pulse-guiding in MaxIm/DL
+2. Added an option to turn off Side of Pier reporting to disable pier-flip behavior in ACP. Option added to Telescope Configuration dialog.
+3. Added optional horizon altitude specification to the Catalog Manager
+
+Version 1.0.5
+-------------
+Test version for pulse-guiding fix.
+
+Version 1.0.4
+-------------
+1. Added asynchronous pulse-guiding method, selectable in the Configuration dialog
+2. Added 'visibility' column to all objects in the Catalog Manager -- this shows if the object is above the horizon
+3. Added selectable observation time to the Catalog manager to see object visibility for specific date/time
+4. Added 'view visible objects only' option to the Catalog manager to hide objects that are below the horizon
+5. Added notification pop-up when doing additional align and sync in the Catalog manager
+6. Added Alkaid to the Bright Star List
+7. Fixed DeclinationRate property get when set to zero: was returning 'infinite'
+
+
+Version 1.0.3
+-------------
+1. Fix for processing of GPS coordinates for locales where comma is used as the decimal separator instead of a period
+2. Change to address an issue when accessing the driver programmatically from some .NET and VB6 programs. This should also help with the reported Gemini Model Builder application hang issue.
+3. Change to minimize the possibility of corrupting ASCOM profile storage in case of a computer or software crash while the driver is running.
+
+
+
+Version 1.0.2
+-------------
+1. All the objects in the included catalogs are now numbered with leading zeroes. This is so that that they can be properly sorted by name, for example, M110 should come after M005, whereas before, M110 came before M5 in the sort order.
+2. Added the missing M045 to the Gemini Messier catalog 
+3. Added Hour Angle display to the main hand-controller window
+4. Changed the initial hand controller display (before connecting to mount) from SLEW to STOP.
+
+Version 1.0.1
+-------------
+1. Fix to correctly set safety limits when mount type is set to Custom
+
+
+Version 1.0.0
+-------------
+First public release of the Gemini driver.
