@@ -6,28 +6,32 @@
 @media(min-width:900px) {
     .py-sm-8 {
         padding-bottom: 4.5rem!important;
-        padding-top: 4.5rem!important
+        padding-top: 4.5rem!important;
+        --bs-body-font-size: 1.3rem!important;
     }
 }
 
 @media(min-width:768px) {
     .py-md-8 {
         padding-bottom: 4.5rem!important;
-        padding-top: 4.5rem!important
+        padding-top: 4.5rem!important;
+        --bs-body-font-size: 1.3rem!important;
     }
 }
 
 @media(min-width:992px) {
     .py-lg-8 {
         padding-bottom: 4.5rem!important;
-        padding-top: 4.5rem!important
+        padding-top: 4.5rem!important;
+        --bs-body-font-size: 1.3rem!important;
     }
 }
 
 @media(min-width:1200px) {
     .py-xl-8 {
         padding-bottom: 4.5rem!important;
-        padding-top: 4.5rem!important
+        padding-top: 4.5rem!important;
+        --bs-body-font-size: 1.3rem!important;
     }
 }
 
