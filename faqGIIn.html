@@ -1,0 +1,780 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head profile="http://www.w3.org/2005/10/profile">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Frequency Asked Questions About Gemini 2</title>
+    <link rel="stylesheet" href="ajxmenu.css" type="text/css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="faq-2.css">
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="en-us" http-equiv="Content-Language" />
+
+
+    <link href="gemini-2.css" rel="stylesheet" title="light" type="text/css">
+    <link href="gemini-2-dark.css" rel="stylesheet" title="dark" type="text/css">
+    <script src="style_switcher.js"></script>
+    <link href="theme-selector.css" rel="stylesheet" type="text/css">
+
+    <script src="w3data.js"></script>
+</head>
+
+<body onload="set_style_from_cookie()">
+    <div w3-include-html="header.html"></div>
+    <div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div>
+    <script>
+        w3IncludeHTML();
+    </script>
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="style6"> New Users to Gemini-2 Controller PLEASE start first, by going down the menu list provided by clicking on the<br /><b>"Start 
+		Here"</b> menu button above this message.
+            </td>
+        </tr>
+    </table>
+
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td class="h2">
+                Frequently Asked Questions about Gemini 2
+            </td>
+        </tr>
+        <tr>
+            <td class="h3">
+                <br />Click on questions to see the answer
+            </td>
+        </tr>
+    </table>
+
+    <table align="center" style="max-width: 900px; min-width: 200px;">
+        <tr>
+            <td>
+                <!-- FAQ 2 - Bootstrap Brain Component -->
+                <section class="bsb-faq-2 bg-light py-3 py-md-5 py-xl-8" style="max-width: 900px; min-width: 200px;">
+                    <div class="container">
+                        <div class="row gy-5 gy-lg-0">
+                            <div class="">
+                                <div class="row justify-content-xl-end">
+                                    <div class="col-12 col-xl-11">
+                                        <div class="accordion accordion-flush" id="accordionExample">
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading1">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+														1.&nbsp;&nbsp;&nbsp;Warning about changing battery or adding an external 
+														power pack to Gemini-2
+					</button>
+                                                </h2>
+                                                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1">
+                                                    <div class="accordion-body">
+                                                        WARNING: The Battery circuit in Gemini-2 is much different than in Gemini-1. The battery connects through a small .2v Zener diode directly into the ARM processor.
+                                                        <span class="smalltext"> <a href="http://www.nxp.com/documents/data_sheet/LPC2388.pdf" target="_blank">The Data sheet LPC2388.pdf
+		</a>states Vi(VBAT), the separate input for the RTC and the SRAM, has to have 2.0V at minimum, 
+		typical 3.3V and 3.6V at max for operation.</span> With the Zener diode inline, that means that a battery voltage between 2.2V and not exceeding 3.8V would be acceptable. A note states that the
+                                                        RTC typically fails at 1.6V (1.8V at the battery).
+                                                        <em>This means that
+		connecting an external Battery pack in place of the internal 3.3V 
+		battery will probably damage the ARM processor, So, <b>DON'T DO IT!</b></em>
+                                                        <br><br>After replacing the battery, power on Gemini-2 and set the time and date. Failure to do so could cause the processor to draw too much power from the battery and might result in processor
+                                                        damage.&nbsp; You can also save all your setting using the Web interface Firmware/SRAM page "Store SRAM" content to a file before removing the battery, and then "Load SRAM" content from file to restore
+                                                        all the setting after you replace the battery.&nbsp; This will not set the date and time, you still must do this!
+                                                        <br><br>Here is a
+                                                        <a href="javascript:localURL('videos/Losmandy_Gemini_Battery_CR2354.mp4')" target="_self">
+		video</a> showing how to change the CR2350 battery. <br>Here is a
+                                                        <a href="javascript:localURL('videos/Losmandy_Gemini_Battery_CR2450.mp4')" target="_self">
+		video</a> showing how to change the CR2450 battery in Gemini-2 Mini. <br />
+                                                        <br /> When Losmandy receives the circuit boards, the battery has a piece of insulating material inserted between the positive contact and the battery to keep it from powering the ARM processor.&nbsp;
+                                                        What Losmandy does first, is to power up Gemini-2, set the time and date, then pull out the the insulation.&nbsp; This way, the ARM processor does not have a chance to pull excessive current.&nbsp;
+                                                        You can emulate that on the original Gemini-2 version by putting a small piece of plastic or paper on top of the new battery before putting it in.&nbsp; Then power up Gemini-2, set the date and time
+                                                        and remove the insulation.
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading2">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+														2.&nbsp;&nbsp;&nbsp;What is the difference between the older and newer versions 
+														of Gemini-2
+					</button>
+                                                </h2>
+                                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2">
+                                                    <div class="accordion-body">
+                                                        <ul>
+                                                            <li> The new unit (Gemini-2 Mini) is physically smaller
+                                                            </li>
+                                                            <li> The new unit has only one power connector</li>
+                                                            <li> The Classic hand controller jack has been eliminated.&nbsp; The new hand control has the same version of the switches that is on the back of the Graphics hand control, so there is no need for
+                                                                a classic hand controller jack</li>
+                                                            <li> The DEC and RA connectors have been rotated 90 degrees, so that right angle connectors if used will not interfere with other connectors</li>
+                                                            <li> The PCB has been completely redesigned, with all the latest components and fixes applied</li>
+                                                            <li> The front panel connectors have been totally rearranged</li>
+                                                            <li> Serial Port 1 now has been relabeled "Serial Port/GPS"</li>
+                                                            <li> Serial Port 2 now has been relabeled "HC"</li>
+                                                            <li> The new unit battery has been changed to the readily available CR2450 which has a slightly higher mAH rating than the previous CR2354. The battery holder has been changed to something much less
+                                                                damaging to one's finger nails. The cell snaps into place, and releases with a simple move.
+                                                            </li>
+                                                            <li> The DIN connectors are now rock solid and do not suffer pin fracture, common with previous units.</li>
+                                                        </ul>
+                                                        <br />
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading3">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+														3.&nbsp;&nbsp;&nbsp;What do you do if you have two or more Gemini-2 
+														controllers on the your network				</button>
+                                                </h2>
+                                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3">
+                                                    <div class="accordion-body">
+                                                        Gemini-2 has a default IP address of 192.168.0.111, and a default MAC address of 1e:30:6c:a2:45:5f.&nbsp; These are set by the firmware an are changeable. If you have more than one Gemini-2 on a local network, you will have to change both the IP address
+                                                        and MAC address in the second one. If you have more than 2 then change the others, as well.<br><br> You can change the last digit of the MAC
+                                                        address. The MAC address of a Gemini-2 can be anything between 0 and F (Hex for 16). It is also best to use static IP to be safe, so turn off DHCP by unchecking it's box.&nbsp;Do this by going to
+                                                        http://current IP address of Gemini-2 you are going to change/network.cgi&nbsp; Example would be <a href="http://192.168.0.111/network.cgi">
+			http://192.168.0.111/network.cgi</a> and changing the IP address to 192.168.0.110 in both Current Setting and Stored Setting boxes, then uncheck the DHCP box and also change the MAC address from 1e:30:6c:a2:45:5f to 1e:30:6c:a2:45:5e etc. Change both
+                                                        the Current Setting and the Stored Setting and then hit "Set". When you do this, you will have to reopen the browser page by putting in the new IP address.<br><br> It can also be done on the hand
+                                                        controller, but that does not set the default IP address, just the current IP address.&nbsp; Also if you are using ASCOM Gemini.net driver, it can only address one mount per computer at a time.&nbsp;
+                                                        You will have to have multiple computers with the ASCOM Gemini.net driver on each, and the Ethernet IP address set correctly and DHCP turned off, or change the IP address configured in Gemini.net
+                                                        each time you want to connect to a different controller. On a local network you cannot have any two devices using the same IP address.&nbsp; If you also change the MAC address, if by some chance
+                                                        you do use DHCP, then the router will automatically assign a different IP address to each Gemini-2. You can see
+                                                        <a href="web/web-network_change_mac.html" target="_self"> 
+			instructions</a> on how to do this.&nbsp; After making these changes you can store these settings to the Micro-SDcard by going to <a href="http://ip/">http://IP</a> address of the unit you are
+                                                        working on/firmware.cgi and hitting Store SRAM.&nbsp; The example page is
+                                                        <a href="web/web-firmware-sram.html" target="_self">
+			here</a>.&nbsp; It can also be stored in the latest version 1.20 or newer of the hand controller using the Menu--&gt;System--&gt;"STORE" button.<br /><br />
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading4">
+
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+														4.&nbsp;&nbsp;&nbsp;What are the power requirements for Gemini-2 and the power connector sizes 
+				</button>
+                                                </h2>
+                                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4">
+                                                    <div class="accordion-body">
+                                                        Gemini-2 original has two barrel connector inputs (Gemini-2 Mini only has one) much like what is used on laptop computers.&nbsp; The outside diameter is 5.5mm and the inside diameter is 2.1mm.&nbsp; Gemini-2 is designed to be able to provide a absolute
+                                                        maximum of 2.8 amps to each motor. The Gemini-2 is fused at 5 amps on the inputs.&nbsp;&nbsp;&nbsp; Gemini-2 is not designed to function on voltage less than +12 volts and can work all the way up
+                                                        to +18 volts safely.&nbsp; I recommend at least a +5 amp 12 volt switching power supply.&nbsp;The reason for the 5 amps is that some power supplies will drop the voltage below it's rating when higher
+                                                        amperage is required, like slewing.&nbsp;&nbsp; This needs to be a good quality power supply, and many of the lower cost units puts out a lot of voltage spikes and are not well regulated.&nbsp; You
+                                                        have invested $1000.00 in Gemini-2, so don't skimp on the power supply. I personally use a 16V 7 Amp medical rated power supply.&nbsp; Sorry they are not made anymore as it was quite reasonable at
+                                                        $80.00 and has performed quite well for both my Gemini-1 unit and now my Gemini-2 unit. The 16 volts seems to be a sweet spot where both the G1 and G2 works well at. A very similar unit by the same
+                                                        company but at
+                                                        <a href="http://www.mouser.com/ProductDetail/Cincon/TR100M150-11E12-LVL-V/?qs=sGAEpiMZZMtz8P%2feuiupSd5oavmXb5skAPUGLJPzw9I%3d" target="_blank">
+														15V at 6.67 amps is here</a>.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading5">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+															5.&nbsp;&nbsp;&nbsp;Can a 
+															USB to Wireless Ethernet adapter, or a USB bluetooth adapter be plugged into the 
+															USB-B/USB-A ports of Gemini 2 to give wired or wireless Ethernet capability. 
+					</button>
+                                                </h2>
+                                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5">
+                                                    <div class="accordion-body">
+                                                        The simple answer is No.&nbsp; Almost all USB dongles where they are WiFi, or BlueTooth, are slave devices, and requires the device that they are being plugged into to: 1. recognize it, and 2. configure them. The Gemini 2 does not have the firmware (smarts)
+                                                        to do this Yet.&nbsp; There is no way to load a driver into the Gemini 2, like you can a PC. &nbsp;This may, however, change in the future.
+                                                        <br />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading6">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+															6.&nbsp;&nbsp;&nbsp;Can SkySafari be used with Gemini-2
+					</button>
+                                                </h2>
+                                                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6">
+                                                    <div class="accordion-body">
+                                                        Yes it can.<br /><br /> At this time you will need to use two free programs to insure that it can.&nbsp; The first is the ASCOM Gemini.net driver and the second is what is called
+                                                        <a href="http://www.mainsequencesoftware.com/Products/WiFiScope" target="_blank">WiFi Scope</a>. WiFi Scope is a free program, but they do ask for a donation.&nbsp; Using both together will allow
+                                                        SkySafari to connect through WiFi Scope to the ASCOM Gemini.net driver into Gemini-2 and control it.&nbsp; SkySafari runs on an
+                                                        <a href="https://skysafariastronomy.com/skysafari-6-professional-astronomy-telescope-control-software-for-ios.html" target="_blank">
+															Iphone/Ipad</a> or an
+                                                        <a href="https://skysafariastronomy.com/skysafari-6-professional-astronomy-telescope-control-software-for-android.html" target="_blank">
+															Android</a> device.<br /><br> WiFi Scope is a PC application.&nbsp; Once you have an Ethernet connection with the Gemini, using either the Netgear or D-Link Bridges above, (or a wired
+                                                        connection) then connect WiFi scope to Gemini-2 (Ascom connection) first, and then SkySafari to WiFi scope.&nbsp; There is a small (or maybe larger) problem with SkySafari when using it with Ethernet.&nbsp;
+                                                        It opens up a new socket for each command it sends to Gemini-2.&nbsp; This can eventually overload Gemini-2 ethernet stack.&nbsp; This does not happen when using SkySafari with a serial port.<br
+                                                        />
+                                                        <br />
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading7">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+				  7.&nbsp;&nbsp;&nbsp;Can the hand controller firmware be updated from 
+		the 
+		main Gemini-2 unit
+				</button>
+                                                </h2>
+                                                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7">
+                                                    <div class="accordion-body">
+                                                        Yes.&nbsp; Any file that is placed into the SDcard HCFirmware sub-directory will be uploaded to the Hand controller on the next power on of the Hand Controller.&nbsp; If this file is gemhc.bin it is considered a firmware update, and the hand controller
+                                                        should upload it and and use it as a firmware update.&nbsp; You may have noticed that I said should. There is a problem, in that if the Main Gemini 2 unit has not been booted, and sitting at the
+                                                        Boot menu asking how you want to boot, then the gemhc.bin file will not be used as a firmware update, but as a Catalog file.&nbsp; You must go through the boot menu for this to work correctly. See
+                                                        Question 6.
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading8">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+														8.&nbsp;&nbsp;&nbsp;Can the hand controller Catalogs and logo file be updated from the
+														main Gemini-2 unit
+				</button>
+                                                </h2>
+                                                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8">
+                                                    <div class="accordion-body">
+                                                        Yes.&nbsp; Any file that is placed into the SDcard HCFirmware sub-directory will be uploaded to the Hand controller on the next power on of the Hand Controller.&nbsp; If this file is a catalog file ending in .guc then the hand controller will put it in
+                                                        it's catalog directory, and you will be able to see them with the Go-To command.&nbsp; If the file is the GemLogo.b16 file then the hand controller will place it correctly, so that it shows up during
+                                                        power up of the hand controller, as the boot up logo.&nbsp; If the file is gemhc.bin firmware update, then it will be uploaded to the root of the micro SDcard in the hand controller, and then flashed
+                                                        as an updated firmware.&nbsp;
+                                                        <a href="hcfirmwareflashexample.html" target="_self">See HC Flashing 
+			Example.</a> There are 2 ways to get the Gemini Hand controller to upload files. 1) power it off and then on. 2) Under the MENU --&gt;HC--SDcard menu is a selection that says Upload files.&nbsp;
+                                                        This will also cause the Hand controller to up load catalogs (*.guc) files.&nbsp; NOTE #2 is only for uploading catalog files.&nbsp; It will not work for uploading a firmware update.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading9">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+															9.&nbsp;&nbsp;&nbsp;Why are there so many different ways of updating the firmware 
+															in the main Gemini-2 unit? 
+					</button>
+                                                </h2>
+                                                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9">
+                                                    <div class="accordion-body">
+                                                        That is a good question. However the answer is a little complex.&nbsp; To update the firmware, the basic idea is to place a programming file at the root of the Main Gemini-2 unit SDcard. If this file is named "HGM_Gem2.bin", then Gemini-2 will reprogram
+                                                        itself on the next power up and rename the file "Cur_Gem2.bin".&nbsp; After programming this Cur_Gem2.bin file can be deleted with no harm.<br
+                                                        /> If the file is named "NewGem.bin", then the web interface has to be used to tell Gemini-2 to use this file and flash the program.&nbsp; The file will not be renamed.&nbsp; After programming this
+                                                        file can be deleted with no harm.
+                                                        <br /> The differences are primarily in the method that you use to get one of these two files to the root of the SDcard. There are basically 5 ways:
+                                                        <ol>
+                                                            <li>Use the web interface and upload one of these files to the root of the SDcard.</li>
+                                                            <li>Use a FTP program and place&nbsp;one of these files at the root of the SDcard.</li>
+                                                            <li>Remove the SDcard, and use a card reader to place one of these files at the root of the SDcard.</li>
+                                                            <li>All the update files are also stored as a combined.zip file, that updates both the main unit and the hand controller at the same time.&nbsp; All these files and catalogs can be put on the micro
+                                                                SDcard with&nbsp; an FTP process.</li>
+                                                            <li>There is now a utility that can be used to upload the combined.zip file using a Windows computer
+                                                                <a href="gfu.html" target="_self">GFU 
+				for Windows</a>.</li>
+                                                        </ol>
+                                                        After the file is at the root, the ways to cause Gemini-2 to flash itself depend on the file type uploaded, as described above.<br /> Note: There are no differences in the NewGem.bin file and the
+                                                        HGM_Cur2.bin file except the file name. You can convert one to the other just by renaming it.
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading10">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+														10.&nbsp;&nbsp;&nbsp;What are the Catalogs, EN, DE, ES, 
+														FR, HCFirmware, MHC, CONFIG, PEC, HC and Logs sub-directories of the SDcard
+					</button>
+                                                </h2>
+                                                <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10">
+                                                    <div class="accordion-body">
+                                                        These directories are mainly to support different languages. The exception are
+                                                        <ol>
+                                                            <li>Catalogs Directory - it contains all the star positioning catalogs.</li>
+                                                            <li>HCFirmware Directory - Any file put into this directory will be uploaded to the hand controller, it is normally empty.</li>
+                                                            <li>Logs Directory - This is a directory where Gemini-2 stores information about its internal operations. Do not try and delete this directory as it is locked.
+                                                            </li>
+                                                            <li>MHC Directory - it contains all the files for the Mobile web interface.&nbsp; This interface is designed to work with smart Phones and Tablets using Wireless Ethernet and a wireless router connected
+                                                                to Gemini-2.&nbsp; </li>
+                                                            <li>CONFIG - this stores a configuration file named Gemini.cfg.&nbsp; It can be used to restore Gemini-2 configuration after a firmware update, if it has been saved previously.</li>
+                                                            <li>PEC is where the PEC files is stored if a PEC is generated</li>
+                                                            <li>HC is the Web based hand controller menu.&nbsp; This is different than the MHC directory.</li>
+                                                        </ol>
+                                                        The other directories are EN - English, contains all the English web interface files. DE - German, contains all the German web interface files. Fr - French, contains all the French web interface files, and ES - Spanish, contains all the Spanish web interface
+                                                        files. All these directories can be updated by any method that will let you write to the SDcard, i.e., Web interface, FTP, or Card reader/writer, except for the Logs Directory.
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading11">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+														11.&nbsp;&nbsp;&nbsp;What size micro-SDcards can be used in Gemini-2 
+														main unit and hand controller
+				</button>
+                                                </h2>
+                                                <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11">
+                                                    <div class="accordion-body">
+                                                        The micro-SDcards supplied by Losmandy are 2GB cards for both the main unit and hand controller.&nbsp; This might have changed now with Gemini-2 Mini, as 2GB cards are almost impossible to find. Both SD and SDHC types are supported.&nbsp; Use the default
+                                                        Fat size for the 2Gbyte size of micro-SDcards to format them.&nbsp;&nbsp;I have tested up to 32GB cards and they worked. Now this is only true with the latest 5.1 firmware (or later) versions of
+                                                        the firmware. If using 4GB or larger micro-SDcards, they must be formatted using Fat32.&nbsp; The default under Windows 7 is FAT64, do not use that size to format the micro-SDcards, as it will not
+                                                        work&nbsp; Instructions for removing and replacing the micro-SDcards are<a href="Removing_SDCards.html"> 
+														here</a>.
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading12">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+				  12.&nbsp;&nbsp;&nbsp;Why do two different models have to 
+				  be built, one for the east side and another for the west side
+				</button>
+                                                </h2>
+                                                <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12">
+                                                    <div class="accordion-body">
+                                                        After many tried to incorporate one model for both sides of the meridian, it was determined that this caused large model errors after doing a meridian flip. This lead to the development of separate models for each side of the meridian. This of course
+                                                        has the disadvantage that you have to build two distinct models. But it also has many advantages, in that the model can be more accurate and that non-perpendicularities, flexure, and mirror flop
+                                                        can be better compensated for. See <a href="alignment_procedure.html" target="_self">Alignment 
+														Procedures </a>for more detail.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading13">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+														13.&nbsp;&nbsp;&nbsp;How do you get Windows 
+														2000, XP, Vista &amp; Win7 to show all the com ports that have been allocated
+					</button>
+                                                </h2>
+                                                <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13">
+                                                    <div class="accordion-body">
+                                                        Windows does not normally show non-connected devices in device manager. This is even true if you turn on show hidden devices under the view tab. Before you do this change, be for warned - that this will let you modify/delete devices that you might not
+                                                        want changed or deleted. You do this at your own risk! With that said here is a step by step process.
+                                                        <br /><br /> For 2000 and XP:
+
+                                                        <ol>
+                                                            <li>Right mouse click on My Computer and select Properties.</li>
+
+                                                            <li>Select the Advanced tab.</li>
+
+                                                            <li>Select the "Environment Variables" Button at the bottom above the "Ok" Button</li>
+
+                                                            <li>In the "Systems Variables" box select "New"</li>
+
+                                                            <li>A box will Popup that has 2 entry blocks.</li>
+
+                                                            <ol>
+                                                                <li>In the Variable Name: box enter devmgr_show_nonpresent_devices</li>
+                                                                <li>In the Variable value: box enter 1 then click the OK button , then click the OK button on the bottom of Environment Variables. </li>
+                                                            </ol>
+
+                                                            <li>Close the Hardware manager, and System Properties windows.</li>
+                                                            <li>Use step one above to reopen System Properties and select the Hardware tab.</li>
+                                                            <li>Select the Device manager. </li>
+                                                            <li>Under the View menu, select show hidden devices. </li>
+                                                            <li>Under Ports you should see all the devices that Windows has allocated now. You can modify them and delete them if you need, but please be careful what you delete.</li>
+                                                        </ol>
+
+                                                        For Vista/WIN7:
+                                                        <ol>
+
+                                                            <li> Click in the Vista Balloon at the bottom of the page.</li>
+
+                                                            <li>Right mouse click on Computer and select Properties.</li>
+                                                            <li>Select Advanced System Setting. If you are asked for permissions hit continue.</li>
+                                                            <li>Select the "Environment Variables" Button at the bottom of the page</li>
+                                                            <li>In the "Systems Variables" box select "New"</li>
+                                                            <ol>
+                                                                <li>In the Variable Name: box enter devmgr_show_nonpresent_devices</li>
+                                                                <li>In the Variable value: box enter 1 then click the OK button , then click the OK button on the bottom of Environment Variables. </li>
+                                                            </ol>
+                                                            <li>Close the the windows until you are back at the <strong>Control Panel System.</strong></li>
+                                                            <li>Select Device Manager</li>
+                                                            <li>Under the View menu, select show hidden devices. </li>
+                                                            <li>Under Ports you should see all the devices that Windows has allocated now. You can modify them and delete them if you need, but please be careful what you delete.</li>
+                                                        </ol>
+                                                        Another way to do this is:<br /> <br /> The trick was to open the Command Prompt as administrator and start the Device Manager from the same command prompt.
+                                                        <ol>
+                                                            <li>Right-click “Command Prompt” in Accessories and choose “Run as Administrator”</li>
+                                                            <li>Enter “set devmgr_show_nonpresent_devices=1″ – without the quotes obviously</li>
+                                                            <li>Enter “start devmgmt.msc”</li>
+                                                            <li>In the box that opens, select “Show hidden devices” in the ‘view’ menu.</li>
+                                                        </ol>
+                                                        <br />Now if you expand the section on COM ports, all the COM ports that have ever been created will be displayed, the non present ones being in grey. You can uninstall away anything that you don’t
+                                                        want (right click, select uninstall).&nbsp;
+                                                        <br />
+                                                        <br />
+                                                        <br /> Also there is a USB port scanner that will tell you every USB port and it's assignment.&nbsp; See
+                                                        <a href="javascript:localURL('downloads/USV_View/usbdeview.zip')" target="_self">
+		http://gemini-2.com/downloads/USB_View/usbdeview.zip</a><br /><br />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading14">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+														14.&nbsp;&nbsp;&nbsp;How to wire the guide cable from a 
+														ShoeStringAstronomy GPUSB to Gemini 2 or Gemini 1
+					</button>
+                                                </h2>
+                                                <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14">
+                                                    <div class="accordion-body">
+                                                        Here is a link to a wiring diagram provided with the permission if
+                                                        <a href="http://www.store.shoestringastronomy.com/" target="_blank">ShoeStringAstronomy</a> that tells how to make the cable that goes from the GPUSB or GPUSB-AH into Gemini-2 or Gemini-1. Note that
+                                                        only the GPUSB is compatible with Gemini-2, or Gemini-1 with round motor cables. Here is the link to the
+                                                        <a href="downloads/GPUSB/guide_port_cables.pdf" target="_blank">
+														guide_port_cables.pdf.</a>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading15">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+														15.&nbsp;&nbsp;&nbsp;Does Modeling help to provide better tracking 
+				</button>
+                                                </h2>
+                                                <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15">
+                                                    <div class="accordion-body">
+                                                        <p>To cancel your account, please follow these steps:</p>
+                                                        Nope this is wrong.&nbsp; Modeling only helps provide for better GO-TO's.&nbsp; The only thing that really helps accurate tracking is an excellent Polar alignment.<br /> If your polar alignment is
+                                                        dead on, and your time, time zone offset, latitude and longitude are dead on, then the G2 should provide accurate tracking, but of course other factors such as gear slop, mount imperfections, balance
+                                                        imperfections, and atmospheric refraction can cause tracking errors, so you might not see perfect tracking, even if you have a perfect polar alignment.
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading16">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+														16.&nbsp;&nbsp;&nbsp;What setting are needed for the 
+														Southern Hemisphere
+				</button>
+                                                </h2>
+                                                <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16">
+                                                    <div class="accordion-body">
+                                                        <p>To cancel your account, please follow these steps:</p>
+                                                        The only setting for the Southern Hemisphere is to make sure your Latitude is negative.&nbsp; Gemini-2 will make all the correct setting for the Southern Hemisphere.&nbsp; There are no switches to find or to set.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading17">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+														17.&nbsp;&nbsp;&nbsp;Info from Craig Stark about PHD and Guiding with Gemini-2. This limitation has no effect on RA guiding
+				</button>
+                                                </h2>
+                                                <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="heading17">
+                                                    <div class="accordion-body">
+
+                                                        Here's what people can do:
+                                                        <ol>
+                                                            <li>
+                                                                Calibration: Set you calibration step size to be, say 100 ms or more. I doubt anyone is below this though as the default is 750 ms. If set to something far above 75 ms, you are not getting short pulses during calibration. Therefore, if you are having
+                                                                a problem during calibration, it is not because the pulses are too short and thus being ignored. ** If you want to play with things to see what gets ignored and what doesn't, set this to
+                                                                some value and use the Manual Guide tool. Each time you press a button, it will send out a single pulse of "Calibration Step size" in duration. Is it ignored or is it listened to?
+
+                                                            </li>
+                                                            <li>
+                                                                Dec guiding mode: Keep in mind that if a short command is ignored during normal guiding, the next one will be bigger as more error has built up. In Dec, if you're drifting at 30 msec worth of guiding per frame (i.e., it would take 30 ms to bring it back),
+                                                                the first time we send 30ms. If this is ignored, we've built up more error -- 60ms. If this is ignored (as it's too short), the next time, we send 90ms and so we bring it back. This exact
+                                                                scheme will take place if you use "Resist switch " or the N or S only guiding. The Lowpass mode will send shorter pulses, so you'll want to avoid that mode. In RA, there's nothing like the
+                                                                lowpass filter mode, so if error builds up, longer pulses will go out.
+
+                                                            </li>
+                                                            <li>
+                                                                Enforcing a min pulse duration: PHD lets you specify a max pulse duration but not a min one. It does let you specify a min motion parameter though. To turn this into a min duration, you need a number that's found in the log file. Right before the main
+                                                                log info you'll see a bit that lists the RA angle and rate and the Dec angle and rate. These rates are the number of pixels the image will move per msec of a guide pulse. So, it might be
+                                                                0.007. If so, we know that 100 msec of a pulse would lead to a 0.7 pixel motion. Thus, if we set the min-motion parameter to 0.7, we'll never send pulses less than 100 ms. Personally, though,
+                                                                I'd not do #3. I'd use "Resist-switch" as my algorithm, let it send short pulses that get ignored and let the error build up a bit. When they don't get ignored, the correction gets applied
+                                                                and we start all over again.
+
+
+
+
+                                                            </li>
+
+
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading18">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+														18.&nbsp;&nbsp;&nbsp;What is the CWD (Counterweight down position, and how do you determine it 
+				</button>
+                                                </h2>
+                                                <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="heading18">
+                                                    <div class="accordion-body">
+                                                        The CWD down position is when the counterweights are positioned down towards the ground, where the counterweight shaft is as vertical as possible. The Dec axis is also positioned pointing to either the North Pole in the Northern Hemisphere or the South
+                                                        pole in the southern Hemisphere. There is also a document put out by Mike Dodd that tells how to determine the
+                                                        <a href="downloads/magiccwdposition.pdf" target="_blank">"Magic CWD Position"</a> as he calls it.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading19">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+														19.&nbsp;&nbsp;&nbsp;What causes the hand controller to just change languages all of a sudden 
+				</button>
+                                                </h2>
+                                                <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="heading19">
+                                                    <div class="accordion-body">
+                                                        <p>To cancel your account, please follow these steps:</p>
+                                                        <ol class="auto-style6">
+                                                            <li>You need to do a calibration on the hand controller LCD alignment,<br /> See
+                                                                <a href="quickstart/index.html" target="_self">/quickstart/index.html</a> The reason for this is that there are hidden switches at the bottom of the screen, that are normally covered by the
+                                                                plastic case.&nbsp; But if the screen has not been calibrated, then the touch screen can be moved up electrically which effectively moves these hidden switches where a finger can hit them.&nbsp;
+                                                                Hitting these switches can change the language without having to go through the menus. This is so that pictures of each screen could be taken for tutorials with the cover removed. </li>
+                                                            <li>The other thing is that there is a gasket all the way around the LCD. If it gets too tight on the bottom, it could also be pressing on these switches. If aligning the screen does not fix it,
+                                                                you might want to back off the screws that holds the front cover on about a quarter of turn or so.</li>
+                                                            <li>Now once you have calibrated the switches, they should hold calibration, even through a power off and on.&nbsp; But if firmware is updated, then they would need to be recalibrated.&nbsp; Also
+                                                                extreme temperature changes might effect the calibration.</li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading20">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
+														20.&nbsp;&nbsp;&nbsp;What units of measurement are the Index Error, Polar Axis Misalignment, Orthogonally and Flexure measured in 
+				</button>
+                                                </h2>
+                                                <div id="collapse20" class="accordion-collapse collapse" aria-labelledby="heading20">
+                                                    <div class="accordion-body">
+                                                        Arc-Seconds for all of them. Notice the names are referenced to the Web interface Modeling Web page. &nbsp;
+                                                        <ul>
+                                                            <li>The hand controller Names are:
+                                                                <ul>
+                                                                    <li>Polar Axis Misalignment is called Polar Axis Azimuth or Polar Axis Elevation.
+                                                                    </li>
+                                                                    <li>&nbsp;Orthogonally Error is called Non-Perpendicularity.
+                                                                    </li>
+                                                                    <li>&nbsp;Flexure is called Counterweight Flexure.
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading21">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse21" aria-expanded="false" aria-controls="collapse21">
+														21.&nbsp;&nbsp;&nbsp;What type of Battery do the Gemini 1 and Gemini-2 units use 
+				</button>
+                                                </h2>
+                                                <div id="collapse21" class="accordion-collapse collapse" aria-labelledby="heading21">
+                                                    <div class="accordion-body">
+
+                                                        Gemini-1 used 2 different types of batteries. In units that have a slide switch for power, the battery is a CR-2032.&nbsp; It the newer Gemini-1 units that use a toggle switch for power, the battery is a CR-2354.&nbsp; <br
+                                                        />
+                                                        <br /> The battery in the original Gemini-2 (with two power ports) is a CR-2354.&nbsp; This battery powers the Real Time Clock and SRAM.&nbsp; After replacing this battery, you'll need to power up
+                                                        Gemini-2 and then set the time.&nbsp; When setting the time, remember to store setting, or it will not be saved.&nbsp; This is because the processor will drain the battery if this is not done.&nbsp;
+                                                        It is a known flaw that is documented in the data sheet for the processor that is being used in Gemini-2 units.<br />
+                                                        <br /> The newer Gemini-2 Mini uses a CR2450 and is easier to change.&nbsp; The above same warning about setting the time and date still holds true.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading22">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+														22.&nbsp;&nbsp;&nbsp;What catalogs are included into the hand controller by default? How are more catalogs added to the hand controller
+				</button>
+                                                </h2>
+                                                <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="heading22">
+                                                    <div class="accordion-body">
+                                                        The catalogs in the Hand controller by default are: BSL.guc, Combined_Constellation_Stars.guc, LBN.guc, LDN.guc, Messier.guc, PN.guc SAO.guc, Sh2.guc, Southern_constellation_Stars.guc, and WDS.guc.<br
+                                                        />
+                                                        <br /> If you would like other catalogs in the hand controller, all that is necessary, is to put them into the HCFirmware directory of the Main Gemini-2 units SDcard.&nbsp; They will be uploaded
+                                                        into the hand controller on the next power up.<br />
+                                                        <br />
+                                                        <a href="http://garriou.didier.free.fr/astro/gemini_anglais.html" target="_blank">Didier Garriou Gemini Catalogs building site</a> is a good place to start for instructions on building your own catalogs,
+                                                        and installing them into Gemini-2.&nbsp;&nbsp; He also has some very nice catalogs of his own that you can download.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading23">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
+														23.&nbsp;&nbsp;&nbsp;What does the message "Autoguider Error" mean
+				</button>
+                                                </h2>
+                                                <div id="collapse23" class="accordion-collapse collapse" aria-labelledby="heading23">
+                                                    <div class="accordion-body">
+                                                        This error message normally means that the Autoguider input is receiving invalid inputs. If the autoguider input receives both a RA+ and RA- input together, or a DEC+ and DEC- input together, these are invalid conditions, and Gemini-1 and Gemini-2 will
+                                                        give this error message. In the past this has mostly been caused by the SBIG brand of cameras when they were powered off and the Gemini is powered on. The most common solution to this is:
+                                                        <ol>
+                                                            <li>Turn on the camera before turning on the Gemini, and turn off the Gemini before turning off the Camera</li>
+                                                            <li>Get an SBIG relay box for the camera</li>
+                                                            <li>Purchase or build an opto-Isolator for the Gemini/camera.&nbsp;&nbsp; You cannot use the old Optocoupler that Losmandy sold, on Gemini-2. It's signal levels are not compatible. It only worked
+                                                                on Gemini-1 units that had telephone style motor cables. Here are links to plans for two of them.
+                                                                <ol>
+                                                                    <li>
+                                                                        <a href="gemini-images/faq/SBIG_opto_Autoguider_opto-isolator.jpg" target="_blank">SBIG Autoguider opto-isolator 
+					</a>by Mike Dodd. Mike has asked that no one contact him concerning this as he no longer uses the Losmandy mounts, and remembers very little, if any about the circuit.</li>
+                                                                    <li>
+                                                                        <a href="gemini-images/faq/SBIG_opto_isolator.jpg" target="_blank">
+					SBIG_opto_isolator.jpg&nbsp; design by John Moore</a></li>
+                                                                </ol>
+                                                            </li>
+                                                            <li>You can see the guider signal levels from the Web interface pages when Ethernet is connected.&nbsp; You must have the Gemini-2 either in the all-speed mode, or Photo mode. Here is a sample of
+                                                                that page.
+                                                                <ol>
+                                                                    <li>
+                                                                        <a href="web/web-battery-ports.html" target="_self">
+					http://gemini-2.com/web/web-battery-ports.html</a> or the actual link to take you to the Gemini page:</li>
+                                                                    <li>
+                                                                        <a href="http://gemini/ad.cgi" target="_blank">http://gemini/ad.cgi</a>&nbsp; This will prompt for a login if you have not logged into the Gemini-2.&nbsp; This is the Battery/Ports
+                                                                        page.
+                                                                    </li>
+                                                                </ol>
+                                                            </li>
+                                                            <li>Excessive Ground loop currents can also cause Auto-Guider problems.&nbsp; Routing Dew Heater cables close to auto-guider cables can trigger the Auto-guider signals.</li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading24">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+														24.&nbsp;&nbsp;&nbsp;How to use Windows Problem Steps Recorder 
+				</button>
+                                                </h2>
+                                                <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="heading24">
+                                                    <div class="accordion-body">
+                                                        You can use
+                                                        <a href="http://windows.microsoft.com/en-US/windows7/How-do-I-use-Problem-Steps-Recorder" target="_blank">Problem Steps Recorder</a> to automatically capture the steps you take on a computer, including
+                                                        a text description of where you clicked and a picture of the screen during each click (called a screen shot). Once you capture these steps, you can save them to a file that can be used by a support
+                                                        professional or someone else helping you with a computer problem. The link will take you to a web page that describes how to use it.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading25">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+														25.&nbsp;&nbsp;&nbsp;Long RJ12 6P6C cables for Gemini hand controller
+				</button>
+                                                </h2>
+                                                <div id="collapse25" class="accordion-collapse collapse" aria-labelledby="heading25">
+                                                    <div class="accordion-body">
+                                                        You can use
+                                                        <a href="http://www.digikey.com/product-search/en?keywords=AT-C-26-6%2F6%2FB-14%2FR" target="_blank">
+		http://www.digikey.com/product-search/en?keywords=AT-C-26-6%2F6%2FB-14%2FR</a>
+                                                        <br />Assmann AT-C-26-6/6/B-14-R&nbsp;
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading26">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+														26.&nbsp;&nbsp;&nbsp;Install Unsigned Drivers in Win 8
+				</button>
+                                                </h2>
+                                                <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="heading26">
+                                                    <div class="accordion-body">
+                                                        You can goto
+                                                        <a href="http://www.makeuseof.com/tag/how-can-i-install-hardware-with-unsigned-drivers-in-windows-8/" target="_blank">
+		install unsigned drivers in Win 8</a> for instructions on how to do this.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading27">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse27" aria-expanded="false" aria-controls="collapse27">
+														27.&nbsp;&nbsp;&nbsp;How to add a second Ethernet port to a Laptop 
+				</button>
+                                                </h2>
+                                                <div id="collapse27" class="accordion-collapse collapse" aria-labelledby="heading27">
+                                                    <div class="accordion-body">
+                                                        <a href="http://plugable.com/products/usb2-e1000" target="_blank">Pluggable Technologies</a> makes a USB to Gigabit Ethernet adapter. This adapter will add a 10/100/1000 Ethernet port your your laptop
+                                                        using a USB 2.0 port. There is also a USB 3.0 to Gigabit Ethernet Adapter available also. With either of these, going to Gemini-2, you can use a normal Ethernet Patch cable. The other port of the
+                                                        Laptop can then connect to your local network.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading28">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
+														28.&nbsp;&nbsp;&nbsp;Can a model be built using plate solving
+				</button>
+                                                </h2>
+                                                <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="heading28">
+                                                    <div class="accordion-body">
+                                                        Yes: You can easily use plate solves manually with your choice of plate solving software. To do this, the plate solving software must be able to issue a Sync command to Gemini.net ASCOM Driver.&nbsp; You'll need to set this setting in the Gemini.net ASCOM
+                                                        driver: &nbsp;"Sync performs additional align". Then, each Sync from the plate solve coordinates will add an additional data point to the Gemini model.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading29">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse29" aria-expanded="false" aria-controls="collapse29">
+														29.&nbsp;&nbsp;&nbsp;Can an Ethernet connection be used without the internet being  
+				</button>
+                                                </h2>
+                                                <div id="collapse29" class="accordion-collapse collapse" aria-labelledby="heading29">
+                                                    <div class="accordion-body">
+                                                        Yes. To use an Ethenet connection between Gemini-2 and a Laptop computer, they will more than likely have to use a static IP address, because a router is not present to provide a DHCP address. Use the
+                                                        <a href="crossovernetwork.html" target="_self">Configuring Win10, Win7 or XP instructions</a> to configure the computer for a static IP address.&nbsp; The on the Gemini-2's hand controller Network
+                                                        configuration page, uncheck the DHCP checkbox.&nbsp; Now make sure that you have used the same Gateway in both the computer and the hand controller.&nbsp; IE. 192.168.0.1 as an example.&nbsp; Now
+                                                        the IP address of the computer itself MUST BE DIFFERENT than the one selected for Gemini-2 hand controller.&nbsp; As an example use 192.168.0.100 in the computer and 192.168.0.111 in Gemini-2 hand
+                                                        controller. The netmask should be 255.255.255.0 for both.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="accordion-item shadow-sm">
+                                                <h2 class="accordion-header" id="heading30">
+                                                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse30" aria-expanded="false" aria-controls="collapse30">
+														30.&nbsp;&nbsp;&nbsp;Difference in Privilege Admin in Win 7 and Win 
+				</button>
+                                                </h2>
+                                                <div id="collapse30" class="accordion-collapse collapse" aria-labelledby="heading30">
+                                                    <div class="accordion-body">
+                                                        This problem rears it's ugly head when trying to use Windows File Explorer with Windows 8. Windows 8 and 8.1 will not let you turn off UAC.&nbsp; If UAC is turned off in Windows 7, then File Explorer will act as if it had been started in admin mode, and
+                                                        should have full file privileges.&nbsp; Because you cannot use Windows file explorer in full admin mode with Windows 8 or 8.1, you will probably have to use an external FTP program such as FileZilla
+                                                        to access the micro SDcard contents instead of Windows File Explorer.&nbsp; Now if you are using Windows 7 File Explorer and you try to delete a file on the micro SDcard, and get a permissions error,
+                                                        go into the Windows Control Panel\User Accounts and change the UAC to off (lowest setting.)&nbsp; When you finish, please make sure you restore the setting back.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </section>
+            </td>
+        </tr>
+
+
+
+        <link rel="stylesheet " href="ajxmenu_bottom.css " type="text/css ">
+
+
+
+        <div w3-include-html="footer.html "></div>
+        <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js "></script>
+</body>
