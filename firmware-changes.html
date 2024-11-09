@@ -46,11 +46,13 @@
     <!-- <hr class="style2" style="width: 900px" /> -->
 
     <div id="versions" hidden>
-        { "versions" : [{"Level 6.02" : "https://gemini-2.com/firmware1/combined602.zip"}, {"Level 6.00" : "https://gemini-2.com/firmware1/combined600.zip"}, {"Level 5.21" : "https://gemini-2.com/firmware1/combined521.zip"} ] }
+        { "versions" : [{"Level 6.03" : "https://gemini-2.com/firmware1/combined603.zip"},{"Level 6.02" : "https://gemini-2.com/firmware1/combined602.zip"}, {"Level 6.00" : "https://gemini-2.com/firmware1/combined600.zip"}, {"Level 5.21" : "https://gemini-2.com/firmware1/combined521.zip"}
+        ] }
     </div>
 
     <div id="versions-beta" hidden>
-        { "versions" : [ {"Level 6.02" : "https://gemini-2.com/firmware1/combined602.zip"}, {"Level 6.00" : "https://gemini-2.com/firmware1/combined600.zip"}, {"Level 5.21" : "https://gemini-2.com/firmware1/combined521.zip"} ] }
+        { "versions" : [ {"Level 6.03" : "https://gemini-2.com/firmware1/combined603.zip"},{"Level 6.02" : "https://gemini-2.com/firmware1/combined602.zip"}, {"Level 6.00" : "https://gemini-2.com/firmware1/combined600.zip"}, {"Level 5.21" : "https://gemini-2.com/firmware1/combined521.zip"}
+        ] }
     </div>
 
 
@@ -71,6 +73,41 @@
 	</tr>
 	<tr><td><hr/></td><td><hr/></td><td><hr/></td><td><hr/></td></tr>  -->
 
+        <tr>
+            <td>2024-11-05</td>
+            <td>MU</td>
+            <td>HC</td>
+            <td>Main Unit Firmware Level 6.03, HC Firmware Version 1.63<br/>
+                <ul>
+                    <li>HC: Show time to limit on the main screen, when time remaining is less than 1 hour</li>
+                    <li>HC: Checkbox to invert the direction of gearboxes in Mount->Gearing (for McLennan gearboxes, for example)</li>
+                    <li>HC: New page added under Mount->Flip to enable/disable and to configure meridian flip points</li>
+                    <li>HC: Fixes screen brightness reset to 100% after restart on home page</li>
+                    <li>HC: Fixes the Allow Speeding Up option not selectable</li>
+                    <br>
+                    <li>Main: Provides for better brightness synchronization with the HC</li>
+                    <li>Main: Adds flip point configuration to Gemini web pages</li>
+                    <li>Main: Adds serial commands :HCx to change HC settings</li>
+                    <li>Main: Enhancements for PEC precision, drift removal</li>
+                </ul>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <hr/>
+            </td>
+            <td>
+                <hr/>
+            </td>
+            <td>
+                <hr/>
+            </td>
+            <td>
+                <hr/>
+            </td>
+        </tr>
 
         <tr>
             <td>2024-04-09</td>
