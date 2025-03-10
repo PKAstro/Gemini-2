@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US">
+
+<head profile="http://www.w3.org/2005/10/profile">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta content="en-us" http-equiv="Content-Language">
+    <title>Gemini 2 Mount Controller</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="ajxmenu.css" type="text/css">
+    <link href="gemini-2.css" rel="stylesheet" title="light" type="text/css">
+    <link href="gemini-2-dark.css" rel="stylesheet" title="dark" type="text/css">
+    <link href="theme-selector.css" rel="stylesheet" type="text/css">
+    <script src="w3data.js"></script>
+    <script src="style_switcher.js"></script>
+</head>
+
+<body onload="set_style_from_cookie()">
+
+    <div w3-include-html="header.html"></div>
+    <div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div>
+    <script>
+        w3IncludeHTML();
+    </script>
+    <script type="text/javascript" src="other-files/xweb-popup.js">
+    </script>
+    <base target="_self">
+    <br>
+
+    <div>
+        <table style="min-width:500px; max-width:900px" align="center">
+            <tbody>
+                <tr>
+                    <td>
+                        <h1 style="padding-top: 3pt;text-indent: 9pt;line-height: 150%;text-align: left;">25 Years and Six Levels of the Gemini Telescope Control System</h1>
+                        <p style="padding-top: 3pt;text-indent: 9pt;" ">by René Görlich, Jan 2025</p>
+                        <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                    
+                        <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">The world of astronomers is changing, and it is changing rapidly. The oldest science on earth has always been linked to curiosity and longing, the desire for ever more precise and deeper knowledge. The wonders of the heavens before our eyes... who
+                            doesn&#39;t know the desire to see them more precisely, brighter, with more detail and in color? Observation spots under dark skies have become rare, but people are inventive. From visual observation to film-based photography to CCD and videos
+                            - on the basis of a stable mount. The sky is full of admirable objects, observation time is short... Couldn&#39;t the mount do a lot on its own, relieve the user? Automated, even faster, even more accurate?</p>
+                        <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                        <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">The desire is all too understandable. For Gemini, the answer is: Yes! For 25 years now, the software has been expanded, new functions have been added, the interfaces have been extended, new hardware and new forms of use have been supported. Since
+                            the introduction of Gemini in 2000 with software level 1.0 as an affordable GoTo controller with servo motors, through the redesign of the hardware from the no longer available 8-bit architecture to Gemini 2 with ARM processor with level 5 software
+                            to the current version, level 6.</p>
+                        <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                        <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">What is the basis for such a long-lasting development? The first pillar is a concept that fully exploits the potential of the technology. Modern microcontrollers offer many internal function blocks such as timers, counters, PWM and communication technologies.
+                            Used correctly, these function blocks replace external hardware, and they function largely independently, precisely and without burdening the processor. Gemini was developed to make optimum use of all these function blocks and thus to provide
+                            potential for further development. Even 25 years later, there is still potential and development continues, with no end in sight!</p>
+                        <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                        <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">The second pillar is... sufficient imagination. Every developer and every user has their own ideas. At the beginning of Gemini development, the wishes were straightforward... Fast positioning of the axes, tracking, guiding for photography, object
+                            catalogs and coordinate display. In November 2000, “Initial Level 1” version 1.0 was launched on the market and quickly found its first users. Version</p>
+                        <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">1.0 also revealed the first problems - the positioning was incorrect and there were deviations. A small group of enthusiasts got together in a user group (Yahoo at the time) and we found the solution - the motor cables used were twisted incorrectly.
+                            With the correct cables, the positioning was correct. Gemini worked and the (great!) Gemini community was born!</p>
+                        <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                        <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">The positioning was correct, but not yet perfect ... Why? Because a telescope magnifies, the requirements also magnify on the same scale. If the polar axis does not point exactly to the pole, the object is not in the eyepiece or on the CCD chip after
+                            the GoTo... A search mode helps, but “learning” control is better. The user could use an align function to tell Gemini where the object really is. From the difference between the telescopic position and the real, “apparent” position of the object,
+                            Gemini was able to form a model in order to offset subsequent positionings accordingly. After a few alignments, each object could be centered with sufficient accuracy to make the best use of the night under the dark sky of the observation site,
+                            for photography, a Messier marathon or simply to work through the observation list. The modeling required a lot of math with few resources, but it was as easy as possible for the user to use. The software was still at level 1, but already allowed
+                            precise GoTo operations even with mounts that were not correctly aligned.</p>
+                        <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                        <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">Right from the start, there were many forms of use and they all had their own special requirements. “Remote Control Level 2” focused on the wishes of users who control their telescope from home,</p>
+                        <p style="padding-top: 3pt;padding-left: 5pt;text-indent: 0pt;text-align: left; ">whether remotely, in the garden or on the driveway. The command interface was expanded, a user catalog was introduced as an extension of the internal catalogs and external software such as GCC or ASCOM made access easier. “Professional Level 3” extended
+                            the use to the newly introduced Losmandy Titan mount and was extensively tested in the southern hemisphere. “Universal Level 4” allowed the adaptation to other mounts, the use of the horizontal coordinate system and rounded off the Gemini 1 system
+                            in 2007. Even today, Gemini 1 is still in use in many places, as a “workhorse” on many mounts.</p>
+                        <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                        <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">Gemini 1 made maximum use of the tried and tested 8-bit technology. The processor used (Siemens/Infineon C517A) already had many extensions, such as additional 16bit pointers and an arithmetic unit, which made faster calculations possible. The available
+                            program memory of 512kByte (16 banks of 32k bytes each) and the available RAM were largely utilized and even minor changes required major optimizations. However, the problem came from a different direction: due to new environmental regulations
+                            (RoHS), chip manufacturers reduced their range and production of the C517A was also discontinued. The alternatives were either porting to a similar 8bit processor or a complete redesign. Since Gemini 1 had to be programmed in 8051 assembly language
+                            (otherwise the resources would have been exhausted much sooner), the effort was comparable and the decision was made in 2008 in favor of the modern 32-bit ARM architecture.</p>
+                        <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                        <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">At that time, Gemini 1 systems were already in use on many mounts, so compatibility and investment protection were the most important tasks. External dimensions, the interfaces to the motors and serial communication, especially to ASCOM, which had
+                            become established in the Windows PC world, and the numerous planetarium programs had to continue to function. The problems that occurred with Gemini 1 had to be avoided. Important functional units had to be available. Other features, such as
+                            a simple update without EPROM replacement, were desirable, as was more memory capacity and, above all, a higher processing speed. A detailed search began and the perfect successor was found - the NXP LPC2388, which was launched in 2008. It not
+                            only offers the necessary function blocks and sufficient connections, but also an internal RTC and modern connectivity via Internet technologies and USB. The trick now was to assign the pins (each with four selectable functionalities) to the internal
+                            and external connections in order to preserve the available potential. More on this later.</p>
+                        <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                        <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">In 2010, Gemini 2 was ready for beta testing with completely reprogrammed firmware. Right from the start, G2 was designed for updates and the firmware was divided into two parts for this purpose: The bootloader starts after switching on and checks
+                            whether there is new firmware on the internal SD card. If so, the upper part of the flash memory is programmed with the new software and the original file is then renamed to prevent repeated flashing.</p>
+                        <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                        <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">Gemini 2 “tall boy” and Level 5 firmware were born. The astronomical functions were ported from Gemini 1, but its user interface with the 16-character display was no longer up to date. Based on the LPC23xx processor family, a completely new graphical
+                            hand controller was developed as an independent client. A virtual hand controller was already available in Gemini 1 via a serial interface, and now in Gemini 2 in different, independent variants: As a web HC via the Internet, in ASCOM directly,
+                            as a virtual HC via the internal web server, ... All interfaces are open and documented and each user could compile their own functionalities. The graphical HC is only one of the possible interfaces, but with over 50 lovingly designed pixel-by-pixel
+                            pages, it is a good standard for the use and documentation of Gemini&#39;s functionalities.</p>
+                        <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                        <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">The access options are very important for a controller, but the decisive factor is the control of the actuators, in this case the motors. The motor-encoder combination supported by Gemini is operated by dedicated PIC processors. The firmware for these
+                            servo processors used to come from a third party. For Level 6, it was redesigned from scratch. The question of the accuracy of the motor</p>
+                        <p style="padding-top: 3pt;padding-left: 5pt;text-indent: 0pt;text-align: left; ">control was often raised. Encoders with a nominal 256 ticks/rev are attached to the motors, which provide four times the accuracy in quadrature, 1024 ticks/rev. However, this accuracy was only used internally in the servo processors; four steps were
+                            taken for each pulse of the main processor. Level 6 uses a new PIC firmware developed by David Partridge that supports full encoder resolution. Now the ARM processor can also use the full precision for positioning and tracking: With the 4x mode.</p>
+                        <p
+                            style="text-indent: 0pt;text-align: left; "><br/></p>
+                            <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">For programmers of external software, the changeover from 1x stepping to 4x stepping mode is very simple, as it hardly needs to be taken into account: The divisors that determine the stepping speed do not need to be changed. To make this possible,
+                                the internal clocking of the axes is switched between 12MHz and 48MHz.</p>
+                            <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                            <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">The cooperation between the main processor and the servo processors has been put on a completely new footing. The servo processors have their own intelligence, manage the motor position independently of the main processor, monitor limits and can
+                                also position independently. A comprehensive communication protocol provides the basis for cooperative collaboration. Stall monitoring has been put on a new footing. Instead of setting a static limit for the positioning deviation, monitoring
+                                is situation-based, so that increased deviations in slow movements such as guiding and tracking are also detected. Various control curves are also used. The control parameters can be defined by the user and are transmitted from the main processor
+                                to the servo processors. The parameters have been carefully selected for the motors manufactured by HGM. Level 6 has extensive logging options for the motor movement, allowing the motor curves to be measured and simulated and optimized with
+                                this data.</p>
+                            <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                            <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">A special feature supports guiding in DEC. An equatorial mount rarely requires correction in DEC. If it is determined that this has not been carried out as desired due to imbalance or friction and an offset remains, the torque is briefly increased
+                                to eliminate the deviation.</p>
+                            <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                            <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">With the described capabilities, satellite tracking has also been put on a new footing. The axes can now be moved very quickly at varying speeds, making tracking much more consistent. The user can very easily search for satellites using the ASCOM
+                                Gemini.net driver from Paul Kanevsky, download the orbital elements (TLEs) and use them to control the L6 firmware.</p>
+                            <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                            <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">PEC has also been redesigned. Whereas in the L5 version guiding movements were still recorded in the classic way with the preset guiding speed, in L6 any speed can be specified for a single step or any number of consecutive steps. The classic
+                                step pattern can thus be replaced by precise compensation of the screw error. Any drift can be compensated for.</p>
+                            <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                            <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">Due to the leap in the precision of the drives, the accuracy of the operating frequency of the ARM processor became the determining factor. Although in Level 5 and even in Gemini 1 the divisors that determine the walking speed could be adjusted
+                                by the user, this was relatively cumbersome. In Level 6, it is now possible to connect a GPS receiver with a so-called 1PPS pin (1 pulse per second) to feature port F. The Level 6 firmware can measure the number of clock pulses in the ARM
+                                processor during this one second with high precision. Up to 40 measurements can be averaged. The result is used to calculate a correction value for the 12MHz (in 1x mode) or 48MHz (in 4x mode) time base, which can be used to adjust the step
+                                speed.</p>
+                            <p style="text-indent: 0pt;text-align: left; "><br/></p>
+                            <p style="padding-left: 5pt;text-indent: 0pt;text-align: left; ">If all this precision is not enough for you: Even the temperature drift of the CPU clocking can be compensated. Under the working title “Absurdly High Precision Tracking”, an automatic cyclical adjustment of the divisors is possible, i.e. hours
+                                of high-precision tracking at all temperatures ;)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <table style="width:900px " align="center ">
+        <tr>
+            <td style="font-size:small ">site last updated on <span id="lastUpdate "></span>
+                <script>
+                    var d = new Date(Date.parse(document.lastModified));
+                    document.getElementById("lastUpdate ").innerText = d.toDateString();
+                </script>
+            </td>
+        </tr>
+    </table>
+
+    <div w3-include-html="themeSelector.html "></div>
+</body>
+
+</html>
