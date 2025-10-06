@@ -47,7 +47,8 @@ const formatSigned = new Intl.NumberFormat('en-US', {
 });
 	
 async function getTimeZone(lat, lon) {
-  const url = `https://atlas.microsoft.com/timezone/byCoordinates/json?api-version=1.0&subscription-key=${atob(k)}&query=${lat},${lon}`;
+  const utc  = new Date();
+  const url = `https://atlas.microsoft.com/timezone/byCoordinates/json?api-version=1.0&subscription-key=${atob(k)}&query=${lat},${lon}&ReferenceUtcTimestamp=${utc.toISOString()}`;
 
   const response = await fetch(url);
   const r = await response.json();
@@ -63,7 +64,7 @@ async function getTimeZone(lat, lon) {
 
 
 	const tzOffset = -(new Date(tz.ReferenceTime.WallTime).getTimezoneOffset()/60);
-	document.getElementById('utcOffset').innerHTML =  formatSigned.format(hours2) + "\r\n";
+	document.getElementById('utcOffset').innerHTML =  formatSigned.format(hours + hours2) + "\r\n";
     console.log(`Time zone ID: ${tz.Id}`);
     console.log(`Name: ${tz.Name}`);
     console.log(`Utc offset: ${tz.UtcOffset}`);
