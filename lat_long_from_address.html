@@ -40,51 +40,58 @@
 <base target="_self" />
 
 <script>
-	var k = "QXJxRTZHUG1pZW1DMzhkMktLQUl1UVdGWmt1NFl5MVZac1daU2l2R2pGZWNVWmY3a21yWExjSWkwUk9CRWphYQ==";
+	var k = "QXd4OTNTY09qcVhiTUdPcms4Y2RtYW5ZeTh4aDNRU21VT1RWZ24zWnRpMklubzJLeW1FNUpRUUo5OUJKQUNZZUJqRkdxSHhDQUFBZ0FaTVAyYVpM";
 
-	function CallRestService(request) {
-		var script = document.createElement("script");
-		script.setAttribute("type", "text/javascript");
-		script.setAttribute("src", request);
-		document.body.appendChild(script);
-	}
+const formatSigned = new Intl.NumberFormat('en-US', {
+  signDisplay: 'always'
+});
 	
-	
-	function getLatLng(address)
-	{
-		var geocodeRequest = "https://dev.virtualearth.net/REST/v1/Locations?query=" + encodeURIComponent(address) + "&jsonp=GeocodeCallback&key="+atob(k);
-		CallRestService(geocodeRequest);
-	}
+async function getTimeZone(lat, lon) {
+  const url = `https://atlas.microsoft.com/timezone/byCoordinates/json?api-version=1.0&subscription-key=${atob(k)}&query=${lat},${lon}`;
 
-	function getTimeZone(point)
-	{
-		var geocodeRequest = "https://dev.virtualearth.net/REST/v1/TimeZone/" + point + "?jsonp=GeocodeCallback&key="+atob(k);
-		CallRestService(geocodeRequest);
-	}
+  const response = await fetch(url);
+  const r = await response.json();
 
-	function GeocodeCallback(result) 
-	{   
-		if (result.statusCode==200)
-		{
-			var r = result.resourceSets[0].resources[0];
-			if (r!=null) {
+  if (r.TimeZones && r.TimeZones.length > 0) {
+    const tz = r.TimeZones[0];
 
-				if (r.timeZone)
-				{
-					document.getElementById('utcOffset').innerHTML =r.timeZone.convertedTime.utcOffsetWithDst; 
-				}
-				else // address/location 
-				{
-					document.getElementById('addr').innerHTML = r.name;
-					document.getElementById('latlng').innerHTML = convertDMS(r.point.coordinates[0],r.point.coordinates[1]);
-					getTimeZone(r.point.coordinates[0]+","+r.point.coordinates[1]);
-				}
-				return;
-			}
-		}
-		document.getElementById('addr').innerHTML = "not found!";
-		document.getElementById('latlng').innerHTML = "not found!";
-	}
+	const dst = tz.ReferenceTime.DaylightSavings;
+	const offset = tz.ReferenceTime.StandardOffset;
+
+	const [hours, minutes, seconds] = dst.split(":").map(Number);
+	const [hours2, minutes2, seconds2] = offset.split(":").map(Number);
+
+
+	const tzOffset = -(new Date(tz.ReferenceTime.WallTime).getTimezoneOffset()/60);
+	document.getElementById('utcOffset').innerHTML =  formatSigned.format(hours2) + "\r\n";
+    console.log(`Time zone ID: ${tz.Id}`);
+    console.log(`Name: ${tz.Name}`);
+    console.log(`Utc offset: ${tz.UtcOffset}`);
+    return tz;
+  } else {
+    document.getElementById('utcOffset').innerHTML = "not found!";
+  }
+}
+
+
+async function getLatLng(address) {
+  const encodedAddress = encodeURIComponent(address);
+  const url = `https://atlas.microsoft.com/search/address/json?api-version=1.0&subscription-key=${atob(k)}&query=${encodedAddress}`;
+
+  const response = await fetch(url);
+  const data = await response.json();
+
+  if (data.results && data.results.length > 0) {
+    const r = data.results[0]; // { lat, lon }
+	document.getElementById('addr').innerText =  r.address.freeformAddress + "\r\n";
+    document.getElementById('latlng').innerHTML  = convertDMS(r.position.lat, r.position.lon) + "\r\n";
+    getTimeZone(r.position.lat, r.position.lon);
+  } else {
+   document.getElementById('addr').innerText = "not found!";
+   document.getElementById('latlng').innerHTML = "not found!";
+  }
+}
+
 
 	Number.prototype.pad = function(size) {
 		var s = String(this);
