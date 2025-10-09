@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head profile="http://www.w3.org/2005/10/profile">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Gemini-2</title>
+
+
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+<link rel="stylesheet" href="ajxmenu.css" type="text/css">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="en-us" http-equiv="Content-Language" />
+
+
+<link href="gemini-2.css" rel="stylesheet" title = "light" type="text/css">
+<link href="gemini-2-dark.css" rel="stylesheet" title = "dark" type="text/css">
+<script src="style_switcher.js"></script>
+<link href="theme-selector.css" rel="stylesheet" type="text/css">
+
+<script src="w3data.js"></script> 
+ <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.6; margin: 2rem; }
+    h1, h2, h3 { line-height: 1.25; }
+    .warning { background: #fff3cd; border: 1px solid #ffeeba; padding: 1rem; border-radius: 8px; }
+    code, kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background: #f6f8fa; padding: 0.1rem 0.35rem; border-radius: 4px; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #ddd; padding: 0.6rem; text-align: left; }
+    th { background: #f2f2f2; }
+    .small { color: #555; }
+    ul { margin-top: 0; }
+    .section { margin-top: 2rem; }
+  </style>
+</head>
+
+<body onload="set_style_from_cookie()">
+<div w3-include-html="header.html" ></div>
+<div class="AJXMenueDFaTFD" w3-include-html="navigation.html"></div><script>w3IncludeHTML();</script>
+
+<table style="width: 900px" align="center">
+	<tr>
+		<td class="h2"><br />
+		Connecting to Web interface of Gemini 2
+		</td>
+	</tr>
+	<tr>
+		<td class="style6"><br />
+		 <div class="warning">
+    <h2>Important Port Warning</h2>
+    <ul>
+      <li><strong>Do not</strong> plug the Ethernet cable into <strong>Port E</strong> (top) — it’s not an Ethernet port.</li>
+      <li><strong>Do not</strong> use <strong>Port F</strong> for Ethernet.</li>
+      <li>Use the <strong>dedicated Ethernet port</strong> on the Gemini‑2 unit.</li>
+    </ul>
+  </div>
+ <div class="section">
+    <h2>Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Pros</th>
+          <th>Requirements</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Router (DHCP)</strong></td>
+          <td>Easiest, automatic IP, can be wireless</td>
+          <td>DHCP router, correct IP subnet</td>
+        </tr>
+        <tr>
+          <td><strong>Direct (Static IP)</strong></td>
+          <td>Independent from home network</td>
+          <td>Manual IP setup, proper cable, matching subnets</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="section">
+    <h2>Why Use Ethernet</h2>
+    <p>Using Ethernet gives you full access to Gemini‑2’s built‑in web interface and offers several advantages over USB or serial:</p>
+    <ul>
+      <li><strong>Full Web Control:</strong> Access through any web browser (desktop, tablet, or phone) to:
+        <ul>
+          <li>Slew to targets and build models</li>
+          <li>Move the telescope and adjust settings</li>
+          <li>Monitor port status, power, battery, and servo performance</li>
+        </ul>
+      </li>
+      <li><strong>File Management:</strong> Upload firmware, catalogs, and hand controller updates to the microSD card. Use FTP to back up or restore models, PEC data, and settings.</li>
+      <li><strong>Networking Benefits:</strong>
+        <ul>
+          <li>Longer cable lengths and higher speeds (10/100&nbsp;Mbps) than USB/serial</li>
+          <li>Easily made wireless via a Wi‑Fi bridge (e.g., Netgear WNCE2001, D‑Link DAP‑1350)</li>
+          <li>More reliable and cost‑effective cabling; fewer cables to Gemini‑2</li>
+          <li>Control from any computer on your LAN</li>
+          <li>Compatible with Gemini.NET ASCOM driver for mount control and pulse guiding</li>
+          <li>Some ground loop isolation, unlike USB</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Network Compatibility</h2>
+    <p>The Gemini‑2 Ethernet port supports <strong>10/100 Mbps</strong> and does <strong>not</strong> auto‑detect cable type. One end of the connection (computer, router, or switch) must be <strong>auto‑detecting</strong> or support <strong>Gigabit (10/100/1000 Mbps)</strong> to handle standard patch cables.</p>
+    <ul>
+      <li>If <em>both</em> devices are only 10/100 Mbps and lack auto‑MDI/MDIX, use a <strong>crossover cable</strong>.</li>
+      <li>Most modern laptops, routers, and switches support auto‑detection (Gigabit), so standard patch cables work.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Connection Methods</h2>
+
+    <h3>1. Using a Router (DHCP) — <em>Recommended</em></h3>
+    <ol>
+      <li>Connect Gemini‑2 to a router, switch, or wireless adapter.</li>
+      <li>Power on Gemini <strong>after</strong> connecting the cable so it can obtain an IP from the DHCP server.</li>
+      <li>Ensure your computer also uses DHCP or has a static IP on the same subnet.</li>
+      <li>Access the interface using a browser:
+        <ul>
+          <li><code>http://gemini</code> (via NetBIOS), or</li>
+          <li>Gemini’s assigned IP, e.g., <code>http://192.168.0.111</code></li>
+        </ul>
+      </li>
+      <li>Login credentials:
+        <ul>
+          <li>Username: <code>admin</code></li>
+          <li>Password: <em>(blank)</em></li>
+        </ul>
+      </li>
+      <li>If <code>http://gemini</code> doesn’t work but the IP does, enable <strong>NetBIOS over TCP/IP</strong> on your computer.</li>
+      <li>Optionally, reserve a fixed DHCP lease for Gemini in your router so the IP stays the same.</li>
+    </ol>
+    <p class="small"><strong>Note:</strong> Gemini does <strong>not</strong> support HTTPS. Always use <code>http://</code> (not <code>https://</code>) in the browser.</p>
+    <p><strong>Router IP Alignment:</strong></p>
+    <ul>
+      <li>Gemini defaults to 192.168.0.111 (Gateway 192.168.0.1).</li>
+      <li>If your router uses 192.168.1.x (common for Netgear), update Gemini’s gateway to 192.168.1.1 via the hand controller.</li>
+    </ul>
+
+    <h3>2. Direct Connection (No Router)</h3>
+    <ol>
+      <li>Use a <strong>crossover cable</strong> if your NIC is 10/100 Mbps only. If your NIC is Gigabit (10/100/1000), either crossover or standard cable works. A Gigabit switch can also be inserted so standard cables may be used.</li>
+      <li>Assign <strong>static IP addresses</strong> on both ends:
+        <ul>
+          <li><strong>Computer:</strong> e.g., <code>192.168.0.2</code>, subnet mask <code>255.255.255.0</code>, gateway <code>192.168.0.1</code></li>
+          <li><strong>Gemini:</strong> <code>192.168.0.111</code> (default)</li>
+          <li>Ensure no other device uses the same IP.</li>
+        </ul>
+      </li>
+      <li>If your network base is different (e.g., 192.168.1.x), adjust both sides to that scheme.
+      </li>
+      <li>Verify gateway and interface details with <kbd>ipconfig /all</kbd> in a Windows Command Prompt.</li>
+      <li>Power on Gemini and browse to <code>http://gemini</code> or its IP address.</li>
+    </ol>
+    <p>If IPs don’t match, either change the computer’s IP to match Gemini, or change Gemini’s IP with the hand controller (<em>Menu → Mount → Network Options</em>).</p>
+  </div>
+
+  <div class="section">
+    <h2>Testing the Connection</h2>
+    <ul>
+      <li>Open a browser and go to <code>http://gemini</code> or <code>http://192.168.0.111</code> (or whatever IP you assigned).</li>
+      <li>If the login prompt doesn’t appear, check:
+        <ul>
+          <li>Cable type (standard vs crossover)</li>
+          <li>NIC speed and auto‑detect capabilities</li>
+          <li>IP addressing (same subnet, unique addresses)</li>
+          <li>NetBIOS settings if using the hostname</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+ 
+
+		</td>
+	</tr>
+</table>
+
+<link rel="stylesheet" href="ajxmenu_bottom.css" type="text/css">
+
+<div w3-include-html="footer.html" ></div>
+</body>
+
+
+</html>
