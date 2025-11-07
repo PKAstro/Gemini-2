@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Troubleshooting Tree</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #101732;
+      --panel-2: #0e1430;
+      --text: #e7ecff;
+      --muted: #9fb0ff;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --border: #223064;
+      --input: #0c1330;
+      --btn: #16214a;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; background: linear-gradient(180deg, #0b1020, #0a0f25 40%, #0a0e22);
+      color: var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+    .app { display: grid; grid-template-columns: 380px 1fr; gap: 18px; height: 100%; padding: 18px; max-width: 1400px; margin: 0 auto; }
+    @media (max-width: 1000px) { .app { grid-template-columns: 1fr; } }
+    .panel { background: linear-gradient(180deg, var(--panel), var(--panel-2)); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .left { padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+    .right { padding: 16px; display: flex; flex-direction: column; overflow: hidden; }
+
+    h2 { margin: 0; font-size: 18px; letter-spacing: .2px; }
+    textarea { width: 100%; min-height: 280px; resize: vertical; background: var(--input); color: var(--text); border: 1px solid #2a3c78; border-radius: 12px; padding: 12px 14px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace; }
+    button { appearance: none; border: 1px solid #2a3c78; background: var(--btn); color: var(--text); padding: 10px 14px; border-radius: 12px; cursor: pointer; font-weight: 600; }
+    button:disabled { opacity: .6; cursor: not-allowed; }
+
+    .controls { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 4px 0 16px; }
+    .controls .spacer { flex:1; }
+    .hint { font-size:12px; color: var(--muted); }
+
+    .field { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom: 12px; }
+    .field input, .field select { background: var(--input); color: var(--text); border: 1px solid #2a3c78; border-radius: 10px; padding: 8px 10px; }
+    .field select { min-width: 320px; max-width: 100%; }
+
+    .card { background: rgba(255,255,255,0.03); border: 1px solid #2a3c78; border-radius: 14px; padding: 16px; box-shadow: var(--shadow); }
+    .prompt { font-size: 20px; margin: 0 0 12px; }
+    .options { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .solution { margin-top: 12px; padding: 12px; border-radius: 10px; background: #0d2d1e; border: 1px solid #2a5a44; }
+    .unknown { background: #2a0f1b; border-color: #70304a; }
+
+    .error { color: #ffd3d3; background: #3a1320; border: 1px solid #7a2b3c; padding: 10px; border-radius: 10px; white-space: pre-wrap; display:none; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <section class="panel left" style="visibility: hidden;">
+      <h2>JSON Troubleshooting Tree</h2>
+      <textarea id="jsonInput" aria-label="JSON input" spellcheck="false"></textarea>
+      <div class="controls">
+        <button id="applyBtn">Start / Restart</button>
+        <span class="spacer"></span>
+        <span class="hint" id="leftStatus">Loaded example</span>
+      </div>
+      <div class="error" id="errorBox"></div>
+      <p class="hint">Schema: object of nodes keyed by ID. Nodes may have <code>prompt</code>, <code>options</code> (array of {<code>label</code>, <code>next</code>}), <code>solution</code>. Starting entries can be defined via <code>meta.starts</code> (array of IDs) or <code>start: true</code>. Optional <code>keywords</code> improves search.</p>
+    </section>
+
+    <section class="panel right">
+      <div class="controls">
+        <button id="backBtn" disabled>← Back</button>
+        <button id="restartBtn">⟲ Restart</button>
+        <span class="spacer"></span>
+        <span class="hint" id="statusHint">Ready</span>
+      </div>
+
+      <div id="starter" class="card" style="display:none;">
+        <h3 style="margin:0 0 10px;">Choose a starting question</h3>
+        <div class="field">
+          <input id="startSearch" type="text" placeholder="Search keywords… e.g., printer, wifi, power" aria-label="Search starting questions" />
+          <select id="startSelect" aria-label="Starting questions"></select>
+          <button id="startGoBtn">Begin</button>
+        </div>
+        <div class="hint">Filtering matches on the question text and optional per-node <code>keywords</code>.</div>
+      </div>
+
+      <div class="card">
+        <p class="prompt" id="prompt">Load or edit the JSON on the left, then press <em>Start / Restart</em>.</p>
+        <div class="options" id="options"></div>
+        <div id="solutionBox"></div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // ----------  JSON with multiple starts + keywords ----------
+    const Gemini2 = {
+      meta: {
+        name: "Gemini2 Troubleshooter",
+        version: 1,
+       
+      },
+      motor_stall_root: {
+        start: true,
+        prompt: "Does one motor stall?",
+        keywords: ["stall", "stop", "motors","slew","goto"],
+        options: [
+          { label: "Yes", next: "motor_stall_1" },
+          { label: "No", next: "done_no_issue" }
+        ]
+      },
+      motor_stall_1: {   
+        prompt: "Is the mount balanced well?",
+        options: [
+          { label: "Yes", next: "motor_stall_2" },
+          { label: "No", next: "done_balance" }
+        ] },
+      done_no_issue: { solution: "There is no issue!" },
+      done_balance: { solution: "Try to balance better and see if the stall still occurs" },
+
+      motor_stall_2: {
+        prompt: "Are any of the wires dragging or caught on something?",
+    
+        options: [
+          { label: "Yes", next: "done_wire_caught" },
+          { label: "No", next: "motor_stall_3" }
+        ]
+      },
+      done_wire_caught: { solution: "Make sure no wires are caught or dragging." },
+     
+
+      motor_stall_3: {
+     
+        prompt: "Is your power supply working, and providing more than 12v during slew?",
+        options: [
+          { label: "Yes", next: "motor_stall_4" },
+          { label: "No", next: "done_power" }
+        ]   
+      },
+
+      done_power: { solution: "Try it with a power supply that provides at least 15v/4A." },
+
+    motor_stall_4: {
+     
+        prompt: "Have you tried lowering the goto/slew speeds to 400x or less? Does that help?",
+        options: [
+          { label: "Yes", next: "done_motor_speed" },
+          { label: "No", next: "motor_stall_5" }
+        ]   
+      },
+
+      done_motor_speed: { solution: "Keep your speed set to lower, as that requires less power and is easier on the motors" },
+      
+      motor_stall_5: {
+     
+        prompt: "Try to adjust worm/gear mesh to allow for a little backlash. Does that help?",
+        options: [
+          { label: "Yes", next: "done_motor_backlash" },
+          { label: "No", next: "motor_stall_6" }
+        ]   
+      },
+
+      done_motor_backlash: { solution: "Leave a little backlash in your worm/gear mesh to reduce friction." },
+    
+      motor_stall_6: {
+     
+        prompt: "Is your worm grease fresh and covers the worm where it touches the gear?",
+        options: [
+          { label: "No", next: "done_motor_grease" },
+          { label: "Yes", next: "motor_stall_7" }
+        ]   
+      },
+
+      done_motor_grease: { solution: "Relube the worm with a thin layer of recommended grease to reduce friction." },
+    
+    
+      motor_stall_7 : {
+     
+        prompt: "Are your motor cables seated well and making good contacts?",
+        options: [
+          { label: "No", next: "done_motor_cables" },
+          { label: "Yes", next: "motor_stall_8" }
+        ]   
+      },
+
+      done_motor_cables: { solution: "Make sure the cables are inserted fully and making good contacts. Double-check cable connectivity." },
+
+
+      motor_stall_8 : {
+     
+        prompt: "If you swap the motors, does the same motor keep stalling when on the other axis?",
+        options: [
+          { label: "Yes", next: "done_motor_bad" },
+          { label: "No", next: "done_pic_bad" }
+        ]   
+      },
+
+      done_motor_bad: { solution: "The stalling motor is likely bad, and may need repair or replacement." },
+
+      done_pic_bad: { solution: "If the same axis stalls on slew or during tracking/guiding even when the motors are swapped, you may have an issue inside of Gemini, likely with the PIC controller" },
+
+    };
+
+    // ---------- State & element refs ----------
+    let tree = null;
+    let path = []; // array of node ids visited (for Back button)
+
+    const els = {
+      jsonInput: document.getElementById('jsonInput'),
+      applyBtn: document.getElementById('applyBtn'),
+      leftStatus: document.getElementById('leftStatus'),
+      errorBox: document.getElementById('errorBox'),
+
+      starter: document.getElementById('starter'),
+      startSearch: document.getElementById('startSearch'),
+      startSelect: document.getElementById('startSelect'),
+      startGoBtn: document.getElementById('startGoBtn'),
+
+      backBtn: document.getElementById('backBtn'),
+      restartBtn: document.getElementById('restartBtn'),
+      statusHint: document.getElementById('statusHint'),
+
+      prompt: document.getElementById('prompt'),
+      options: document.getElementById('options'),
+      solutionBox: document.getElementById('solutionBox')
+    };
+
+    // Seed JSON
+    els.jsonInput.value = JSON.stringify(Gemini2, null, 2);
+
+    // ---------- Utilities ----------
+    function clearError() {
+      els.errorBox.style.display = 'none';
+      els.errorBox.textContent = '';
+    }
+    function showError(msg) {
+      els.errorBox.style.display = 'block';
+      els.errorBox.textContent = msg;
+    }
+
+    function getStartNodes() {
+      if (!tree) return [];
+      const ids = new Set();
+      if (tree.meta && Array.isArray(tree.meta.starts)) {
+        tree.meta.starts.forEach((id) => { if (tree[id]) ids.add(id); });
+      }
+      for (const [id, node] of Object.entries(tree)) {
+        if (node && node.start === true) ids.add(id);
+      }
+      return [...ids].map((id) => ({
+        id,
+        prompt: (tree[id] && tree[id].prompt) ? String(tree[id].prompt) : id,
+        keywords: Array.isArray(tree[id]?.keywords) ? tree[id].keywords : []
+      }));
+    }
+
+    function populateStartSelect(list) {
+      els.startSelect.innerHTML = '';
+      list.forEach(({ id, prompt }) => {
+        const opt = document.createElement('option');
+        opt.value = id;
+        opt.textContent = prompt;
+        els.startSelect.appendChild(opt);
+      });
+    }
+
+    function renderStarter() {
+      els.starter.style.display = 'block';
+      els.prompt.textContent = '';
+      els.options.innerHTML = '';
+      els.solutionBox.innerHTML = '';
+      els.statusHint.textContent = 'Select a starting question';
+
+      const starts = getStartNodes();
+      populateStartSelect(starts);
+
+      function applyFilter() {
+        const q = els.startSearch.value.trim().toLowerCase();
+        if (!q) { populateStartSelect(starts); return; }
+        const tokens = q.split(/\s+/).filter(Boolean);
+        const filtered = starts.filter(({ prompt, keywords }) => {
+          const base = (prompt || '').toLowerCase();
+          const pool = new Set([base, ...keywords.map((k) => String(k).toLowerCase())]);
+          return tokens.every((t) => {
+            for (const item of pool) { if (item.includes(t)) return true; }
+            return false;
+          });
+        });
+        populateStartSelect(filtered);
+      }
+
+      els.startSearch.oninput = applyFilter;
+
+      function beginSelected() {
+        const id = els.startSelect.value;
+        if (!id) return;
+        path = [id];
+        renderNode(id);
+      }
+      els.startGoBtn.onclick = beginSelected;
+      els.startSelect.onkeydown = (e) => { if (e.key === 'Enter') beginSelected(); };
+
+      els.backBtn.disabled = true;
+    }
+
+    function renderNode(id) {
+      els.starter.style.display = 'none';
+      els.statusHint.textContent = `Depth ${path.length}`;
+
+      const node = tree[id] || {};
+      els.prompt.textContent = node.prompt ? String(node.prompt) : 'Result';
+      els.options.innerHTML = '';
+      els.solutionBox.innerHTML = '';
+
+      if (Array.isArray(node.options) && node.options.length > 0) {
+        node.options.forEach((opt) => {
+          const btn = document.createElement('button');
+          btn.textContent = String(opt.label);
+          btn.addEventListener('click', () => {
+            path.push(opt.next);
+            renderNode(opt.next);
+          });
+          els.options.appendChild(btn);
+        });
+      } else if (node.solution) {
+        const box = document.createElement('div');
+        box.className = 'solution';
+        box.textContent = String(node.solution);
+        els.solutionBox.appendChild(box);
+      } else {
+        const box = document.createElement('div');
+        box.className = 'solution unknown';
+        box.textContent = 'No known answer. Please escalate.';
+        els.solutionBox.appendChild(box);
+      }
+
+      els.backBtn.disabled = path.length <= 1;
+    }
+
+    // ---------- Event wiring ----------
+    els.applyBtn.addEventListener('click', () => {
+      clearError();
+      try {
+        tree = JSON.parse(els.jsonInput.value);
+        path = [];
+        els.leftStatus.textContent = 'Loaded custom JSON';
+        renderStarter();
+      } catch (err) {
+        showError(String(err && err.message ? err.message : err));
+      }
+    });
+
+    els.backBtn.addEventListener('click', () => {
+      if (path.length <= 1) { renderStarter(); return; }
+      path.pop();
+      renderNode(path[path.length - 1]);
+    });
+
+    els.restartBtn.addEventListener('click', () => {
+      path = [];
+      renderStarter();
+    });
+
+    // Initial render with example
+    try {
+      tree = Gemini2;
+      renderStarter();
+    } catch { /* ignore */ }
+  </script>
+</body>
+</html>
