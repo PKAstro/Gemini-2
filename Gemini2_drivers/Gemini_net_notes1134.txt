@@ -6,7 +6,7 @@ Version 1.1.34 - release
 2025-11-07 Fix HC brightness control displays blank if Gemini returns an unexpected value
 2025-05-29 Fix for some timeouts when polling (serial or USB)
 2025-05-29 Add menu item and window to display all session errors and warnings
-2025-10-26 Fix for timeout when setting UTC time over serial protocol (serial or USB)
+2024-10-26 Fix for timeout when setting UTC time over serial protocol (serial or USB)
 
 
 Version 1.1.30 - test release
